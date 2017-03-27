@@ -1,52 +1,124 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8' />
-    <title>Points on a map</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="">
 
-      #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id='map'></div>
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA'; // replace this with your access token
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/dchilders21/cj0oa78mu005e2smy6pnoyyd1' // replace this with your style
-    });
+	<title>CNN Soundtracks</title>
 
-    map.on('click', function(e) {
-      var features = map.queryRenderedFeatures(e.point, {
-        layers: ['test-cnn'] // replace this with the name of the layer
-      });
+	<link rel="shortcut icon" href="images/CNN_Favicon.png">
 
-      if (!features.length) {
-        return;
-      }
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-      var feature = features[0];
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-      var popup = new mapboxgl.Popup({ offset: [0, -15] })
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-        .setLngLat(feature.geometry.coordinates)
-        .addTo(map);
-    });
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/main.css">
 
-    </script>
-  </body>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#map {
+			margin-top: 50px;
+			height: 600px;
+			width: 100%;
+		}
+	</style>
+
+</head>
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body class="theme-invert">
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="timeline.html">TIMELINE <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">ABOUT</a></li>
+				<li><a href="map.html">MAP</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ALL EPISODES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">EPISODE 1</a></li>
+            <li><a href="#">EPISODE 2</a></li>
+            <li><a href="#">EPISODE 3</a></li>
+            <!-- <li role="separator" class="divider"></li> -->
+            <li><a href="#">EPISODE 4</a></li>
+            <!-- <li role="separator" class="divider"></li> -->
+            <li><a href="#">EPISODE 5</a></li>
+						<li><a href="#">EPISODE 6</a></li>
+						<li><a href="#">EPISODE 7</a></li>
+						<li><a href="#">EPISODE 8</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+
+				<div id='map'></div>
+
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+
+	</div>
+</section>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="js/magister.js"></script>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA'; // replace this with your access token
+var map = new mapboxgl.Map({
+	container: 'map',
+	style: 'mapbox://styles/dchilders21/cj0oa78mu005e2smy6pnoyyd1' // replace this with your style
+});
+
+map.on('click', function(e) {
+	var features = map.queryRenderedFeatures(e.point, {
+		layers: ['test-cnn'] // replace this with the name of the layer
+	});
+
+	if (!features.length) {
+		return;
+	}
+
+	var feature = features[0];
+
+	var popup = new mapboxgl.Popup({ offset: [0, -15] })
+		.setLngLat(feature.geometry.coordinates)
+		.setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+		.setLngLat(feature.geometry.coordinates)
+		.addTo(map);
+});
+
+</script>
+</body>
 </html>

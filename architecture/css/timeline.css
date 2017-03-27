@@ -20,6 +20,10 @@ p.footer {
     text-align: center;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* -----------------------------------------------
  * Timeline
  * --------------------------------------------- */
@@ -66,7 +70,7 @@ p.footer {
     width: -webkit-calc(100% - 25px);
     float: left;
     border: 1px solid #dcdcdc;
-    background: #ffffff;
+    background: #000;
     position: relative;
 }
 .timeline > li > .timeline-panel:before {
@@ -130,9 +134,16 @@ p.footer {
 .timeline-heading h4 {
     font-weight: 400;
     padding: 0 15px;
-    color: #4679bd;
+    text-align: left;
+    color: #FFF;
 }
+
+li.timeline-inverted > .timeline-panel > .timeline-heading h4 {
+  text-align: right;
+}
+
 .timeline-body > p, .timeline-body > ul {
+    color: #FFF;
     padding: 10px 15px;
     margin-bottom: 0;
 }
