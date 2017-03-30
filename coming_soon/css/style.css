@@ -33,6 +33,12 @@ img {
 	width: 100%;
 }
 
+img.audio {
+	width: 96px;
+	height: 68px;
+	margin-top: 66px;
+}
+
 
 
 
