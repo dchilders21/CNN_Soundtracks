@@ -1,5 +1,5 @@
 html {
-	background:#000 url(../images/CNN_ST_LandingPage_JD_R02_01.jpg) no-repeat center center fixed;
+	background:#000 url(../images/CNN_soundtracks.png) no-repeat center center fixed;
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -27,7 +27,6 @@ body {
 .navbar-default {
 	border: none;
 	border-bottom: 1px #FFF solid;
-	height: 50px;
 }
 .navbar-default .navbar-collapse {
 	padding: 0px;
@@ -55,94 +54,10 @@ body {
 
 .dropdown-menu {
 	background-color: #000;
-	border: none;
 }
 
 .dropdown-menu>li>a {
 	color: #FFF;
-	font-weight: bold
-}
-
-.dropdown-menu>li>a span {
-	color: #cc0000;
-}
-
-.navbar-brand {
-    float: none;
-  }
-
-.navbar-center
-{
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 0;
-	text-align: center;
-	margin: auto;
-	height:100%;
-}
-
-.navbar-center a {
-	font-size: 20px;
-	font-weight: bold;
-	color: #cc0000 !important;
-	letter-spacing: 5px;
-}
-
-.navbar-header {
-	margin-left: 45px;
-}
-
-.navbar-right {
-	margin-right: 45px;
-	height: 50px;
-}
-
-#logo {
-	background: url(../images/logo_cnn_badge_2up.png) no-repeat;
-	background-position: 0 0;
-	background-size: 60px;
-	position: relative;
-	width: 60px;
-	height: 60px;
-}
-
-@media (min-width: 768px) {
-	.navbar-collapse.collapse {
-		height: 50px !important;
-	}
-
-	.navbar-left {
-		margin-left: 20px;
-	}
-}
-
-.glyphicon {
-	top: 2px;
-}
-
-.hamburger {
-	margin-top: -2px;
-}
-
-.follow {
-	font-size: 15px;
-	font-weight: bold;
-	color: #FFFFFF;
-	line-height: 50px;
-	margin-left: 10px;
-}
-
-.fa {
-	color: #fff;
-	padding-right: 6px;
-	padding-left: 6px;
-	vertical-align: middle;
-}
-
-.fa.divider {
-	padding-right: 10px;
-	border-right: solid 2px;
 }
 
 
@@ -171,10 +86,12 @@ body {
 }
 
 
+
+
 /********************************************************/
 /*                      Typography                      */
 /********************************************************/
-a { color:#fff; text-decoration: none; font-size: 18px;}
+a { color:#fff; text-decoration: none; }
 a:hover, a:active { color:#fff; text-decoration: underline; }
 .lead {
 	font-weight:normal;
