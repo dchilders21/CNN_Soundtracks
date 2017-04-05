@@ -29,9 +29,11 @@
 		}
 
 		#map {
-			margin-top: 50px;
-			height: 600px;
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
+			height: 100%;
 		}
 	</style>
 
@@ -98,7 +100,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA'; // replace this with your access token
 var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/dchilders21/cj0oa78mu005e2smy6pnoyyd1' // replace this with your style
+	style: 'mapbox://styles/dchilders21/cj14i333q00082so02h0pg5sv' // replace this with your style
 });
 
 map.on('click', function(e) {

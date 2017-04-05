@@ -19,12 +19,24 @@
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/main.css">
+
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
   
 </head>
 
 <body class="theme-invert">
 
-  
   <div id="container">
     
   </div>
@@ -48,15 +60,7 @@
       render: function() {
           return (
             <div>
-              <h2>HELLO</h2>
-              <p>Cras facilisis urna ornare ex volutpat, et
-              convallis erat elementum. Ut aliquam, ipsum vitae
-              gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-              metus nec massa. Maecenas hendrerit laoreet augue
-              nec molestie. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.</p>
-      
-              <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+
             </div>
           );
         }
@@ -64,14 +68,76 @@
 
     var About = React.createClass({
       render: function() {
+        //document.documentElement.style.backgroundImage = 'url("images/CNN_ST_About_JD_R02_01.jpg")';
+        document.documentElement.style.backgroundImage = 'url("")';
+        document.documentElement.style.backgroundColor = '#121116';
           return (
             <div>
-              <h2>ABOUT?</h2>
-              <p>The easiest thing to do is post on
-              our <a href="http://forum.kirupa.com">forums</a>.
-              </p>
+              <div className="border row">
+                <div className="border col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
+                <div className="border col-md-5 about-rt">
+                <h2>ABOUT THE SHOW</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed condimentum nisl ut varius sagittis. Vestibulum elementum quis nulla vel euismod. Aenean imperdiet mauris ante, fermentum tempor mauris dignissim ut. Nullam vestibulum libero non sollicitudin consectetur. Vivamus tempus nec turpis non congue. Ut vehicula est eu erat ullamcorper ornare vitae in massa. Integer tempor, lorem sit amet vestibulum facilisis, leo est aliquam odio, eget egestas leo felis eget diam. Sed egestas, velit quis molestie convallis, eros leo pellentesque dui, sed iaculis urna mauris ac nulla. Donec mollis risus vel convallis porttitor.</p>
+
+                  <p>Donec id velit facilisis, tristique dolor sit amet, blandit ipsum. Duis nec turpis eu velit pellentesque ultrices. Maecenas feugiat dolor vel sodales dictum. Ut feugiat non eros quis pulvinar. Phasellus mauris nisl, imperdiet scelerisque rutrum et, varius ac lorem. Pellentesque vel suscipit ante. Aliquam quis ante metus.
+                  </p>
+                  <div><h3>EPISODE 01.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 02.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 03.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 04.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 05.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 06.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 07.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 08.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                </div>
+              </div>
+
             </div>
           );
+        }
+    });
+
+    var Map = React.createClass({
+
+          componentDidMount: function() {
+            this.renderMap();
+          },
+          componentDidUpdate: function() {
+            this.renderMap();
+          },
+          render: function() {
+      
+          return (
+            <div>
+              <div id='map'></div>
+            </div>
+          );
+        },
+        renderMap: function() {
+          mapboxgl.accessToken = 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA'; 
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/dchilders21/cj14i333q00082so02h0pg5sv' 
+          });
+
+          map.on('click', function(e) {
+            var features = map.queryRenderedFeatures(e.point, {
+              layers: ['test-cnn'] 
+            });
+
+            if (!features.length) {
+              return;
+            }
+
+            var feature = features[0];
+
+            var popup = new mapboxgl.Popup({ offset: [0, -15] })
+              .setLngLat(feature.geometry.coordinates)
+              .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+              .setLngLat(feature.geometry.coordinates)
+              .addTo(map);
+          });
+          console.log(' ============= ');
         }
     });
      
@@ -97,10 +163,12 @@
     var Episode = React.createClass({
       render: function() {
           document.documentElement.style.backgroundImage = 'url("images/CNN_ST_EpisodeTOC_JD_R02_5_01_small.png")';
+          
 
           return (
-            <div>
-              <div className="scroll-pane" style={{"width": "500px", "height": "900px", "overflow": "scroll", "color": "#fff", "margin": "0 auto"}}>
+            <section className="section" id="head">
+              <div className="row">
+              <div className="scroll-pane" style={{"width": "500px", "height": "900px", "overflow": "scroll", "margin": "0 auto"}}>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque enim risus, gravida at metus eleifend, suscipit varius arcu. Maecenas hendrerit ultrices bibendum. Praesent libero dolor, sagittis nec diam ut, ultrices fringilla leo. Aliquam eget odio tellus. Integer ac sodales lacus, eget aliquet ipsum. Nulla eu cursus est, feugiat pretium tellus. Nullam suscipit ipsum enim, eget varius justo fermentum eget. Etiam id orci ante. Nulla tortor nibh, egestas at odio id, posuere fringilla ante. Etiam leo risus, bibendum a lectus nec, rutrum imperdiet quam. Curabitur aliquam tempus diam non porttitor. Nulla accumsan quam odio. Vivamus blandit orci eros, eget euismod orci pharetra in. Nulla id tristique massa.
 
@@ -114,6 +182,7 @@
                 </p>
             </div>
             </div>
+          </section>
           );
         }
     });
@@ -137,7 +206,7 @@
                
                 <ul className="nav navbar-nav navbar-left">
                   <li><Link to="/about" activeClassName="active">ABOUT</Link></li>
-                  <li><a href="#">MAP</a></li>
+                  <li><Link to="/map" activeClassName="active">MAP</Link></li>
                   <li className="dropdown">
 
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">ALL EPISODES <span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span></a>
@@ -165,13 +234,7 @@
               </div>
           </nav>
 
-          <section className="section" id="head">
-              <div className="row">
-                <div className="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
-                  {this.props.children}
-                </div>
-              </div>
-          </section>
+          {this.props.children}
 
             
           </div>
@@ -184,6 +247,7 @@
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
           <Route path="about" component={About} />
+          <Route path="map" component={Map} />
           <Route path="episodes" component={Episodes} />
           <Route path="episode" component={Episode} />
      
@@ -197,6 +261,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
   <script src="js/modernizr.custom.72241.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
   <!-- Custom template scripts -->
   <script src="js/magister.js"></script>
 </body>
