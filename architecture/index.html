@@ -19,15 +19,6 @@
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/main.css">
-
-  <style>
-
-  a {
-    font-size: 18px;
-  }
-
-
-  </style>
   
 </head>
 
@@ -35,7 +26,7 @@
 
   
   <div id="container">
-  
+    
   </div>
 
 
@@ -71,11 +62,11 @@
         }
     });
 
-    var Contact = React.createClass({
+    var About = React.createClass({
       render: function() {
           return (
             <div>
-              <h2>GOT QUESTIONS?</h2>
+              <h2>ABOUT?</h2>
               <p>The easiest thing to do is post on
               our <a href="http://forum.kirupa.com">forums</a>.
               </p>
@@ -84,11 +75,11 @@
         }
     });
      
-    var Stuff = React.createClass({
+    var Episodes = React.createClass({
       render: function() {
           return (
             <div>
-              <h2>STUFF</h2>
+              <h2>EPISODES</h2>
               <p>Mauris sem velit, vehicula eget sodales vitae,
               rhoncus eget sapien:</p>
               <ol>
@@ -102,6 +93,32 @@
           );
         }
     });
+
+    var Episode = React.createClass({
+      render: function() {
+          document.documentElement.style.backgroundImage = 'url("images/CNN_ST_EpisodeTOC_JD_R02_5_01_small.png")';
+
+          return (
+            <div>
+              <div className="scroll-pane" style={{"width": "500px", "height": "900px", "overflow": "scroll", "color": "#fff", "margin": "0 auto"}}>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque enim risus, gravida at metus eleifend, suscipit varius arcu. Maecenas hendrerit ultrices bibendum. Praesent libero dolor, sagittis nec diam ut, ultrices fringilla leo. Aliquam eget odio tellus. Integer ac sodales lacus, eget aliquet ipsum. Nulla eu cursus est, feugiat pretium tellus. Nullam suscipit ipsum enim, eget varius justo fermentum eget. Etiam id orci ante. Nulla tortor nibh, egestas at odio id, posuere fringilla ante. Etiam leo risus, bibendum a lectus nec, rutrum imperdiet quam. Curabitur aliquam tempus diam non porttitor. Nulla accumsan quam odio. Vivamus blandit orci eros, eget euismod orci pharetra in. Nulla id tristique massa.
+
+                  Nullam accumsan ligula consectetur, pharetra mi ut, ullamcorper mauris. Duis ut mattis purus, a fringilla metus. Suspendisse congue vestibulum pellentesque. Quisque lobortis auctor lorem, ut volutpat ante condimentum vitae. Etiam euismod urna sit amet justo porttitor, eget pellentesque lacus interdum. Donec quis sem maximus urna vestibulum porta ut at dui. Sed ullamcorper ex a vulputate convallis. Sed ultricies, lectus eget aliquet tristique, tortor quam ullamcorper odio, sit amet auctor risus orci eget libero. Maecenas tempus mauris quis nisi cursus tincidunt. Proin ultrices tincidunt felis rutrum iaculis. Nulla scelerisque tortor ut sagittis ultrices. Nullam massa lectus, rhoncus eget aliquam non, maximus vitae risus. Fusce tempor gravida ipsum, sit amet volutpat sapien aliquet sit amet.
+
+                  Aenean rutrum elit a bibendum tempor. Phasellus eu convallis dolor. Etiam feugiat elit in ligula feugiat mattis. Aliquam et libero vel elit sagittis mollis. Suspendisse elementum, felis quis ultricies lacinia, ante mauris rhoncus felis, et pretium tellus mi a justo. Nulla turpis erat, venenatis quis egestas sed, aliquam vitae mauris. Integer accumsan sit amet augue non elementum. Quisque iaculis scelerisque dignissim. Mauris sollicitudin quam ut diam accumsan rhoncus. Aenean interdum pretium mi, quis luctus felis rhoncus at. Ut accumsan non dui nec pellentesque.
+
+                  Praesent hendrerit, nibh a ultricies lobortis, arcu odio pellentesque tortor, ac fringilla massa sapien ac felis. Nunc rutrum placerat quam, at lacinia neque dignissim id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ex velit, semper in posuere nec, sodales sit amet lacus. Nulla facilisi. Vivamus ut dolor maximus, lacinia magna vitae, facilisis tellus. In eu quam sodales, commodo risus in, interdum ipsum. Nulla hendrerit risus enim, at fringilla ex tempor vitae. Donec finibus mi id ex efficitur hendrerit. Integer nec aliquam urna, eu accumsan elit.
+
+                  Aliquam erat volutpat. Praesent faucibus cursus augue, vel tincidunt mi consequat ut. Donec scelerisque interdum elementum. Aenean lobortis mollis sapien id luctus. Pellentesque congue rutrum suscipit. Pellentesque sollicitudin maximus neque in vestibulum. Nulla congue mattis mi, sed efficitur ante tempor id. Vestibulum ut auctor urna. Donec convallis, sapien nec feugiat ultrices, lorem mauris consectetur velit, a venenatis justo diam ut nisi. Nunc vitae sem ligula. Sed tempor elit nibh, et molestie dui posuere venenatis. Duis luctus nisl vel odio malesuada aliquet. Aliquam erat volutpat. Sed eu est feugiat, blandit risus eu, posuere nisi. In a ornare metus, a posuere lectus.
+                </p>
+            </div>
+            </div>
+          );
+        }
+    });
+
+
 
 
     var App = React.createClass({
@@ -119,12 +136,13 @@
               <div className="collapse navbar-collapse" id="navbar-collapse-1">
                
                 <ul className="nav navbar-nav navbar-left">
-                  <li><a href="#">ABOUT</a></li>
+                  <li><Link to="/about" activeClassName="active">ABOUT</Link></li>
                   <li><a href="#">MAP</a></li>
                   <li className="dropdown">
+
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">ALL EPISODES <span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span></a>
                     <ul className="dropdown-menu">
-                      <li><a href="#"><span>EPISODE:</span> 1</a></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 1</Link></li>
                       <li><a href="#"><span>EPISODE:</span> 2</a></li>
                       <li><a href="#"><span>EPISODE:</span> 3</a></li>
                       <li><a href="#"><span>EPISODE:</span> 4</a></li>
@@ -147,6 +165,14 @@
               </div>
           </nav>
 
+          <section className="section" id="head">
+              <div className="row">
+                <div className="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+                  {this.props.children}
+                </div>
+              </div>
+          </section>
+
             
           </div>
         )
@@ -157,8 +183,9 @@
       <Router history={ReactRouter.hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
-          <Route path="stuff" component={Stuff} />
-          <Route path="contact" component={Contact} />
+          <Route path="about" component={About} />
+          <Route path="episodes" component={Episodes} />
+          <Route path="episode" component={Episode} />
      
         </Route>
       </Router>,
