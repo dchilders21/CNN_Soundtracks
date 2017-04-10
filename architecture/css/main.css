@@ -1,11 +1,11 @@
 html {
 	height: 100%;
-	background:#000 url(../images/CNN_ST_RECORD_PLAYER.jpg) no-repeat center center fixed;
+	/*background:#000 url(../images/CNN_ST_RECORD_PLAYER.jpg) no-repeat center center fixed;*/
 	min-height:100%;
-	-webkit-background-size: cover;
+	/*-webkit-background-size: cover;
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
-	        background-size: cover;
+	        background-size: cover;*/
 }
 
 body {
@@ -88,6 +88,7 @@ body {
 	text-align: center;
 	margin: auto;
 	height:100%;
+	/*z-index: 1000000;*/
 }
 
 .navbar-center a {
@@ -183,7 +184,7 @@ body {
 /*                      Typography                      */
 /********************************************************/
 a { color:#fff; text-decoration: none; font-size: 18px;}
-a:hover, a:active { color:#fff; text-decoration: underline; }
+a:hover, a:active { color:#fff; }
 .lead {
 	font-weight:normal;
 	font-size:1.5em;
@@ -218,6 +219,13 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	}
 }
 
+.red {
+	color: #cc0000;
+}
+
+.white {
+	color: #FFF;
+}
 
 /********************************************************/
 /*                   UI - Buttons                       */

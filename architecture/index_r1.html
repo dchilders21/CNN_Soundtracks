@@ -1,89 +1,716 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="">
 
-	<title>CNN Soundtracks</title>
+    <meta charset="utf-8" />
+    <title>CNN Soundtracks</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/CNN_Favicon.png" />
+		
+	<!-- CSS Files -->
 
-	<link rel="shortcut icon" href="images/CNN_Favicon.png">
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/socials.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/cubeportfolio.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/settings-ie8.css" />
+	<link rel="stylesheet" href="css/settings.css" />
 
-	<!-- Bootstrap itself -->
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!-- Page Styles -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/backgrounds.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
 
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
+	<!-- End Page Styles -->
 
+	<!-- Page Layout Color, night or dark -->
+	<link id="changeable_tone" rel="stylesheet" href="css/page_tones/dark.css" />
+	<!-- End Page Layout Color -->
+
+	<!-- Page Elements Color -->
+	<link id="changeable_color" rel="stylesheet" href="css/colors/red.css" />
+	<!-- End Page Elements Color -->
+
+	<!-- Page Fonts / Pacifico-->
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<!-- Raleway-->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,,200,300,600,700' rel='stylesheet' type='text/css'>
+	<!-- Oswald-->
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!-- End CSS Files -->
+	<style>
+		.scroll-pane
+		{
+			width: 100%;
+			height: 200px;
+			overflow: auto;
+		}
+
+		#introVideo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		@media (min-aspect-ratio: 16/9) {
+			#introVideo {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (max-aspect-ratio: 16/9) {
+			#introVideo {
+				width: auto;
+				height: 100%;
+			}
+		}
+
+		#transitionVideo {
+			/*position: absolute;
+			top: 0;
+			left: 0;*/
+			width: 100%;
+			height: 100%;
+		}
+		@media (min-aspect-ratio: 16/9) {
+			#transitionVideo {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (max-aspect-ratio: 16/9) {
+			#transitionVideo {
+				/*width: auto;*/
+				height: 100%;
+			}
+		}
+
+		/* Need to remove */
+		#transition-episode {
+			background-color: #000;
+		}
+
+		.episode-mg {
+			margin-bottom: 362px;
+		}
+
+		.timeline-ftr {
+			/*background-image:url(images/CNN_ST_EpisodeTOC_JD_R04_01_footer.png);*/
+			width: 100%;
+			height: 363px;
+			background-position: center bottom;
+		}
+
+		#logo_badge {
+			z-index: 100000000;
+		}
+
+		.row {
+			margin: 0;
+		}
+
+		@media (max-width: 768px) {
+
+			.navbar-right {
+				display: none;
+			}
+
+			.navbar-center {
+				margin-left: 14px;
+			}
+		}
+
+		.background_home {
+			/*min-height: 1000px;*/
+		}
+
+
+
+	</style>
+ 
 </head>
 
-<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
-<body class="theme-invert">
+<!-- Body Start -->
+<body>
 
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="timeline.html">TIMELINE <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">ABOUT</a></li>
-				<li><a href="map.html">MAP</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ALL EPISODES <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">EPISODE 1</a></li>
-            <li><a href="#">EPISODE 2</a></li>
-            <li><a href="#">EPISODE 3</a></li>
-            <!-- <li role="separator" class="divider"></li> -->
-            <li><a href="#">EPISODE 4</a></li>
-            <li role="separator" class="divider"></li> 
-            <li><a href="#">EPISODE 5</a></li>
-						<li><a href="#">EPISODE 6</a></li>
-						<li><a href="#">EPISODE 7</a></li>
-						<li><a href="#">EPISODE 8</a></li>
-          </ul>
-        </li>
-      </ul>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+	<!-- Page Loader -->
+	<article id="pageloader" class="dark-loader">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</article>
 
 
-<!-- Main (Home) section -->
-<section class="section" id="head">
-	<div class="container">
 
-		<div class="row">
-			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+	
+	<!-- Navigation - select your nav color - dark-nav or white-nav -->
+	<nav id="navigation" class="dark-nav">
+		<!-- Navigation -->
+		<!-- <div class="navigation first-nav double-nav raleway"> -->
+		<div class="navigation first-nav">
+			<!-- Navigation Inner -->
+			<div class="nav-inner clearfix">
 
-				<!-- Site Title, your name, HELLO msg, etc. -->
-				<!-- <h1 class="title">Magister</h1>
-				<h2 class="subtitle">Free html5 template by GetTemplate</h2> -->
+				<!-- Logo Area -->
+				<div id="logo_badge" class="logo f-left">
+					<!-- Logo Link -->
+					<a href="#home" class="logo-link scroll">
+						<!-- Logo Image / data-second-logo for only white nav -->
+							<img src="images/logo_cnn_badge_2up.png" style="float: left;" data-second-logo="images/logo/logo_condensed_dark.png" alt="CNN Logo" />
+					</a>
+				</div>
+				<!-- End Logo Area -->
 
-				<!-- Short introductory (optional) -->
-				<!-- <h3 class="tagline">
-					Potentially, the best place to tell people why they are here.<br>
-					So, this is a demo page built to showcase the beauty of the template.
-				</h3> -->
+				<div class="navbar-center navbar-brand"><a href="#home" class="navbar-brand scroll">SOUNDTRACKS</a></div>
 
-				<!-- Nice place to describe your site in a sentence or two -->
-				<!-- <p><a href="/download/" class="btn btn-default btn-lg">Download template now</a></p> -->
+				<div class="navbar-right">
+                    <span class="follow">FOLLOW</span>
+                    <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-instagram fa-2x divider" aria-hidden="true"></i>
+                    <span class="follow">SHARE SITE</span>
+                    <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                  </div>
 
-			</div> <!-- /col -->
-		</div> <!-- /row -->
+				<!-- Mobile Menu Button -->
+				<a class="mobile-nav-button"><i class="fa fa-bars"></i></a>
 
-	</div>
-</section>
+				<!-- Navigation Links -->
+				<div class="nav-menu clearfix">
+					<!-- Nav List -->
+					<ul class="nav uppercase normal big-texts">
+
+						<li><a href="about.html" class="scroll">ABOUT</a></li>
+						<li><a href="map.html" class="scroll">MAP</a></li>
+						<li class="dropdown-toggle nav-toggle"><a href="#episodes" class="scroll">EPISODES</a><span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
+							<!-- DropDown Menu -->
+							<ul class="dropdown-menu pull-left clearfix">
+								<li><a href="#transition-episode" class="scroll"><span class="red">EPISODE:</span> 1</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 2</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 3</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 4</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 5</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 6</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 7</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 8</a></li>
+							</ul>
+							<!-- End DropDown Menu -->
+						</li>
+
+					</ul>
+
+					<!-- End Nav List -->
+					
+				</div>
+				<!-- End Navigation Links -->
+
+			</div>
+			<!-- End Navigation Inner -->
+
+		</div>
+
+	</nav>
+	<!-- End Nav -->
 
 
-<!-- Load js libs only when the page is loaded. -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.72241.js"></script>
-<!-- Custom template scripts -->
-<script src="js/magister.js"></script>
+	<!-- Home Section -->
+	<section id="home" class="home bw-type container">
+
+		<!-- Ful Screen Slider -->
+		<div id="fullscreen" class="background_home parallax">
+			<video id="introVideo" preload="auto" height="100%" width="100%"
+              poster="images/CNN_ST_RECORD_PLAYER.jpg">
+                <source src="video/CNN_ST_RECORD_PLAYER_Render.mp4" type='video/mp4' />
+                <source src="video/CNN_ST_RECORD_PLAYER_Render.WebM" type='video/webm' />
+             </video>
+		</div>
+		<!-- End Ful Screen Home -->
+
+		<!-- Home Inner Details -->
+		<div class="home-inner t-center" data-0="opacity:1;" data-600="opacity:0;">
+
+			<!-- Home Text Slider -->
+			<div class="home-text-slider relative">
+
+				<!-- Home Text Slider -->
+				<h1 class="white small-type text-rotetor antialiased light">
+
+					<!-- Home Texts -->
+					<!-- <span>
+						ALL SHOWS
+					</span> -->
+					<!-- End Home Texts -->
+
+				</h1>
+				<!-- End Home Text Slider -->
+
+			</div>
+			<!-- End Home Text Slider -->
+
+		</div>
+		<!-- End Home Inner Details -->
+
+		<!-- Home Bottom Note -->
+		<div id="home-episodes" class="home-extra-note fullwidth t-center jump white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
+			<p>ALL SHOWS</p>
+			<!-- Text Link -->
+			<a href="#" onclick="introVidPlay()">
+				<!-- Bottom Button -->
+				<span class="home-button t-center no-border"><i class="fa fa-angle-down fa-3x"></i></span>
+			</a>
+			<!-- End Text Link -->
+		</div>
+		<!-- End Home Bottom Note -->
+
+	</section>
+	<!-- End Home Section -->
+
+
+	<!-- Features Section -->
+	<section id="episodes" class="container background_episodes">
+
+		<!-- Features Inner -->
+		<div class="inner t-center">
+
+			<h1 class="header header-style-1 normal uppercase">
+				ALL EPISODES
+			</h1>
+
+			<!-- Boxes  -->
+			<div class="feature-boxes type-3 clearfix">
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="100">
+
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<a href="#transition-episode" class="scroll"><img src="images/albums/mlk.png" /></a>
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 1
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="150">
+
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/september_11.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 2
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="200">
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/kent_state.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 3
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="250">
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/katrina.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 4
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+			</div>
+			<!-- End Features Inner  -->
+
+			<!-- Boxes  -->
+			<div class="feature-boxes type-3 clearfix">
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="100">
+
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/berlin_wall.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 5
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="150">
+
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/moon_landing.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 6
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="200">
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/stone_wall.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 7
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+				<!-- Box  -->
+				<div class="feature-box col-xs-3 animated" data-animation="fadeIn" data-animation-delay="250">
+					<!-- Box Texts  -->
+					<div class="feature-text small-head f-left t-left dark">
+						
+						<!-- Box Description  -->
+						<img src="images/albums/battle_of_the_sexes.png" />
+					</div>
+					<!-- Box Header  -->
+						<h4 class="no-margin no-padding uppercase bold white">
+							<span class="red">EPISODE:</span> 8
+						</h4>
+				</div>
+				<!-- End Box  -->
+
+			</div>
+			<!-- End Boxes  -->
+		</div>
+		<!-- End Features Inner  -->
+	</section>
+	<!-- End Features Section  -->
+
+	<!-- Transition Video Section -->
+	<section id="transition-episode" class="home bw-type container">
+
+		<!-- Ful Screen Slider -->
+		<div id="fullscreen" class="parallax">
+		<!-- End Ful Screen Home -->
+
+			<video id="transitionVideo" preload="auto" height="100%" width="100%"
+              poster="images/CNN_ST_PhotoTransition.jpg">
+                <source src="video/CNN_ST_PhotoTransition_RENDER.mp4" type='video/mp4' />
+                <source src="video/CNN_ST_PhotoTransition_RENDER.WebM" type='video/webm' />
+             </video>
+
+		</div>
+	</section>
+
+
+	
+	<!-- Testimonials -->
+	<section id='episode_1' class="type-1 background_ep1">
+		<!-- Inner -->
+		<div class="inner">
+
+			<div class="row">
+
+				<div class="col-md-12 col-lg-12 episode-mg">
+
+					<!-- <ul class="timeline scroll-pane" style="width: 100%; height: 400px; overflow: scroll;"> -->
+					<ul class="timeline">
+					    <li>
+					        <div class="timeline-badge">
+
+					        </div>
+					        <div class="timeline-panel">
+										<div class="timeline-heading">
+										</div>
+										<a href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection"><img src="images/episode_ToC/content_1.png" /></a>
+										<a href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
+
+
+					        </div>
+					    </li>
+
+					    <li class="timeline-inverted">
+					        <div class="timeline-badge">
+
+					        </div>
+					        <div class="timeline-panel">
+					            <div class="timeline-heading">
+					            </div>
+					            <img src="images/episode_ToC/content_4.png" />
+					        </div>
+					    </li>
+
+					    <li>
+					        <div class="timeline-badge">
+
+					        </div>
+					        <div class="timeline-panel">
+					            <div class="timeline-heading">
+					            </div>
+					            <!-- <div class="timeline-body"> </div> -->
+					           	<img src="images/episode_ToC/content_2.png" />
+					        </div>
+					    </li>
+
+					    <li class="timeline-inverted">
+					        <div class="timeline-badge">
+
+					        </div>
+					        <div class="timeline-panel">
+					            <div class="timeline-heading">
+					            </div>
+					            <img src="images/episode_ToC/content_5.png" />
+					        </div>
+					    </li>
+
+
+							<li>
+		 						 <div class="timeline-badge">
+
+		 						 </div>
+		 						 <div class="timeline-panel">
+		 							 <div class="timeline-heading">
+		 							 </div>
+		 							 <img src="images/episode_ToC/content_3.png" />
+		 						 </div>
+		 				 </li>
+
+		 				 <li class="timeline-inverted">
+		 						 <div class="timeline-badge">
+		 						 </div>
+		 						 <div class="timeline-panel">
+		 								 <div class="timeline-heading">
+		 								 </div>
+		 								 <img src="images/episode_ToC/content_6.png" />
+		 						 </div>
+		 				 </li>
+
+					    <li class="clearfix no-float"></li>
+				</ul>
+
+				</div> <!-- /col -->
+
+				
+				
+			</div>
+			
+		</div>
+		<!-- End Inner -->
+	</section>
+	<!-- End Testimonials -->
+
+
+
+	<!-- Footer -->
+	<footer class="big-footer fullwidth t-left">
+		<!-- Footer Inner -->
+		<div class="clearfix footer_inner">
+
+			
+			<div class="timeline-ftr">
+					<img src="images/CNN_ST_EpisodeTOC_JD_R04_01_footer_r2.png" />
+				</div>
+			
+
+		</div>
+		<!-- End Footer Inner -->
+
+		<!-- Bottom -->
+		<div class="footer_bottom">
+			<!-- Bottom Inner -->
+			<div class="boxed clearfix">
+				<!-- Left, Copyright Area -->
+				<div class="left f-left">
+					<!-- Text and Link -->
+					<p class="copyright">
+					</p>
+				</div>
+				<!-- End Left -->
+				<!-- Right, Socials -->
+				<div class="right f-right">
+					
+				</div>
+				<!-- End Right -->
+			</div>
+			<!-- End Inner -->
+		</div>
+		<!-- End Footer, Bottom -->
+	</footer>
+	<!-- End Footer -->
+
+
+
+	<!-- JS Files -->
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/waypoint.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+	<script type="text/javascript" src="js/jquery.cubeportfolio.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<!-- Revolution Slider -->
+	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/rev_slider/rev_plugins.js"></script>
+	<!-- Contact Form -->
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/contact-form.js"></script>
+	<!-- Twitter -->
+	<script type="text/javascript" src="js/tweecool.min.js"></script>
+	<script type="text/javascript" src="js/tweecool.js"></script>
+	<!-- Page Plugins -->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<!-- Portfolio Plugins -->
+	<script type="text/javascript" src="js/portfolio.js"></script>
+	<!-- Theme Panel -->
+	<!-- <script type="text/javascript" src="theme_panel/themepanel.js"></script> -->
+
+	<script type="text/javascript" src="js/lightcase.js"></script>
+
+	<!-- JS Scrollpane -->
+	<script type="text/javascript" src="js/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.js"></script>
+	<script type="text/javascript" src="js/jscrollpane/mwheelIntent.js"></script>
+	
+	<script>
+
+		var count = 0;
+		var isMobile;
+		
+
+		function endEpisodeTransition() {
+			if (!isMobile) {
+				document.getElementById('transitionVideo').play();
+				document.getElementById('transitionVideo').addEventListener('ended',endTransitionVideo,false);
+			} else {
+				$("html, body").animate({
+		        scrollTop: $('#episode_1').offset().top
+		    });
+			}
+		}
+
+		function introVidPlay() {
+			console.log(isMobile)
+			if (!isMobile) {
+				document.getElementById('introVideo').play();
+				document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
+			} else {
+				$("html, body").animate({
+		        	scrollTop: $('#episodes').offset().top
+		    	});
+			}
+		}
+
+		function endIntroVideo() {
+		    $("html, body").animate({
+		        scrollTop: $('#episodes').offset().top
+		    });
+		}
+
+		function endTransitionVideo() {
+
+			if (count < 1) {
+				endEpisodeTransition();
+				count++;
+			} else {
+				$("html, body").animate({
+		        scrollTop: $('#episode_1').offset().top
+		    });
+			}
+		}
+
+		$(function()
+		{
+
+			isMobile = detectmob();
+
+			if (isMobile) {
+				document.getElementById('transitionVideo').style.display = "none";
+				document.getElementById('introVideo').style.display = "none";
+			} 
+
+
+			$('.scroll-pane').jScrollPane(
+				{
+					verticalDragMinHeight: 84,
+					verticalDragMaxHeight: 84,
+					horizontalDragMinWidth: 44,
+					horizontalDragMaxWidth: 44
+				});
+		});
+
+		jQuery(document).ready(function($) {
+		$('a[data-rel^=lightcase]').lightcase();
+		});
+
+		function detectmob() {
+		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+		     return true;
+		   } else {
+		     return false;
+		   }
+		}
+
+	</script>
+	<!-- End JS Files -->
+
 </body>
+<!-- Body End -->
 </html>

@@ -21,7 +21,7 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 127px;
+	width: 64px;
 	height: 1008px;
 }
 
@@ -48,18 +48,18 @@
 .jspTrack
 {
 	background: #dde;
-	background: url('../images/scroll_bg.png');
+	background: url('../images/scroll_bg_50.png');
 	position: relative;
 }
 
 .jspDrag
 {
 	background: #bbd;
-	background: url('../images/scroller.png') no-repeat;
+	background: url('../images/scroller_50.png') no-repeat;
 	position: relative;
 	height: 84px;
 	top: 0;
-	left: 22px;
+	left: 11px;
 	cursor: pointer;
 }
 
