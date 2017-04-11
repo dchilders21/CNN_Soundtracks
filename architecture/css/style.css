@@ -50,6 +50,10 @@
 		text-decoration: none;
 	}
 
+	.inactive_link {
+		color: rgba(255, 255, 255, .6) !important;
+	}
+
 /* Page Loader */
 
 	#pageloader{
@@ -1216,7 +1220,8 @@
 		/*margin-bottom:45px;*/
 		color: #FFF;
 		font-weight: 600;
-		font-size: 50px;
+		font-size: 36px;
+		margin-top: 75px;
 	}
 
 	.header-style-1:after{
@@ -1530,7 +1535,7 @@
 	.nav-inner{
 		width: 100%;
 		height: 100%;
-		max-width: 1170px;
+		/*max-width: 1170px;*/
 		margin:0 auto;
 		padding: 0;
 	}
@@ -2284,6 +2289,8 @@
 	}
 
 	.home-extra-note a{
+		font-size: 30px;
+		font-weight: 600;
 		display:inline-block;
 	}
 
@@ -2313,7 +2320,7 @@
 /* Home Extra Note For Black White Version */
 
 	.bw-type .home-extra-note{
-		top:calc(100% - 80px);
+		top:calc(100% - 100px);
 	}
 
 /* Home Boxes Version */	

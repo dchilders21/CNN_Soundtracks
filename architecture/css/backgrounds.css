@@ -8,6 +8,7 @@
 	.background_episodes {
 		background-image:url(../images/CNN_ST_AllEpisodes_JD_R02_01.jpg);
 		background-size: cover;
+		height: 100vh;
 	}
 
 	.background_ep1 {
