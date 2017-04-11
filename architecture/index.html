@@ -51,61 +51,7 @@
 
 	<!-- End CSS Files -->
 	<style>
-		.scroll-pane
-		{
-			width: 100%;
-			height: 200px;
-			overflow: auto;
-		}
 
-		#introVideo {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-		@media (min-aspect-ratio: 16/9) {
-			#introVideo {
-				width: 100%;
-				height: auto;
-			}
-		}
-
-		@media (max-aspect-ratio: 16/9) {
-			#introVideo {
-				width: 100%;
-				height: auto;
-				/*width: auto;
-				height: 100%;*/
-			}
-		}
-
-		#transitionVideo {
-			/*position: absolute;
-			top: 0;
-			left: 0;*/
-			width: 100%;
-			height: 100%;
-		}
-		@media (min-aspect-ratio: 16/9) {
-			#transitionVideo {
-				width: 100%;
-				height: auto;
-			}
-		}
-
-		@media (max-aspect-ratio: 16/9) {
-			#transitionVideo {
-				/*width: auto;*/
-				height: 100%;
-			}
-		}
-
-		/* Need to remove */
-		#transition-episode {
-			background-color: #000;
-		}
 
 		.episode-mg {
 			margin-top: 50px;
@@ -143,41 +89,17 @@
 			/*min-height: 1000px;*/
 		}
 
-		#transition-jump {
-			margin-top: -100px;
-		}
-
-		.lightcase-icon-close {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			font-size: 50px;
-		}
-
-		#lightcase-overlay {
-			z-index: 10000 !important;
-		}
-
-		#lightcase-loading {
-			z-index: 10001 !important;
-		}
-
-		#lightcase-case {
-			z-index: 10002 !important;
-		}
-
-		.lightcase-icon-close {
-			z-index: 10003 !important;
-		}
-
-		#lightcase-nav {
-			z-index: 10004 !important;
-		}
-
-		#lightcase-nav a[class*='lightcase-icon-'] {
-			z-index: 10004 !important;
-		}
-
+		#introVideo { 
+		    position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    min-width: 100%;
+		    min-height: 100%;
+		    width: auto;
+		    height: auto;
+		    z-index: -100;
+		    transform: translateX(-50%) translateY(-50%);
+    	}
 
 
 	</style>
@@ -344,6 +266,14 @@
 
 		var count = 0;
 		var isMobile;
+
+		$( window ).bind("resize", function(){
+			console.log(' ====== ');
+		    // Change the width of the div
+		    console.log($('html').innerWidth());
+		    console.log($('html').innerHeight());
+		    $("#introVideo").width( 600 );
+		});
 		
 
 		function endEpisodeTransition() {
@@ -370,30 +300,10 @@
 		}
 
 		function endIntroVideo() {
-			document.getElementById('introVideo').style.display = "none";
-		    $("html, body").animate({
+			/*document.getElementById('introVideo').style.display = "none";*/
+		    /*$("html, body").animate({
 		        scrollTop: $('#episodes').offset().top
-		    });
-		}
-
-		function endTransition() {
-			document.getElementById('transitionVideo').pause();
-
-			$("html, body").animate({
-		        scrollTop: $('#episode_1').offset().top
-		    });
-		}
-
-		function endTransitionVideo() {
-			document.getElementById('transitionVideo').pause();
-			if (count < 1) {
-				endEpisodeTransition();
-				count++;
-			} else {
-				$("html, body").animate({
-		        scrollTop: $('#episode_1').offset().top
-		    });
-			}
+		    });*/
 		}
 
 		$(function()
@@ -402,8 +312,7 @@
 			isMobile = detectmob();
 
 			if (isMobile) {
-				document.getElementById('transitionVideo').style.display = "none";
-				document.getElementById('introVideo').style.display = "none";
+				/*document.getElementById('introVideo').style.display = "none";*/
 			} 
 
 

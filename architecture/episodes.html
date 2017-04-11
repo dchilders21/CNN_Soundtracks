@@ -51,6 +51,22 @@
 
 	<!-- End CSS Files -->
 	<style>
+		html { 
+			  background: url(images/CNN_ST_AllEpisodes_JD_R02_01.jpg) no-repeat center center fixed; 
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+		  html{
+		    background-image:url(images/CNN_ST_AllEpisodes_JD_R02_01_2x.jpg) no-repeat center center fixed;
+		    /*background-size:500px 500px;  This replicates the original standard sprite dimensions, and assumes the actual dimensions of sprite@2x.png are 1000x1000px */
+		  }
+		}
+
+
 		.scroll-pane
 		{
 			width: 100%;
@@ -87,19 +103,6 @@
 			left: 0;*/
 			width: 100%;
 			height: 100%;
-		}
-		@media (min-aspect-ratio: 16/9) {
-			#transitionVideo {
-				width: 100%;
-				height: auto;
-			}
-		}
-
-		@media (max-aspect-ratio: 16/9) {
-			#transitionVideo {
-				/*width: auto;*/
-				height: 100%;
-			}
 		}
 
 		/* Need to remove */
@@ -145,37 +148,6 @@
 
 		#transition-jump {
 			margin-top: -100px;
-		}
-
-		.lightcase-icon-close {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			font-size: 50px;
-		}
-
-		#lightcase-overlay {
-			z-index: 10000 !important;
-		}
-
-		#lightcase-loading {
-			z-index: 10001 !important;
-		}
-
-		#lightcase-case {
-			z-index: 10002 !important;
-		}
-
-		.lightcase-icon-close {
-			z-index: 10003 !important;
-		}
-
-		#lightcase-nav {
-			z-index: 10004 !important;
-		}
-
-		#lightcase-nav a[class*='lightcase-icon-'] {
-			z-index: 10004 !important;
 		}
 
 
@@ -243,13 +215,13 @@
 							<!-- DropDown Menu -->
 							<ul class="dropdown-menu pull-left clearfix">
 								<li><a href="#transition-episode" class="scroll"><span class="red">EPISODE: 1</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 2</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 3</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 4</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 5</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 6</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 7</span></a></li>
-								<li><a class="ex-link"><span class="inactive_link">EPISODE: 8</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 2</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 3</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 4</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 5</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 6</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 7</span></a></li>
+								<li><a><span class="inactive_link">EPISODE: 8</span></a></li>
 							</ul>
 							<!-- End DropDown Menu -->
 						</li>
@@ -274,10 +246,6 @@
 
 		<!-- Features Inner -->
 		<div class="t-center">
-
-			<h1 class="header header-style-1 normal uppercase">
-				ALL EPISODES
-			</h1>
 
 			<!-- Boxes  -->
 			<div class="feature-boxes type-3 clearfix">
@@ -461,96 +429,7 @@
 	<script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.js"></script>
 	<script type="text/javascript" src="js/jscrollpane/mwheelIntent.js"></script>
 	
-	<script>
 
-		var count = 0;
-		var isMobile;
-		
-
-		function endEpisodeTransition() {
-			if (!isMobile) {
-				document.getElementById('transitionVideo').play();
-				document.getElementById('transitionVideo').addEventListener('ended',endTransitionVideo,false);
-			} else {
-				$("html, body").animate({
-		        scrollTop: $('#episode_1').offset().top
-		    });
-			}
-		}
-
-		function introVidPlay() {
-			console.log(isMobile)
-			if (!isMobile) {
-				document.getElementById('introVideo').play();
-				document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
-			} else {
-				$("html, body").animate({
-		        	scrollTop: $('#episodes').offset().top
-		    	});
-			}
-		}
-
-		function endIntroVideo() {
-			document.getElementById('introVideo').style.display = "none";
-		    $("html, body").animate({
-		        scrollTop: $('#episodes').offset().top
-		    });
-		}
-
-		function endTransition() {
-			document.getElementById('transitionVideo').pause();
-
-			$("html, body").animate({
-		        scrollTop: $('#episode_1').offset().top
-		    });
-		}
-
-		function endTransitionVideo() {
-			document.getElementById('transitionVideo').pause();
-			if (count < 1) {
-				endEpisodeTransition();
-				count++;
-			} else {
-				$("html, body").animate({
-		        scrollTop: $('#episode_1').offset().top
-		    });
-			}
-		}
-
-		$(function()
-		{
-
-			isMobile = detectmob();
-
-			if (isMobile) {
-				document.getElementById('transitionVideo').style.display = "none";
-				document.getElementById('introVideo').style.display = "none";
-			} 
-
-
-			$('.scroll-pane').jScrollPane(
-				{
-					verticalDragMinHeight: 84,
-					verticalDragMaxHeight: 84,
-					horizontalDragMinWidth: 44,
-					horizontalDragMaxWidth: 44
-				});
-		});
-
-		jQuery(document).ready(function($) {
-		$('a[data-rel^=lightcase]').lightcase();
-		});
-
-		function detectmob() {
-		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-		     return true;
-		   } else {
-		     return false;
-		   }
-		}
-
-	</script>
-	<!-- End JS Files -->
 
 </body>
 <!-- Body End -->
