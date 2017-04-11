@@ -142,10 +142,30 @@
 		</div>
 	</article>
 
-	<div id="main">
 
-	</div>
+	<!-- Home Section -->
+	<section id="home" class="home bw-type container">
 
+		<!-- Full Screen Slider -->
+		<div id="fullscreen" class="background_home parallax">
+			<video id="introVideo" preload="auto" height="100%" width="100%"
+              poster="images/CNN_ST_RECORD_PLAYER.jpg">
+                <source src="video/CNN_ST_RECORD_PLAYER_Render.mp4" type='video/mp4' />
+                <source src="video/CNN_ST_RECORD_PLAYER_Render.WebM" type='video/webm' />
+             </video>
+		</div>
+		<!-- End Ful Screen Home -->
+
+		<!-- Home Bottom Note -->
+		<div id="home-episodes" class="home-extra-note fullwidth t-center white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
+			<!-- Text Link -->
+			<a onclick="introVidPlay()">ALL SHOWS</a>
+			<!-- End Text Link -->
+		</div>
+		<!-- End Home Bottom Note -->
+
+	</section>
+	<!-- End Home Section -->
 
 	<div id="apple-badge" onclick="showPlayer()">
 		<img src="images/itunes.png" />
@@ -203,191 +223,59 @@
 
 	<script type="text/babel">
 
-		var { Router,
-	      Route,
-	      IndexRoute,
-	      IndexLink,
-	      hashHistory,
-	      Link } = ReactRouter;
-
-	    var destination = document.querySelector("#main");
-
-	    var Home = React.createClass({
-
-	      componentDidMount: function() {
-            this.initHome();
-          },
-          componentDidUpdate: function() {
-            this.initHome();
-          },
-	      render: function() {
-	          return (
-	            <div>
-					<section id="home" className="home bw-type container">
-
-						<div id="fullscreen" className="background_home parallax">
-							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_Render.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_Render.WebM" type='video/webm' />
-				             </video>
-						</div>
-
-						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
-							<a id="CTA">ALL SHOWS</a>
-						</div>
-
-					</section>
-	            </div>
-	          );
-	        },
-	        initHome: function() {
-
-	        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
-
-		        function introVidPlay() {
-		        	console.log(React.PropTypes)
-					document.getElementById('introVideo').play();
-					document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
-				}
-
-		        }
-		    });
-
-	    var Episodes = React.createClass({
-
-	      render: function() {
-	      	  document.documentElement.style.backgroundImage = 'url("images/CNN_ST_AllEpisodes_JD_R02_01.jpg")';
-	          return (
-	            <div>
-					<section id="episodes" className="container background_episodes">
-						<div className="t-center">
-							<div className="feature-boxes type-3 clearfix">
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="100">
-									<div className="feature-text small-head f-left t-left dark">
-										<a href="#transition-episode" className="scroll"><img src="images/albums/mlk.png" /></a>
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										<span className="red">LAUNCH EPISODE: 1</span>
-									</h4>
-								</div>
-
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="150">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/september_11.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 2
-									</h4>
-								</div>
-
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/kent_state.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 3
-									</h4>
-								</div>
-
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/katrina.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 4
-									</h4>
-								</div>
-							</div>
-
-							<div className="feature-boxes type-3 clearfix">
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="100">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/berlin_wall.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 5
-									</h4>
-								</div>
-
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="150">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/moon_landing.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 6
-									</h4>
-								</div>
-
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/stone_wall.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 7
-									</h4>
-								</div>
-
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
-									<div className="feature-text small-head f-left t-left dark">			
-										<img src="images/albums/battle_of_the_sexes.png" />
-									</div>
-									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 8
-									</h4>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-	          );
-	        }
-	    });
-
 		var App = React.createClass({
 	      render: function() {
 	        return (
 	          <div>
 
-				<nav id="navigation" className="dark-nav">
-					<div className="navigation first-nav">
-						<div className="nav-inner clearfix">
-							<div id="logo_badge" className="logo f-left">
-								<a href="http://www.cnn.com/" target="_blank" className="logo-link">
-									<img src="images/logo_cnn_badge_2up.png" style={{float: 'left'}} data-second-logo="images/logo/logo_condensed_dark.png" alt="CNN Logo" />
+				<nav id="navigation" class="dark-nav">
+
+					<div class="navigation first-nav">
+
+						<div class="nav-inner clearfix">
+
+
+							<div id="logo_badge" class="logo f-left">
+
+								<a href="http://www.cnn.com/" target="_blank" class="logo-link">
+
+										<img src="images/logo_cnn_badge_2up.png" style="float: left;" data-second-logo="images/logo/logo_condensed_dark.png" alt="CNN Logo" />
 								</a>
 							</div>
 
-							<div className="navbar-center navbar-brand"><a href="#home" className="navbar-brand scroll">SOUNDTRACKS</a></div>
 
-							<div className="navbar-right">
-			                    <span className="follow">FOLLOW</span>
-			                    <a href="https://www.facebook.com/CNNOriginalSeries/" target="_blank"><i className="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-			                    <a href="https://twitter.com/cnnoriginals" target="_blank"><i className="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+							<div class="navbar-center navbar-brand"><a href="#home" class="navbar-brand scroll">SOUNDTRACKS</a></div>
 
-			                    <a href="https://www.instagram.com/cnnorigseries/" target="_blank"><i className="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+							<div class="navbar-right">
+			                    <span class="follow">FOLLOW</span>
+			                    <a href="https://www.facebook.com/CNNOriginalSeries/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+			                    <a href="https://twitter.com/cnnoriginals" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+
+			                    <a href="https://www.instagram.com/cnnorigseries/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
 
 			                  </div>
 
-							<a className="mobile-nav-button"><i className="fa fa-bars"></i></a>
 
-							<div className="nav-menu clearfix">
+							<a class="mobile-nav-button"><i class="fa fa-bars"></i></a>
 
-								<ul className="nav uppercase normal big-texts">
 
-									<li><a href="about.html" className="scroll">ABOUT</a></li>
+							<div class="nav-menu clearfix">
 
-									<li className="dropdown-toggle nav-toggle"><Link to="/episodes">EPISODES</Link><span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
+								<ul class="nav uppercase normal big-texts">
 
-										<ul className="dropdown-menu pull-left clearfix">
-											<li><a href="#transition-episode" className="scroll"><span className="red">EPISODE:</span> 1</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 2</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 3</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 4</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 5</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 6</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 7</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 8</a></li>
+									<li><a href="about.html" class="scroll">ABOUT</a></li>
+
+									<li class="dropdown-toggle nav-toggle"><a href="#episodes" class="scroll">EPISODES</a><span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
+
+										<ul class="dropdown-menu pull-left clearfix">
+											<li><a href="#transition-episode" class="scroll"><span class="red">EPISODE:</span> 1</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 2</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 3</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 4</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 5</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 6</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 7</a></li>
+											<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 8</a></li>
 										</ul>
 									</li>
 
@@ -401,7 +289,9 @@
 					</div>
 
 				</nav>
-	          	{this.props.children}
+	          {this.props.children}
+
+	            
 	          </div>
 	        )
 	      }
@@ -411,14 +301,15 @@
 	      <Router history={ReactRouter.hashHistory}>
 	        <Route path="/" component={App}>
 	          <IndexRoute component={Home}/>
+	          <Route path="about" component={About} />
+	          <Route path="map" component={Map} />
 	          <Route path="episodes" component={Episodes} />
+	          <Route path="episode" component={Episode} />
 	     
 	        </Route>
 	      </Router>,
 	      destination
 	    );
-
-	</script>
 
 	<script>
 
@@ -454,6 +345,25 @@
 			$('#apple-player').css("bottom","0");
 		}
 		
+
+		function introVidPlay() {
+			console.log(isMobile)
+			if (!isMobile) {
+				document.getElementById('introVideo').play();
+				document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
+			} else {
+				$("html, body").animate({
+		        	scrollTop: $('#episodes').offset().top
+		    	});
+			}
+		}
+
+		function endIntroVideo() {
+			/*document.getElementById('introVideo').style.display = "none";*/
+		    /*$("html, body").animate({
+		        scrollTop: $('#episodes').offset().top
+		    });*/
+		}
 
 		$(function()
 		{
