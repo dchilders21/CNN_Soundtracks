@@ -35,7 +35,7 @@
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
 
-	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
 	<!-- End Page Styles -->
 
@@ -91,10 +91,12 @@
 		}
 
 		.background_home {
+			/*background-color: #000000;*/
 			/*min-height: 1000px;*/
 		}
 
 		#introVideo { 
+
 		    position: fixed;
 		    top: 50%;
 		    left: 50%;
@@ -117,13 +119,65 @@
 
     	#apple-player {
     		position: fixed;
-    		bottom: -500px;
+    		bottom: -506px;
     		left: 20px;
     	}
 
     	.visible {
     		bottom: 0px;
     	}
+
+    	.feature-boxes {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+
+		.feature-boxes .feature-box {
+			padding-right: 6px;
+			padding-left: 6px;
+		}
+
+		.about-title {
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		#episode-1-video {
+			margin-top: 50px;
+			background-color: #000;
+		}
+
+		.lightcase-icon-close {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			font-size: 50px;
+		}
+
+		#lightcase-overlay {
+			z-index: 10000 !important;
+		}
+
+		#lightcase-loading {
+			z-index: 10001 !important;
+		}
+
+		#lightcase-case {
+			z-index: 10002 !important;
+		}
+
+		.lightcase-icon-close {
+			z-index: 10003 !important;
+		}
+
+		#lightcase-nav {
+			z-index: 10004 !important;
+		}
+
+		#lightcase-nav a[class*='lightcase-icon-'] {
+			z-index: 10004 !important;
+		}
 
 
 	</style>
@@ -154,10 +208,6 @@
 	<div id="apple-player">
 		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="500px" width="100%" frameborder="0"></iframe>
 	</div>
-
-
-
-
 
 	<!-- JS Files -->
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
@@ -211,6 +261,49 @@
 	      Link } = ReactRouter;
 
 	    var destination = document.querySelector("#main");
+
+	    var About = React.createClass({
+	      render: function() {
+	      	document.documentElement.style.backgroundImage = 'url("images/about_bg.jpg")';
+	        return (
+	          <div>
+				
+				<section id="home" className="home bw-type container">
+					<div className="border" style={{marginTop: "100px"}}>
+			                <div className="border col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
+			                <div className="border col-md-5 about-rt">
+			                <div className="t-center" style={{marginTop: "0px", marginBottom: "10px"}}><h2>ABOUT THE SHOW</h2></div>
+			                  <p>Soundtracks is an eight-part series executive-produced by Dwayne Johnson, Dany Garcia, Hiram Garcia,
+							 and Brian Gewirtz that will explore the music tied to iconic moments in history. Every episode will cover a tragedy, triumph, or the start of a movement – and the music that came to define it. From the March on Washington to the
+							riots at Stonewall, the moon landing to Hurricane Katrina – music has played an integral
+							part in celebrating, criticizing, and amplifying these seismic events in our collective
+							history. Soundtracks is produced by Show of Force and Seven Bucks Productions.</p>
+
+			                  <div><p><span className="about-title red">The Assassination of Martin Luther King, JR.</span> The episode explores the music that kept the spirit of the civil rights
+			 movement alive following Martin Luther King, Jr.’s death. </p></div>
+			                  <div><p><span className="about-title red">September 11th.</span> Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
+			                  <div><p><span className="about-title red">Kent State &amp; The Vietnam War </span>Following the killings of four Kent State University students during anti-Vietnam War protests, politically
+			 driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
+			                  <div><p><span className="about-title red">Hurricane Katrina</span>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit
+			 concerts to help ensure the city’s rich traditions survived.</p></div>
+			                  <div><p><span className="about-title red">The Fall of the Berlin Wall</span>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic
+			 and Sun Ra to imagine a cosmic future for mankind. </p></div>
+			                  <div><p><span className="about-title red">The Moon Landing</span>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds
+			 of rebellion. </p></div>
+			                  <div><p><span className="about-title red">The Stonewall Riots</span>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn
+			 and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
+			                  <div><p><span className="about-title red">Battle of the Sexes</span>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s
+			 movement and ushered in music that delivered messages of female empowerment.</p></div>
+			              </div>
+
+			  		</div>
+
+				</section>
+	          </div>
+	        )
+	      }
+	    });
+
 
 	    var Home = React.createClass({
 
@@ -268,7 +361,7 @@
 										<a href="#transition-episode" className="scroll"><img src="images/albums/mlk.png" /></a>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
-										<span className="red">LAUNCH EPISODE: 1</span>
+										<span className="red">EXPLORE EPISODE: 1</span>
 									</h4>
 								</div>
 
@@ -339,9 +432,68 @@
 							</div>
 						</div>
 					</section>
+
+
 				</div>
 	          );
 	        }
+	    });
+
+	    var Episode1 = React.createClass({
+	      render: function() {
+	        return (
+	          <div>
+				<section id="episode-1-video" className="home bw-type container">
+					<div className="parallax">
+						<video id="transitionVideo" autoPlay preload="auto" height="100%" width="100%"
+			              poster="images/CNN_ST_PhotoTransition.jpg">
+			                <source src="video/CNN_ST_PhotoTransition_RENDER.mp4" type='video/mp4' />
+			                <source src="video/CNN_ST_PhotoTransition_RENDER.WebM" type='video/webm' />
+			             </video>
+					</div>
+				</section>
+
+
+				<section id='episode_1' className="type-1 background_ep1">
+					<div className="inner">
+						<div className="row">
+							<div className="col-md-6">
+								<div className="t-center" style={{marginTop: "0px", marginBottom: "10px"}}>
+									<h2>ABOUT THE SHOW</h2>
+								</div>
+								<p>The Assassination of Martin Luther King, Jr The death of Martin Luther King Jr. marked a turning point in the civil rights movement, a moment of reckoning for the African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
+
+								<p>The continued struggle for civil rights has been along and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King Holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
+							</div>
+							<div className="col-md-6">
+								<a href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection"><img src="images/episode_ToC/content_1.png" /></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-lg-12">
+								 <a href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/content_4.png" /></a>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-md-6"></div>
+							<div className="col-md-6"></div>
+						</div>
+						<div className="row">
+							<div className="col-lg-12"></div>
+						</div>
+					</div> 
+				</section>
+	          </div>
+	        )
+	      }
 	    });
 
 		var App = React.createClass({
@@ -358,7 +510,7 @@
 								</a>
 							</div>
 
-							<div className="navbar-center navbar-brand"><a href="#home" className="navbar-brand scroll">SOUNDTRACKS</a></div>
+							<div className="navbar-center navbar-brand"><Link to="/" className="navbar-brand scroll">SOUNDTRACKS</Link></div>
 
 							<div className="navbar-right">
 			                    <span className="follow">FOLLOW</span>
@@ -375,19 +527,19 @@
 
 								<ul className="nav uppercase normal big-texts">
 
-									<li><a href="about.html" className="scroll">ABOUT</a></li>
+									<li><Link to="/about">ABOUT</Link></li>
 
 									<li className="dropdown-toggle nav-toggle"><Link to="/episodes">EPISODES</Link><span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
 
 										<ul className="dropdown-menu pull-left clearfix">
-											<li><a href="#transition-episode" className="scroll"><span className="red">EPISODE:</span> 1</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 2</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 3</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 4</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 5</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 6</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 7</a></li>
-											<li><a href="#" className="ex-link"><span className="red">EPISODE:</span> 8</a></li>
+											<li><Link to="/episode-1"><span className="red">EPISODE: 1</span></Link></li>
+											<li><a href="#">EPISODE: 2</a></li>
+											<li><a href="#">EPISODE: 3</a></li>
+											<li><a href="#">EPISODE: 4</a></li>
+											<li><a href="#">EPISODE: 5</a></li>
+											<li><a href="#">EPISODE: 6</a></li>
+											<li><a href="#">EPISODE: 7</a></li>
+											<li><a href="#">EPISODE: 8</a></li>
 										</ul>
 									</li>
 
@@ -411,7 +563,9 @@
 	      <Router history={ReactRouter.hashHistory}>
 	        <Route path="/" component={App}>
 	          <IndexRoute component={Home}/>
+	          <Route path="about" component={About} />
 	          <Route path="episodes" component={Episodes} />
+	          <Route path="episode-1" component={Episode1} />
 	     
 	        </Route>
 	      </Router>,
@@ -422,60 +576,75 @@
 
 	<script>
 
-		var count = 0;
-		var isMobile;
-
-		$( window ).bind("resize", function(){
-			console.log(' ====== ');
+		function divResize() {
 			ht = $('html').innerHeight();
 			wd = $('html').innerWidth();
-		    // Change the width of the div
+			aspect_ratio = (wd/ht)
 
-		    console.log(wd + ' - width');
-		    console.log(ht + ' - height');
+		    if (aspect_ratio <= 1.3333333333333) {
 
-		    if (ht >= wd) {
-		    	console.log(' Changing Height');
+		    	console.log($("#introVideo").height)
 		    	$("#introVideo").height($('html').innerHeight())
 		    	$('#introVideo').css("width","auto");
+		    	console.log(' ========= ');
+		    	//$('#introVideo').setAttribute('height', ht);
+				//$('#introVideo').setAttribute('width ', 'auto');
 		    	
 		    } else {
-		    	console.log(' Changing Width');
-
+		    	console.log('there')
 		    	$("#introVideo").width($('html').innerWidth())
 		    	$('#introVideo').css("height","auto");
 		    }
+		}
+
+		$( window ).bind("resize", function(){
+			divResize();
 
 		});
 
 		function showPlayer() {
-			console.log(' =========== ');
 			console.log($('#apple-player'))
 			$('#apple-player').css("bottom","0");
 		}
+
+		$( document ).ready(function() {
+			//console.log(document.getElementById('fullscreen'));
+			//document.getElementById('introVideo').style.height;
+			//console.log($("#fullscreen"))
+			
+		    //divResize();
+
+		    $("#fullscreen").load(function() {
+		    	console.log(' ======= ')
+
+			// Do stuff
+			console.log(document.getElementById('fullscreen'));
+			console.log($("#fullscreen"))
+
+			});
+		});
 		
 
 		$(function()
 		{
 
-			isMobile = detectmob();
+			
 
-			if (isMobile) {
-				/*document.getElementById('introVideo').style.display = "none";*/
-			} 
+			//divResize();
 
 
-			$('.scroll-pane').jScrollPane(
+			/*$('.scroll-pane').jScrollPane(
 				{
 					verticalDragMinHeight: 84,
 					verticalDragMaxHeight: 84,
 					horizontalDragMinWidth: 44,
 					horizontalDragMaxWidth: 44
-				});
+				});*/
 		});
 
 		jQuery(document).ready(function($) {
-		$('a[data-rel^=lightcase]').lightcase();
+			console.log('READY')
+			$('a[data-rel^=lightcase]').lightcase();
 		});
 
 		function detectmob() {
