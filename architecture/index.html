@@ -2,10 +2,10 @@
 <html>
 <head>
 
-	<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
-	 <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-	 <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+	<script src="https://npmcdn.com/react@latest/dist/react-with-addons.js"></script>
+	 <script src="https://npmcdn.com/react-dom@latest/dist/react-dom.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+	<script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
 
     <meta charset="utf-8" />
     <title>CNN Soundtracks</title>
@@ -145,13 +145,13 @@
     	}
 
     	.feature-boxes {
-			padding-left: 16px;
-			padding-right: 16px;
+			padding-left: 24px;
+			padding-right: 24px;
 		}
 
 		.feature-boxes .feature-box {
-			padding-right: 6px;
-			padding-left: 6px;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
 
 		.about-title {
@@ -199,6 +199,34 @@
 		#fullscreen {
 			min-height: 100vh;
 		}
+
+		.album-collapse {
+			/*-webkit-transition: all 1s;
+		    -moz-transition: all 1s;
+		    -o-transition: all 1s;
+		    transition: all 1s;
+			transform: all .2s ease-in-out;*/
+
+			-webkit-transition: -webkit-transform 0.4s;
+    		transition: transform 0.4s;
+		}
+
+		.album-collapse:hover { 
+
+			-webkit-transform: scale(1.1);
+		    -moz-transform: scale(1.1);
+		    -o-transform: scale(1.1);
+		    transform: scale(1.1); 
+		}
+
+		#CTA {
+			cursor: pointer;
+		}
+
+		.fa-2x {
+			font-size: 1.5em;
+		}
+
 
 	</style>
  
@@ -327,6 +355,9 @@
 
 
 	    var Home = React.createClass({
+	      contextTypes: {
+			router: React.PropTypes.object.isRequired,
+		  },
 
 	      componentDidMount: function() {
             this.initHome();
@@ -356,12 +387,17 @@
 	          );
 	        },
 	        initHome: function() {
-
+	        	var me = this;
 	        	window.divResize();
 	        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
+	        	function endIntroVideo(){
+	        		console.log(me.context.router);
+	        		me.context.router.push('/episodes')
+
+				}
+
 		        function introVidPlay() {
-		        	console.log(React.PropTypes)
 					document.getElementById('introVideo').play();
 					document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
 				}
@@ -380,7 +416,7 @@
 							<div className="feature-boxes type-3 clearfix">
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="100">
 									<div className="feature-text small-head f-left t-left dark">
-										<a href="episode_1.html" className="scroll"><img src="images/albums/mlk.png" /></a>
+										<Link to="/episode-1"><img src="images/albums/mlk.png" className="album-collapse"/></Link>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										<span className="red">EXPLORE EPISODE: 1</span>
@@ -462,6 +498,24 @@
 	    });
 
 	    var Episode1 = React.createClass({
+	      componentDidMount() {
+
+	      		var script = document.createElement("script");
+				script.type = "text/javascript"
+		        script.text = "var vhm_widget_settings = { eventId: 3435375, colorScheme: 'cnn_music_trivia_listing', width: '100%', height: '100%', thumbSize: 'orig'};";
+
+		        $('#scriptContainer').append(script);
+		    	var source_script =  document.createElement("script");
+		        source_script.type = "text/javascript"
+		        source_script.src = "//vhmengine.com/widgets/qawidget.js.jsp";
+		        $('#scriptContainer').append(source_script);
+    			$('#scriptContainer').append(source_script);
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+			
+			});
+		  },
 	      render: function() {
 	        return (
 	          <div>
@@ -481,22 +535,15 @@
 						<div className="row">
 							<div className="col-md-6">
 								<div className="t-center" style={{marginTop: "0px", marginBottom: "10px"}}>
-									<h2>ABOUT THE SHOW</h2>
+									<h2>ABOUT THE EPISODE</h2>
 								</div>
-								<p>The Assassination of Martin Luther King, Jr The death of Martin Luther King Jr. marked a turning point in the civil rights movement, a moment of reckoning for the African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
+								<p>The death of Martin Luther King, Jr. marked a turning point in the Civil Rights Movement, a moment of reckoning for African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest songs of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
 
-								<p>The continued struggle for civil rights has been along and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King Holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
+								<p>The continued struggle for civil rights has been a long and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King national holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter Movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
 							</div>
 							<div className="col-md-6">
-								<a href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection"><img src="images/episode_ToC/content_1.png" /></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-								<a href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+								<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" ><img src="images/episode_ToC/content_1.png" /></a>
+								
 							</div>
 						</div>
 						<div className="row">
@@ -505,7 +552,9 @@
 							</div>
 						</div>
 						<div className="row">
-							<div className="col-md-6"></div>
+							<div className="col-md-6">
+								<div className="tm-embed-container" id="scriptContainer"></div>
+							</div>
 							<div className="col-md-6"></div>
 						</div>
 						<div className="row">
@@ -527,7 +576,7 @@
 					<div className="navigation first-nav">
 						<div className="nav-inner clearfix">
 							<div id="logo_badge" className="logo f-left">
-								<a href="http://www.cnn.com/" target="_blank" className="logo-link">
+								<a href="http://www.cnn.com/shows/soundtracks" target="_blank" className="logo-link">
 									<img src="images/logo_cnn_badge_2up.png" style={{float: 'left'}} data-second-logo="images/logo/logo_condensed_dark.png" alt="CNN Logo" />
 								</a>
 							</div>
@@ -554,7 +603,7 @@
 									<li className="dropdown-toggle nav-toggle"><Link to="/episodes">EPISODES</Link><span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
 
 										<ul className="dropdown-menu pull-left clearfix">
-											<li><a href="episode_1.html"><span className="red">EPISODE: 1</span></a></li>
+											<li><Link to="/episode-1"><span className="red">EPISODE: 1</span></Link></li>
 											<li><a>EPISODE: 2</a></li>
 											<li><a>EPISODE: 3</a></li>
 											<li><a>EPISODE: 4</a></li>
@@ -585,9 +634,9 @@
 	      <Router history={ReactRouter.hashHistory}>
 	        <Route path="/" component={App}>
 	          <IndexRoute component={Home}/>
-	          <Route path="about" component={About} />
-	          <Route path="episodes" component={Episodes} />
-	          <Route path="episode-1" component={Episode1} />
+	          <Route path="/about" component={About} />
+	          <Route path="/episodes" component={Episodes} />
+	          <Route path="/episode-1" component={Episode1} />
 	     
 	        </Route>
 	      </Router>,
