@@ -118,13 +118,30 @@
     	}
 
     	#apple-player {
+
+    		-webkit-transition: bottom 1s;
+		    -moz-transition: bottom 1s;
+		    -o-transition: bottom 1s;
+		    transition: bottom 1s;
+
     		position: fixed;
-    		bottom: -506px;
     		left: 20px;
     	}
 
-    	.visible {
-    		bottom: 0px;
+    	#apple-close {
+    		width: 20px;
+    		height: 20px;
+    		position: absolute;
+    		top: 3px;
+    		left: 4px;
+    	}
+
+    	.move-down {
+    		bottom: -506px;
+    	}
+
+    	.move-up {
+    		bottom: -6px;
     	}
 
     	.feature-boxes {
@@ -224,17 +241,17 @@
 
 						<li><a href="index.html#/about">ABOUT</a></li>
 
-						<li class="dropdown-toggle nav-toggle"><a to="index.html#/episodes">EPISODES</a><span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
+						<li class="dropdown-toggle nav-toggle"><a href="index.html#/episodes">EPISODES</a><span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
 
 							<ul class="dropdown-menu pull-left clearfix">
 								<li><a to="/episode-1"><span class="red">EPISODE: 1</span></a></li>
-								<li><a href="#">EPISODE: 2</a></li>
-								<li><a href="#">EPISODE: 3</a></li>
-								<li><a href="#">EPISODE: 4</a></li>
-								<li><a href="#">EPISODE: 5</a></li>
-								<li><a href="#">EPISODE: 6</a></li>
-								<li><a href="#">EPISODE: 7</a></li>
-								<li><a href="#">EPISODE: 8</a></li>
+								<li><a>EPISODE: 2</a></li>
+								<li><a>EPISODE: 3</a></li>
+								<li><a>EPISODE: 4</a></li>
+								<li><a>EPISODE: 5</a></li>
+								<li><a>EPISODE: 6</a></li>
+								<li><a>EPISODE: 7</a></li>
+								<li><a>EPISODE: 8</a></li>
 							</ul>
 						</li>
 
@@ -264,9 +281,9 @@
 
 	<section id='episode_1' class="type-1 background_ep1">
 		<div class="inner">
-			<div class="row">
+			<div class="row" style="margin-top: 100px">
 				<div class="col-md-6">
-					<div class="t-center" style={{marginTop: "0px", marginBottom: "10px"}}>
+					<div class="t-center" style="margin-top: 0px; margin-bottom: 10px">
 						<h2>ABOUT THE SHOW</h2>
 					</div>
 					<p>The Assassination of Martin Luther King, Jr The death of Martin Luther King Jr. marked a turning point in the civil rights movement, a moment of reckoning for the African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
@@ -309,15 +326,6 @@
 
 	</div>
 
-
-	<div id="apple-badge" onclick="showPlayer()">
-		<img src="images/itunes.png" />
-	</div>	
-
-	<div id="apple-player">
-		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="500px" width="100%" frameborder="0"></iframe>
-	</div>
-
 	<!-- Footer -->
 	<footer class="big-footer fullwidth t-left">
 		<!-- Footer Inner -->
@@ -354,6 +362,15 @@
 		<!-- End Footer, Bottom -->
 	</footer>
 	<!-- End Footer -->
+
+	<div id="apple-badge" onclick="showPlayer()">
+		<img src="images/itunes.png" />
+	</div>	
+
+	<div id="apple-player" class="move-down">
+		<div id="apple-close" onclick="closePlayer()"><img src="images/close.png" /></div>
+		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="500px" width="100%" frameborder="0"></iframe>
+	</div>
 
 	<!-- JS Files -->
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
@@ -427,57 +444,23 @@
 		});
 
 		function showPlayer() {
-			console.log($('#apple-player'))
-			$('#apple-player').css("bottom","0");
+			console.log(' ======== ');
+			$('#apple-player').removeClass('move-down');
+			$('#apple-player').addClass('move-up');
+			//$('#apple-player').css("bottom","-6px");
 		}
 
-		$( document ).ready(function() {
-			//console.log(document.getElementById('fullscreen'));
-			//document.getElementById('introVideo').style.height;
-			//console.log($("#fullscreen"))
-			
-		    //divResize();
-
-		    $("#fullscreen").load(function() {
-		    	console.log(' ======= ')
-
-			// Do stuff
-			console.log(document.getElementById('fullscreen'));
-			console.log($("#fullscreen"))
-
-			});
-		});
-		
-
-		$(function()
-		{
-
-			
-
-			//divResize();
-
-
-			/*$('.scroll-pane').jScrollPane(
-				{
-					verticalDragMinHeight: 84,
-					verticalDragMaxHeight: 84,
-					horizontalDragMinWidth: 44,
-					horizontalDragMaxWidth: 44
-				});*/
-		});
+		function closePlayer() {
+			console.log(' +++++++++ ');
+			$('#apple-player').removeClass('move-up');
+			$('#apple-player').addClass('move-down');
+			//$('#apple-player').css("bottom","-506");
+		}
 
 		jQuery(document).ready(function($) {
-			console.log('READY')
 			$('a[data-rel^=lightcase]').lightcase();
 		});
 
-		function detectmob() {
-		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-		     return true;
-		   } else {
-		     return false;
-		   }
-		}
 
 	</script>
 	<!-- End JS Files -->

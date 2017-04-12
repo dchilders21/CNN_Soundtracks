@@ -27,6 +27,10 @@ body {
 	position: relative;
 }
 
+.pre-soundtracks {
+	background: url('../images/CNN_ST_PreLoaderGIF_JD_R01_01.gif');
+}
+
 
 /********************************************************/
 /*                    Navigation bar                    */

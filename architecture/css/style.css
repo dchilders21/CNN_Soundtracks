@@ -2323,7 +2323,7 @@
 /* Home Extra Note For Black White Version */
 
 	.bw-type .home-extra-note{
-		top:calc(100% - 100px);
+		top: 75%;
 	}
 
 /* Home Boxes Version */	

@@ -118,13 +118,30 @@
     	}
 
     	#apple-player {
+
+    		-webkit-transition: bottom 1s;
+		    -moz-transition: bottom 1s;
+		    -o-transition: bottom 1s;
+		    transition: bottom 1s;
+
     		position: fixed;
-    		bottom: -506px;
     		left: 20px;
     	}
 
-    	.visible {
-    		bottom: 0px;
+    	#apple-close {
+    		width: 20px;
+    		height: 20px;
+    		position: absolute;
+    		top: 3px;
+    		left: 4px;
+    	}
+
+    	.move-down {
+    		bottom: -506px;
+    	}
+
+    	.move-up {
+    		bottom: -6px;
     	}
 
     	.feature-boxes {
@@ -179,6 +196,9 @@
 			z-index: 10004 !important;
 		}
 
+		#fullscreen {
+			min-height: 100vh;
+		}
 
 	</style>
  
@@ -205,7 +225,8 @@
 		<img src="images/itunes.png" />
 	</div>	
 
-	<div id="apple-player">
+	<div id="apple-player" class="move-down">
+		<div id="apple-close" onclick="closePlayer()"><img src="images/close.png" /></div>
 		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="500px" width="100%" frameborder="0"></iframe>
 	</div>
 
@@ -335,7 +356,7 @@
 	          );
 	        },
 	        initHome: function() {
-	        
+
 	        	window.divResize();
 	        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
@@ -359,7 +380,7 @@
 							<div className="feature-boxes type-3 clearfix">
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="100">
 									<div className="feature-text small-head f-left t-left dark">
-										<a href="#transition-episode" className="scroll"><img src="images/albums/mlk.png" /></a>
+										<a href="episode_1.html" className="scroll"><img src="images/albums/mlk.png" /></a>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										<span className="red">EXPLORE EPISODE: 1</span>
@@ -511,7 +532,7 @@
 								</a>
 							</div>
 
-							<div className="navbar-center navbar-brand"><Link to="/" className="navbar-brand scroll">SOUNDTRACKS</Link></div>
+							<div className="navbar-center navbar-brand"><Link to="/" className="navbar-brand">SOUNDTRACKS</Link></div>
 
 							<div className="navbar-right">
 			                    <span className="follow">FOLLOW</span>
@@ -534,13 +555,13 @@
 
 										<ul className="dropdown-menu pull-left clearfix">
 											<li><a href="episode_1.html"><span className="red">EPISODE: 1</span></a></li>
-											<li><a href="#">EPISODE: 2</a></li>
-											<li><a href="#">EPISODE: 3</a></li>
-											<li><a href="#">EPISODE: 4</a></li>
-											<li><a href="#">EPISODE: 5</a></li>
-											<li><a href="#">EPISODE: 6</a></li>
-											<li><a href="#">EPISODE: 7</a></li>
-											<li><a href="#">EPISODE: 8</a></li>
+											<li><a>EPISODE: 2</a></li>
+											<li><a>EPISODE: 3</a></li>
+											<li><a>EPISODE: 4</a></li>
+											<li><a>EPISODE: 5</a></li>
+											<li><a>EPISODE: 6</a></li>
+											<li><a>EPISODE: 7</a></li>
+											<li><a>EPISODE: 8</a></li>
 										</ul>
 									</li>
 
@@ -584,15 +605,11 @@
 
 		    if (aspect_ratio <= 1.3333333333333) {
 
-		    	console.log(document.getElementById('introVideo'))
 		    	$("#introVideo").height($('html').innerHeight())
 		    	$('#introVideo').css("width","auto");
-		    	console.log(' ========= ');
-		    	//$('#introVideo').setAttribute('height', ht);
-				//$('#introVideo').setAttribute('width ', 'auto');
 		    	
 		    } else {
-		    	console.log('there')
+
 		    	$("#introVideo").width($('html').innerWidth())
 		    	$('#introVideo').css("height","auto");
 		    }
@@ -604,24 +621,18 @@
 		});
 
 		function showPlayer() {
-			console.log($('#apple-player'))
-			$('#apple-player').css("bottom","0");
+			console.log(' ======== ');
+			$('#apple-player').removeClass('move-down');
+			$('#apple-player').addClass('move-up');
+			//$('#apple-player').css("bottom","-6px");
 		}
 
-		/*document.addEventListener("DOMContentLoaded", function(event) {
-		    console.log("DOM fully loaded and parsed");
-		    console.log(document.getElementById('introVideo'))
-			console.log($("#introVideo"))
-		});
-
-	
-
-		jQuery(document).ready(function($) {
-			console.log("jquery ready");
-			console.log(document.getElementById('introVideo'))
-			console.log($("#introVideo"))
-			//$('a[data-rel^=lightcase]').lightcase();
-		});*/
+		function closePlayer() {
+			console.log(' +++++++++ ');
+			$('#apple-player').removeClass('move-up');
+			$('#apple-player').addClass('move-down');
+			//$('#apple-player').css("bottom","-506");
+		}
 
 
 	</script>
