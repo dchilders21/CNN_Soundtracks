@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+	 <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	 <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+
+    <meta charset="utf-8" />
+    <title>CNN Soundtracks</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/CNN_Favicon.png" />
+		
+	<!-- CSS Files -->
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/socials.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/cubeportfolio.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/settings-ie8.css" />
+	<link rel="stylesheet" href="css/settings.css" />
+
+	<!-- Page Styles -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/backgrounds.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
+	<!-- End Page Styles -->
+
+	<!-- Page Layout Color, night or dark -->
+	<link id="changeable_tone" rel="stylesheet" href="css/page_tones/dark.css" />
+	<!-- End Page Layout Color -->
+
+	<!-- Page Elements Color -->
+	<link id="changeable_color" rel="stylesheet" href="css/colors/red.css" />
+	<!-- End Page Elements Color -->
+
+	<!-- Page Fonts / Pacifico-->
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<!-- Raleway-->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,,200,300,600,700' rel='stylesheet' type='text/css'>
+	<!-- Oswald-->
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!-- End CSS Files -->
+	<style>
+
+
+		.episode-mg {
+			margin-top: 50px;
+			margin-bottom: 362px;
+		}
+
+		.timeline-ftr {
+			/*background-image:url(images/CNN_ST_EpisodeTOC_JD_R04_01_footer.png);*/
+			width: 100%;
+			height: 363px;
+			background-position: center bottom;
+		}
+
+		#logo_badge {
+			margin-left: 45px;
+			z-index: 100000000;
+		}
+
+		.row {
+			margin: 0;
+		}
+
+		@media (max-width: 768px) {
+
+			.navbar-right {
+				display: none;
+			}
+
+			.navbar-center {
+				margin-left: 14px;
+			}
+		}
+
+		.background_home {
+			/*background-color: #000000;*/
+			/*min-height: 1000px;*/
+		}
+
+		#introVideo { 
+
+		    position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    transform: translateX(-50%) translateY(-50%);
+
+		    /*min-width: 100%;
+		    min-height: 100%;
+		    width: auto;
+		    height: auto;*/
+		    z-index: -100;
+    	}
+
+    	#apple-badge {
+    		position: fixed;
+    		bottom: 40px;
+    		left: 40px;
+    		width: 110px;
+    		height: 40px;
+    	}
+
+    	#apple-player {
+    		position: fixed;
+    		bottom: -506px;
+    		left: 20px;
+    	}
+
+    	.visible {
+    		bottom: 0px;
+    	}
+
+    	.feature-boxes {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+
+		.feature-boxes .feature-box {
+			padding-right: 6px;
+			padding-left: 6px;
+		}
+
+		.about-title {
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		#episode-1-video {
+			margin-top: 50px;
+			background-color: #000;
+		}
+
+		.lightcase-icon-close {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			font-size: 50px;
+		}
+
+		#lightcase-overlay {
+			z-index: 10000 !important;
+		}
+
+		#lightcase-loading {
+			z-index: 10001 !important;
+		}
+
+		#lightcase-case {
+			z-index: 10002 !important;
+		}
+
+		.lightcase-icon-close {
+			z-index: 10003 !important;
+		}
+
+		#lightcase-nav {
+			z-index: 10004 !important;
+		}
+
+		#lightcase-nav a[class*='lightcase-icon-'] {
+			z-index: 10004 !important;
+		}
+
+
+	</style>
+ 
+</head>
+
+<!-- Body Start -->
+<body>
+
+	<!-- Page Loader -->
+	<article id="pageloader" class="dark-loader">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</article>
+
+	<nav id="navigation" class="dark-nav">
+		<div class="navigation first-nav">
+			<div class="nav-inner clearfix">
+				<div id="logo_badge" class="logo f-left">
+					<a href="http://www.cnn.com/" target="_blank" class="logo-link">
+						<img src="images/logo_cnn_badge_2up.png" style={{float: 'left'}} data-second-logo="images/logo/logo_condensed_dark.png" alt="CNN Logo" />
+					</a>
+				</div>
+
+				<div class="navbar-center navbar-brand"><a href="index.html" class="navbar-brand scroll">SOUNDTRACKS</a></div>
+
+				<div class="navbar-right">
+                    <span class="follow">FOLLOW</span>
+                    <a href="https://www.facebook.com/CNNOriginalSeries/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/cnnoriginals" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+
+                    <a href="https://www.instagram.com/cnnorigseries/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+
+                  </div>
+
+				<a class="mobile-nav-button"><i class="fa fa-bars"></i></a>
+
+				<div class="nav-menu clearfix">
+
+					<ul class="nav uppercase normal big-texts">
+
+						<li><a href="index.html#/about">ABOUT</a></li>
+
+						<li class="dropdown-toggle nav-toggle"><a to="index.html#/episodes">EPISODES</a><span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
+
+							<ul class="dropdown-menu pull-left clearfix">
+								<li><a to="/episode-1"><span class="red">EPISODE: 1</span></a></li>
+								<li><a href="#">EPISODE: 2</a></li>
+								<li><a href="#">EPISODE: 3</a></li>
+								<li><a href="#">EPISODE: 4</a></li>
+								<li><a href="#">EPISODE: 5</a></li>
+								<li><a href="#">EPISODE: 6</a></li>
+								<li><a href="#">EPISODE: 7</a></li>
+								<li><a href="#">EPISODE: 8</a></li>
+							</ul>
+						</li>
+
+					</ul>
+
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</nav>
+
+	<div id="main">
+
+	<section id="episode-1-video" class="home bw-type container">
+		<div class="parallax">
+			<video id="transitionVideo" autoPlay preload="auto" height="100%" width="100%"
+              poster="images/CNN_ST_PhotoTransition.jpg">
+                <source src="video/CNN_ST_PhotoTransition_RENDER.mp4" type='video/mp4' />
+                <source src="video/CNN_ST_PhotoTransition_RENDER.WebM" type='video/webm' />
+             </video>
+		</div>
+	</section>
+
+
+	<section id='episode_1' class="type-1 background_ep1">
+		<div class="inner">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="t-center" style={{marginTop: "0px", marginBottom: "10px"}}>
+						<h2>ABOUT THE SHOW</h2>
+					</div>
+					<p>The Assassination of Martin Luther King, Jr The death of Martin Luther King Jr. marked a turning point in the civil rights movement, a moment of reckoning for the African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
+
+					<p>The continued struggle for civil rights has been along and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King Holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
+				</div>
+				<div class="col-md-6">
+					<a href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection"><img src="images/episode_ToC/content_1.png" /></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+					<a href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					 <a href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/content_4.png" /></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6" style="margin-top: 50px;"><script type="text/javascript">var vhm_widget_settings = { eventId: 3435375, colorScheme: 'cnn_music_trivia_listing', width: '100%', height: '100%', thumbSize: 'orig'};</script>
+<script type="text/javascript" src="//vhmengine.com/widgets/qawidget.js.jsp"></script>
+				</div>
+				<div class="col-md-6">
+					<script type="text/javascript">var vhm_widget_settings = { eventId: 3435372, colorScheme: 'cnn_music_poll', width: '100%', height: '100%', thumbSize: 'orig'};</script>
+<script type="text/javascript" src="//vhmengine.com/widgets/qawidget.js.jsp"></script>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 280px">
+				<div class="col-lg-12">
+					 <a href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/content_6.png" /></a>
+				</div>
+			</div>
+		</div> 
+	</section>
+
+	</div>
+
+
+	<div id="apple-badge" onclick="showPlayer()">
+		<img src="images/itunes.png" />
+	</div>	
+
+	<div id="apple-player">
+		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="500px" width="100%" frameborder="0"></iframe>
+	</div>
+
+	<!-- Footer -->
+	<footer class="big-footer fullwidth t-left">
+		<!-- Footer Inner -->
+		<div class="clearfix footer_inner">
+
+			
+			<div class="timeline-ftr">
+					<img src="images/CNN_ST_EpisodeTOC_JD_R04_01_footer_r2.png" />
+				</div>
+			
+
+		</div>
+		<!-- End Footer Inner -->
+
+		<!-- Bottom -->
+		<div class="footer_bottom">
+			<!-- Bottom Inner -->
+			<div class="boxed clearfix">
+				<!-- Left, Copyright Area -->
+				<div class="left f-left">
+					<!-- Text and Link -->
+					<p class="copyright">
+					</p>
+				</div>
+				<!-- End Left -->
+				<!-- Right, Socials -->
+				<div class="right f-right">
+					
+				</div>
+				<!-- End Right -->
+			</div>
+			<!-- End Inner -->
+		</div>
+		<!-- End Footer, Bottom -->
+	</footer>
+	<!-- End Footer -->
+
+	<!-- JS Files -->
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/waypoint.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+	<script type="text/javascript" src="js/jquery.cubeportfolio.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<!-- Revolution Slider -->
+	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/rev_slider/rev_plugins.js"></script>
+	<!-- Contact Form -->
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/contact-form.js"></script>
+	<!-- Twitter -->
+	<script type="text/javascript" src="js/tweecool.min.js"></script>
+	<script type="text/javascript" src="js/tweecool.js"></script>
+	<!-- Page Plugins -->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<!-- Portfolio Plugins -->
+	<script type="text/javascript" src="js/portfolio.js"></script>
+	<!-- Theme Panel -->
+	<!-- <script type="text/javascript" src="theme_panel/themepanel.js"></script> -->
+
+	<script type="text/javascript" src="js/lightcase.js"></script>
+
+	<!-- JS Scrollpane -->
+	<script type="text/javascript" src="js/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.js"></script>
+	<script type="text/javascript" src="js/jscrollpane/mwheelIntent.js"></script>
+
+
+	<script>
+
+		function divResize() {
+			ht = $('html').innerHeight();
+			wd = $('html').innerWidth();
+			aspect_ratio = (wd/ht)
+
+		    if (aspect_ratio <= 1.3333333333333) {
+
+		    	console.log($("#introVideo").height)
+		    	$("#introVideo").height($('html').innerHeight())
+		    	$('#introVideo').css("width","auto");
+		    	console.log(' ========= ');
+		    	//$('#introVideo').setAttribute('height', ht);
+				//$('#introVideo').setAttribute('width ', 'auto');
+		    	
+		    } else {
+		    	console.log('there')
+		    	$("#introVideo").width($('html').innerWidth())
+		    	$('#introVideo').css("height","auto");
+		    }
+		}
+
+		$( window ).bind("resize", function(){
+			divResize();
+
+		});
+
+		function showPlayer() {
+			console.log($('#apple-player'))
+			$('#apple-player').css("bottom","0");
+		}
+
+		$( document ).ready(function() {
+			//console.log(document.getElementById('fullscreen'));
+			//document.getElementById('introVideo').style.height;
+			//console.log($("#fullscreen"))
+			
+		    //divResize();
+
+		    $("#fullscreen").load(function() {
+		    	console.log(' ======= ')
+
+			// Do stuff
+			console.log(document.getElementById('fullscreen'));
+			console.log($("#fullscreen"))
+
+			});
+		});
+		
+
+		$(function()
+		{
+
+			
+
+			//divResize();
+
+
+			/*$('.scroll-pane').jScrollPane(
+				{
+					verticalDragMinHeight: 84,
+					verticalDragMaxHeight: 84,
+					horizontalDragMinWidth: 44,
+					horizontalDragMaxWidth: 44
+				});*/
+		});
+
+		jQuery(document).ready(function($) {
+			console.log('READY')
+			$('a[data-rel^=lightcase]').lightcase();
+		});
+
+		function detectmob() {
+		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+		     return true;
+		   } else {
+		     return false;
+		   }
+		}
+
+	</script>
+	<!-- End JS Files -->
+
+</body>
+<!-- Body End -->
+</html>

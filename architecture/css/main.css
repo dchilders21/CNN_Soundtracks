@@ -319,12 +319,13 @@ h2 {
 
 h3 {
 	font-size: 14px;
-	margin-top: 16px;
+	margin-top: 24px;
 }
 
 .about-rt {
 	width: 37.66666667%;
 	text-align: left;
+	margin-bottom: 75px;
 }
 
 .about-lt {
