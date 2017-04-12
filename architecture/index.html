@@ -335,7 +335,8 @@
 	          );
 	        },
 	        initHome: function() {
-
+	        
+	        	window.divResize();
 	        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
 		        function introVidPlay() {
@@ -583,7 +584,7 @@
 
 		    if (aspect_ratio <= 1.3333333333333) {
 
-		    	console.log($("#introVideo").height)
+		    	console.log(document.getElementById('introVideo'))
 		    	$("#introVideo").height($('html').innerHeight())
 		    	$('#introVideo').css("width","auto");
 		    	console.log(' ========= ');
@@ -607,53 +608,21 @@
 			$('#apple-player').css("bottom","0");
 		}
 
-		$( document ).ready(function() {
-			//console.log(document.getElementById('fullscreen'));
-			//document.getElementById('introVideo').style.height;
-			//console.log($("#fullscreen"))
-			
-		    //divResize();
-
-		    $("#fullscreen").load(function() {
-		    	console.log(' ======= ')
-
-			// Do stuff
-			console.log(document.getElementById('fullscreen'));
-			console.log($("#fullscreen"))
-
-			});
+		/*document.addEventListener("DOMContentLoaded", function(event) {
+		    console.log("DOM fully loaded and parsed");
+		    console.log(document.getElementById('introVideo'))
+			console.log($("#introVideo"))
 		});
-		
 
-		$(function()
-		{
-
-			
-
-			//divResize();
-
-
-			/*$('.scroll-pane').jScrollPane(
-				{
-					verticalDragMinHeight: 84,
-					verticalDragMaxHeight: 84,
-					horizontalDragMinWidth: 44,
-					horizontalDragMaxWidth: 44
-				});*/
-		});
+	
 
 		jQuery(document).ready(function($) {
-			console.log('READY')
-			$('a[data-rel^=lightcase]').lightcase();
-		});
+			console.log("jquery ready");
+			console.log(document.getElementById('introVideo'))
+			console.log($("#introVideo"))
+			//$('a[data-rel^=lightcase]').lightcase();
+		});*/
 
-		function detectmob() {
-		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-		     return true;
-		   } else {
-		     return false;
-		   }
-		}
 
 	</script>
 	<!-- End JS Files -->
