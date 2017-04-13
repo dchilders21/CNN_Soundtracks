@@ -900,7 +900,6 @@
 	.pattern-black:before{
 		background: url(../images/pattern-black.png) repeat;
 		content:'';
-		width: 100%;
 		height: 100%;
 		top:0;
 		left:0;
@@ -6546,14 +6545,14 @@
 /* Footer Bigger Type */
 
 	footer.big-footer {
-		margin-top: -474px;
+		/*margin-top: -449px;*/
 		width: 100%;
 		height: auto;
 		padding:0;
 	}
 
 	footer.big-footer .footer_inner {
-		padding-bottom: 50px;
+		/*padding-bottom: 50px;*/
 		/*padding:60px 0 50px;*/
 	}
 
