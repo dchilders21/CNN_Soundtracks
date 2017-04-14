@@ -35,6 +35,8 @@
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
 
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
 	<!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
 	<!-- End Page Styles -->
@@ -53,245 +55,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,,200,300,600,700' rel='stylesheet' type='text/css'>
 	<!-- Oswald-->
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-
-	<!-- End CSS Files -->
-	<style>
-
-
-		.episode-mg {
-			margin-top: 50px;
-			margin-bottom: 362px;
-		}
-
-		.timeline-ftr {
-			/*background-image:url(images/CNN_ST_EpisodeTOC_JD_R04_01_footer.png);*/
-			width: 100%;
-			height: 363px;
-			background-position: center bottom;
-		}
-
-		#logo_badge {
-			margin-left: 45px;
-			z-index: 100000000;
-		}
-
-		.row {
-			margin: 0;
-		}
-
-		@media (max-width: 768px) {
-
-			.navbar-right {
-				display: none;
-			}
-
-			.navbar-center {
-				margin-left: 14px;
-			}
-		}
-
-		.background_home {
-			/*background-color: #000000;*/
-			/*min-height: 1000px;*/
-		}
-
-		#introVideo { 
-
-		    position: fixed;
-		    top: 50%;
-		    left: 50%;
-		    transform: translateX(-50%) translateY(-50%);
-
-		    /*min-width: 100%;
-		    min-height: 100%;
-		    width: auto;
-		    height: auto;*/
-		    z-index: -100;
-    	}
-
-    	#apple-badge {
-    		position: fixed;
-    		bottom: 40px;
-    		left: 40px;
-    		width: 110px;
-    		height: 40px;
-    	}
-
-    	#apple-player {
-
-    		-webkit-transition: bottom 1s;
-		    -moz-transition: bottom 1s;
-		    -o-transition: bottom 1s;
-		    transition: bottom 1s;
-
-    		position: fixed;
-    		left: 20px;
-    	}
-
-    	#apple-close {
-    		width: 20px;
-    		height: 20px;
-    		position: absolute;
-    		top: 3px;
-    		left: 4px;
-    	}
-
-    	.move-down {
-    		bottom: -506px;
-    	}
-
-    	.move-up {
-    		bottom: -6px;
-    	}
-
-    	.feature-boxes {
-			padding-left: 24px;
-			padding-right: 24px;
-		}
-
-		.feature-boxes .feature-box {
-			padding-right: 10px;
-			padding-left: 10px;
-		}
-
-		.about-title {
-			font-size: 14px;
-			font-weight: bold;
-			text-transform: uppercase;
-		}
-
-		#episode-1-video {
-			margin-top: 50px;
-			background-color: #000;
-		}
-
-		.lightcase-icon-close {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			font-size: 50px;
-		}
-
-		#lightcase-overlay {
-			z-index: 10000 !important;
-		}
-
-		#lightcase-loading {
-			z-index: 10001 !important;
-		}
-
-		#lightcase-case {
-			z-index: 10002 !important;
-		}
-
-		.lightcase-icon-close {
-			z-index: 10003 !important;
-		}
-
-		#lightcase-nav {
-			z-index: 10004 !important;
-		}
-
-		#lightcase-nav a[class*='lightcase-icon-'] {
-			z-index: 10004 !important;
-		}
-
-		#fullscreen {
-			min-height: 100vh;
-		}
-
-		.album-collapse {
-			/*-webkit-transition: all 1s;
-		    -moz-transition: all 1s;
-		    -o-transition: all 1s;
-		    transition: all 1s;
-			transform: all .2s ease-in-out;*/
-
-			-webkit-transition: -webkit-transform 0.4s;
-    		transition: transform 0.4s;
-		}
-
-		.album-collapse:hover { 
-
-			-webkit-transform: scale(1.1);
-		    -moz-transform: scale(1.1);
-		    -o-transform: scale(1.1);
-		    transform: scale(1.1); 
-		}
-
-		#CTA {
-			cursor: pointer;
-		}
-
-		.fa-2x {
-			font-size: 1.5em;
-		}
-
-		#temp {
-			height: 800px;
-		}
-
-		.ep1 {
-			display: block;
-			position: absolute;
-			height: 100%;
-			/* background: url(/images/CNN_EpisodeTOC_Sidebar.png) no-repeat left top; */
-		}
-
-		.ep1 img {
-			max-width: 100%;
-			max-height: 100%;
-		}
-
-		#episode-wrapper {
-			min-height: 100%;
-		}
-
-		#episode-wrapper:after{
-			content: "";
-			display: block;
-		}
-
-		#lightcase-content {
-			background-color: #000 !important;
-		}
-
-		.episode_video {
-			float: none;
-			margin: 0 auto;
-		}
-
-		.tape-title {
-			margin: 0 auto;
-			margin-top: 10px;
-		}
-
-		.view {
-			width: 287px;
-		}
-
-		.interviews {
-			width: 227px;
-		}
-
-		.next_on {
-			width: 448px;
-		}
-
-		.soundtracks {
-			background-image:url(/images/CNN_ST_PreLoaderGIF_JD_R01_03.gif);
-			width: 1256px;
-			height: 256px;
-		}
-
-		#readMore p {
-			color: #FFFFFF;
-		}
-
-
-
-
-	</style>
  
 </head>
 
@@ -301,11 +64,11 @@
 	<!-- Page Loader -->
 	<article id="pageloader" class="dark-loader">
 		<!-- <div class="soundtracks"></div> -->
-		<div class="spinner">
+		<!-- <div class="spinner">
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
-		</div>
+		</div> -->
 	</article>
 
 	<div id="main">
@@ -374,6 +137,46 @@
 	      Link } = ReactRouter;
 
 	    var destination = document.querySelector("#main");
+
+	    var VHMWidget = React.createClass({
+          componentDidMount: function() {
+
+            var widget = document.createElement('iframe');
+            widget.id = 'vhmwidget_' + this.props.elementId;
+            widget.src = 'http://vhmengine.com/widgets/view?eventId=' + this.props.eventId + '&colorScheme=' + this.props.colorScheme + '&thumbSize='+ this.props.thumbSize + (this.props.dynamicHeight ? '&dynamicHeight=true' : '');
+            widget.frameBorder = 0;
+            widget.width = this.props.width;
+            widget.height = this.props.height;
+            this.instance.appendChild(widget);
+            if (this.props.dynamicHeight) {
+
+              var inst = this.instance;
+              var props = this.props;
+              var pf = document.createElement('script');
+              pf.type = 'text/javascript';
+              pf.src = 'https://static.vhmengine.com/ie8.polyfils.min.js';
+              pf.onload = function () {
+                var ir = document.createElement('script');
+                ir.type = 'text/javascript';
+                ir.src = 'https://static.vhmengine.com/iframeResizer.min.js';
+                ir.onload = function () {
+                  var ws = document.createElement('script');
+                  ws.type = 'text/javascript';
+                  ws.innerHTML = 'iFrameResize({},"#vhmwidget_' + props.elementId + '");';
+                  inst.appendChild(ws);
+                };
+                inst.appendChild(ir);
+              };
+              this.instance.appendChild(pf);
+            }
+          },
+
+          render: function() {
+            return (
+                <div ref={(el) => (this.instance = el)} id={this.props.elementId}/>
+            )
+          }
+        });
 
 	    var About = React.createClass({
 	      render: function() {
@@ -539,18 +342,18 @@
 									</h4>
 								</div>
 
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
-									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/stone_wall.png" />
+								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
+									<div className="feature-text small-head f-left t-left dark">			
+										<img src="images/albums/battle_of_the_sexes.png" />
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										EPISODE: 7
 									</h4>
 								</div>
 
-								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
-									<div className="feature-text small-head f-left t-left dark">			
-										<img src="images/albums/battle_of_the_sexes.png" />
+								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
+									<div className="feature-text small-head f-left t-left dark">
+										<img src="images/albums/stone_wall.png" />
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										EPISODE: 8
@@ -587,6 +390,18 @@
 				     resizeFooter();
 				});
 
+				var count = 0;
+
+				console.log
+
+				document.getElementById('transitionVideo').addEventListener('ended', function () { 
+					console.log('count ' + count);
+					if (count < 1) {
+						count++;
+						document.getElementById('transitionVideo').play();
+					}
+				}, false);
+
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
@@ -608,12 +423,29 @@
 					</section>
 
 
-					<section id='episode_1' className="type-1 background_ep1">
+					<div id='episode_1' className="type-1 background_ep1">
 						<div className="row">
 							<img src="images/CNN_EpisodeTOC_Header.jpg" />
 						</div>
+
+						<div className="sidebar">
+							<div>
+								<img src="images/CNN_EpisodeTOC_Sidebar_Album1.png" />
+							</div>
+							<div>
+								<img src="images/CNN_EpisodeTOC_Sidebar_Album3.png" />
+							</div>
+							<div>
+								<img src="images/CNN_EpisodeTOC_Sidebar_Album2.png" />
+							</div>
+						</div>
+
+						<div id="mlk-title" className="tape-title mlk">
+							<img src="images/episode_ToC/episode_1_title.png" />
+						</div>
 						
 						<div className="inner">
+
 							<div className="row">
 								
 								<div className="col-md-6">
@@ -642,59 +474,239 @@
 										<img src="images/episode_ToC/view.png" />
 									</div>
 							</div>
-
 						</div>
+
+						<div className="row">
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/content_6_2.jpg" /></a>
+								 <a ref="lightcase" href="//www.youtube.com/embed/eatisljr2P4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"></a></div>
+								 <div className="tape-title interviews">
+										<img src="images/episode_ToC/interviews.png" />
+								 </div>
+							</div>
+						</div>
+
+						<div className="row">
+							<div className="tape-title histories">
+								<img src="images/episode_ToC/histories.png" />
+							</div>
+						</div>
+
+						<div className="row">
+									
+							<div className="col-md-6">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="t-center song_history">
+										<h2>“We Shall Overcome”</h2> 
+								
+
+									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<div className="line-separator"></div>
+
+									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“If I Had a Hammer”</h2>
+								
+								<h4>Peter, Paul &amp; Mary</h4>
+								<div className="line-separator"></div>
+
+								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
+								</div> 
+								</div>
+							</div>
 					</div>
 
 					<div className="row">
-						<div className="col-lg-10 episode_video" ref={(el) => {
-										$(el).find("a").lightcase();
-									}}>
-							 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/content_6_2.jpg" /></a>
-							 <a ref="lightcase" href="//www.youtube.com/embed/eatisljr2P4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"></a></div>
-							 <div className="tape-title interviews">
-									<img src="images/episode_ToC/interviews.png" />
-							 </div>
-						</div>
-					</div>
-
-					<div className="row" style={{marginTop: "100px"}}>
-						<div className="col-lg-10 episode_video" ref={(el) => {
-										$(el).find("a").lightcase();
-									}}>
-							 <div><a ref="lightcase" href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/content_4_2.jpg" /></a></div>
-							 <div className="tape-title next_on">
-									<img src="images/episode_ToC/next.png" />
-							 </div>
-						</div>
-					</div>
-
-					<div className="row" style={{marginTop: "100px"}}>
+									
+							<div className="col-md-6">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="t-center song_history">
+										<h2>“We Shall Overcome”</h2> 
 								
-						<div className="col-md-6" style={{marginTop: "-80px"}}>
-							<div className="col-md-10" style={{margin: "0 auto", float: "none"}}>
-							<div className="t-center">
-								<h2>SONG HISTORIES</h2>
+
+									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<div className="line-separator"></div>
+
+									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+
+								</div>
 							</div>
-							<h3>“We Shall Overcome” – various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h3>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“If I Had a Hammer”</h2>
+								
+								<h4>Peter, Paul &amp; Mary</h4>
+								<div className="line-separator"></div>
 
-							<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, “We Shall Overcome” had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, “I’ll Be Alright,” and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made “We Shall Overcome” the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: “It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.” </p>
-						</div>
-						</div>
-						<div className="col-md-6">
-							
-							<div className="col-md-10" style={{margin: "0 auto", float: "none"}} ref={(el) => {
-										$(el).find("a").lightcase();
-									}}>
-							<h3>“If I Had a Hammer” – Peter, Paul &amp; Mary</h3>
-
-							<p>Though oft performed and recorded, Peter, Paul & Mary’s version of “If I Had a Hammer” marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable “I Have a Dream” speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul & Mary enjoyed remarkable success: the group scored five Top Ten singles, including “Puff the Magic Dragon” and the #1 hit, “Leaving On a Jet Plane,” which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written “If I Had a Hammer” in the-forties with his Weavers bandmate, Lee Hays. <a ref="lightcase" href="#readMore" data-rel="lightcase:textCollection" style={{color: "#CC0000", fontWeight: "bold", fontSize: "14px"}}>READ MORE.</a>  </p>
+								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
+								</div> 
+								</div>
 							</div>
 					</div>
+
+					<div className="row">
+									
+							<div className="col-md-6">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="t-center song_history">
+										<h2>“We Shall Overcome”</h2> 
+								
+
+									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<div className="line-separator"></div>
+
+									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“If I Had a Hammer”</h2>
+								
+								<h4>Peter, Paul &amp; Mary</h4>
+								<div className="line-separator"></div>
+
+								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
+								</div> 
+								</div>
+							</div>
+					</div>
+
+					<div className="row">
+									
+							<div className="col-md-6">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="t-center song_history">
+										<h2>“We Shall Overcome”</h2> 
+								
+
+									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<div className="line-separator"></div>
+
+									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“If I Had a Hammer”</h2>
+								
+								<h4>Peter, Paul &amp; Mary</h4>
+								<div className="line-separator"></div>
+
+								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
+								</div> 
+								</div>
+							</div>
+					</div>
+
+					<div className="row">
+									
+							<div className="col-md-6">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="t-center song_history">
+										<h2>“We Shall Overcome”</h2> 
+								
+
+									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<div className="line-separator"></div>
+
+									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“If I Had a Hammer”</h2>
+								
+								<h4>Peter, Paul &amp; Mary</h4>
+								<div className="line-separator"></div>
+
+								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
+								</div> 
+								</div>
+							</div>
+					</div>
+
+					<div className="row">
+									
+							<div className="col-md-6">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="t-center song_history">
+										<h2>“We Shall Overcome”</h2> 
+								
+
+									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<div className="line-separator"></div>
+
+									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“If I Had a Hammer”</h2>
+								
+								<h4>Peter, Paul &amp; Mary</h4>
+								<div className="line-separator"></div>
+
+								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
+								</div> 
+								</div>
+							</div>
+					</div>
+
+						<div className="row">
+
+						 <div className="col-md-6">
+                         	 <VHMWidget elementId="mpoll" eventId="3435372" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+                          <div className="col-md-6">
+                          	<VHMWidget elementId="mtrivia" eventId="3435375" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+
+                        </div>
+
+						<div className="row" style={{marginTop: "100px"}}>
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/Video_Screen_03.jpg" /></a></div>
+								 <div className="tape-title next_on">
+										<img src="images/episode_ToC/next.png" />
+								 </div>
+							</div>
+						</div>
+
+						
 
 					</div>
 					
-					</section>
+					</div>
 				</div>
 
 				<footer className="big-footer fullwidth t-left">

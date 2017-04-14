@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+
+  <title>CNN Soundtracks</title>
+
+  <link rel="shortcut icon" href="images/CNN_Favicon.png">
+
+  <!-- Bootstrap itself -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Font Awesome styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/main_about.css">
+
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 200;
+    }
+
+    #moon {
+      position: absolute;
+      width: 338px;
+      height: 271px;
+      z-index: 201;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      margin-top: -40px;
+    }
+
+    #moon img {
+      width: 338px;
+    }
+
+    #CTA {
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    #transitionVideo {
+      position: fixed;
+      top: 50%; left: 50%;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body class="theme-invert">
+
+  <div id="container">
+
+    <nav class="navbar navbar-default" role="navigation">
+
+            <div class="navbar-header">
+              <div id="logo"></div>
+            </div>
+
+            <div class="navbar-center navbar-brand" href="#"><a class="navbar-brand">SOUNDTRACKS</a></div>
+
+              <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-left">
+                  <li><a href="/about" activeclass="active">ABOUT</a></li>
+                  <li><a href="/map" activeclass="active">MAP</a></li>
+                  <li class="dropdown">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">ALL EPISODES <span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 1</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 2</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 3</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 4</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 5</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 6</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 7</Link></li>
+                      <li><Link to="/episode" activeclass="active"><span>EPISODE:</span> 8</Link></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                  <div class="navbar-right">
+                    <span class="follow">FOLLOW</span>
+                    <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-instagram fa-2x divider" aria-hidden="true"></i>
+                    <span class="follow">SHARE SITE</span>
+                    <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                  </div>
+              </div>
+          </nav>
+
+
+    <div class="border row">
+                <div class="border col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
+                <div class="border col-md-5 about-rt">
+                <h2>ABOUT THE SHOW</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed condimentum nisl ut varius sagittis. Vestibulum elementum quis nulla vel euismod. Aenean imperdiet mauris ante, fermentum tempor mauris dignissim ut. Nullam vestibulum libero non sollicitudin consectetur. Vivamus tempus nec turpis non congue. Ut vehicula est eu erat ullamcorper ornare vitae in massa. Integer tempor, lorem sit amet vestibulum facilisis, leo est aliquam odio, eget egestas leo felis eget diam. Sed egestas, velit quis molestie convallis, eros leo pellentesque dui, sed iaculis urna mauris ac nulla. Donec mollis risus vel convallis porttitor.</p>
+
+                  <p>Donec id velit facilisis, tristique dolor sit amet, blandit ipsum. Duis nec turpis eu velit pellentesque ultrices. Maecenas feugiat dolor vel sodales dictum. Ut feugiat non eros quis pulvinar. Phasellus mauris nisl, imperdiet scelerisque rutrum et, varius ac lorem. Pellentesque vel suscipit ante. Aliquam quis ante metus.
+                  </p>
+                  <div><h3>EPISODE 01.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 02.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 03.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 04.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 05.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 06.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 07.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 08.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                </div>
+              </div>
+
+  </div>
+
+
+  <div id="itunes_listen"><a href="https://itunes.apple.com/us/curator/cnn/id1214435500" target="_blank"><img src="images/itunes_listen.png" width="110px" height="40px"/></a></div>
+
+
+  <!-- Load js libs only when the page is loaded. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="js/modernizr.custom.72241.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+  <!-- Custom template scripts -->
+  <script src="js/magister.js"></script>
+</body>
+
+</html>

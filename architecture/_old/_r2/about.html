@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title>CNN Soundtracks</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/CNN_Favicon.png" />
+		
+	<!-- CSS Files -->
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/socials.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/cubeportfolio.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/settings-ie8.css" />
+	<link rel="stylesheet" href="css/settings.css" />
+
+	<!-- Page Styles -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/backgrounds.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="css/main_about.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
+
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
+	<!-- End Page Styles -->
+
+	<!-- Page Layout Color, night or dark -->
+	<link id="changeable_tone" rel="stylesheet" href="css/page_tones/dark.css" />
+	<!-- End Page Layout Color -->
+
+	<!-- Page Elements Color -->
+	<link id="changeable_color" rel="stylesheet" href="css/colors/red.css" />
+	<!-- End Page Elements Color -->
+
+	<!-- Page Fonts / Pacifico-->
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<!-- Raleway-->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,,200,300,600,700' rel='stylesheet' type='text/css'>
+	<!-- Oswald-->
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!-- End CSS Files -->
+	<style>
+		.scroll-pane
+		{
+			width: 100%;
+			height: 200px;
+			overflow: auto;
+		}
+
+		#introVideo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		@media (min-aspect-ratio: 16/9) {
+			#introVideo {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (max-aspect-ratio: 16/9) {
+			#introVideo {
+				width: 100%;
+				height: auto;
+				/*width: auto;
+				height: 100%;*/
+			}
+		}
+
+		#transitionVideo {
+			/*position: absolute;
+			top: 0;
+			left: 0;*/
+			width: 100%;
+			height: 100%;
+		}
+		@media (min-aspect-ratio: 16/9) {
+			#transitionVideo {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (max-aspect-ratio: 16/9) {
+			#transitionVideo {
+				/*width: auto;*/
+				height: 100%;
+			}
+		}
+
+		/* Need to remove */
+		#transition-episode {
+			background-color: #000;
+		}
+
+		.episode-mg {
+			margin-top: 50px;
+			margin-bottom: 362px;
+		}
+
+		.timeline-ftr {
+			/*background-image:url(images/CNN_ST_EpisodeTOC_JD_R04_01_footer.png);*/
+			width: 100%;
+			height: 363px;
+			background-position: center bottom;
+		}
+
+		#logo_badge {
+			z-index: 100000000;
+		}
+
+		.row {
+			margin: 0;
+		}
+
+		@media (max-width: 768px) {
+
+			.navbar-right {
+				display: none;
+			}
+
+			.navbar-center {
+				margin-left: 14px;
+			}
+		}
+
+		.background_home {
+			/*min-height: 1000px;*/
+		}
+
+		#transition-jump {
+			margin-top: -100px;
+		}
+
+		.lightcase-icon-close {
+			position: fixed;
+			top: 40px;
+			right: 40px;
+		}
+
+		#lightcase-overlay {
+			z-index: 10000 !important;
+		}
+
+		#lightcase-loading {
+			z-index: 10001 !important;
+		}
+
+		#lightcase-case {
+			z-index: 10002 !important;
+		}
+
+		.lightcase-icon-close {
+			z-index: 10003 !important;
+		}
+
+		#lightcase-nav {
+			z-index: 10004 !important;
+		}
+
+		#lightcase-nav a[class*='lightcase-icon-'] {
+			z-index: 10004 !important;
+		}
+
+		h2 {
+			color: #CC0000 !important;
+		}
+
+		html {
+				height: 100%;
+				background:#000 url(images/about_bg.jpg) no-repeat center center fixed;
+				min-height:100%;
+				-webkit-background-size: cover;
+				   -moz-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+		}
+	</style>
+ 
+</head>
+
+<!-- Body Start -->
+<body>
+
+	<!-- Page Loader -->
+	<article id="pageloader" class="dark-loader">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</article>
+
+
+
+	
+	<!-- Navigation - select your nav color - dark-nav or white-nav -->
+	<nav id="navigation" class="dark-nav">
+		<!-- Navigation -->
+		<!-- <div class="navigation first-nav double-nav raleway"> -->
+		<div class="navigation first-nav">
+			<!-- Navigation Inner -->
+			<div class="nav-inner clearfix">
+
+				<!-- Logo Area -->
+				<div id="logo_badge" class="logo f-left">
+					<!-- Logo Link -->
+					<a href="http://www.cnn.com/" target="_blank" class="logo-link">
+						<!-- Logo Image / data-second-logo for only white nav -->
+							<img src="images/logo_cnn_badge_2up.png" style="float: left;" data-second-logo="images/logo/logo_condensed_dark.png" alt="CNN Logo" />
+					</a>
+				</div>
+				<!-- End Logo Area -->
+
+				<div class="navbar-center navbar-brand"><a href="index.html" class="navbar-brand scroll">SOUNDTRACKS</a></div>
+
+				<div class="navbar-right">
+                    <span class="follow">FOLLOW</span>
+                    <a href="https://www.facebook.com/CNNOriginalSeries/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/cnnoriginals" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <!-- <i class="fa fa-instagram fa-2x divider" aria-hidden="true"></i> -->
+                    <a href="https://www.instagram.com/cnnorigseries/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <!-- <span class="follow">SHARE SITE</span>
+                    <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i> -->
+                  </div>
+
+				<!-- Mobile Menu Button -->
+				<a class="mobile-nav-button"><i class="fa fa-bars"></i></a>
+
+				<!-- Navigation Links -->
+				<div class="nav-menu clearfix">
+					<!-- Nav List -->
+					<ul class="nav uppercase normal big-texts">
+
+						<li><a href="about.html" class="scroll">ABOUT</a></li>
+						<!-- <li><a href="map.html" class="scroll">MAP</a></li> -->
+						<li class="dropdown-toggle nav-toggle"><a href="index.html#episodes" class="scroll">EPISODES</a><span class="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
+							<!-- DropDown Menu -->
+							<ul class="dropdown-menu pull-left clearfix">
+								<li><a href="index.html#transition-episode" class="scroll"><span class="red">EPISODE:</span> 1</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 2</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 3</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 4</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 5</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 6</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 7</a></li>
+								<li><a href="#" class="ex-link"><span class="red">EPISODE:</span> 8</a></li>
+							</ul>
+							<!-- End DropDown Menu -->
+						</li>
+
+					</ul>
+
+					<!-- End Nav List -->
+					
+				</div>
+				<!-- End Navigation Links -->
+
+			</div>
+			<!-- End Navigation Inner -->
+
+		</div>
+
+	</nav>
+	<!-- End Nav -->
+
+
+	<!-- Home Section -->
+	<section id="home" class="home bw-type container">
+
+		<div class="border" style="margin-top: 100px;">
+                <div class="border col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
+                <div class="border col-md-5 about-rt">
+                <h2>ABOUT THE SHOW</h2>
+                  <p>Soundtracks is an eight-part series executive-produced by Dwayne Johnson, Dany Garcia, Hiram Garcia,
+				 and Brian Gewirtz that will explore the music tied to iconic moments in history. Every episode will cover a tragedy, triumph, or the start of a movement – and the music that came to define it. From the March on Washington to the
+				riots at Stonewall, the moon landing to Hurricane Katrina – music has played an integral
+				part in celebrating, criticizing, and amplifying these seismic events in our collective
+				history. Soundtracks is produced by Show of Force and Seven Bucks Productions.</p>
+
+                  <div><h3>EPISODE 01.</h3><p>The episode explores the music that kept the spirit of the civil rights
+ movement alive following Martin Luther King, Jr.’s death. </p></div>
+                  <div><h3>EPISODE 02.</h3><p>Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
+                  <div><h3>EPISODE 03.</h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically
+ driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
+                  <div><h3>EPISODE 04.</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit
+ concerts to help ensure the city’s rich traditions survived.</p></div>
+                  <div><h3>EPISODE 05.</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic
+ and Sun Ra to imagine a cosmic future for mankind. </p></div>
+                  <div><h3>EPISODE 06.</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds
+ of rebellion. </p></div>
+                  <div><h3>EPISODE 07.</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn
+ and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
+                  <div><h3>EPISODE 08.</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s
+ movement and ushered in music that delivered messages of female empowerment.</p></div>
+                </div>
+              </div>
+
+  </div>
+
+	</section>
+	<!-- End Home Section -->
+
+
+
+
+	<!-- Footer -->
+	<footer class="big-footer fullwidth t-left">
+		<!-- Footer Inner -->
+		<div class="clearfix footer_inner">
+
+
+		</div>
+		<!-- End Footer Inner -->
+
+		<!-- Bottom -->
+		<div class="footer_bottom">
+			<!-- Bottom Inner -->
+			<div class="boxed clearfix">
+				
+			</div>
+			<!-- End Inner -->
+		</div>
+		<!-- End Footer, Bottom -->
+	</footer>
+	<!-- End Footer -->
+
+
+
+	<!-- JS Files -->
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/waypoint.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+	<script type="text/javascript" src="js/jquery.cubeportfolio.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<!-- Revolution Slider -->
+	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="js/rev_slider/rev_plugins.js"></script>
+	<!-- Contact Form -->
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/contact-form.js"></script>
+	<!-- Twitter -->
+	<script type="text/javascript" src="js/tweecool.min.js"></script>
+	<script type="text/javascript" src="js/tweecool.js"></script>
+	<!-- Page Plugins -->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<!-- Portfolio Plugins -->
+	<script type="text/javascript" src="js/portfolio.js"></script>
+	<!-- Theme Panel -->
+	<!-- <script type="text/javascript" src="theme_panel/themepanel.js"></script> -->
+
+	<!-- JS Scrollpane -->
+	<script type="text/javascript" src="js/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.js"></script>
+	<script type="text/javascript" src="js/jscrollpane/mwheelIntent.js"></script>
+	
+	<script>
+
+		function endEpisodeTransition() {
+			console.log(' ======== ');
+			document.getElementById('transitionVideo').play();
+		}
+
+		function introVidPlay() {
+			document.getElementById('introVideo').play();
+
+			document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
+		}
+
+		function endIntroVideo() {
+			console.log(' ++++++++ ');
+			console.log($('#episodes'));
+		    $("html, body").animate({
+		        scrollTop: $('#episodes').offset().top
+		    });
+		}
+
+		$(function()
+		{
+			$('.scroll-pane').jScrollPane(
+				{
+					verticalDragMinHeight: 84,
+					verticalDragMaxHeight: 84,
+					horizontalDragMinWidth: 44,
+					horizontalDragMaxWidth: 44
+				});
+		});
+	</script>
+	<!-- End JS Files -->
+
+</body>
+<!-- Body End -->
+</html>

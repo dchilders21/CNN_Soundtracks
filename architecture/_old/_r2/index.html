@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+
+  <title>CNN Soundtracks</title>
+
+  <link rel="shortcut icon" href="images/CNN_Favicon.png">
+
+  <!-- Bootstrap itself -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Font Awesome styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 200;
+    }
+
+    #moon {
+      position: absolute;
+      width: 338px;
+      height: 271px;
+      z-index: 201;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      margin-top: -40px;
+    }
+
+    #moon img {
+      width: 338px;
+    }
+
+    #CTA {
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    #transitionVideo {
+      position: fixed;
+      top: 50%; left: 50%;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body class="theme-invert">
+
+  <div id="container">
+
+  </div>
+
+
+  <div id="itunes_listen"><a href="https://itunes.apple.com/us/curator/cnn/id1214435500" target="_blank"><img src="images/itunes_listen.png" width="110px" height="40px"/></a></div>
+
+
+  <script type="text/babel">
+
+    var { Router,
+      Route,
+      IndexRoute,
+      IndexLink,
+      hashHistory,
+      Link } = ReactRouter;
+
+    var destination = document.querySelector("#container");
+
+    var Home = React.createClass({
+      componentDidMount: function() {
+
+        this.setHome();
+      },
+      componentDidUpdate: function() {
+        this.setHome();
+      },
+
+      render: function() {
+
+          return (
+            <div>
+                 <video id="transitionVideo" autoPlay preload="auto" height="100%" width="100%"
+                  poster="images/CNN_ST_RECORD_PLAYER.jpg">
+                    <source src="video/CNN_ST_RECORD_PLAYER.mp4" type='video/mp4' />
+                    <source src="video/CNN_ST_RECORD_PLAYER.WebM" type='video/webm' />
+                 </video>
+            </div>
+          );
+        }, setHome: function() {
+
+          document.getElementById('transitionVideo').addEventListener('ended', endOfVideo, false);
+
+          function endOfVideo(e) {
+              console.log(' ============= ');
+              document.getElementById('transitionVideo').style.display = 'none';
+              // What you want to do after the event
+          }
+        }
+
+    });
+
+    var About = React.createClass({
+      render: function() {
+        //document.documentElement.style.backgroundImage = 'url("images/CNN_ST_About_JD_R02_01.jpg")';
+        document.documentElement.style.backgroundImage = 'url("")';
+        document.documentElement.style.backgroundColor = '#121116';
+          return (
+            <div>
+              <div className="border row">
+                <div className="border col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
+                <div className="border col-md-5 about-rt">
+                <h2>ABOUT THE SHOW</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed condimentum nisl ut varius sagittis. Vestibulum elementum quis nulla vel euismod. Aenean imperdiet mauris ante, fermentum tempor mauris dignissim ut. Nullam vestibulum libero non sollicitudin consectetur. Vivamus tempus nec turpis non congue. Ut vehicula est eu erat ullamcorper ornare vitae in massa. Integer tempor, lorem sit amet vestibulum facilisis, leo est aliquam odio, eget egestas leo felis eget diam. Sed egestas, velit quis molestie convallis, eros leo pellentesque dui, sed iaculis urna mauris ac nulla. Donec mollis risus vel convallis porttitor.</p>
+
+                  <p>Donec id velit facilisis, tristique dolor sit amet, blandit ipsum. Duis nec turpis eu velit pellentesque ultrices. Maecenas feugiat dolor vel sodales dictum. Ut feugiat non eros quis pulvinar. Phasellus mauris nisl, imperdiet scelerisque rutrum et, varius ac lorem. Pellentesque vel suscipit ante. Aliquam quis ante metus.
+                  </p>
+                  <div><h3>EPISODE 01.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 02.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 03.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 04.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 05.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 06.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 07.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                  <div><h3>EPISODE 08.</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo nunc, hendrerit at molestie in, imperdiet sed lacus. Nunc ac volutpat neque, non scelerisque lacus. </p></div>
+                </div>
+              </div>
+
+            </div>
+          );
+        }
+    });
+
+    var Map = React.createClass({
+
+          componentDidMount: function() {
+            this.renderMap();
+          },
+          componentDidUpdate: function() {
+            this.renderMap();
+          },
+          render: function() {
+
+          return (
+            <div>
+              <div id='moon'><img src="images/moon.png" /></div>
+              <div id='map'></div>
+
+            </div>
+          );
+        },
+        renderMap: function() {
+          mapboxgl.accessToken = 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA';
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/dchilders21/cj14i333q00082so02h0pg5sv'
+          });
+
+          map.on('click', function(e) {
+            var features = map.queryRenderedFeatures(e.point, {
+              layers: ['test-cnn']
+            });
+
+            if (!features.length) {
+              return;
+            }
+
+            var feature = features[0];
+
+            var popup = new mapboxgl.Popup({ offset: [0, -15] })
+              .setLngLat(feature.geometry.coordinates)
+              .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+              .setLngLat(feature.geometry.coordinates)
+              .addTo(map);
+          });
+        }
+    });
+
+    var Episodes = React.createClass({
+      render: function() {
+          return (
+            <div>
+             
+            </div>
+          );
+        }
+    });
+
+    var Episode = React.createClass({
+      render: function() {
+          document.documentElement.style.backgroundImage = 'url("images/CNN_ST_EpisodeTOC_JD_R02_5_01_small.png")';
+
+
+          return (
+            <section className="section" id="head">
+              <div className="row">
+              <div className="scroll-pane" style={{"width": "500px", "height": "900px", "overflow": "scroll", "margin": "0 auto"}}>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque enim risus, gravida at metus eleifend, suscipit varius arcu. Maecenas hendrerit ultrices bibendum. Praesent libero dolor, sagittis nec diam ut, ultrices fringilla leo. Aliquam eget odio tellus. Integer ac sodales lacus, eget aliquet ipsum. Nulla eu cursus est, feugiat pretium tellus. Nullam suscipit ipsum enim, eget varius justo fermentum eget. Etiam id orci ante. Nulla tortor nibh, egestas at odio id, posuere fringilla ante. Etiam leo risus, bibendum a lectus nec, rutrum imperdiet quam. Curabitur aliquam tempus diam non porttitor. Nulla accumsan quam odio. Vivamus blandit orci eros, eget euismod orci pharetra in. Nulla id tristique massa.
+
+                  Nullam accumsan ligula consectetur, pharetra mi ut, ullamcorper mauris. Duis ut mattis purus, a fringilla metus. Suspendisse congue vestibulum pellentesque. Quisque lobortis auctor lorem, ut volutpat ante condimentum vitae. Etiam euismod urna sit amet justo porttitor, eget pellentesque lacus interdum. Donec quis sem maximus urna vestibulum porta ut at dui. Sed ullamcorper ex a vulputate convallis. Sed ultricies, lectus eget aliquet tristique, tortor quam ullamcorper odio, sit amet auctor risus orci eget libero. Maecenas tempus mauris quis nisi cursus tincidunt. Proin ultrices tincidunt felis rutrum iaculis. Nulla scelerisque tortor ut sagittis ultrices. Nullam massa lectus, rhoncus eget aliquam non, maximus vitae risus. Fusce tempor gravida ipsum, sit amet volutpat sapien aliquet sit amet.
+
+                  Aenean rutrum elit a bibendum tempor. Phasellus eu convallis dolor. Etiam feugiat elit in ligula feugiat mattis. Aliquam et libero vel elit sagittis mollis. Suspendisse elementum, felis quis ultricies lacinia, ante mauris rhoncus felis, et pretium tellus mi a justo. Nulla turpis erat, venenatis quis egestas sed, aliquam vitae mauris. Integer accumsan sit amet augue non elementum. Quisque iaculis scelerisque dignissim. Mauris sollicitudin quam ut diam accumsan rhoncus. Aenean interdum pretium mi, quis luctus felis rhoncus at. Ut accumsan non dui nec pellentesque.
+
+                  Praesent hendrerit, nibh a ultricies lobortis, arcu odio pellentesque tortor, ac fringilla massa sapien ac felis. Nunc rutrum placerat quam, at lacinia neque dignissim id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ex velit, semper in posuere nec, sodales sit amet lacus. Nulla facilisi. Vivamus ut dolor maximus, lacinia magna vitae, facilisis tellus. In eu quam sodales, commodo risus in, interdum ipsum. Nulla hendrerit risus enim, at fringilla ex tempor vitae. Donec finibus mi id ex efficitur hendrerit. Integer nec aliquam urna, eu accumsan elit.
+
+                  Aliquam erat volutpat. Praesent faucibus cursus augue, vel tincidunt mi consequat ut. Donec scelerisque interdum elementum. Aenean lobortis mollis sapien id luctus. Pellentesque congue rutrum suscipit. Pellentesque sollicitudin maximus neque in vestibulum. Nulla congue mattis mi, sed efficitur ante tempor id. Vestibulum ut auctor urna. Donec convallis, sapien nec feugiat ultrices, lorem mauris consectetur velit, a venenatis justo diam ut nisi. Nunc vitae sem ligula. Sed tempor elit nibh, et molestie dui posuere venenatis. Duis luctus nisl vel odio malesuada aliquet. Aliquam erat volutpat. Sed eu est feugiat, blandit risus eu, posuere nisi. In a ornare metus, a posuere lectus.
+                </p>
+            </div>
+            </div>
+          </section>
+          );
+        }
+    });
+
+
+
+
+    var App = React.createClass({
+      render: function() {
+        return (
+          <div>
+          <nav className="navbar navbar-default" role="navigation">
+
+            <div className="navbar-header">
+              <div id="logo"></div>
+            </div>
+
+            <div className="navbar-center navbar-brand" href="#"><a className="navbar-brand">SOUNDTRACKS</a></div>
+
+              <div className="collapse navbar-collapse" id="navbar-collapse-1">
+
+                <ul className="nav navbar-nav navbar-left">
+                  <li><Link to="/about" activeClassName="active">ABOUT</Link></li>
+                  <li><Link to="/map" activeClassName="active">MAP</Link></li>
+                  <li className="dropdown">
+
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">ALL EPISODES <span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span></a>
+                    <ul className="dropdown-menu">
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 1</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 2</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 3</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 4</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 5</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 6</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 7</Link></li>
+                      <li><Link to="/episode" activeClassName="active"><span>EPISODE:</span> 8</Link></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                  <div className="navbar-right">
+                    <span className="follow">FOLLOW</span>
+                    <i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                    <i className="fa fa-instagram fa-2x divider" aria-hidden="true"></i>
+                    <span className="follow">SHARE SITE</span>
+                    <i className="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                  </div>
+              </div>
+          </nav>
+
+          {this.props.children}
+
+
+          </div>
+        )
+      }
+    });
+
+    ReactDOM.render(
+      <Router history={ReactRouter.hashHistory}>
+        <Route path="/" component={App}>
+          <IndexRoute component={Home}/>
+          <Route path="about" component={About} />
+          <Route path="map" component={Map} />
+          <Route path="episodes" component={Episodes} />
+          <Route path="episode" component={Episode} />
+
+        </Route>
+      </Router>,
+      destination
+    );
+  </script>
+
+  <!-- Load js libs only when the page is loaded. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="js/modernizr.custom.72241.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+  <!-- Custom template scripts -->
+  <script src="js/magister.js"></script>
+</body>
+
+</html>

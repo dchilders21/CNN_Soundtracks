@@ -12,9 +12,10 @@
 	}
 
 	.background_ep1 {
-		background-image:url(../images/CNN_EpisodeTOC_Bg.jpg);
-		background-size: cover;
-		background-position: center top;
+		background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+    	background-size: none;
+    	background-position: none;
+    	background-repeat: none;
 	}
 
 	.background1{
