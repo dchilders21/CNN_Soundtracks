@@ -35,6 +35,7 @@
 
 		position: fixed;
 		left: 20px;
+		z-index: 100;
 	}
 
 	#apple-close {
@@ -92,26 +93,12 @@
 		margin-bottom: 0px !important;
 	}
 
-	.arrow_img {
-		width: 15px;
-		height: 18px;
-	}
-
 	.arrow_down {
 		display: block;
-		width: 18px;
-		height: 15px;
-		margin: 0px;
+		width: 65px;
+		height: 56px;
 		margin: 0 auto;
-
-	}
-
-	.arrow_right {
-		display: block;
-		margin: 0px;
-		float: right;
-		margin-top: -2px;
-		margin-left: 10px;
+		margin-top: 10px;
 
 	}
 
@@ -128,8 +115,8 @@
 		}
 
 		.background_home {
-			/*background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
-			background-size: cover;*/
+			background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
+			background-size: cover;
 		}
 
 		.background_ep1 {
@@ -161,8 +148,8 @@
 		}
 
 	   .background_home {
-			/*background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
-			background-size: cover;*/
+			background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
+			background-size: cover;
 		}
 
 		.background_ep1 {
@@ -240,7 +227,7 @@
 		}
 
 		.bw-type .home-extra-note {
-			top: 70%;
+			top: 65%;
 		}
 
 		#apple-badge {
@@ -363,7 +350,7 @@
 		}
 
 		.bw-type .home-extra-note {
-			top: 70%;
+			top: 65%;
 		}
 
 		#apple-badge {
@@ -564,7 +551,6 @@
 	#CTA {
 		cursor: pointer;
 		line-height: 1;
-		margin-right: -10px;
 	}
 
 	.fa-2x {
@@ -645,8 +631,7 @@
 	}
 
 	.episode-extra-note {
-		top: auto;
-		/*bottom: 55px !important;*/
+		top: 60% !important;
 	}
 
 	#mtrivia {

@@ -64,11 +64,11 @@
 	<!-- Page Loader -->
 	<article id="pageloader" class="dark-loader">
 		<!-- <div class="soundtracks"></div> -->
-		<div class="spinner">
+		<!-- <div class="spinner">
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
-		</div>
+		</div> -->
 	</article>
 
 	<div id="main">
@@ -244,8 +244,8 @@
 						</div>
 
 						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
-								<a id="CTA">EXPLORE THE SERIES<span className="arrow_right"><img className="arrow_img" src="images/arrow_right.png" /></span></a>
-								
+							<Link to="/episodes" id="CTA">EXPLORE <br /> THE SERIES</Link>
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span>
 						</div>
 					</section>
 	            </div>
@@ -253,32 +253,25 @@
 	        },
 	        initHome: function() {
 
-	        	var me = this;
-
 		        if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		      		window.isMob = true;
 		      		var el = document.getElementById('introVideo');
 		      		el.parentNode.removeChild(el);
-		      		document.getElementById('CTA').addEventListener("click", function() {
-		      			me.context.router.push('/episodes');
-		      		}, false);
-		      		
 		      	} else {
-
 		      		$( window ).bind("resize", function() {
-						divResize();
+						//divResize();
 					});
 
+		        	var me = this;
 		        	window.divResize();
 		        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
 		        	function endIntroVideo(){
 		        		console.log(me.context.router);
-		        		me.context.router.push('/episodes');
+		        		me.context.router.push('/episodes')
 					}
 
 			        function introVidPlay() {
-			        	console.log(' ==== ');
 						document.getElementById('introVideo').play();
 						document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
 					}
@@ -405,27 +398,14 @@
 					console.log(footerHeight);
 	      		}
 
-	      		function moveCTA() {
-	      		console.log(' ===== ');
-	      			var bottomVideo = $("#transitionVideo").height();
-	      			var top = bottomVideo - 80;
-	      			console.log(top)
-
-	      			$('#home-episodes').css("top", top);
-
-	      		}
-
 	      		$(".footer_img").load(function() {
 	      			// initial call
 	      			resizeFooter();
-	      			moveCTA();
 	      		}); 
 	      		
 
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
-				     moveCTA();
-
 				});
 
 				var count = 0;
@@ -450,8 +430,8 @@
 						</div>
 
 						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
-							<a href="#episode_1" id="CTA" className="scroll">EXPLORE THE EPISODE
-							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
+							<a id="CTA">EXPLORE <br /> THE EPISODE</a>
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span>
 						</div>
 					</section>
 

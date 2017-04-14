@@ -46,6 +46,7 @@
 
 	a:focus,
 	button:focus{
+		color: #FFFFFF;
 		outline: none;
 		text-decoration: none;
 	}
@@ -2291,7 +2292,7 @@
 	}
 
 	.home-extra-note a{
-		font-size: 30px;
+		font-size: 22px;
 		font-weight: 600;
 		display:inline-block;
 	}
