@@ -102,7 +102,8 @@
 	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
 	<script type="text/javascript" src="js/skrollr.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
-	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script> -->
+	<script src="http://www.youtube.com/player_api"></script>
 	<!-- Revolution Slider -->
 	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
 	<script type="text/javascript" src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
@@ -224,6 +225,7 @@
           },
           componentDidUpdate: function() {
             this.initHome();
+
           },
 	      render: function() {
 
@@ -234,6 +236,10 @@
 	          return (
 	            <div>
 					<section id="home" className="home bw-type container">
+						<div className="col-md-6 eps-block" ref={(el) => {
+										$(el).find("a").lightcase();
+									}}>
+						</div>
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
@@ -255,6 +261,27 @@
 
 	        	var me = this;
 
+	        	this.$node = $(this.refs.lightcase);
+
+	        	this.$node.lightcase({
+					shrinkFactor: .90,
+					maxWidth: 1200,
+					maxHeight: 1200
+				});
+
+				lightcase.start({
+				  href: '//www.youtube.com/embed/eilWGr4DwpE?rel=0&controls=1&showinfo=0&autoplay=1',
+				});
+
+				/*lightcase.start({
+				  onInit:{
+						foo: function() {
+							//window.onYouTubePlayerAPIReady();
+						}
+					}
+				});*/
+
+				
 		        if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		      		window.isMob = true;
 		      		var el = document.getElementById('introVideo');
@@ -283,6 +310,36 @@
 						document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
 					}
 		      	}
+
+
+		      	var player;
+		      	console.log(' ====----===== ')
+		      	
+		        function onYouTubePlayerAPIReady() {
+		        	console.log(' ------ ');
+		            player = new YT.Player('player', {
+		              videoId: 'eilWGr4DwpE',
+		              events: {
+		                onReady: onPlayerReady,
+		                onStateChange: onPlayerStateChange
+		              }
+		            });
+		        }
+
+		        // autoplay video
+		        function onPlayerReady(event) {
+		        	console.log(' ============= ');
+		            event.target.playVideo();
+		        }
+
+		        // when video ends
+		        function onPlayerStateChange(event) {        
+		            if(event.data === 0) {          
+		                console.log('done');
+		            }
+		        }
+
+
 	        }
 	    });
 
@@ -444,8 +501,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay preload="auto" height="100%" width="100%"
 				              poster="images/CNN_ST_PhotoTransition.jpg">
-				                <source src="video/CNN_ST_PhotoTransition_RENDER.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_PhotoTransition_RENDER.WebM" type='video/webm' />
+				                <source src="video/Photo_MLK.mp4" type='video/mp4' />
+				                <source src="video/Photo_MLK.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -869,7 +926,6 @@
 		    	$('#introVideo').css("height","auto");
 		    }
 		}
-
 
 		
 

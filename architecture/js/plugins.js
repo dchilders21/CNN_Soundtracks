@@ -530,7 +530,7 @@ MAGNIFIC POPUP (LIGHTBOX PLUGIN)
 VIDEO PLAYER
 =============================================== */  
 
-    $(".player").mb_YTPlayer();
+    //$(".player").mb_YTPlayer();
 
 /* ==============================================
 CHANGE BG TONE WITH HOVER
