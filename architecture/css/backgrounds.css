@@ -1,8 +1,10 @@
 /* Background Image Ways */
 
+	
+
 	.background_home {
-		/*background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
-		background-size: cover;*/
+		background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
+		background-size: cover;
 	}
 
 	.background_episodes {

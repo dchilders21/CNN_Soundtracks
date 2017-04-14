@@ -8,9 +8,9 @@
 		background-color: #1b1b1b;
 	}
 
-	.dark-nav .nav-menu ul.dropdown-menu{
+	/*.dark-nav .nav-menu ul.dropdown-menu{
 		background-color: #000000;
-	}
+	}*/
 
 	.dark-nav .search-form button{
 		background-color:#2b2b2b;
@@ -474,7 +474,7 @@
 
 /* Media Screen Color */
 
-	@media only screen and (max-width: 1000px){
+	/*@media only screen and (max-width: 1000px){
 
 		.dark-nav .nav-inner div.nav-menu ul.nav{
 			background-color:rgba(34,34,34, 0.95);
@@ -484,6 +484,6 @@
 			background-color:#333 !important;
 		}
 
-	}
+	}*/
 
 

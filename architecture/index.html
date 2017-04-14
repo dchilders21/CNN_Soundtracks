@@ -30,7 +30,7 @@
 
 	<!-- Page Styles -->
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/backgrounds.css" />
+	<!-- <link rel="stylesheet" href="css/backgrounds.css" /> -->
 	<link rel="stylesheet" href="css/responsive.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
@@ -82,7 +82,7 @@
 
 	<div id="apple-player" class="move-down">
 		<div id="apple-close" onclick="closePlayer()"><img src="images/close.png" /></div>
-		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="500px" width="100%" frameborder="0"></iframe>
+		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>
 	</div>
 
 	<!-- JS Files -->
@@ -121,6 +121,7 @@
 	<!-- <script type="text/javascript" src="theme_panel/themepanel.js"></script> -->
 
 	<script type="text/javascript" src="js/lightcase.js"></script>
+	<script type="text/javascript" src="js/isMobile.min.js"></script>
 
 	<!-- JS Scrollpane -->
 	<script type="text/javascript" src="js/jscrollpane/jquery.mousewheel.js"></script>
@@ -185,31 +186,23 @@
 	          <div>
 				
 				<section id="home" className="home bw-type container">
-					<div className="border" style={{marginTop: "100px"}}>
-			                <div className="border col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
-			                <div className="border col-md-5 about-rt">
+					<div className="border">
+			                <div className="col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
+			                <div className="col-md-5 about-rt">
 			                <div className="t-center" style={{marginTop: "0px", marginBottom: "10px"}}><h2>ABOUT THE SHOW</h2></div>
 			                  <p>Soundtracks is an eight-part series executive-produced by Dwayne Johnson, Dany Garcia, Hiram Garcia,
 							 and Brian Gewirtz that will explore the music tied to iconic moments in history. The show premieres Thursday, April 20th, 10pm et/pt.  Every episode will cover a tragedy, triumph, or the start of a movement – and the music that came to define it. From the March on Washington to the
 							riots at Stonewall, the moon landing to Hurricane Katrina – music has played an integral
 							part in celebrating, criticizing, and amplifying these seismic events in our collective
 							history. Soundtracks is produced by Show of Force and Seven Bucks Productions.</p>
-
-			                  <div><h3 className="uppercase">The Assassination of Martin Luther King, JR.</h3> <p>The episode explores the music that kept the spirit of the civil rights
-			 movement alive following Martin Luther King, Jr.’s death. </p></div>
+			                  <div><h3 className="uppercase">The Assassination of Martin Luther King, JR.</h3> <p>The episode explores the music that kept the spirit of the civil rights movement alive following Martin Luther King, Jr.’s death. </p></div>
 			                  <div><h3 className="uppercase">September 11th.</h3><p> Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
-			                  <div><h3 className="uppercase">Kent State &amp; The Vietnam War </h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically
-			 driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
-			                  <div><h3 className="uppercase">Hurricane Katrina</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit
-			 concerts to help ensure the city’s rich traditions survived.</p></div>
-			                  <div><h3 className="uppercase">The Fall of the Berlin Wall</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic
-			 and Sun Ra to imagine a cosmic future for mankind. </p></div>
-			                  <div><h3 className="uppercase">The Moon Landing</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds
-			 of rebellion. </p></div>
-			                  <div><h3 className="uppercase">The Stonewall Riots</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn
-			 and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
-			                  <div><h3 className="uppercase">Battle of the Sexes</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s
-			 movement and ushered in music that delivered messages of female empowerment.</p></div>
+			                  <div><h3 className="uppercase">Kent State &amp; The Vietnam War </h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
+			                  <div><h3 className="uppercase">Hurricane Katrina</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit concerts to help ensure the city’s rich traditions survived.</p></div>
+			                  <div><h3 className="uppercase">The Fall of the Berlin Wall</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
+			                  <div><h3 className="uppercase">The Moon Landing</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
+			                  <div><h3 className="uppercase">Battle of the Sexes</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s movement and ushered in music that delivered messages of female empowerment.</p></div>
+			                  <div><h3 className="uppercase">The Stonewall Riots</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
 			              </div>
 
 			  		</div>
@@ -233,6 +226,11 @@
             this.initHome();
           },
 	      render: function() {
+
+      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+      			//document.documentElement.style.backgroundImage = 'url("images/CNN_ST_AllEpisodes_JD_R02_01.jpg")';
+      		}
+	      		
 	          return (
 	            <div>
 					<section id="home" className="home bw-type container">
@@ -246,36 +244,40 @@
 						</div>
 
 						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
-							<a id="CTA">ALL SHOWS</a>
+							<Link to="/episodes" id="CTA">EXPLORE <br /> THE SERIES</Link>
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span>
 						</div>
-
 					</section>
 	            </div>
 	          );
 	        },
 	        initHome: function() {
 
-	        	$( window ).bind("resize", function(){
-					divResize();
-				});
+		        if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('introVideo');
+		      		el.parentNode.removeChild(el);
+		      	} else {
+		      		$( window ).bind("resize", function() {
+						//divResize();
+					});
 
-	        	var me = this;
-	        	window.divResize();
-	        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
+		        	var me = this;
+		        	window.divResize();
+		        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
-	        	function endIntroVideo(){
-	        		console.log(me.context.router);
-	        		me.context.router.push('/episodes')
+		        	function endIntroVideo(){
+		        		console.log(me.context.router);
+		        		me.context.router.push('/episodes')
+					}
 
-				}
-
-		        function introVidPlay() {
-					document.getElementById('introVideo').play();
-					document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
-				}
-
-		        }
-		    });
+			        function introVidPlay() {
+						document.getElementById('introVideo').play();
+						document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
+					}
+		      	}
+	        }
+	    });
 
 	    var Episodes = React.createClass({
 
@@ -372,6 +374,22 @@
 	    var Episode1 = React.createClass({
 	      componentDidMount() {
 
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+		      	} else {
+		      		document.getElementById('transitionVideo').addEventListener('ended', function () { 
+						if (count < 1) {
+							count++;
+							document.getElementById('transitionVideo').play();
+						}
+					}, false);
+		      	}
+
 	      		function resizeFooter() {
 	      			var footerHeight = $(".big-footer").height();
 					//$("#main").css("padding-bottom", footerHeight);
@@ -392,16 +410,6 @@
 
 				var count = 0;
 
-				console.log
-
-				document.getElementById('transitionVideo').addEventListener('ended', function () { 
-					console.log('count ' + count);
-					if (count < 1) {
-						count++;
-						document.getElementById('transitionVideo').play();
-					}
-				}, false);
-
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
@@ -419,6 +427,11 @@
 				                <source src="video/CNN_ST_PhotoTransition_RENDER.mp4" type='video/mp4' />
 				                <source src="video/CNN_ST_PhotoTransition_RENDER.WebM" type='video/webm' />
 				             </video>
+						</div>
+
+						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
+							<a id="CTA">EXPLORE <br /> THE EPISODE</a>
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span>
 						</div>
 					</section>
 
@@ -441,22 +454,24 @@
 						</div>
 
 						<div id="mlk-title" className="tape-title mlk">
-							<img src="images/episode_ToC/episode_1_title.png" />
+							<img id="ep-img" src="images/episode_ToC/episode_1_title.png" />
 						</div>
 						
 						<div className="inner">
 
 							<div className="row">
 								
-								<div className="col-md-6">
+								<div className="col-md-6 eps-block">
 									<div className="t-center">
 										<h2>ABOUT THE EPISODE</h2>
 									</div>
-									<p>The death of Martin Luther King, Jr. marked a turning point in the Civil Rights Movement, a moment of reckoning for African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest songs of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
+									<div className="t-center">
+										<p>The death of Martin Luther King, Jr. marked a turning point in the Civil Rights Movement, a moment of reckoning for African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest songs of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
 
-									<p>The continued struggle for civil rights has been a long and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King national holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter Movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
+										<p>The continued struggle for civil rights has been a long and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King national holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter Movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
+									</div>
 								</div>
-								<div className="col-md-6" ref={(el) => {
+								<div className="col-md-6 eps-block" ref={(el) => {
 										$(el).find("a").lightcase();
 									}}>
 									<div>
@@ -477,10 +492,10 @@
 						</div>
 
 						<div className="row">
-							<div className="col-lg-10 episode_video" ref={(el) => {
+							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/content_6_2.jpg" /></a>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/Video_Screen_03.jpg" /></a>
 								 <a ref="lightcase" href="//www.youtube.com/embed/eatisljr2P4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"></a></div>
 								 <div className="tape-title interviews">
 										<img src="images/episode_ToC/interviews.png" />
@@ -488,7 +503,7 @@
 							</div>
 						</div>
 
-						<div className="row">
+						<div className="row alternate">
 							<div className="tape-title histories">
 								<img src="images/episode_ToC/histories.png" />
 							</div>
@@ -496,7 +511,7 @@
 
 						<div className="row">
 									
-							<div className="col-md-6">
+							<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="t-center song_history">
 										<h2>“We Shall Overcome”</h2> 
@@ -523,162 +538,134 @@
 								</div> 
 								</div>
 							</div>
+
+
 					</div>
+
+
 
 					<div className="row">
 									
-							<div className="col-md-6">
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-									<div className="t-center song_history">
-										<h2>“We Shall Overcome”</h2> 
-								
-
-									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
-									<div className="line-separator"></div>
-
-									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
-
-								</div>
-							</div>
-							</div>
-							<div className="col-md-6">
-								
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="col-md-6 eps-block">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="t-center song_history">
-									<h2>“If I Had a Hammer”</h2>
-								
-								<h4>Peter, Paul &amp; Mary</h4>
+									<h2>“People Get Ready” </h2> 
+							
+
+								<h4>The Impressions featuring Curtis Mayfield; Aretha Franklin</h4>
 								<div className="line-separator"></div>
 
-								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
-								</div> 
+								<p>Inspired by the March on Washington, Chicago songwriter Curtis Mayfield penned the gospel-inflected <b><i>“People Get Ready”</i></b> for his trio, the Impressions. As in many of the popular church songs Mayfield heard growing up, such as guitarist Sister Rosetta Tharpe’s <b><i>“This Train,”</i></b> Mayfield used the notion of a train ride to signify both a journey to redemption and a sense of religious community. Indeed, in a 1993 radio interview, Mayfield suggested that the song’s biblical imagery had simply come to him as a result of his upbringing in the church, when it was a matter of course to hear both gospel and “the preachings of my grandmothers and most ministers when they reflect from the bible.” Though a pop star – after leaving the Impressions, Mayfield enjoyed his biggest hits with the soundtrack to the classic African-American gangster film, <i>“Superfly,”</i> Mayfield never lost touch with his spiritual roots. Until his death in 1999 as the result of a freak stage accident, Mayfield remained a songwriter whose topics were ever and always hope and justice. </p>
+
 								</div>
 							</div>
-					</div>
+						</div>
+														
+						<div className="col-md-6">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="t-center song_history">
+									<h2>“Mississippi Goddamn” and “Why (The King of Love is Dead)”</h2> 
+							
 
-					<div className="row">
+								<h4>Nina Simone</h4>
+								<div className="line-separator"></div>
+
+								<p>Dubbed “the High Priestess of Soul,” Nina Simone drew on an extraordinary wealth of music traditions including classical, gospel, jazz and pop to create her own unique style as a singer and pianist. Julliard-educated, Simone took her stage name in homage to the French actress Simone Signore and to hide her career as a nightclub singer from her father, a Carolina preacher. A passionate performer and volatile personality with a deep commitment to African-American self-determination, Simone was the creator of two of the most outraged songs of the era. Her composition  <b><i>“Mississippi Goddamn”</i></b> – written, she said, in a “rush of fury, hatred and determination” – was spurred by two despicable events in the summer of 1963: the murder of civil rights activist Medgar Evers in Jackson, MS., and the Alabama bombing of Birmingham’s 16th Street Church that killed four young black girls and blinded a fifth.  Though not an adherent to Dr. King’s philosophy of non-violence, Simone leant her support to numerous civil rights actions, including the march from Selma to Montgomery, where she performed 
+								<b><i>“Mississippi Goddamn.”</i></b> Three days after Dr. King’s assassination, Simone and her group recorded a live album dedicated to him that including <b><i>“Why (The King of Love is Dead)”</i></b> written by bassist Gene Taylor. Always independent and idiosyncratic, Simone spent her later years as an expatriate, living at various times in Europe, Liberia and Barbados before settling in the south of France. </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div className="row">
 									
-							<div className="col-md-6">
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-									<div className="t-center song_history">
-										<h2>“We Shall Overcome”</h2> 
-								
+					<div className="col-md-6 eps-block">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="t-center song_history">
+								<h2>“Say It Loud (I’m Black and I’m Proud)” </h2> 
+						
 
-									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
-									<div className="line-separator"></div>
+							<h4>James Brown</h4>
+							<div className="line-separator"></div>
 
-									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+							<p>The undisputed anthem of black power and black pride, <b><i>“Say It Loud (I’m Black and I’m Proud)”</i></b> was both an enormous hit and one of the rare popular works in any medium that managed to both encompass and move a moment. Though he certainly wasn’t the lone or even an early proponent for replacing “negro” with “black” in the American lexicon, Brown’s record so correctly, forthrightly, and irresistibly captured the trajectory of African-American consciousness as to immediately consign “negro” to the dustbin of history. The ebullient, funk-charged song, featuring a call-and-response with a chorus of kids rounded up from a nearby restaurant, topped the R&amp;B charts for six weeks – a mighty achievement in a year that saw Brown score nine different hits.  An outspoken advocate for black empowerment, Brown’s greatest moment may have been his historic performance at the Boston Garden on the night Martin Luther King, Jr. was murdered: in offering a riveting concert and appearing on television that night, Brown has been credited with preventing the widespread rioting that gripped many other American cities. </p>
 
-								</div>
 							</div>
-							</div>
-							<div className="col-md-6">
-								
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
-									<h2>“If I Had a Hammer”</h2>
-								
-								<h4>Peter, Paul &amp; Mary</h4>
-								<div className="line-separator"></div>
-
-								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
-								</div> 
-								</div>
-							</div>
+						</div>
 					</div>
+													
+					<div className="col-md-6">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="t-center song_history">
+								<h2>“Living for the City”; “Happy Birthday”</h2> 
+						
 
-					<div className="row">
+							<h4>Stevie Wonder</h4>
+							<div className="line-separator"></div>
+
+							<p>Released in August, 1973 as part of the album <b><i>“Innervisions,”</i></b>  <b><i>“Living for the City”
+							</i></b>  became an instant classic: a condemnation of the cruelly failed dream of an African-American rebirth through migration to the north. Told as a narrative, a young man raised in the rural deep south leaves family and hardship behind in a bid for a new beginning in the city, only to become fodder for con men and hustlers, his story ending not with enlightenment or economic hope but jail. For Wonder, who could be acerbic about the unchanging status of African-Americans (<b><i>“You Haven’t Done Nothing”</i></b> ), (<b><i>“Living for the City”</i></b>  was particularly caustic. Yet his celebratory “Happy Birthday” – both a tribute to Dr. King and the spearhead of a successful movement to honor him with a national holiday – was Wonder at his optimistic and focused best: changing the world one note at a time. </p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div className="row">
 									
-							<div className="col-md-6">
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-									<div className="t-center song_history">
-										<h2>“We Shall Overcome”</h2> 
-								
+				<div className="col-md-6 eps-block">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="t-center song_history">
+							<h2>“Fight the Power”</h2> 
+					
 
-									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
-									<div className="line-separator"></div>
+						<h4>Public Enemy</h4>
+						<div className="line-separator"></div>
 
-									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+						<p>Commissioned by Spike Lee for his film, <i>“Do the Right Thing,”</i> no record showcased hip hop’s ability to express the inner city’s frustrations in the Reagan era as incisively as Public Enemy’s, <b><i>“Fight the Power.”</i></b> Cooked at a steady rolling boil, with words by group leader Chuck D and a thick stew of samples running the gamut from vocal group the Dramatic to James Browns’, <b><i>“Say It Loud”</i></b>  to pioneering DJ Afrika Bambaataa, the record evoked nothing so much as the hot Brooklyn night portrayed in the film, the air filled with music old and new from apartments and passing cars. A call to hold power accountable, the record fairly seethes with anger and impatience and a palpable sense that patience is a thing of the past. Indeed, the record found a specific later life: in 1989 it was played in the streets of Miami as a celebratory song after a policeman was convicted of shooting a black motorist and spurring a riot. As its author, Chuck D termed the song Public Enemy’s “most important record.”</p>
 
-								</div>
-							</div>
-							</div>
-							<div className="col-md-6">
-								
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
-									<h2>“If I Had a Hammer”</h2>
-								
-								<h4>Peter, Paul &amp; Mary</h4>
-								<div className="line-separator"></div>
-
-								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
-								</div> 
-								</div>
-							</div>
 					</div>
+				</div>
+				</div>
+												
+				<div className="col-md-6">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="t-center song_history">
+							<h2>“A Change is Gonna Come”</h2> 
+					
 
-					<div className="row">
+						<h4>Sam Cooke</h4>
+						<div className="line-separator"></div>
+
+						<p>Sam Cooke was never more himself than on his unsurpassed American psalm, <b><i>“A Change is Gonna Come.”
+						</i></b> Though a gospel singer who had “crossed over” into pop and nightclub work, Cooke had been paying close attention to the folk revival of the early ‘sixties and was particularly moved by Bob Dylan’s <b><i>“Blowin’ in the Wind.”</i></b> “A black guy should have written that song,” Cooke told his manager, Allen Klein. “I should have written that song.” Thus inspired, Cooke turned to his gospel roots for the song’s inspiration, which seems to come from the story of Exodus – a powerful metaphor for a life of slavery and wandering in America. A song of spiritual transcendence with a soaring, angelic vocal, the original recording was donated to an album benefiting the Southern Christian Leadership Conference, the organization closely associated with Dr. King. </p>
+
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div className="row">
 									
-							<div className="col-md-6">
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-									<div className="t-center song_history">
-										<h2>“We Shall Overcome”</h2> 
-								
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="t-center song_history">
+							<h2>“Alright”</h2> 
+					
 
-									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
-									<div className="line-separator"></div>
+						<h4>Kendrick Lamar</h4>
+						<div className="line-separator"></div>
 
-									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
+						<p>Rarely has a song captured the zeitgeist as elegantly as <b><i>“Alright.”</i></b> Crafted by rapper Kendrick Lamar off a hook by Pharrell Williams with a breadth of allusions referencing both Alice Walker novels and Public Enemy records, it was intended as a street-savvy paean to perseverance, a message of hope and optimism studded in the face of difficulties. While <b><i>“Alright”</i></b> was nominated for Song of the Year at the Grammys, won the award’s rap categories, and topped many 2015 critics’ polls, its remarkable success as a pop phenomenon couldn’t have predicted its embrace as the de facto song of the Black Lives Matter Movement, picked up and chanted by young protesters. Indeed, its picture of a frustrating, violent world mitigated by a life-affirming joy and faith in oneself led one commentator to call <b><i>“Alright”</i></b> the new <b><i>“We Shall Overcome,”</i></b> and the B.E.T. network to suggest it was a modern black national anthem.   In that context, can it be just a coincidence that the roots of <b><i>“We Shall Overcome”</i></b> trace back to an earlier gospel tune entitled <b><i>“I’ll Be Alright”?</i></b> </p>
 
-								</div>
-							</div>
-							</div>
-							<div className="col-md-6">
-								
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
-									<h2>“If I Had a Hammer”</h2>
-								
-								<h4>Peter, Paul &amp; Mary</h4>
-								<div className="line-separator"></div>
-
-								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
-								</div> 
-								</div>
-							</div>
 					</div>
+				</div>
+			</div>
+		</div>
 
-					<div className="row">
-									
-							<div className="col-md-6">
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-									<div className="t-center song_history">
-										<h2>“We Shall Overcome”</h2> 
-								
-
-									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
-									<div className="line-separator"></div>
-
-									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
-
-								</div>
-							</div>
-							</div>
-							<div className="col-md-6">
-								
-								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
-									<h2>“If I Had a Hammer”</h2>
-								
-								<h4>Peter, Paul &amp; Mary</h4>
-								<div className="line-separator"></div>
-
-								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the-forties with his Weavers bandmate, Lee Hays. </p>
-								</div> 
-								</div>
-							</div>
-					</div>
 
 						<div className="row">
 
@@ -691,13 +678,13 @@
 
                         </div>
 
-						<div className="row" style={{marginTop: "100px"}}>
+						<div className="row no-margin-bottom">
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/Video_Screen_03.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/content_6_2.jpg" /></a></div>
 								 <div className="tape-title next_on">
-										<img src="images/episode_ToC/next.png" />
+										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
 							</div>
 						</div>
@@ -747,6 +734,12 @@
 	    });
 
 		var App = React.createClass({
+		  componentDidMount: function() {
+            this.initApp();
+          },
+          componentDidUpdate: function() {
+            this.initApp();
+          },
 	      render: function() {
 	        return (
 	          <div>
@@ -777,7 +770,7 @@
 
 								<ul className="nav uppercase normal big-texts">
 
-									<li><Link to="/about">ABOUT</Link></li>
+									<li><Link to="/about" className="nav-custom">ABOUT</Link></li>
 
 									<li className="dropdown-toggle nav-toggle"><Link to="/episodes">EPISODES</Link><span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
 
@@ -806,7 +799,19 @@
 	          	{this.props.children}
 	          </div>
 	        )
-	      }
+	      }, initApp: function() {
+	      	 $("ul.nav li a").click(function(event) {
+			  	console.log(' ========== ');
+			    $(".nav-menu").hide();
+			  });
+
+			  $("dropdown-menu li a").click(function(event) {
+			  	console.log(' ========== ');
+			    $(".nav-menu").hide();
+			  });
+	      		
+		}
+
 	    });
 	  
 	    ReactDOM.render(
@@ -826,6 +831,8 @@
 
 	<script>
 
+		var isMob;
+
 		function divResize() {
 			ht = $('html').innerHeight();
 			wd = $('html').innerWidth();
@@ -843,22 +850,20 @@
 		    }
 		}
 
+
 		
 
 		function showPlayer() {
-			console.log(' ======== ');
 			$('#apple-player').removeClass('move-down');
 			$('#apple-player').addClass('move-up');
 			//$('#apple-player').css("bottom","-6px");
 		}
 
 		function closePlayer() {
-			console.log(' +++++++++ ');
 			$('#apple-player').removeClass('move-up');
 			$('#apple-player').addClass('move-down');
 			//$('#apple-player').css("bottom","-506");
 		}
-
 
 	</script>
 	<!-- End JS Files -->

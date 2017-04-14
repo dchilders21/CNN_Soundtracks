@@ -128,7 +128,7 @@
 		}
 
 		footer.big-footer .footer_inner{
-			padding:60px 20px 50px;
+			/* padding:60px 20px 50px; */
 		}
 
 		.content .left,
@@ -221,7 +221,7 @@
 			width: 100%;
 			padding:0 15px;
 			height: auto;
-			text-align: left;
+			text-align: right;
 			line-height: 35px;
 		}
 
@@ -264,7 +264,7 @@
 		}
 
 		.nav-inner div.nav-menu ul.dropdown-menu li a{
-			padding:0 25px;
+			/*padding:0 25px;*/
 		}
 
 		.white-nav .nav-inner div.nav-menu ul.nav .submenu_column a:hover{
@@ -589,8 +589,9 @@
 			width: 90%;
 			float: none;
 			display: block;
-			padding:50px 0 !important;
+			padding:30px 0;
 			margin:0 auto !important;
+			padding-bottom: 0px;
 		}
 
 		.feature-boxes .basic_slider{
@@ -602,7 +603,7 @@
 		}
 
 		.feature-text.small-head.f-left.t-left.dark{
-			margin-bottom:30px;
+			margin-bottom:8px;
 		}
 
 		.feature-boxes .feature-box.no-margin-top{
