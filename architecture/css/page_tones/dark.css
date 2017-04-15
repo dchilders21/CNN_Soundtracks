@@ -21,6 +21,15 @@
 		background-color:#2b2b2b !important;
 	}
 
+	.dark-nav .nav-menu ul.dropdown-menu li.inactiveEp a:hover{
+		background-color:#000 !important;
+	}
+
+	/*a.inactiveEp:hover{
+		background-color: #FFFFFF !important;
+	    background-color: #2b2b2b !important;
+	}*/
+
 /* Page Elements */
 	
 	.page-content,

@@ -137,6 +137,8 @@
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
+
+	    	background-size: 100% auto;
 		}
 
 		.feature-boxes {
@@ -170,6 +172,7 @@
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
+	    	background-size: 100% auto;
 		}
 		.feature-boxes {
 			padding-left: 24px;
@@ -212,11 +215,12 @@
 	   .background_home {
 			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_bg.jpg);
 			/*background-size: cover;*/
-			background-size: 400px 600px;
+			background-size: cover;
+			background-position: center
 		}
 
 		.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile_Small.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -321,6 +325,18 @@
 			display: none;
 		}
 
+		.lightcase-open body > *:not([id*='lightcase-']) {
+			top: auto !important;
+		}
+
+		.sidebar {
+			display: none;
+		}
+
+		.navbar-center a {
+			letter-spacing: 1px;
+		}
+
 	  
 	}
 
@@ -334,11 +350,12 @@
 	    .background_home {
 			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_bg.jpg);
 			/*background-size: cover;*/
-			background-size: 400px 600px;
+			background-size: cover;
+			background-position: center;
 		}
 
 		.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile_Small.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -447,6 +464,18 @@
 
 		.arrow_down {
 			display: none;
+		}
+
+		.lightcase-open body > *:not([id*='lightcase-']) {
+			top: auto !important;
+		}
+
+		.sidebar {
+			display: none;
+		}
+
+		.navbar-center a {
+			letter-spacing: 1px;
 		}
 	  
 	}

@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!--Favicon -->
 	<link rel="icon" type="image/png" href="images/CNN_Favicon.png" />
+	<link href="images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png">
 		
 	<!-- CSS Files -->
 
@@ -243,9 +244,9 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_Render.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_Render.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_Next_Thursday.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_02.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_02.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -463,10 +464,9 @@
 	      		}
 
 	      		function moveCTA() {
-	      		console.log(' ===== ');
+
 	      			var bottomVideo = $("#transitionVideo").height();
 	      			var top = bottomVideo - 80;
-	      			console.log(top)
 
 	      			$('#home-episodes').css("top", top);
 
@@ -853,13 +853,13 @@
 
 										<ul className="dropdown-menu pull-left clearfix">
 											<li><Link to="/episode-1"><span className="red">EPISODE: 1</span></Link></li>
-											<li><a>EPISODE: 2</a></li>
-											<li><a>EPISODE: 3</a></li>
-											<li><a>EPISODE: 4</a></li>
-											<li><a>EPISODE: 5</a></li>
-											<li><a>EPISODE: 6</a></li>
-											<li><a>EPISODE: 7</a></li>
-											<li><a>EPISODE: 8</a></li>
+											<li className="inactiveEp"><a>EPISODE: 2</a></li>
+											<li className="inactiveEp"><a>EPISODE: 3</a></li>
+											<li className="inactiveEp"><a>EPISODE: 4</a></li>
+											<li className="inactiveEp"><a>EPISODE: 5</a></li>
+											<li className="inactiveEp"><a>EPISODE: 6</a></li>
+											<li className="inactiveEp"><a>EPISODE: 7</a></li>
+											<li className="inactiveEp"><a>EPISODE: 8</a></li>
 										</ul>
 									</li>
 
@@ -877,13 +877,24 @@
 	          </div>
 	        )
 	      }, initApp: function() {
+
+      		 $(".navbar-brand").click(function(event) {
+			    $(".nav-menu").hide();
+			  });
+
+			  $('.mobile-nav-button').click(function(event) {
+			  		$(".dropdown-menu").show();
+			  });
+
+			  $("ul.nav li a").click(function(event) {
+			    $(".nav-menu").hide();
+			  });
+
 	      	 $("ul.nav li a").click(function(event) {
-			  	console.log(' ========== ');
 			    $(".nav-menu").hide();
 			  });
 
 			  $("dropdown-menu li a").click(function(event) {
-			  	console.log(' ========== ');
 			    $(".nav-menu").hide();
 			  });
 	      		
