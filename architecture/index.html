@@ -83,7 +83,12 @@
 
 	<div id="apple-player" class="move-down">
 		<div id="apple-close" onclick="closePlayer()"><img src="images/close.png" /></div>
-		<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>
+		<div id="season_playlist">
+			<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>
+		</div>
+		<div id="mlk_playlist">
+			<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.727882d2ab8145b28962327e38e714c8?country=us" height="400px" width="100%" frameborder="0"></iframe>
+		</div>
 	</div>
 
 	<!-- JS Files -->
@@ -191,7 +196,7 @@
 					<div className="border">
 			                <div className="col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
 			                <div className="col-md-5 about-rt">
-			                <div className="t-center" style={{marginTop: "0px", marginBottom: "10px"}}><h2>ABOUT THE SHOW</h2></div>
+			                <div className="t-center about" style={{marginTop: "0px", marginBottom: "10px"}}><h2>ABOUT THE SHOW</h2></div>
 			                  <p>Soundtracks is an eight-part series executive-produced by Dwayne Johnson, Dany Garcia, Hiram Garcia,
 							 and Brian Gewirtz that will explore the music tied to iconic moments in history. The show premieres Thursday, April 20th, 10pm et/pt.  Every episode will cover a tragedy, triumph, or the start of a movement – and the music that came to define it. From the March on Washington to the
 							riots at Stonewall, the moon landing to Hurricane Katrina – music has played an integral
@@ -244,9 +249,9 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER_Next_Thursday.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_02.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_02.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_NewSeriesThursday.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_NewSeriesThursday.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_NewSeriesThursday.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -539,10 +544,10 @@
 							<div className="row">
 								
 								<div className="col-md-6 eps-block">
-									<div className="t-center">
+									<div className="about">
 										<h2>ABOUT THE EPISODE</h2>
 									</div>
-									<div className="t-center">
+									<div>
 										<p>The death of Martin Luther King, Jr. marked a turning point in the Civil Rights Movement, a moment of reckoning for African Americans in the United States. After the mourning, the community gathered its strength to continue King’s fight, inspired by the fiery protest songs of Nina Simone, the black power anthem of James Brown, and the extraordinary voice of Aretha Franklin.</p>
 
 										<p>The continued struggle for civil rights has been a long and uneven battle since 1968, but the spirit of resistance has been kept alive in the music, from Stevie Wonder’s campaign to establish a Martin Luther King national holiday to Kendrick Lamar’s searing protest song that became an anthem for the Black Lives Matter Movement. The music in this episode both celebrates the strength and solidarity of the African American experience while reminding us how far we still have to go.</p>
@@ -590,7 +595,7 @@
 									
 							<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-									<div className="t-center song_history">
+									<div className="song_history">
 										<h2>“We Shall Overcome”</h2> 
 								
 
@@ -605,7 +610,7 @@
 							<div className="col-md-6">
 								
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
+								<div className="song_history">
 									<h2>“If I Had a Hammer”</h2>
 								
 								<h4>Peter, Paul &amp; Mary</h4>
@@ -625,7 +630,7 @@
 									
 						<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
+								<div className="song_history">
 									<h2>“People Get Ready” </h2> 
 							
 
@@ -640,7 +645,7 @@
 														
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-								<div className="t-center song_history">
+								<div className="song_history">
 									<h2>“Mississippi Goddamn” and “Why (The King of Love is Dead)”</h2> 
 							
 
@@ -660,7 +665,7 @@
 									
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-							<div className="t-center song_history">
+							<div className="song_history">
 								<h2>“Say It Loud (I’m Black and I’m Proud)” </h2> 
 						
 
@@ -675,7 +680,7 @@
 													
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-							<div className="t-center song_history">
+							<div className="song_history">
 								<h2>“Living for the City”; “Happy Birthday”</h2> 
 						
 
@@ -695,7 +700,7 @@
 									
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-						<div className="t-center song_history">
+						<div className="song_history">
 							<h2>“Fight the Power”</h2> 
 					
 
@@ -710,7 +715,7 @@
 												
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-						<div className="t-center song_history">
+						<div className="song_history">
 							<h2>“A Change is Gonna Come”</h2> 
 					
 
@@ -729,7 +734,7 @@
 									
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
-						<div className="t-center song_history">
+						<div className="song_history">
 							<h2>“Alright”</h2> 
 					
 
@@ -941,12 +946,26 @@
 		
 
 		function showPlayer() {
+			console.log(window.location.href);
+			l = window.location.href.split("/");
+			page = l[l.length - 1];
+			console.log(page)
+			if (page == 'episode-1') {
+
+				$('#mlk_playlist').css('display', 'block');
+			} else {
+				$('#season_playlist').css('display', 'block');
+			}
+
+			console.log(' ====== ');
 			$('#apple-player').removeClass('move-down');
 			$('#apple-player').addClass('move-up');
 			//$('#apple-player').css("bottom","-6px");
 		}
 
 		function closePlayer() {
+			$('#mlk_playlist').css('display', 'none');
+			$('#season_playlist').css('display', 'none');
 			$('#apple-player').removeClass('move-up');
 			$('#apple-player').addClass('move-down');
 			//$('#apple-player').css("bottom","-506");
