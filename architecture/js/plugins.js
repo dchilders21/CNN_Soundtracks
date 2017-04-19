@@ -9,27 +9,7 @@ PAGE LOADER
     $("#pageloader .spinner").delay(0).fadeOut("slow");
     $("#pageloader").delay(300).fadeOut("slow");
 
-/* ==============================================
-HOME PAGE IMAGE SLIDER (SUPER SLIDES)
-=============================================== */
 
- 	$('#fullscreen').superslides({
-	 	play: 12000,
-    	animation_speed: 600,
-    	usekeyboard: false,
-	    animation: 'fade',
-	    inherit_height_from: window
-    });
-
-/* ==============================================
-TEXT ROTATOR FOR HOME TEXTS
-=============================================== */	
-		
-    $(".text-rotetor .rotate").textrotator({
-        animation: "dissolve",
-        speed: 4000,
-		separator: ","
-    });   
 
 /* ==============================================
 NAVIGATION SECTION CHANGEABLE BACKGROUND SCRIPT
@@ -166,7 +146,7 @@ MOBILE NAV BUTTON
 FIT VIDEOS
 =============================================== */
 
-     $(".fitvid").fitVids();
+     //$(".fitvid").fitVids();
 
  /* ==============================================
 ALERT CLOSE
@@ -225,312 +205,8 @@ FEATURES COLLAPSE
         }, 700);
     });
 
-/* ==============================================
-CAROUSEL SLIDER FOR BOXES / 3 ITEMS
-=============================================== */  
-
-    var owlBox = $(".box-carousel.three-items");
-    
-    // Add .box-carousel class to boxes div
-    owlBox.owlCarousel({
-        items : 3,
-        // Responsive Settings
-        itemsDesktop : [1169,3],
-        itemsDesktopSmall : [979,2],
-        itemsTablet : [800,2],
-        itemsTabletSmall : false,
-        itemsMobile : [560,1],
-        // End Responsive Settings
-        mouseDrag : false,
-        pagination : true,
-        navigation : true,
-        touchDrag : true,
-        slideSpeed : 400
-    });
-
-    // Arrows
-    $( ".boxes-type-4 .owl-prev" ).addClass( "fa fa-angle-left" );
-    $( ".boxes-type-4 .owl-next" ).addClass( "fa fa-angle-right" );
-
-/* ==============================================
-CAROUSEL SLIDER FOR BOXES / 3 ITEMS / DRAGABLE
-=============================================== */  
-
-    var owlBox = $(".box-carousel-dragable.three-items");
-    
-    // Add .box-carousel class to boxes div
-    owlBox.owlCarousel({
-        items : 3,
-        // Responsive Settings
-        itemsDesktop : [1169,3],
-        itemsDesktopSmall : [979,2],
-        itemsTablet : [600,2],
-        itemsTabletSmall : false,
-        itemsMobile : [560,1],
-        // End Responsive Settings
-        mouseDrag : true,
-        pagination : false,
-        navigation : true,
-        touchDrag : true,
-        slideSpeed : 400
-    });
-
-/* ==============================================
-CAROUSEL SLIDER FOR BOXES / 4 ITEMS
-=============================================== */  
-
-    var owlBox = $(".box-carousel.four-items");
-    
-    // Add .box-carousel class to boxes div
-    owlBox.owlCarousel({
-        items : 4,
-        // Responsive Settings
-        itemsDesktop : [1169,3],
-        itemsDesktopSmall : [979,3],
-        itemsTablet : [640,2],
-        itemsTabletSmall : false,
-        itemsMobile : [560,1],
-        // End Responsive Settings
-        mouseDrag : false,
-        pagination : true,
-        navigation : true,
-        touchDrag : true,
-        slideSpeed : 400
-    });
-
-/* ==============================================
-CAROUSEL SLIDER FOR BOXES / 4 ITEMS / DRAGABLE
-=============================================== */  
-
-    var owlBox = $(".box-carousel-dragable.four-items");
-    
-    // Add .box-carousel class to boxes div
-    owlBox.owlCarousel({
-        items : 4,
-        // Responsive Settings
-        itemsDesktop : [1169,3],
-        itemsDesktopSmall : [979,3],
-        itemsTablet : [640,2],
-        itemsTabletSmall : false,
-        itemsMobile : [560,1],
-        // End Responsive Settings
-        mouseDrag : true,
-        pagination : false,
-        navigation : true,
-        touchDrag : true,
-        slideSpeed : 400
-    });
-
-/* ==============================================
-CAROUSEL SLIDER FOR BOXES / 5 ITEMS
-=============================================== */  
-
-    var owlBox = $(".box-carousel.five-items");
-    
-    // Add .box-carousel class to boxes div
-    owlBox.owlCarousel({
-        items : 5,
-        // Responsive Settings
-        itemsDesktop : [1169,5],
-        itemsDesktopSmall : [979,4],
-        itemsTablet : [640,3],
-        itemsTabletSmall : false,
-        itemsMobile : [560,3],
-        // End Responsive Settings
-        mouseDrag : true,
-        pagination : false,
-        navigation : false,
-        touchDrag : true,
-        slideSpeed : 400
-    });
-
-/* ==============================================
-CAROUSEL SLIDER FOR BOXES / 6 ITEMS
-=============================================== */  
-
-    var owlBox = $(".box-carousel.six-items");
-    
-    // Add .box-carousel class to boxes div
-    owlBox.owlCarousel({
-        items : 6,
-        // Responsive Settings
-        itemsDesktop : [1169,5],
-        itemsDesktopSmall : [979,4],
-        itemsTablet : [600,3],
-        itemsTabletSmall : false,
-        itemsMobile : [560,2],
-        // End Responsive Settings
-        mouseDrag : false,
-        pagination : true,
-        navigation : true,
-        touchDrag : true,
-        slideSpeed : 400
-    });
-  
-/* ==============================================
-CAROUSEL SLIDER FOR CATEGORIES AND INNER SLIDER
-=============================================== */ 
-    
-    // Category Tag
-    var owlCategory = $(".double-slider");
-    // Inner Slider Tag
-    var owlInnerSlider = $(".inner-slider");
-    
-    // Categories Slider
-    owlCategory.owlCarousel({
-        items : 5,
-        // Responsive Settings
-        itemsDesktop : [1170,3],
-        itemsDesktopSmall : [979,3],
-        itemsTablet : [800,2],
-        itemsTabletSmall : false,
-        itemsMobile : [560,1],
-        // End Responsive Settings
-        mouseDrag : false,
-        pagination : false,
-        navigation : true,
-        touchDrag : true,
-        slideSpeed : 400,
-        // Top Navigation
-        afterInit : function(elem){
-            var that = this
-            that.owlControls.prependTo(elem)
-        }
-    });
-
-    // Categories - Inner Slider
-    owlInnerSlider.owlCarousel({
-        navigation : false, // Show next and prev buttons
-        slideSpeed : 300,
-        transitionStyle : "fade",
-        pagination : true,
-        paginationSpeed : 700,
-        // Will be active on all categories
-        autoPlay: false,
-        singleItem:true
-        // "singleItem:true" is a shortcut for:
-        // items : 1
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-  });
 
 
-/* ==============================================
-TESTIMONIALS
-=============================================== */
-
-    var gridContainer = $('.testimonial-slide'),
-        filtersContainer = $('#filters-container'),
-        wrap, filtersCallback;
-
-    gridContainer.cubeportfolio({
-        layoutMode: 'slider',
-        drag: true,
-        auto: true,
-        autoTimeout: 4000,
-        autoPauseOnHover: true,
-        showNavigation: false,
-        showPagination: true,
-        rewindNav: false,
-        scrollByPage: false,
-        gridAdjustment: 'responsive',
-        mediaQueries: [{
-            width: 1,
-            cols: 1
-        }],
-        gapHorizontal: 0,
-        gapVertical: 0,
-        caption: 'overlayBottomReveal',
-        displayType: 'lazyLoading',
-        displayTypeSpeed: 100
-    });
-
-/* ==============================================
-CUSTOM IMAGE SLIDER
-=============================================== */  
-        
-    $('.basic_slider').flexslider({
-        animation: "fade",
-        selector: ".image_slider li",
-        controlNav: true,
-        directionNav: true,
-        animationSpeed: 500,
-        slideshowSpeed: 5000,
-        pauseOnHover: true, 
-        direction: "vertical",
-        start: function(slider){
-            $('body').removeClass('loading'); 
-        }
-     });
-
-/* ==============================================
-FLEX SLIDER WITH IMAGE PAGINATION
-=============================================== */  
-        
-    $('.image-pgn-slider').flexslider({
-        animation: "slide",
-        controlNav: "thumbnails"
-    });
-
-/* ==============================================
-MAGNIFIC POPUP (LIGHTBOX PLUGIN)
-=============================================== */
-
-    // Magnific Popup Calling
-    $('.image-link').magnificPopup({
-        type:'image',
-        mainClass: 'mfp-with-zoom mfp-img-mobile'
-    });
-
-    $('.mp-video, mp-map').magnificPopup({
-        type:'iframe',
-        mainClass: 'mfp-with-zoom mfp-img-mobile'
-    });
-
-    //iframe scripts
-    $.extend(true, $.magnificPopup.defaults, {  
-        iframe: {
-            patterns: {
-                //youtube videos
-                youtube: {
-                    index: 'youtube.com/', 
-                    id: 'v=', 
-                    src: 'http://www.youtube.com/embed/%id%?autoplay=1' 
-                },
-                //vimeo videos
-                vimeo: {
-                    index: 'vimeo.com/',
-                    id: '/',
-                    src: 'http://player.vimeo.com/video/%id%?autoplay=1'
-                },
-                //google maps
-                gmaps: {
-                    index: '//maps.google.',
-                    src: '%id%&output=embed'
-                }
-            }
-        }
-    });
-
-    //for image gallery
-    $('.mp-gallery').each(function() { // the containers for all your galleries
-        $(this).magnificPopup({
-            delegate: 'a', // the selector for gallery item
-            type: 'image',
-            mainClass: 'mfp-with-zoom mfp-img-mobile',
-            gallery: {
-              enabled:true
-            }
-        });
-    }); 
-
-/* ==============================================
-VIDEO PLAYER
-=============================================== */  
-
-    //$(".player").mb_YTPlayer();
 
 /* ==============================================
 CHANGE BG TONE WITH HOVER
@@ -608,20 +284,6 @@ MOBILE BACKGROUND FOR VIDEO BACKGROUNDS
                 }
             }
         });
-
-        //Parallax Classes
-        $('body.parallax .parallax').parallax("50%", 0.3);
-        $('body.parallax .parallax1').parallax("50%", 0.3);
-        $('body.parallax .parallax2').parallax("50%", 0.3);
-        $('body.parallax .parallax3').parallax("50%", 0.3);
-        $('body.parallax .parallax4').parallax("50%", 0.3);
-        $('body.parallax .parallax5').parallax("50%", 0.3);
-        $('body.parallax .parallax6').parallax("50%", 0.3);
-        $('body.parallax .parallax7').parallax("50%", 0.3);
-        $('body.parallax .parallax8').parallax("50%", 0.3);
-        $('body.parallax .parallax9').parallax("50%", 0.3);
-        $('body.parallax .parallax10').parallax("50%", 0.3);
-        $('body.parallax .parallax11').parallax("50%", 0.3);
 
     }
 
@@ -720,84 +382,6 @@ CALCULATE HOME INNER HEIGHT
 // End Window Load Function
 });
 
-/* ==============================================
-COUNT FACTORS
-=============================================== */  
- 
-    // Count Scripts
-    (function($) {
-        $.fn.countTo = function(options) {
-            // merge the default plugin settings with the custom options
-            options = $.extend({}, $.fn.countTo.defaults, options || {});
-
-            // how many times to update the value, and how much to increment the value on each update
-            var loops = Math.ceil(options.speed / options.refreshInterval),
-                increment = (options.to - options.from) / loops;
-
-            return $(this).each(function() {
-                var _this = this,
-                    loopCount = 0,
-                    value = options.from,
-                    interval = setInterval(updateTimer, options.refreshInterval);
-
-                function updateTimer() {
-                    value += increment;
-                    loopCount++;
-                    $(_this).html(value.toFixed(options.decimals));
-
-                    if (typeof(options.onUpdate) == 'function') {
-                        options.onUpdate.call(_this, value);
-                    }
-
-                    if (loopCount >= loops) {
-                        clearInterval(interval);
-                        value = options.to;
-
-                        if (typeof(options.onComplete) == 'function') {
-                            options.onComplete.call(_this, value);
-                        }
-                    }
-                }
-            });
-        };
-
-        $.fn.countTo.defaults = {
-            from: 0,  // the number the element should start at
-            to: 100,  // the number the element should end at
-            speed: 1000,  // how long it should take to count between the target numbers
-            refreshInterval: 100,  // how often the element should be updated
-            decimals: 0,  // the number of decimal places to show
-            onUpdate: null,  // callback method for every time the element is updated,
-            onComplete: null  // callback method for when the element finishes updating
-        };
-
-        // Count Options
-        $(".fact").appear(function(){
-            dataperc = $(this).attr('data-perc'),
-            //Count Factors Options
-            $(this).find('.factor').delay(0).countTo({
-                from: 0,
-                to: dataperc,
-                speed: 3000,
-                refreshInterval: 50
-            }); 
-        });
-
-    })(jQuery);
-
-/* ==============================================
-ANIMATED SKILL BARS
-=============================================== */
-
-    jQuery('.progress-bar').appear(function(){
-        datavl = $(this).attr('data-value'),
-        // Add Data Value to Width
-        $(this).animate({ "width" : datavl + "%"}, 300);
-        // Create Span
-        $(this).append( "<span></span>" );
-        // Add value to Span
-        $(this).find("span").html( datavl + "%");
-    }); 
 
 /* ==============================================
 CATEGORIES FULL SCREEN - DATA TEXT AREAS
@@ -810,30 +394,6 @@ CATEGORIES FULL SCREEN - DATA TEXT AREAS
         $(this).find('.texts').append('<span>' + itemText + '</span>');
     });
 
-/* ==============================================
-FEATURES WITH MOBILE SCRIPTS
-=============================================== */
-
-    jQuery('.strips').each(function(){
-        dataWidth = $(this).attr('data-width'),
-        dataHeight = $(this).attr('data-height'),
-        // Change Width
-        $(this).css({ "width" : dataWidth + "px"});
-        // Change Height
-        $(this).css({ "height" : dataHeight + "px"});
-    });
-
-/* ==============================================
-SKROLLR SCRIPT
-=============================================== */
-
-    skrollr.init({
-        forceHeight: false,
-        mobileCheck: function() {
-            //hack - forces mobile version to be off
-            return false;
-        }
-    });
 
 /* ==============================================
 TIMELINE
@@ -868,12 +428,4 @@ BACK TO TOP BUTTON
         return false;
     });
 
-/* ==============================================
-BLOG DATES FOR MOBILE
-=============================================== */ 
-
-    $('#blog .post').each(function(){
-        var newPosition = $(this).find('.post-header');
-        $(this).find('.dates').clone().insertAfter(newPosition).addClass('for-mobile');
-    });
 
