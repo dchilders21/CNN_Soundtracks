@@ -57,15 +57,13 @@
 	<!-- Oswald-->
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
-  	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
-
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-97634966-1', 'auto');
+	  ga('create', 'UA-97495636-1', 'auto');
 	  ga('send', 'pageview');
 
 	</script>
@@ -148,8 +146,6 @@
 	<script type="text/javascript" src="js/jscrollpane/jquery.jscrollpane.js"></script>
 	<script type="text/javascript" src="js/jscrollpane/mwheelIntent.js"></script>
 
-	<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
-
 	<script type="text/babel">
 
 		var { Router,
@@ -229,144 +225,6 @@
 	          </div>
 	        )
 	      }
-	    });
-
-
-	    var Map = React.createClass({
-	      componentDidMount: function() {
-            this.initMap();
-          },
-          componentDidUpdate: function() {
-            this.initMap();
-
-          },
-	      render: function() {
-	        return (
-	          <div>
-				
-				<div id='map-leaflet' className='map'></div>
-					<div id="moon"><img src="images/moon.png" />
-						<div id="moon_pop"><img className="moonMarker" src="images/redMarker.png" /></div>
-					</div>
-					<div id="popup-leaflet">
-						<a className="leaflet-popup-close-button">×</a>
-						<div className='sndtrx_bubble'><img src='images/albums/moon_landing.png' width='210'/><p>Apollo 11 was launched from Kennedy Space Center in Florida and Neil Armstrong stepped onto the moon’s surface on July 20, 1969.</p><a href="#episodes"><img src='images/press_play.jpg' width='207'/></a></div>
-					</div>
-
-			    </div>
-	        )
-	      },
-          initMap: function() {
-
-          		var me = this;
-
-          		L.mapbox.accessToken = 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA';
-
-				var mymap = L.map('map-leaflet', {
-					zoomControl: false,
-					scrollWheelZoom: false,
-					minZoom: 3
-				})
-
-				mymap.on('load', function(e) {
-				        console.log($('.leaflet-map-pane')[0]);
-				        //var $newdiv = $('<div id="moon"><img src="images/moon.png" /></div>')
-
-				        //var $div = $("<div>", {id: "moon"});
-				        var width = mymap.getSize().x * .2;  // Moon will be 20% of the width
-				        var lt = mymap.getSize().x - width;
-
-				        //$('.leaflet-map-pane').append('<div id="moon"><img src="images/moon.png" /></div>');
-				        //$('#moon').css('width', width)
-				        //$('#moon').css('left', lt)
-				});
-
-				mymap.on('resize', function() {
-					/*console.log(mymap.getSize().x)
-					var width = mymap.getSize().x * .2;  // Moon will be 20% of the width
-					console.log(width)
-				    var lt = mymap.getSize().x - width;
-				    $('#moon').css('width', width)
-				    $('#moon').css('left', lt)*/
-				})
-
-				mymap.setView([41.419, -42.382], 3);
-
-
-				L.tileLayer('https://api.mapbox.com/styles/v1/dchilders21/cj12l7rf7004r2rt854usqnlz/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA', {
-				    attribution: '',
-				    maxZoom: 18,
-				    //id: 'your.mapbox.project.id',
-				    accessToken: 'pk.eyJ1IjoiZGNoaWxkZXJzMjEiLCJhIjoiY2owazhndWR5MDA1MTMybzh5dWh5bXI2aiJ9.8oYSScGmA_IsY6RFVqdoqA'
-				}).addTo(mymap);
-
-				//Extend the Default marker class
-				 var RedIcon = L.Icon.extend({
-				    options: {
-				    	    iconUrl: './images/redMarker.png',
-				    	    iconSize: new L.Point(25, 41),
-				    	    iconAnchor: new L.Point(13, 41)
-				    }
-				 });
-
-				 L.control.zoom({
-				     position:'bottomright'
-				}).addTo(mymap);
-
-				var redIcon = new RedIcon();
-
-				var marker = L.marker([40.711667, -74.0125], {icon: redIcon}).addTo(mymap);
-				marker.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/september_11.png' width='210'/><p>The World Trade Center complex was built in 1973. After its destruction in 2001, the One World Trade Center was built in its place.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-				var marker2 = L.marker([41.150092, -81.343353], {icon: redIcon}).addTo(mymap);
-				marker2.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/kent_state.png' width='210'/><p>Kent State University in Kent, OH was the site of a student protest against the Vietnam War. It is still a functioning university.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-				var marker3 = L.marker([29.95, -90.066667], {icon: redIcon}).addTo(mymap);
-				marker3.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/katrina.png' width='210'/><p>The hurricane in 2005 affected many regions in Louisiana but the infrastructure of New Orleans collapsed, causing billions of dollars of damage.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-				var marker4 = L.marker([52.516111, 13.376944], {icon: redIcon}).addTo(mymap);
-				marker4.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/berlin_wall.png' width='210'/><p>Constructed in 1961, the wall was referred to as the Anti-Fascist Protective Wall and was not demolished completely until 1992.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-				var marker5 = L.marker([40.733797, -74.0021], {icon: redIcon}).addTo(mymap);
-				marker5.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/stone_wall.png' width='210'/><p>Stonewall Inn was not actually a hotel though it did begin its existence as a tearoom called, Bonnie’s Stone Wall. </p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-				var marker6 = L.marker([29.685, -95.407778], {icon: redIcon}).addTo(mymap);
-				marker6.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/battle_of_the_sexes.png' width='210'/><p>The Houston Astrodome was the site of what was actually the second match Riggs played against a female tennis player in 1973. He first defeated Margaret Court in Ramona, CA. </p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-				var marker7 = L.marker([35.1345, -90.0576], {icon: redIcon}).addTo(mymap);
-				marker7.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/mlk.png' width='210'/><p>The assassination of MLK took place at the Lorraine Motel in Memphis, TN.  The site has become a part of the National Civil Rights Museum. </p><a href='#episode-1'><img src='images/press_play.jpg' width='207'/></a></div>");
-
-
-				$(".leaflet-popup-close-button").click(function(event) {
-					console.log('here');
-					$("#popup-leaflet").hide();
-				});
-
-				$(".moonMarker").click(function(event) {
-					console.log(' ==== ');
-					$("#popup-leaflet").show();
-				});
-
-				$('.moonMarker').hover(function() {
-					$(this).css('cursor','pointer');
-				});
-
-				$('.leaflet-popup-close-button').hover(function() {
-					$(this).css('cursor','pointer');
-				});
-
-
-				/*$("#mlk_click").load(function() { 
-					console.log('maybe in business');
-				});
-
-
-				function mlk_click() { 
-					me.context.router.push('/episode-1');
-
-				}*/
-
-            }
 	    });
 
 
@@ -1003,8 +861,6 @@
 
 									<li><Link to="/about" className="nav-custom">ABOUT</Link></li>
 
-									<li><Link to="/map" className="nav-custom">MAP</Link></li>
-
 									<li className="dropdown-toggle nav-toggle"><Link to="/episodes">EPISODES</Link><span className="glyphicon glyphicon-menu-hamburger hamburger" aria-hidden="true"></span>
 
 										<ul className="dropdown-menu pull-left clearfix">
@@ -1063,7 +919,6 @@
 	        <Route path="/" component={App}>
 	          <IndexRoute component={Home}/>
 	          <Route path="/about" component={About} />
-	          <Route path="/map" component={Map} />
 	          <Route path="/episodes" component={Episodes} />
 	          <Route path="/episode-1" component={Episode1} />
 	     
@@ -1094,11 +949,6 @@
 		    	$('#introVideo').css("height","auto");
 		    }
 		}
-
-		/*function mlk_click(this) { 
-			me.context.router.push('/episode-1');
-
-		}*/
 
 		
 

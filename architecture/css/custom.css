@@ -697,3 +697,91 @@
 	#mlk_playlist {
 		display: none;
 	}
+
+
+	.map { position:absolute; top:0; bottom:0; width:100%; }
+
+    .leaflet-popup-close-button {
+    	left: 0 !important;
+    }
+
+    .leaflet-bar {
+    	background-color: transparent !important;
+    }
+
+    .leaflet-bar a {
+    	display: inline-block !important;
+    	width: 50px !important;
+    	height: 50px !important;
+    }
+
+    .leaflet-bar a:hover {
+    	background-color: #CC0000;
+    }
+
+    .leaflet-control-zoom-out {
+    	background-color: #CC0000 !important;
+    	opacity: 1 !important;
+    	background-image: url('../images/zoom_minus.png') !important;
+    	background-size: 50px 50px !important;
+    	background-position: 0px 0px !important;
+    	margin-left: 5px !important;
+    }
+
+    .leaflet-control-zoom-in {
+    	background-color: #CC0000 !important;
+    	opacity: 1 !important;
+    	background-image: url('../images/zoom_plus.png') !important;
+    	background-size: 50px 50px !important;
+    }
+
+    .leaflet-container {
+    	font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .leaflet-control-attribution {
+    	display: none !important;
+    }
+
+    .sndtrx_bubble {
+    	z-index: 100000000;
+    	width: 210px;
+    }
+
+    .sndtrx_bubble p {
+    	font-family: Arial, Helvetica, sans-serif;
+    	font-size: 15px;
+    	color: rgba(0, 0, 0, .75);
+    	line-height: 20px;
+    	margin: 0 0 10px;
+    }
+
+    #moon {
+    	position: absolute;
+    	top: 0px;
+    	right: 0px;
+    	z-index: 5;
+    	width: 20%;
+    }
+
+    #moon img {
+    	zoom: 50%;
+    	/*width: 100%;*/
+    }
+
+    #moon_pop {
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    }
+
+    #popup-leaflet {
+    	position: absolute;
+    	top: 200px;
+    	right: 0px;
+    	background-color: #FFF;
+    	padding: 15px 10px;
+    	border-radius: 4px;
+    	z-index: 100;
+    	display: none;
+    }
