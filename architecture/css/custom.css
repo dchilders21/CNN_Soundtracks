@@ -224,6 +224,19 @@
 	    	background-repeat: none;
 	    	background-size: 100% auto;
 		}
+
+		.mlk {
+			margin-top: 40px;
+			width: 640px;
+		}
+
+		.inner {
+			margin-top: 0px;
+		}
+
+		#ep-img {
+			content:url("../images/mobile/episode_1_title_2x.png");
+		}
 	  
 	}
 
