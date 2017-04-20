@@ -75,6 +75,14 @@
 		height: 256px;
 	}
 
+	h2.t-center, h4.t-center {
+		margin-top: 0px;
+	}
+
+	.song-history h4 {
+		margin-top: 0px;
+	}
+
 	.t-center h2 {
 		/*font-size: 28px;
 		margin-bottom: 16px;*/
@@ -202,6 +210,23 @@
 
 	}
 
+	/* 
+	  ##Device = Tablets, Ipads (portrait)
+	  ##Screen = B/w 768px to 1024px
+	*/
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+	  
+	  	.background_ep1 {
+			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 100% auto;
+		}
+	  
+	}
+
 
 
 	/* ////////////////////// START PHONE ///////////////////////// */
@@ -213,7 +238,7 @@
 	@media (min-width: 481px) and (max-width: 767px) {
 	  
 	   .background_home {
-			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_NewSeriesThursday.jpg);
+			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Tonight.jpg);
 			/*background-size: cover;*/
 			background-size: cover;
 			background-position: center
@@ -348,7 +373,7 @@
 	@media (min-width: 320px) and (max-width: 480px) {
 	  
 	    .background_home {
-			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_NewSeriesThursday.jpg);
+			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Tonight.jpg);
 			/*background-size: cover;*/
 			background-size: cover;
 			background-position: center;
@@ -799,4 +824,52 @@
     #home-episodes {
     	display: none;
     }
+
+    #cf {
+	  position:relative;
+	  height:200px;
+	  width:210px;
+	  margin:0 auto;
+	}
+
+	#cf img {
+	  position:absolute;
+	  left:0;
+
+	    -webkit-animation-name: fade;
+	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation-duration: 6s;
+	    animation-name: fade;
+	    animation-iteration-count: infinite;
+	    animation-duration: 6s;
+	}
+
+	@-webkit-keyframes fade {
+	    0% {opacity: 0;}
+	    25% {opacity: 1;}
+	    50% {opacity: 1;}
+	    75% {opacity: 0;}
+	    100% {opacity: 0;}
+	}
+
+	@keyframes fade {
+	    0% {opacity: 0;}
+	    25% {opacity: 1;}
+	    50% {opacity: 1;}
+	    75% {opacity: 0;}
+	    100% {opacity: 0;}
+	}
+
+	.top {
+
+	}
+
+	.bottom {
+		-webkit-animation-delay: -3s;
+		animation-delay: -3s;
+	}
+
+	#pageloader.dark-loader {
+		background-color: #111111;
+	}
 

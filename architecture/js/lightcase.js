@@ -596,7 +596,6 @@
 			};
 
 
-			console.log(dimensions)
 			if (!_self.settings.disableShrink) {
 				// Add calculated maximum width/height to dimensions
 				dimensions.maxWidth = parseInt(_self.dimensions.windowWidth * _self.settings.shrinkFactor);

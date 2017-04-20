@@ -14,7 +14,11 @@
 
     <!--Favicon -->
 	<link rel="icon" type="image/png" href="images/CNN_Favicon.png" />
-	<link href="images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png">
+	<link href="images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
+
+	<meta property="og:title" content="CNN Soundtracks">
+	<meta property="og:description" content="The new CNN Original Series Soundtracks: Songs that Defined History, from Executive Producer Dwayne Johnson, will explore the music that is tied to iconic moments in history, and the impact of that music on our society.">
+	<meta property="og:image" content="images/CNN_Favicon.png">
 		
 	<!-- CSS Files -->
 
@@ -25,6 +29,8 @@
 	<link rel="stylesheet" href="css/settings-ie8.css" />
 	<link rel="stylesheet" href="css/settings.css" />
 	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
+	<link rel="stylesheet" type="text/css" href="css/MarkerCluster.css">
+	<link rel="stylesheet" type="text/css" href="css/MarkerCluster.Default.css">
 
 	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 
@@ -101,6 +107,8 @@
 
 	<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
 
+	<script type="text/javascript" src="js/leaflet.markercluster-src.js"></script>
+
 	<script type="text/babel">
 
 		var { Router,
@@ -121,7 +129,7 @@
             widget.frameBorder = 0;
             widget.width = this.props.width;
             widget.height = this.props.height;
-            widget.style = 'overflow:hidden !important;'
+            //widget.style.overflow = hidden !important;
             this.instance.appendChild(widget);
             if (this.props.dynamicHeight) {
 
@@ -169,8 +177,8 @@
 			                  <div><h3 className="uppercase">September 11th.</h3><p> Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
 			                  <div><h3 className="uppercase">Kent State &amp; The Vietnam War </h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
 			                  <div><h3 className="uppercase">Hurricane Katrina</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit concerts to help ensure the city’s rich traditions survived.</p></div>
-			                  <div><h3 className="uppercase">The Fall of the Berlin Wall</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
-			                  <div><h3 className="uppercase">The Moon Landing</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
+			                  <div><h3 className="uppercase">The Fall of the Berlin Wall</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
+			                  <div><h3 className="uppercase">The Moon Landing</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
 			                  <div><h3 className="uppercase">Battle of the Sexes</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s movement and ushered in music that delivered messages of female empowerment.</p></div>
 			                  <div><h3 className="uppercase">The Stonewall Riots</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
 			              </div>
@@ -267,8 +275,12 @@
 
 				var redIcon = new RedIcon();
 
-				var marker = L.marker([40.711667, -74.0125], {icon: redIcon}).addTo(mymap);
+				var markers = L.markerClusterGroup();
+
+				var marker = L.marker([40.711667, -74.0125], {icon: redIcon});
 				marker.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/september_11.png' width='210'/><p>The World Trade Center complex was built in 1973. After its destruction in 2001, the One World Trade Center was built in its place.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+
+				markers.addLayer(marker);
 
 				var marker2 = L.marker([41.150092, -81.343353], {icon: redIcon}).addTo(mymap);
 				marker2.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/kent_state.png' width='210'/><p>Kent State University in Kent, OH was the site of a student protest against the Vietnam War. It is still a functioning university.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
@@ -279,14 +291,18 @@
 				var marker4 = L.marker([52.516111, 13.376944], {icon: redIcon}).addTo(mymap);
 				marker4.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/berlin_wall.png' width='210'/><p>Constructed in 1961, the wall was referred to as the Anti-Fascist Protective Wall and was not demolished completely until 1992.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
 
-				var marker5 = L.marker([40.733797, -74.0021], {icon: redIcon}).addTo(mymap);
+				var marker5 = L.marker([40.733797, -74.0021], {icon: redIcon});
 				marker5.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/stone_wall.png' width='210'/><p>Stonewall Inn was not actually a hotel though it did begin its existence as a tearoom called, Bonnie’s Stone Wall. </p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+
+				markers.addLayer(marker5);
 
 				var marker6 = L.marker([29.685, -95.407778], {icon: redIcon}).addTo(mymap);
 				marker6.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/battle_of_the_sexes.png' width='210'/><p>The Houston Astrodome was the site of what was actually the second match Riggs played against a female tennis player in 1973. He first defeated Margaret Court in Ramona, CA. </p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				var marker7 = L.marker([35.1345, -90.0576], {icon: redIcon}).addTo(mymap);
-				marker7.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/mlk.png' width='210'/><p>The assassination of MLK took place at the Lorraine Motel in Memphis, TN.  The site has become a part of the National Civil Rights Museum. </p><a href='#episode-1'><img src='images/press_play.jpg' width='207'/></a></div>");
+				marker7.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/mlk_1.jpg' width='210'/><img class='bottom' src='images/map/mlk_2.jpg' width='210'/></div><p>The assassination of MLK took place at the Lorraine Motel in Memphis, TN.  The site has become a part of the National Civil Rights Museum. </p><a href='#episode-1'><img src='images/press_play.jpg' width='207'/></a></div>");
+
+				mymap.addLayer(markers)
 
 
 				$(".leaflet-popup-close-button").click(function(event) {
@@ -350,9 +366,9 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER_NewSeriesThursday.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_NewSeriesThursday.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_NewSeriesThursday.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_Tonight.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -400,6 +416,7 @@
 
 				
 		        if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		        	console.log(' ===== ');
 		      		window.isMob = true;
 		      		var el = document.getElementById('introVideo');
 		      		el.parentNode.removeChild(el);
@@ -530,63 +547,12 @@
 	    });
 
 	    var Episode1 = React.createClass({
-	      componentDidMount() {
-
-	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-		      		window.isMob = true;
-		      		var el = document.getElementById('transitionVideo');
-		      		el.parentNode.removeChild(el);
-
-		      		var el2 = document.getElementById('home-episodes');
-		      		el2.parentNode.removeChild(el2);
-		      	} else {
-		      		document.getElementById('transitionVideo').addEventListener('ended', function () { 
-						if (count < 1) {
-							count++;
-							document.getElementById('transitionVideo').play();
-						}
-					}, false);
-		      	}
-
-	      		function resizeFooter() {
-	      			var footerHeight = $(".big-footer").height();
-					//$("#main").css("padding-bottom", footerHeight);
-					$(".big-footer").css("margin-top", -footerHeight)
-					$("#episode_1").css("padding-bottom", footerHeight)
-					console.log(footerHeight);
-	      		}
-
-	      		function moveCTA() {
-
-	      			var bottomVideo = $("#transitionVideo").height();
-	      			var top = bottomVideo - 80;
-
-	      			$('#home-episodes').css("top", top);
-	      			$('#home-episodes').css("display", "block");
-
-	      		}
-
-	      		$(".footer_img").load(function() {
-	      			// initial call
-	      			resizeFooter();
-	      			moveCTA();
-	      		}); 
-	      		
-
-	      		$( window ).bind("resize", function(){
-				     resizeFooter();
-				     moveCTA();
-
-				});
-
-				var count = 0;
-
-
-				this.$node = $(this.refs.lightcase);
-				this.$node.lightcase({
-			
-			});
-		  },
+	      componentDidMount: function() {
+            this.initEpTOC();
+          },
+          componentDidUpdate: function() {
+            this.initEpTOC();
+          },
 	      render: function() {
 	        return (
 	          <div>
@@ -633,7 +599,7 @@
 							<div className="row">
 								
 								<div className="col-md-6 eps-block">
-									<div className="about">
+									<div className="about t-center">
 										<h2>ABOUT THE EPISODE</h2>
 									</div>
 									<div>
@@ -666,7 +632,7 @@
 							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/Video_Screen_03.jpg" /></a>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/VanJones.jpg" /></a>
 								 <a ref="lightcase" href="//www.youtube.com/embed/eatisljr2P4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"></a></div>
 								 <div className="tape-title interviews">
 										<img src="images/episode_ToC/interviews.png" />
@@ -685,10 +651,10 @@
 							<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="song_history">
-										<h2>“We Shall Overcome”</h2> 
+										<h2 className="t-center">“We Shall Overcome”</h2> 
 								
 
-									<h4>Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
+									<h4 className="t-center">Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
 									<div className="line-separator"></div>
 
 									<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, <b><i>“We Shall Overcome”</i></b> had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, <b><i>“I’ll Be Alright,”</i></b> and it’s that church spirit and its’ soulful yearning – transformed into the collective “we” by the labor movement – that made <b><i>“We Shall Overcome”</i></b> the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: <i>“It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.”</i> </p>
@@ -700,9 +666,9 @@
 								
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2>“If I Had a Hammer”</h2>
+									<h2 className="t-center">“If I Had a Hammer”</h2>
 								
-								<h4>Peter, Paul &amp; Mary</h4>
+								<h4 className="t-center">Peter, Paul &amp; Mary</h4>
 								<div className="line-separator"></div>
 
 								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the forties with his Weavers bandmate, Lee Hays. </p>
@@ -720,10 +686,10 @@
 						<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2>“People Get Ready” </h2> 
+									<h2 className="t-center">“People Get Ready” </h2> 
 							
 
-								<h4>The Impressions featuring Curtis Mayfield; <br />Aretha Franklin</h4>
+								<h4 className="t-center">The Impressions featuring Curtis Mayfield; <br />Aretha Franklin</h4>
 								<div className="line-separator"></div>
 
 								<p>Inspired by the March on Washington, Chicago songwriter Curtis Mayfield penned the gospel-inflected <b><i>“People Get Ready”</i></b> for his trio, the Impressions. As in many of the popular church songs Mayfield heard growing up, such as guitarist Sister Rosetta Tharpe’s <b><i>“This Train,”</i></b> Mayfield used the notion of a train ride to signify both a journey to redemption and a sense of religious community. Indeed, in a 1993 radio interview, Mayfield suggested that the song’s biblical imagery had simply come to him as a result of his upbringing in the church, when it was a matter of course to hear both gospel and “the preachings of my grandmothers and most ministers when they reflect from the bible.” Though a pop star – after leaving the Impressions, Mayfield enjoyed his biggest hits with the soundtrack to the classic African-American gangster film, <i>“Superfly,”</i> Mayfield never lost touch with his spiritual roots. Until his death in 1999 as the result of a freak stage accident, Mayfield remained a songwriter whose topics were ever and always hope and justice. </p>
@@ -735,10 +701,10 @@
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2>“Mississippi Goddamn” <span>and</span> <br />“Why (The King of Love is Dead)”</h2> 
+									<h2 className="t-center">“Mississippi Goddam” <span>and</span> <br />“Why (The King of Love is Dead)”</h2> 
 							
 
-								<h4>Nina Simone</h4>
+								<h4 className="t-center">Nina Simone</h4>
 								<div className="line-separator"></div>
 
 								<p>Dubbed “the High Priestess of Soul,” Nina Simone drew on an extraordinary wealth of music traditions including classical, gospel, jazz and pop to create her own unique style as a singer and pianist. Julliard-educated, Simone took her stage name in homage to the French actress Simone Signore and to hide her career as a nightclub singer from her father, a Carolina preacher. A passionate performer and volatile personality with a deep commitment to African-American self-determination, Simone was the creator of two of the most outraged songs of the era. Her composition  <b><i>“Mississippi Goddamn”</i></b> – written, she said, in a “rush of fury, hatred and determination” – was spurred by two despicable events in the summer of 1963: the murder of civil rights activist Medgar Evers in Jackson, MS., and the Alabama bombing of Birmingham’s 16th Street Church that killed four young black girls and blinded a fifth.  Though not an adherent to Dr. King’s philosophy of non-violence, Simone leant her support to numerous civil rights actions, including the march from Selma to Montgomery, where she performed 
@@ -755,10 +721,10 @@
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2>“Say It Loud <br />(I’m Black and I’m Proud)” </h2> 
+								<h2 className="t-center">“Say It Loud <br />(I’m Black and I’m Proud)” </h2> 
 						
 
-							<h4>James Brown</h4>
+							<h4 className="t-center">James Brown</h4>
 							<div className="line-separator"></div>
 
 							<p>The undisputed anthem of black power and black pride, <b><i>“Say It Loud (I’m Black and I’m Proud)”</i></b> was both an enormous hit and one of the rare popular works in any medium that managed to both encompass and move a moment. Though he certainly wasn’t the lone or even an early proponent for replacing “negro” with “black” in the American lexicon, Brown’s record so correctly, forthrightly, and irresistibly captured the trajectory of African-American consciousness as to immediately consign “negro” to the dustbin of history. The ebullient, funk-charged song, featuring a call-and-response with a chorus of kids rounded up from a nearby restaurant, topped the R&amp;B charts for six weeks – a mighty achievement in a year that saw Brown score nine different hits.  An outspoken advocate for black empowerment, Brown’s greatest moment may have been his historic performance at the Boston Garden on the night Martin Luther King, Jr. was murdered: in offering a riveting concert and appearing on television that night, Brown has been credited with preventing the widespread rioting that gripped many other American cities. </p>
@@ -770,10 +736,10 @@
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2>“Living for the City”; <br />“Happy Birthday”</h2> 
+								<h2 className="t-center">“Living for the City”; <br />“Happy Birthday”</h2> 
 						
 
-							<h4>Stevie Wonder</h4>
+							<h4 className="t-center">Stevie Wonder</h4>
 							<div className="line-separator"></div>
 
 							<p>Released in August, 1973 as part of the album <b><i>“Innervisions,”</i></b>  <b><i>“Living for the City”
@@ -790,10 +756,10 @@
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2>“Fight the Power”</h2> 
+							<h2 className="t-center">“Fight the Power”</h2> 
 					
 
-						<h4>Public Enemy</h4>
+						<h4 className="t-center">Public Enemy</h4>
 						<div className="line-separator"></div>
 
 						<p>Commissioned by Spike Lee for his film, <i>“Do the Right Thing,”</i> no record showcased hip hop’s ability to express the inner city’s frustrations in the Reagan era as incisively as Public Enemy’s, <b><i>“Fight the Power.”</i></b> Cooked at a steady rolling boil, with words by group leader Chuck D and a thick stew of samples running the gamut from vocal group the Dramatic to James Browns’, <b><i>“Say It Loud”</i></b>  to pioneering DJ Afrika Bambaataa, the record evoked nothing so much as the hot Brooklyn night portrayed in the film, the air filled with music old and new from apartments and passing cars. A call to hold power accountable, the record fairly seethes with anger and impatience and a palpable sense that patience is a thing of the past. Indeed, the record found a specific later life: in 1989 it was played in the streets of Miami as a celebratory song after a policeman was convicted of shooting a black motorist and spurring a riot. As its author, Chuck D termed the song Public Enemy’s “most important record.”</p>
@@ -805,10 +771,10 @@
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2>“A Change is Gonna Come”</h2> 
+							<h2 className="t-center">“A Change is Gonna Come”</h2> 
 					
 
-						<h4>Sam Cooke</h4>
+						<h4 className="t-center">Sam Cooke</h4>
 						<div className="line-separator"></div>
 
 						<p>Sam Cooke was never more himself than on his unsurpassed American psalm, <b><i>“A Change is Gonna Come.”
@@ -824,10 +790,10 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2>“Alright”</h2> 
+							<h2 className="t-center">“Alright”</h2> 
 					
 
-						<h4>Kendrick Lamar</h4>
+						<h4 className="t-center">Kendrick Lamar</h4>
 						<div className="line-separator"></div>
 
 						<p>Rarely has a song captured the zeitgeist as elegantly as <b><i>“Alright.”</i></b> Crafted by rapper Kendrick Lamar off a hook by Pharrell Williams with a breadth of allusions referencing both Alice Walker novels and Public Enemy records, it was intended as a street-savvy paean to perseverance, a message of hope and optimism studded in the face of difficulties. While <b><i>“Alright”</i></b> was nominated for Song of the Year at the Grammys, won the award’s rap categories, and topped many 2015 critics’ polls, its remarkable success as a pop phenomenon couldn’t have predicted its embrace as the de facto song of the Black Lives Matter Movement, picked up and chanted by young protesters. Indeed, its picture of a frustrating, violent world mitigated by a life-affirming joy and faith in oneself led one commentator to call <b><i>“Alright”</i></b> the new <b><i>“We Shall Overcome,”</i></b> and the B.E.T. network to suggest it was a modern black national anthem.   In that context, can it be just a coincidence that the roots of <b><i>“We Shall Overcome”</i></b> trace back to an earlier gospel tune entitled <b><i>“I’ll Be Alright”?</i></b> </p>
@@ -853,7 +819,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/Mhj8MdRGm6k?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/content_6_2.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/fuDs749alaI?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/MLK.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -873,34 +839,71 @@
 					</div>
 				</footer>
 
-				<div id="readMore" style={{margin: "0 auto", float: "none", display: "none"}}>
-
-				<p>Assassination of Martin Luther King, Jr.</p>
-
-
-				<p>“We Shall Overcome” – various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</p>
-
-				<p>Though frequently credited to Pete Seeger, who published a version of the song in 1947 in his folk music magazine People’s Songs, “We Shall Overcome” had previously entered the national consciousness as a labor anthem. Sung on picket lines throughout the south, it was associated most notably with a mid-forties strike by North Carolina cigarette workers and at least one earlier strike involving miners in Alabama. Yet even those roots and the tune’s melody trace to an earlier and lyrically similar gospel song, “I’ll Be Alright,” and it’s that church spirit and its soulful yearning – transformed into the collective “we” by the labor movement – that made “We Shall Overcome” the natural choice of protesters, beginning with the Student Nonviolent Coordinating Committee in 1960. Says civil rights activists and U.S. Congressman John Lewis, who was badly beaten during the march to Selma: “It gave you a sense of faith, a sense of strength, to continue to struggle, to continue to push on. And you would lose your sense of fear. You were prepared to march into hell’s fire.” </p>
-
-
-				<p>“If I Had a Hammer” – Peter, Paul &amp; Mary</p>
-
-				<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of “If I Had a Hammer” marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable “I Have a Dream” speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act. In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including “Puff the Magic Dragon” and the #1 hit, “Leaving On a Jet Plane,” which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written “If I Had a Hammer” in the-forties with his Weavers bandmate, Lee Hays.</p> 
-
-
-				<p>“People Get Ready” – The Impressions featuring Curtis Mayfield; Aretha Franklin</p>
-
-				<p>Inspired by the March on Washington, Chicago songwriter Curtis Mayfield penned the gospel-inflected “People Get Ready” for his trio, the Impressions. As in many of the popular church songs Mayfield heard growing up, such as guitarist Sister Rosetta Tharpe’s “This Train,” Mayfield used the notion of a train ride to signify both a journey to redemption and a sense of religious community. Indeed, in a 1993 radio interview, Mayfield suggested that the song’s biblical imagery had simply come to him as a result of his upbringing in the church, when it was a matter of course to hear both gospel and “the preachings of my grandmothers and most ministers when they reflect from the bible.” Though a pop star – after leaving the Impressions, Mayfield enjoyed his biggest hits with the soundtrack to the classic African American gangster film, “Superfly,” Mayfield never lost touch with his spiritual roots. Until his death in 1999 as the result of a freak stage accident, Mayfield remained a songwriter whose topics were ever and always hope and justice.</p>
-
-
-				<p>“Mississippi Goddamn” and “Why (The King of Love is Dead)” – Nina Simone</p>
-
-				<p>Dubbed “the High Priestess of Soul,” Nina Simone drew on an extraordinary wealth of music traditions including classical, gospel, jazz and pop to create her own unique style as a singer and pianist. Julliard-educated, Simone took her stage name in homage to the French actress Simone Signore and to hide her career as a nightclub singer from her father, a Carolina preacher. A passionate performer and volatile personality with a deep commitment to African American self-determination, Simone was the creator of two of the most outraged songs of the era. Her composition “Mississippi Goddamn” – written, she said, in a “rush of fury, hatred and determination” – was spurred by two despicable events in the summer of 1963: the murder of civil rights activist Medgar Evers in Jackson, MS., and the Alabama bombing of Birmingham’s 16th Street Church that killed four young black girls and blinded a fifth.  Though not an adherent to Dr. King’s philosophy of non-violence, Simone leant her support to numerous civil rights actions, including the march from Selma to Montgomery, where she performed “Mississippi Goddamn.” Three days after Dr. King’s assassination, Simone and her group recorded a live album dedicated to him that including “Why (The King of Love is Dead)” written by bassist Gene Taylor. Always independent and idiosyncratic, Simone spent her later years as an expatriate, living at various times in Europe, Liberia and Barbados before settling in the south of France. </p>
-
-				</div>
-
 	          </div>
 	        )
+	      }, initEpTOC: function() {
+	      		
+	      		$( window ).bind("resize", function() {
+					divResize();
+				});
+
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+		      		
+		      		$('.parallax').append('<img src="images/CNN_ST_PhotoTransition.jpg" />');
+		      	} else {
+		      		console.log(' ===== ');
+		      		document.getElementById('transitionVideo').addEventListener('ended', function () { 
+						if (count < 1) {
+							count++;
+							document.getElementById('transitionVideo').play();
+						}
+					}, false);
+		      	}
+
+	      		function resizeFooter() {
+	      			var footerHeight = $(".big-footer").height();
+					//$("#main").css("padding-bottom", footerHeight);
+					$(".big-footer").css("margin-top", -footerHeight)
+					$("#episode_1").css("padding-bottom", footerHeight)
+					console.log(footerHeight);
+	      		}
+
+	      		function moveCTA() {
+
+	      			var bottomVideo = $("#transitionVideo").height();
+	      			var top = bottomVideo - 80;
+
+	      			$('#home-episodes').css("top", top);
+	      			$('#home-episodes').css("display", "block");
+
+	      		}
+
+	      		$(".footer_img").load(function() {
+	      			// initial call
+	      			resizeFooter();
+	      			moveCTA();
+	      		}); 
+	      		
+
+	      		$( window ).bind("resize", function(){
+				     resizeFooter();
+				     moveCTA();
+
+				});
+
+				var count = 0;
+
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+			
+			});
 	      }
 	    });
 
@@ -993,6 +996,9 @@
 			  $("dropdown-menu li a").click(function(event) {
 			    $(".nav-menu").hide();
 			  });
+
+			  //console.log("Orientation type is " + screen.orientation.type);
+     		  //console.log("Orientation angle is " + screen.orientation.angle);
 	      		
 		}
 
