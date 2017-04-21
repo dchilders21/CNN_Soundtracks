@@ -35,6 +35,7 @@
 
 		position: fixed;
 		left: 20px;
+		z-index: 100000000;
 	}
 
 	#apple-close {
@@ -47,11 +48,15 @@
 
 	.tape-title {
 		margin: 0 auto;
-		margin-top: 10px;
+		margin-top: 40px;
 	}
 
 	.mlk {
 		width: 1144px;
+	}
+
+	.nine11 {
+		width: 658px;
 	}
 
 	.view {
@@ -123,6 +128,25 @@
 
 	}
 
+	#moon {
+    	position: absolute;
+    	top: 0px;
+    	right: 0px;
+    	z-index: 5;
+    	width: 20%;
+    }
+
+    #moon img {
+    	zoom: 40%;
+    	/*width: 100%;*/
+    }
+
+    #moon_pop {
+    	position: absolute;
+    	left: 50%;
+    	top: 30%;
+    }
+
 	/* ////////////////////// DESKTOP ///////////////////////// */
 
 	/* 
@@ -142,6 +166,15 @@
 
 		.background_ep1 {
 			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep2 {
+			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -182,6 +215,14 @@
 	    	background-repeat: none;
 	    	background-size: 100% auto;
 		}
+		.background_ep2 {
+			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 100% auto;
+		}
+
 		.feature-boxes {
 			padding-left: 24px;
 			padding-right: 24px;
@@ -225,6 +266,14 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep2 {
+			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 100% auto;
+		}
+
 		.mlk {
 			margin-top: 40px;
 			width: 640px;
@@ -234,7 +283,7 @@
 			margin-top: 0px;
 		}
 
-		#ep-img {
+		#mlk-img {
 			content:url("../images/mobile/episode_1_title_2x.png");
 		}
 	  
@@ -259,6 +308,14 @@
 
 		.background_ep1 {
 			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 960px 540px;
+		}
+
+		.background_ep2 {
+			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -325,8 +382,12 @@
 			padding-bottom: 80px;
 		}
 
-		#ep-img {
+		#mlk-img {
 			content:url("../images/mobile/episode_1_title_2x.png");
+		}
+
+		.tape-title {
+			width: 50%;
 		}
 
 		.inner {
@@ -342,13 +403,17 @@
 			margin-bottom: 40px;
 		}
 
-		.tape-title {
-			width: 50%;
+		#mlk-title {
+			width: 70%;
 		}
 
 		.mlk {
 			width: 80%;
 			margin-top: 16px;
+		}
+
+		.nine11 {
+			width: 100%;
 		}
 
 		.inner p {
@@ -375,6 +440,10 @@
 			letter-spacing: 1px;
 		}
 
+		#moon {
+			top: 50px;
+		}
+
 	  
 	}
 
@@ -394,6 +463,14 @@
 
 		.background_ep1 {
 			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 960px 540px;
+		}
+
+		.background_ep2 {
+			background-image:url(../images/episode2/CNN_E2_Bg_Tile_Small.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -461,7 +538,7 @@
 			padding-bottom: 80px;
 		}
 
-		#ep-img {
+		#mlk-img {
 			content:url("../images/mobile/episode_1_title_2x.png");
 		}
 
@@ -487,9 +564,17 @@
 			width: 50%;
 		}
 
+		#mlk-title {
+			width: 70%;
+		}
+
 		.mlk {
 			width: 80%;
 			margin-top: 16px;
+		}
+
+		.nine11 {
+			width: 100%;
 		}
 
 		.inner p {
@@ -514,6 +599,10 @@
 
 		.navbar-center a {
 			letter-spacing: 1px;
+		}
+
+		#moon {
+			top: 50px;
 		}
 	  
 	}
@@ -798,25 +887,6 @@
     	margin: 0 0 10px;
     }
 
-    #moon {
-    	position: absolute;
-    	top: 0px;
-    	right: 0px;
-    	z-index: 5;
-    	width: 20%;
-    }
-
-    #moon img {
-    	zoom: 50%;
-    	/*width: 100%;*/
-    }
-
-    #moon_pop {
-    	position: absolute;
-    	left: 50%;
-    	top: 50%;
-    }
-
     #popup-leaflet {
     	position: absolute;
     	top: 200px;
@@ -884,5 +954,13 @@
 
 	#pageloader.dark-loader {
 		background-color: #111111;
+	}
+
+	@media only screen and (max-width: 320px) {
+	 .mwidget {
+	   padding: 0 !important;
+	   margin-left: -15px;
+	   margin-right: -15px;
+	 }
 	}
 
