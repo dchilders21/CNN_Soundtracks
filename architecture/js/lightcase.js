@@ -74,7 +74,7 @@
 				caption: null,
 				showTitle: true,
 				showCaption: true,
-				showSequenceInfo: false,
+				showSequenceInfo: true,
 				inline: {
 					width: 'auto',
 					height: 'auto'

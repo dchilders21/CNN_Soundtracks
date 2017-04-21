@@ -291,7 +291,7 @@
 				var markers = L.markerClusterGroup();
 
 				var marker = L.marker([40.711667, -74.0125], {icon: redIcon});
-				marker.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/september_11.png' width='210'/><p>The World Trade Center complex was built in 1973. After its destruction in 2001, the One World Trade Center was built in its place.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+				marker.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/911_01.jpg' width='210'/><img class='bottom' src='images/map/911_02.jpg' width='210'/></div><p>The World Trade Center complex was built in 1973. After its destruction in 2001, the One World Trade Center was built in its place.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				markers.addLayer(marker);
 
@@ -379,9 +379,9 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER_Tonight.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_Thursdays.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -506,10 +506,10 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="150">
 									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/september_11.png" />
+										<Link to="/episode-2"><img src="images/albums/nine11_active.png" className="album-collapse"/></Link>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 2
+										<span className="red">EXPLORE EPISODE: 2</span>
 									</h4>
 								</div>
 
@@ -1005,8 +1005,6 @@
 										<h2>ABOUT THE EPISODE</h2>
 									</div>
 									<div>
-										<p>Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage.</p>
-
 										<p>September 11, 2001 will forever live in infamy for New Yorkers, and all Americans. It was a day of deep anguish followed by weeks of unprecedented camaraderie, partly brought about by benefit concerts in which songs like Billy Joel’s “New York State of Mind” and Sister Sledge’s “We Are Family” took on a new and heightened meaning. But the tragedy that had united the country quickly divided it, as the terrorist attacks became a justification for war in Iraq. Country music took center stage as the politically charged music of the moment, simply by celebrating patriotism in the case of Brooks and Dunn, or in an all-out pro-war message in the case of Toby Keith. When the Dixie Chicks found themselves caught in the crossfire after upsetting their fan base, it became clear that the wounds of 9/11 were not quick to heal.</p>
 									</div>
 								</div>
@@ -1296,7 +1294,7 @@
 
 		      	$('#playlists').empty();
 
-		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.727882d2ab8145b28962327e38e714c8?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
 
 	      		function resizeFooter() {
 	      			var footerHeight = $(".big-footer").height();

@@ -300,7 +300,7 @@
 	@media (min-width: 481px) and (max-width: 767px) {
 	  
 	   .background_home {
-			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Tonight.jpg);
+			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Thursdays.jpg);
 			/*background-size: cover;*/
 			background-size: cover;
 			background-position: center
@@ -455,7 +455,7 @@
 	@media (min-width: 320px) and (max-width: 480px) {
 	  
 	    .background_home {
-			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Tonight.jpg);
+			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Thursdays.jpg);
 			/*background-size: cover;*/
 			background-size: cover;
 			background-position: center;
