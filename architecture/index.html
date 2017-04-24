@@ -426,10 +426,10 @@
 					onFinish:{
 						foo: function() {
 							console.log($('#intro-home'));
-							$('#body').append('<div></div>');
+							$('#lightcase-nav').append($('#intro-home'));
 						}
 					},
-				    href: '//www.youtube.com/embed/eilWGr4DwpE?rel=0&controls=1&showinfo=0&autoplay=1',
+				    href: '//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1',
 				});
 
 				/*lightcase.start({
@@ -596,7 +596,7 @@
 	          	<div id="episode-wrapper">
 					<section id="episode-1-video" className="home bw-type container">
 						<div className="parallax">
-							<video id="transitionVideo" autoPlay preload="auto" height="100%" width="100%"
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/CNN_ST_PhotoTransition.jpg">
 				                <source src="video/Photo_MLK.mp4" type='video/mp4' />
 				                <source src="video/Photo_MLK.WebM" type='video/webm' />
@@ -660,7 +660,15 @@
 									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
 									</div>
 									<div className="tape-title view">
-										<img src="images/episode_ToC/view.png" />
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
 									</div>
 							</div>
 						</div>
@@ -856,7 +864,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/fuDs749alaI?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/MLK.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Video_Screens_2.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -893,13 +901,7 @@
 		      		
 		      		$('.parallax').append('<img src="images/CNN_ST_PhotoTransition.jpg" />');
 		      	} else {
-		      		console.log(' ===== ');
-		      		document.getElementById('transitionVideo').addEventListener('ended', function () { 
-						if (count < 1) {
-							count++;
-							document.getElementById('transitionVideo').play();
-						}
-					}, false);
+		      		
 		      	}
 
 		      	$('#playlists').empty();
@@ -961,7 +963,7 @@
 	          	<div id="episode-wrapper">
 					<section id="episode-1-video" className="home bw-type container">
 						<div className="parallax">
-							<video id="transitionVideo" autoPlay preload="auto" height="100%" width="100%"
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode2/Photo_911_Poster.jpg">
 				                <source src="video/ep2/Photo_911.mp4" type='video/mp4' />
 				                <source src="video/ep2/Photo_911.WebM" type='video/webm' />
@@ -1005,7 +1007,7 @@
 										<h2>ABOUT THE EPISODE</h2>
 									</div>
 									<div>
-										<p>September 11, 2001 will forever live in infamy for New Yorkers, and all Americans. It was a day of deep anguish followed by weeks of unprecedented camaraderie, partly brought about by benefit concerts in which songs like Billy Joel’s “New York State of Mind” and Sister Sledge’s “We Are Family” took on a new and heightened meaning. But the tragedy that had united the country quickly divided it, as the terrorist attacks became a justification for war in Iraq. Country music took center stage as the politically charged music of the moment, simply by celebrating patriotism in the case of Brooks and Dunn, or in an all-out pro-war message in the case of Toby Keith. When the Dixie Chicks found themselves caught in the crossfire after upsetting their fan base, it became clear that the wounds of 9/11 were not quick to heal.</p>
+										<p>September 11, 2001 will forever live in infamy for New Yorkers, and all Americans. It was a day of deep anguish followed by weeks of unprecedented camaraderie, partly brought about by benefit concerts in which songs like Billy Joel’s “New York State of Mind” and Sister Sledge’s “We Are Family” took on a new and heightened meaning. But the tragedy that had united the country quickly divided it, as the terrorist attacks became a justification for war in Iraq. Country music took center stage as the politically charged music of the moment, simply by celebrating patriotism in the case of Brooks and Dunn, or in an all-out pro-war message in the case of Toby Keith. When the Dixie Chicks found themselves caught in the crossfire after upsetting their fan base, it became clear that the wounds of 9/11 were yet to heal.</p>
 									</div>
 								</div>
 								<div className="col-md-6 eps-block" ref={(el) => {
@@ -1019,7 +1021,12 @@
 									<a ref="lightcase" href="images/episode2/gallery/AS_17221_FEM_Back_fireman_rubble_M.jpg" data-rel="lightcase:myCollection"></a>
 									</div>
 									<div className="tape-title view">
-										<img src="images/episode_ToC/view.png" />
+										<a ref="lightcase" href="images/episode2/gallery/AS_00751_GET_911_FIREFIGHTER_SEATED_WEEPING_HAND_IN_FACE_M.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode2/gallery/AS_00784_GET_911_Memorial_Man_Collapses_Fountain_2011.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode2/gallery/AS_14720_MAG_Firefighters_World_Trade_Center_2001_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode2/gallery/AS_17149_GET_CNN_PUBLICITY_Trade_Tower_Firemen.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode2/gallery/AS_17221_FEM_Back_fireman_rubble_M.jpg" data-rel="lightcase:myCollection2"></a>
+
 									</div>
 							</div>
 						</div>
@@ -1052,7 +1059,7 @@
 									<h4 className="t-center">Sting</h4>
 									<div className="line-separator"></div>
 
-									<p>Few songs demonstrate pop music’s ability to cross poli-cal barriers and provide an emo-onal balm like S-ng’s “Fragile.” Originally recorded for the 1988 album Nothing Like the Sun and intended as a tribute to Ben Linder, an American engineer killed by Nicaragua’s American-backed right-wing rebel group the Contras while helping to build a dam, the song ini-ally had a strong leK-leaning context. Lin- der’s death became a poli-cal hot buMon in the United States, where his support and sympathy for the goals of Nicaragua’s socialist Sandinista government was at odds with U.S. policy. While Reagan adminis- tra-on officials were par-cularly unsympathe-c to Linder’s humanitarian inten-ons — even sugges-ng he got what he deserved — opponents of the policy charged that it had resulted in the U.S. government funding and encouraging the murder of an American. The song took on a new and broader context of healing when S-ng used it to open a performance on the evening of September 11th, and he again se- lected it in 2016 as the first song to be performed when he re-opened Paris’s Bataclan theater a year af- ter the deadly terrorist aMacks that horrified that city and shocked the world.</p>
+									<p>Few songs demonstrate pop music’s ability to cross political barriers and provide an emotional balm like Sting’s “Fragile.” Originally recorded for the 1988 album Nothing Like the Sun and intended as a tribute to Ben Linder, an American engineer killed by Nicaragua’s American-backed right-wing rebel group the Contras while helping to build a dam, the song initially had a strong left-leaning context. Linder’s death became a political hot button in the United States, where his support and sympathy for the goals of Nicaragua’s socialist Sandinista government was at odds with U.S. policy. While Reagan administration officials were particularly unsympathetic to Linder’s humanitarian intentions — even suggesting he got what he deserved — opponents of the policy charged that it had resulted in the U.S. government funding and encouraging the murder of an American. The song took on a new and broader context of healing when Sting used it to open a performance on the evening of September 11th, and he again selected it in 2016 as the first song to be performed when he re-opened Paris’s Bataclan theater a year after the deadly terrorist attacks that horrified that city and shocked the world.</p>
 
 								</div>
 							</div>
@@ -1066,7 +1073,7 @@
 								<h4 className="t-center">Bruce Springsteen</h4>
 								<div className="line-separator"></div>
 
-								<p>In his memoir, Born to Run, Bruce Springsteen recalls watching reports of the World Trade Center attack on television in dismay and disbelief, then driving to a nearby bridge with an open view of New York harbor, torrents of smoke rising from lower ManhaMan. In the coming days, the stark and deeply felt religious imagery at the core of “The Rising” took shape as his thoughts returned again and again to the firemen, police, and rescue teams who gave their lives. “The picture I couldn’t let go of was of the emergency workers going up the stairs as others rushed down to safety,” he later recalled. “The depth of their sacrifice in unthinkable and incomprehensible.” Released as a single in 2002, the song won Grammy Awards as Best Rock Song and Best Male Rock Vocal Performance.</p>
+								<p>In his memoir, Born to Run, Bruce Springsteen recalls watching reports of the World Trade Center attack on television in dismay and disbelief, then driving to a nearby bridge with an open view of New York harbor, torrents of smoke rising from lower Manhattan. In the coming days, the stark and deeply felt religious imagery at the core of “The Rising” took shape as his thoughts returned again and again to the firemen, police, and rescue teams who gave their lives. “The picture I couldn’t let go of was of the emergency workers going up the stairs as others rushed down to safety,” he later recalled. “The depth of their sacrifice in unthinkable and incomprehensible.” Released as a single in 2002, the song won Grammy Awards as Best Rock Song and Best Male Rock Vocal Performance.</p>
 								</div> 
 								</div>
 							</div>		
@@ -1085,8 +1092,7 @@
 								<h4 className="t-center">Paul Simon</h4>
 								<div className="line-separator"></div>
 
-								<p>Ini-ally recorded as an acous-c folk song for the 1964 Simon &amp; Garfunkel album, Wednesday Morning, 3 a.m., the song was re-born the following year as a huge pop hit when producer Tom Wilson brought in the same musicians who’d worked on Bob Dylan’s electric breakthrough, “Like A Rolling Stone,” to re-imagine “The Sound of Silence” as a rock record. Neither its author, Paul Simon, who was in England at the -me, nor Art Garfunkle, was even aware of the new produc-on un-l it was completed and released. As the single took off, the duo has-ly re-assembled to record the album, The Sounds of Silence. Given new life, they would go on to record three more landmark studio albums, culmina-ng in the enormously successful Bridge Over Troubled Waters. “The Sound of Silence” would re-emerge over and over through the coming decades, first on the soundtrack for The Graduate, and later re-recorded as a gospel song with the Jesse Dixon Singers for Paul Simon in Concert: Live Rhymin’.
-</p>
+								<p>Initially recorded as an acoustic folk song for the 1964 Simon&nbsp;&amp;&nbsp;Garfunkel album, Wednesday Morning, 3 a.m., the song was&nbsp;re-born the following year as a huge pop hit when producer Tom Wilson brought in the same musicians who’d worked on Bob Dylan’s electric breakthrough, “Like A Rolling Stone,” to re-imagine “The Sound of Silence” as a rock record. Neither its author, Paul Simon, who was in England at the time, nor Art Garfunkle, was even aware of the new production until it was completed and released. As the single took off, the duo hastily&nbsp;re-assembled to record the album, The Sounds of Silence. Given new life, they would go on to record three more landmark studio albums, culminating in the enormously successful Bridge Over Troubled Waters. “The Sound of Silence” would re-emerge over and over through the coming decades, first on the soundtrack for The Graduate, and later re-recorded as a gospel song with the Jesse Dixon Singers for Paul Simon in Concert: Live Rhymin’.</p>
 
 								</div>
 							</div>
@@ -1101,7 +1107,7 @@
 								<h4 className="t-center">We Are Family Collective</h4>
 								<div className="line-separator"></div>
 
-								<p>Initially a 1979 pop and disco hit custom penned for Sister Sledge (a vocal group comprised of four singing sisters), “We Are Family” took on a far more ambi-ous cast when its co-author, musician and producer Nile Rodgers, organized an all-star re-recording of the song to both memorialize and give aid to vic-ms of September 11th. “Nothing I’ve seen in my life liKs the spirit like song,” Rodgers said when asked of the project’s genesis. Though clearly influenced by earlier, large group all-star projects like “We Are the World” and “Sun City,” one of the more inspiring features of the 200-strong chorus was its inclu- sion of Ground Zero emergency workers including doctors, police and firefighters along with such fea- tured singers as Pak Labelle, Dionne Warwick, Luther Vandross, Joan Osborne and Diana Ross. Originally formed to pay for counseling for September 11th workers and vic-ms’ families, the We Are Family Foun- da-on con-nues to support a broad range of inter-cultural peace ini-a-ves.</p>
+								<p>Initially a 1979 pop and disco hit  custom penned for Sister Sledge (a vocal group comprised of four singing sisters), “We Are Family” took on a far more ambitious cast when its co-author, musician and producer Nile Rodgers, organized an all-star re-recording&nbsp;of the song to both memorialize and give aid to victims of September 11th.  “Nothing I’ve seen in my life lifts the spirit like song,” Rodgers said when asked of the project’s genesis. Though clearly influenced by earlier, large group all-star projects like “We Are the World” and “Sun City,”  one of the more inspiring features of the 200-strong chorus was its inclusion of Ground Zero emergency workers including doctors, police and firefighters along with such featured singers as Patti Labelle, Dionne Warwick, Luther Vandross, Joan Osborne and Diana Ross. Originally formed to pay for counseling for September 11th workers and victims’ families, the We Are Family Foundation continues to support a broad range of inter-cultural peace initiatives.</p>
 
 							</div>
 						</div>
@@ -1120,7 +1126,7 @@
 							<h4 className="t-center">Billy Joel</h4>
 							<div className="line-separator"></div>
 
-							<p>It’s hard to think of a contemporary songwriter who has obsessed more over his New York roots than Billy Joel. Since the release of his first album, Cold Spring Harbor, the Long Island na-ve has assidu- ously sketched its country, suburbs and city into his musical landscape, whether providing a snapshot of the neighborhood Italian restaurant, the lights of Broadway, an “uptown girl,” or mocking himself as a suburban miscreant in “The Legend of Billy the Kid” (“From a town known as Oyster Bay, Long Island/ Rode a boy with a six-pack in his hand...”). Literally begun while coming home from Los Angeles on a Greyhound bus, the sen-mental “New York State of Mind,” with its longing for home and all its familiari- -es, took on an anthemic life in October 2001 when he performed it at the Concert For New York City benefit for first responders.</p>
+							<p>It’s hard to think of a contemporary songwriter who has obsessed more over his New York roots than Billy Joel. Since the release of his first album, Cold Spring Harbor, the Long Island native has assiduously sketched its country, suburbs and city into his musical landscape, whether providing a snapshot of the neighborhood Italian restaurant, the lights of Broadway, an “uptown girl,” or mocking himself as a suburban miscreant in&nbsp;“The&nbsp;Legend&nbsp;of&nbsp;Billy&nbsp;the&nbsp;Kid” (“From a town known as Oyster Bay, Long Island/Rode a boy with a six-pack in his hand…”). Literally begun while coming home from Los Angeles on a Greyhound bus, the sentimental “New York State of Mind,” with its longing for home and all its familiarities, took on an anthemic life in October 2001 when he performed it at the Concert For New York City benefit for first responders. </p>
 
 							</div>
 						</div>
@@ -1129,13 +1135,13 @@
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“Boot Scoo-n’ Boogie” and <br />“Only in America”</h2> 
+								<h2 className="t-center">“Boot Scootin’ Boogie” and <br />“Only in America”</h2> 
 						
 
 							<h4 className="t-center">Brooks &amp; Dunn</h4>
 							<div className="line-separator"></div>
 
-							<p>Paired in 1990, the singer/songwriters Kix Brooks and Ronnie Dunn proved country music main- stays over the next three decades, incorpora-ng both rock and roadhouse honky-tonk music into their sound to notch 20 #1 country hits. Their first album, 1991’s Brand New Man -- featuring “Boot Scoo-n’ Boogie,” the song that led the charge of the line dancing craze — is one of the most successful modern country albums, having sold over 6 million copies and produced five #1 country singles. The duo’s ability to craK a music drawn freely from a wide range of influences – and weave those threads into a shared American cloth – was never more forcefully demonstrated than when their song “Only in America” was selected as a theme for both the George W. Bush and Barack Obama presiden-al campaigns. “It’s very flaMering to know our song crossed party lines and poten-ally inspires all Americans,” Brooks said.</p>
+							<p>Paired in 1990, the singer/songwriters Kix Brooks and Ronnie Dunn proved country music mainstays over the next three decades, incorporating both rock and roadhouse honky-tonk music into their sound to notch 20 #1 country hits. Their first album, 1991’s Brand New Man -- featuring “Boot Scootin’ Boogie,” the song that led the charge of the line dancing craze — is one of the most successful modern country albums, having sold over 6 million copies and produced five #1 country singles. The duo’s ability to craft a music drawn freely from a wide range of influences – and weave those threads into a shared American cloth – was never more forcefully demonstrated than when their song “Only in America” was selected as a theme for both the George W. Bush and Barack Obama presidential campaigns. “It’s very flattering to know our song crossed party lines and potentially inspires all Americans,” Brooks said.</p>
 
 						</div>
 					</div>
@@ -1153,7 +1159,7 @@
 						<h4 className="t-center">Alan Jackson</h4>
 						<div className="line-separator"></div>
 
-						<p>Country music speaks best to the heart when it speaks simply, and few country songs are as plainspoken as Alan Jackson’s September 11th reverie, “Where Were You.” The song is perhaps best thought of as a bid for a common prayer, an aMempt to capture the overwhelming sense of a shared grief and confusion that marked the tragedy and put into words the gut feeling that the world had changed. A Georgia na-ve, Jackson has described the inspira-on for the song as “a giK,” and says the seed of it came to him early one Sunday morning and that he finished it by that evening. “I never felt I could take credit for wri-ng it,” he said. “I guess I just didn’t want to forget how I felt on that day and how I knew other people felt.” Jackson, who has also said he is leery of wri-ng “preachy” songs, knew he was taking a chance: while the song won a Grammy for Best Country Song, he and “Where Were You” were lampooned on the show South Park.</p>
+						<p>Country music speaks best to the heart when it speaks simply, and few country songs are as plainspoken as Alan Jackson’s September 11th  reverie, “Where Were You.” The song is perhaps best thought of as a bid for a common prayer, an attempt to capture the overwhelming sense of a shared grief and confusion that marked the tragedy and put into words the gut feeling that the world had changed.  A Georgia native, Jackson has described the inspiration for the song as “a gift,” and says the seed of it came to him early one Sunday morning and that he finished it by that evening. “I never felt I could take credit for writing it,” he said. “I guess I just didn’t want to forget how I felt on that day and how I knew other people felt.”  Jackson, who has also said he is leery of writing “preachy” songs, knew he was taking a chance: while the song won a Grammy for Best Country Song, he and “Where Were You” were lampooned on the show South Park. </p>
 
 					</div>
 				</div>
@@ -1168,7 +1174,7 @@
 						<h4 className="t-center">Lee Greenwood</h4>
 						<div className="line-separator"></div>
 
-						<p>Perhaps the most successful American patrio-c song since Irving Berlin’s similarly--tled “God Bless America,” Greenwood first recorded his paean to the American dream in 1984. Since then, it’s been the de facto flag-waver for both Desert Storm and the 2003 invasion of Iraq, was widely played following September 11th, and was performed by Greenwood at President Trump’s inaugura-on. Transcending popular culture, the song has lodged in the American consciousness: a version recorded by the 2003 fi- nalists on American Idol went gold while raising over $150,000 for the American Red Cross, and it has been recorded by ar-sts as divergent as Beyonce and Dolly Parton.</p>
+						<p>Perhaps the most successful American patriotic song since Irving Berlin’s similarly-titled “God Bless America,” Greenwood first recorded his paean to the American dream in 1984. Since then, it’s been the de facto flag-waver for both Desert Storm and the 2003 invasion of Iraq, was widely played following September 11th, and was performed by Greenwood at President Trump’s inauguration. Transcending popular culture, the song has lodged in the American consciousness: a version recorded by the 2003 finalists on American Idol went gold while raising over $150,000 for the American Red Cross, and it has been recorded by artists as divergent as Beyonce and Dolly Parton.</p>
 
 					</div>
 				</div>
@@ -1187,7 +1193,7 @@
 						<h4 className="t-center">Toby Keith</h4>
 						<div className="line-separator"></div>
 
-						<p>Unapologe-cally jingois-c – the song’s most provoca-ve lyrics, “we’ll put a boot in your ass/it’s the American way” are spotlighted in the sign-on for Sean Hannity’s radio show – “Courtesy of the Red, White and Blue” isn’t everybody’s idea of patrio-sm, but it certainly doesn’t lack for adherents. One of them is former Na-onal Security Advisor James L. Jones who, while serving as Commandant of the Ma- rine Corp, heard Keith perform the song in concert and reportedly told the singer that he had a duty to record it and help liK armed forces morale. Jones clearly knew what he was talking about: “Courtesy of the Red, White and Blue” is immensely popular with members of the military.</p>
+						<p>Unapologetically jingoistic – the song’s most provocative lyrics, “we’ll put a boot in your ass/it’s the American way” are spotlighted in the sign-on for Sean Hannity’s radio show – “Courtesy of the Red, White and Blue” isn’t everybody’s idea of patriotism, but it certainly doesn’t lack for adherents. One of them is former National Security Advisor James L. Jones who, while serving as Commandant of the Marine Corp, heard Keith perform the song in concert and reportedly told the singer that he had a duty to record it and help lift armed forces morale. Jones clearly knew what he was talking about: “Courtesy of the Red, White and Blue” is immensely popular with members of the military.</p>
 
 					</div>
 				</div>
@@ -1202,7 +1208,8 @@
 						<h4 className="t-center">The Dixie Chicks</h4>
 						<div className="line-separator"></div>
 
-						<p>These two singles were the musical bookends to one of the culture war’s great skirmishes. On the eve of the U.S. invasion of Iraq, Texan Natalie Maines told a London audience that “we don't want this war, this violence, and we're ashamed that the President of the United States is from Texas”. Her words unleashed a huge conserva-ve backlash that included protests against the band, an open feud with super-patriot songwriter Toby Keith, and even death threats against Maines. “Travelin’ Soldier,” a sen-mental song about the death of an American soldier in Vietnam, was then the group’s current single and it was quickly blackballed by country sta-ons. The group proved to be un-welcomed by many of its former fans. It took the Dixie Chicks nearly three years to regain their foo-ng – and a whole new status – with their spirited answer record, “Not Ready to Make Nice.” Produced by Rick Rubin, who’d also worked with Johnny Cash, the Beas-e Boys and the Red Hot Chili Peppers, the song won several Grammy Awards including Record of the Year and Song of the Year.</p>
+						<p>These two singles were the musical bookends to one of the culture war’s great skirmishes. On the eve of the U.S. invasion of Iraq, Texan Natalie Maines told a London audience that “we don't want this war, this violence, and we're ashamed that the President of the United States is from Texas”. Her words unleashed a huge conservative backlash that included protests against the band, an open feud with super-patriot songwriter Toby Keith, and even death threats against Maines. “Travelin’ Soldier,” a sentimental song about the death of an American soldier in Vietnam, was then the group’s current single and it was quickly blackballed by country stations. The group proved to be un-welcomed by many of its former fans.  It took the Dixie Chicks nearly three years to regain their footing – and a whole new status – with their spirited answer record, “Not Ready to Make Nice.” Produced by Rick Rubin, who’d also worked with Johnny Cash, the Beastie Boys and the Red Hot Chili Peppers, the song won several Grammy Awards including Record of the Year and Song of the Year.
+</p>
 
 					</div>
 				</div>
@@ -1218,10 +1225,10 @@
 							<h2 className="t-center">“Empire State of Mind”</h2> 
 					
 
-						<h4 className="t-center">Jay Z and Alicia Keys</h4>
+						<h4 className="t-center">Jay Z and Alicia Keyes</h4>
 						<div className="line-separator"></div>
 
-						<p>Though wriMen and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebra-on of the City’s rich, ever-changing mel-ng pot iden-ty and unique ability to stay rooted in the streets while reaching for the sky. Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay Z, it was the rapper who pulled in Alicia Keyes to han- dle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay Z his first trip to the top of the pop charts. </p>
+						<p>Though written and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebration of the City’s rich, ever-changing melting pot identity and unique ability to stay rooted in the streets while reaching for the sky.  Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay&nbsp;Z, it was the rapper who pulled in Alicia Keyes to handle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay&nbsp;Z his first trip to the top of the pop charts. </p>
 
 					</div>
 				</div>
@@ -1246,7 +1253,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/fuDs749alaI?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode_ToC/MLK.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Video_Screens_2.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1283,18 +1290,12 @@
 		      		
 		      		$('.parallax').append('<img src="images/episode2/Photo_911_Poster.jpg" />');
 		      	} else {
-		      		console.log(' ===== ');
-		      		document.getElementById('transitionVideo').addEventListener('ended', function () { 
-						if (count < 1) {
-							count++;
-							document.getElementById('transitionVideo').play();
-						}
-					}, false);
+		      		
 		      	}
 
 		      	$('#playlists').empty();
 
-		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.a24887b4a3824746a0ddac600aafc868?country=us" height="400px" width="100%" frameborder="0"></iframe>');
 
 	      		function resizeFooter() {
 	      			var footerHeight = $(".big-footer").height();
