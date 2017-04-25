@@ -194,6 +194,10 @@
 	        )
 	      },
           initAbout: function() {
+
+          	ga('set', 'page', '/about.html');
+          	ga('send', 'pageview');
+
           	$('#playlists').empty();
 
 		    $('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
@@ -226,6 +230,9 @@
 	        )
 	      },
           initMap: function() {
+
+          		ga('set', 'page', '/map.html');
+          		ga('send', 'pageview');
 
 		        $('#playlists').empty();
 
@@ -403,6 +410,9 @@
 
 	        	var me = this;
 
+	        	ga('set', 'page', '/index.html');
+	        	ga('send', 'pageview');
+
 	        	this.$node = $(this.refs.lightcase);
 
 	        	$('#playlists').empty();
@@ -577,6 +587,10 @@
 	          );
 	        },
 	        initEpisodes: function() {
+
+	        	ga('set', 'page', '/episodes.html');
+	        	ga('send', 'pageview');
+
 	        	$('#playlists').empty();
 
 		    	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
@@ -886,6 +900,9 @@
 	          </div>
 	        )
 	      }, initEpTOC: function() {
+
+	      		ga('set', 'page', '/episode-1.html');
+	      		ga('send', 'pageview');
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
@@ -1092,7 +1109,7 @@
 								<h4 className="t-center">Paul Simon</h4>
 								<div className="line-separator"></div>
 
-								<p>Initially recorded as an acoustic folk song for the 1964 Simon&nbsp;&amp;&nbsp;Garfunkel album, Wednesday Morning, 3 a.m., the song was&nbsp;re-born the following year as a huge pop hit when producer Tom Wilson brought in the same musicians who’d worked on Bob Dylan’s electric breakthrough, “Like A Rolling Stone,” to re-imagine “The Sound of Silence” as a rock record. Neither its author, Paul Simon, who was in England at the time, nor Art Garfunkle, was even aware of the new production until it was completed and released. As the single took off, the duo hastily&nbsp;re-assembled to record the album, The Sounds of Silence. Given new life, they would go on to record three more landmark studio albums, culminating in the enormously successful Bridge Over Troubled Waters. “The Sound of Silence” would re-emerge over and over through the coming decades, first on the soundtrack for The Graduate, and later re-recorded as a gospel song with the Jesse Dixon Singers for Paul Simon in Concert: Live Rhymin’.</p>
+								<p>Initially recorded as an acoustic folk song for the 1964 Simon&nbsp;&amp;&nbsp;Garfunkel album, Wednesday Morning, 3 a.m., the song was <span style={{whiteSpace: "nowrap"}}>re-born</span> the following year as a huge pop hit when producer Tom Wilson brought in the same musicians who’d worked on Bob Dylan’s electric breakthrough, “Like A Rolling Stone,” to <span style={{whiteSpace: "nowrap"}}>re-imagine</span> “The Sound of Silence” as a rock record. Neither its author, Paul Simon, who was in England at the time, nor Art Garfunkle, was even aware of the new production until it was completed and released. As the single took off, the duo hastily <span style={{whiteSpace: "nowrap"}}>re-assembled</span> to record the album, The Sounds of Silence. Given new life, they would go on to record three more landmark studio albums, culminating in the enormously successful Bridge Over Troubled Waters. “The Sound of Silence” would re-emerge over and over through the coming decades, first on the soundtrack for The Graduate, and later re-recorded as a gospel song with the Jesse Dixon Singers for Paul Simon in Concert: Live Rhymin’.</p>
 
 								</div>
 							</div>
@@ -1187,7 +1204,7 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Courtesy of the Red, White and Blue”</h2> 
+							<h2 className="t-center">“Courtesy of the Red, <br />White and Blue”</h2> 
 					
 
 						<h4 className="t-center">Toby Keith</h4>
@@ -1225,10 +1242,10 @@
 							<h2 className="t-center">“Empire State of Mind”</h2> 
 					
 
-						<h4 className="t-center">Jay Z and Alicia Keyes</h4>
+						<h4 className="t-center">Jay Z and Alicia Keys</h4>
 						<div className="line-separator"></div>
 
-						<p>Though written and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebration of the City’s rich, ever-changing melting pot identity and unique ability to stay rooted in the streets while reaching for the sky.  Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay&nbsp;Z, it was the rapper who pulled in Alicia Keyes to handle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay&nbsp;Z his first trip to the top of the pop charts. </p>
+						<p>Though written and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebration of the City’s rich, ever-changing melting pot identity and unique ability to stay rooted in the streets while reaching for the sky.  Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay&nbsp;Z, it was the rapper who pulled in Alicia Keys to handle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay&nbsp;Z his first trip to the top of the pop charts. </p>
 
 					</div>
 				</div>
@@ -1275,6 +1292,9 @@
 	          </div>
 	        )
 	      }, initEp2TOC: function() {
+
+	      		ga('set', 'page', '/episode-2.html');
+	      		ga('send', 'pageview');
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
