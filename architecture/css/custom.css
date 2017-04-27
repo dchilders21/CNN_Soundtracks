@@ -165,7 +165,7 @@
 		}
 
 		.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+			background-image:url(../images/episode1/E1_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -174,7 +174,7 @@
 		}
 
 		.background_ep2 {
-			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
+			background-image:url(../images/episode2/E2_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -280,7 +280,7 @@
 	@media (min-width: 768px) and (max-width: 1024px) {
 	  
 	  	.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
+			background-image:url(../images/episode1/E1_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -288,7 +288,7 @@
 		}
 
 		.background_ep2 {
-			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
+			background-image:url(../images/episode2/E2_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -365,7 +365,7 @@
 		}
 
 		.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile_Small.jpg);
+			background-image:url(../images/episode1/E1_Bg_Tile_Small.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -373,7 +373,7 @@
 		}
 
 		.background_ep2 {
-			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
+			background-image:url(../images/episode2/E2_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;

@@ -1,0 +1,53 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-battle_of_the_sexes {
+    width: 513px;
+    height: 520px;
+    background-position: -5px -5px;
+}
+
+.sprite-berlin_wall {
+    width: 513px;
+    height: 520px;
+    background-position: -528px -5px;
+}
+
+.sprite-katrina {
+    width: 513px;
+    height: 520px;
+    background-position: -5px -535px;
+}
+
+.sprite-kent_state_active {
+    width: 506px;
+    height: 517px;
+    background-position: -528px -535px;
+}
+
+.sprite-mlk {
+    width: 513px;
+    height: 520px;
+    background-position: -1051px -5px;
+}
+
+.sprite-moon_landing {
+    width: 513px;
+    height: 520px;
+    background-position: -1044px -535px;
+}
+
+.sprite-nine11_active {
+    width: 513px;
+    height: 515px;
+    background-position: -5px -1065px;
+}
+
+.sprite-stone_wall {
+    width: 513px;
+    height: 520px;
+    background-position: -528px -1065px;
+}

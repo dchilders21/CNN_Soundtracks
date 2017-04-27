@@ -375,7 +375,7 @@
 	      render: function() {
 
       		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-      			//document.documentElement.style.backgroundImage = 'url("images/CNN_ST_AllEpisodes_JD_R02_01.jpg")';
+      			//document.documentElement.style.backgroundImage = 'url("images/Episodes_Bg.jpg")';
       		}
 	      		
 	          return (
@@ -501,7 +501,7 @@
           },
 
 	      render: function() {
-	      	  document.documentElement.style.backgroundImage = 'url("images/CNN_ST_AllEpisodes_JD_R02_01.jpg")';
+	      	  document.documentElement.style.backgroundImage = 'url("images/Episodes_Bg.jpg")';
 	          return (
 	            <div>
 					<section id="episodes" className="container background_episodes">
@@ -527,10 +527,10 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
 									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/kent_state.png" />
+										<Link to="/episode-3"><img src="images/albums/kent_state_active.png" className="album-collapse"/></Link>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 3
+										<span className="red">EXPLORE EPISODE: 3</span>
 									</h4>
 								</div>
 
@@ -601,10 +601,10 @@
 
 	    var Episode1 = React.createClass({
 	      componentDidMount: function() {
-            this.initEpTOC();
+            this.initEp1();
           },
           componentDidUpdate: function() {
-            this.initEpTOC();
+            this.initEp1();
           },
 	      render: function() {
 	        return (
@@ -613,9 +613,9 @@
 					<section id="episode-1-video" className="home bw-type container">
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_PhotoTransition.jpg">
-				                <source src="video/Photo_MLK.mp4" type='video/mp4' />
-				                <source src="video/Photo_MLK.WebM" type='video/webm' />
+				              poster="images/episode1/E1_PhotoTransition.jpg">
+				                <source src="video/ep1/Photo_MLK.mp4" type='video/mp4' />
+				                <source src="video/ep1/Photo_MLK.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -628,23 +628,23 @@
 
 					<div id='episode_1' className="type-1 background_ep1">
 						<div className="row">
-							<img src="images/CNN_EpisodeTOC_Header.jpg" />
+							<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />
 						</div>
 
 						<div className="sidebar">
 							<div>
-								<img src="images/CNN_EpisodeTOC_Sidebar_Album1.png" />
+								<img src="images/episode1/E1_Sidebar_Album1.png" />
 							</div>
 							<div>
-								<img src="images/CNN_EpisodeTOC_Sidebar_Album3.png" />
+								<img src="images/episode1/E1_Sidebar_Album3.png" />
 							</div>
 							<div>
-								<img src="images/CNN_EpisodeTOC_Sidebar_Album2.png" />
+								<img src="images/episode1/E1_Sidebar_Album2.png" />
 							</div>
 						</div>
 
 						<div id="mlk-title" className="tape-title mlk">
-							<img id="mlk-img" src="images/episode_ToC/episode_1_title.png" />
+							<img id="mlk-img" src="images/episode1/episode_1_title.png" />
 						</div>
 						
 						<div className="inner">
@@ -665,26 +665,26 @@
 										$(el).find("a").lightcase();
 									}}>
 									<div>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection"><img src="images/episode_ToC/gallery_images.png" /></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection"><img src="images/episode1/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode1/gallery/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection"></a>
 									</div>
 									<div className="tape-title view">
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/mlk_photo_gallery_2880x1800/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_01707_MAG_Students_2880x1800.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_05398_LOC_Man_Lynched.jpg" data-rel="lightcase:myCollection"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_06101_MAG_Black_Power_Women_M_2800x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_06111_GET_Black_Panther_Fist_Pump_M_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_08185_GET_Black_Lives_Matter_LA_I_Cant_Breathe_Protest_M_retouch_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_08190_GET_BLM_March_Janelle_Monae_NYC_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_08192_GET_BLM_Fist_Up_Barack_Obama_MLK_Poster_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_08193_GET_BLM_Signs_Fists_Up_Stop_Killing_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode1/gallery/AS_08504_GET_BLM_Girls_March_Hands_Up_Dont_Shoot_2015_2880x1800.jpg" data-rel="lightcase:myCollection2"></a>
 									</div>
 							</div>
 						</div>
@@ -693,7 +693,7 @@
 							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode_ToC/VanJones.jpg" /></a>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/tS7szcrCzfc?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode1/VanJones.jpg" /></a>
 								 <a ref="lightcase" href="//www.youtube.com/embed/eatisljr2P4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"></a></div>
 								 <div className="tape-title interviews">
 										<img src="images/episode_ToC/interviews.png" />
@@ -880,7 +880,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Video_Screens_2.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Next_Screen.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -895,13 +895,13 @@
 
 				<footer className="big-footer fullwidth t-left">
 					<div className="clearfix footer_inner">
-						<img className="footer_img" src="images/CNN_EpisodeTOC_Footer.png" />
+						<img className="footer_img" src="images/episode1/E1_Footer.png" />
 					</div>
 				</footer>
 
 	          </div>
 	        )
-	      }, initEpTOC: function() {
+	      }, initEp1: function() {
 
 	      		ga('set', 'page', '/episode-1.html');
 	      		ga('send', 'pageview');
@@ -1272,7 +1272,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Video_Screens_2.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Next_Screen.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
