@@ -60,7 +60,7 @@
 				fullScreenModeForMobile: true,
 				mobileMatchExpression: /(iphone|ipod|ipad|android|blackberry|symbian)/,
 				disableShrink: false,
-				shrinkFactor: .90,
+				shrinkFactor: .80,
 				overlayOpacity: 1,
 				slideshow: false,
 				slideshowAutoStart: true,
@@ -589,6 +589,7 @@
 		_calculateDimensions: function ($object) {
 
 			_self._cleanupDimensions();
+
 			// Set default dimensions
 			var dimensions = {
 				objectWidth: $object.attr('width') ? $object.attr('width') : $object.attr(_self._prefixAttributeName('width')),
@@ -687,11 +688,25 @@
 				'max-height': dimensions.maxHeight
 			});
 
-			_self.objects.contentInner.css({
-				'width': $object.outerWidth(),
-				'height': $object.outerHeight(),
-				'max-width': '100%'
-			});
+			if (typeof dimensions.objectWidth != 'undefined') {
+				_self.objects.contentInner.css({
+					//'width': $object.outerWidth(),
+					//'height': $object.outerHeight(),
+					'width': dimensions.objectWidth, // this will only work with horizontal images ?
+					'height': 'auto',
+					'max-width': '100%'
+				});
+			} else {
+				_self.objects.contentInner.css({
+					//'width': $object.outerWidth(),
+					//'height': $object.outerHeight(),
+					'width': dimensions.maxWidth, // this will only work with horizontal images ?
+					'height': 'auto',
+					'max-width': '100%'
+				});
+			}
+
+			
 
 			_self.objects.case.css({
 				'width': _self.objects.contentInner.outerWidth()
@@ -699,8 +714,8 @@
 
 			// Adjust margin
 			_self.objects.case.css({
-				'margin-top': parseInt(-((_self.objects.case.outerHeight() / 2) + 30)), // DC Added to center with the caption and title
-				'margin-left': parseInt(-(_self.objects.case.outerWidth() / 2))
+				'margin-top': parseInt(-((_self.objects.case.height() / 2) + 30)), // DC Added to center with the caption and title
+				'margin-left': parseInt(-(_self.objects.case.width() / 2))
 			});
 		},
 
