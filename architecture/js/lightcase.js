@@ -590,10 +590,15 @@
 
 			_self._cleanupDimensions();
 
+			console.log($object.prop('naturalHeight'))
+
+
 			// Set default dimensions
 			var dimensions = {
-				objectWidth: $object.attr('width') ? $object.attr('width') : $object.attr(_self._prefixAttributeName('width')),
-				objectHeight: $object.attr('height') ? $object.attr('height') : $object.attr(_self._prefixAttributeName('height'))
+				objectWidth: $object.prop('naturalWidth'),
+				objectHeight: $object.prop('naturalHeight')
+				//objectWidth: $object.attr('width') ? $object.attr('width') : $object.attr(_self._prefixAttributeName('width')),
+				//objectHeight: $object.attr('height') ? $object.attr('height') : $object.attr(_self._prefixAttributeName('height'))
 			};
 
 
@@ -690,17 +695,17 @@
 
 			if (typeof dimensions.objectWidth != 'undefined') {
 				_self.objects.contentInner.css({
-					//'width': $object.outerWidth(),
-					//'height': $object.outerHeight(),
-					'width': dimensions.objectWidth, // this will only work with horizontal images ?
+					'width': $object.outerWidth(),
+					'height': $object.outerHeight(),
+					//'width': dimensions.objectWidth, // this will only work with horizontal images ?
 					'height': 'auto',
 					'max-width': '100%'
 				});
 			} else {
 				_self.objects.contentInner.css({
-					//'width': $object.outerWidth(),
-					//'height': $object.outerHeight(),
-					'width': dimensions.maxWidth, // this will only work with horizontal images ?
+					'width': $object.outerWidth(),
+					'height': $object.outerHeight(),
+					//'width': dimensions.maxWidth, // this will only work with horizontal images ?
 					'height': 'auto',
 					'max-width': '100%'
 				});

@@ -60,6 +60,10 @@
 		width: 658px;
 	}
 
+	.kent-state {
+		width: 956px;
+	}
+
 	.view {
 		width: 287px;
 	}
@@ -142,6 +146,12 @@
     	top: 30%;
     }
 
+    .dials {
+    	/*background-image:url(../images/episode_ToC/EpisodeTOC_Header.jpg);
+    	background-position: center top;
+    	background-size: cover;*/
+    }
+
 	/* ////////////////////// DESKTOP ///////////////////////// */
 
 	/* 
@@ -175,6 +185,15 @@
 
 		.background_ep2 {
 			background-image:url(../images/episode2/E2_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep3 {
+			background-image:url(../images/episode3/E3_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -295,10 +314,20 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep3 {
+			background-image:url(../images/episode3/E3_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 100% auto;
+		}
+
 		.mlk {
 			margin-top: 40px;
 			width: 640px;
 		}
+
+
 
 		.inner {
 			margin-top: 0px;
@@ -358,7 +387,7 @@
 	@media (min-width: 481px) and (max-width: 767px), (min-width: 320px) and (max-width: 480px)  {
 	  
 	   .background_home {
-			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Thursdays.jpg);
+			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Tonight.jpg);
 			/*background-size: cover;*/
 			background-size: cover;
 			background-position: center
@@ -374,6 +403,14 @@
 
 		.background_ep2 {
 			background-image:url(../images/episode2/E2_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+	    	background-size: 960px 540px;
+		}
+
+		.background_ep3 {
+			background-image:url(../images/episode3/E3_Bg_Tile.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;

@@ -3,8 +3,8 @@ var isMob;
 function divResize() {
 	ht = $('html').innerHeight();
 	wd = $('html').innerWidth();
-	console.log('ht: ' + ht);
-	console.log('wd: ' + wd);
+	//console.log('ht: ' + ht);
+	//console.log('wd: ' + wd);
 	aspect_ratio = (wd/ht)
 
     if (aspect_ratio <= 1.3333333333333) {
@@ -25,7 +25,7 @@ function showPlayer() {
 	console.log(window.location.href);
 	l = window.location.href.split("/");
 	page = l[l.length - 1];
-	console.log(page)
+	//console.log(page)
 	if (page == 'episode-1') {
 
 		$('#mlk_playlist').css('display', 'block');

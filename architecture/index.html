@@ -388,9 +388,9 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER_Thursdays.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_Tonight.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -596,6 +596,7 @@
 	        	$('#playlists').empty();
 
 		    	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+
 	        }
 	    });
 
@@ -607,6 +608,7 @@
             this.initEp1();
           },
 	      render: function() {
+
 	        return (
 	          <div>
 	          	<div id="episode-wrapper">
@@ -627,8 +629,7 @@
 
 
 					<div id='episode_1' className="type-1 background_ep1">
-						<div className="row">
-							<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />
+						<div className="row mixer">
 						</div>
 
 						<div className="sidebar">
@@ -895,7 +896,6 @@
 
 				<footer className="big-footer fullwidth t-left">
 					<div className="clearfix footer_inner">
-						<img className="footer_img" src="images/episode1/E1_Footer.png" />
 					</div>
 				</footer>
 
@@ -910,6 +910,7 @@
 					divResize();
 				});
 
+
 	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		      		window.isMob = true;
 		      		var el = document.getElementById('transitionVideo');
@@ -918,9 +919,16 @@
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
 		      		
-		      		$('.parallax').append('<img src="images/episode1/CNN_ST_PhotoTransition.jpg" />');
+		      		$('.parallax').append('<img src="images/episode1/E1_PhotoTransition.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode1/E1_Footer_Mobile.png" />');
 		      	} else {
-		      		
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode1/E1_Footer.png" />');
 		      	}
 
 		      	$('#playlists').empty();
@@ -997,8 +1005,8 @@
 
 
 					<div id='episode_2' className="type-1 background_ep2">
-						<div className="row">
-							<img src="images/CNN_EpisodeTOC_Header.jpg" />
+
+						<div className="row mixer">
 						</div>
 
 						<div className="sidebar">
@@ -1287,7 +1295,6 @@
 
 				<footer className="big-footer fullwidth t-left">
 					<div className="clearfix footer_inner">
-						<img className="footer_img" src="images/episode2/E2_Footer.png" />
 					</div>
 				</footer>
 
@@ -1310,9 +1317,16 @@
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
 		      		
-		      		$('.parallax').append('<img src="images/episode2/Photo_911_Poster.jpg" />');
+		      		$('.parallax').append('<img src="images/episode2/E2_PhotoTransition.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode2/E2_Footer_Mobile.png" />');
 		      	} else {
-		      		
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode2/E2_Footer.png" />');
 		      	}
 
 		      	$('#playlists').empty();
@@ -1375,37 +1389,36 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode2/Photo_911_Poster.jpg">
-				                <source src="video/ep2/Photo_911.mp4" type='video/mp4' />
-				                <source src="video/ep2/Photo_911.WebM" type='video/webm' />
+				                <source src="video/ep3/Photo_KENTVIETNAM.mp4" type='video/mp4' />
+				                <source src="video/ep3/Photo_KENTVIETNAM.WebM" type='video/webm' />
 				             </video>
 						</div>
 
 						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
-							<a href="#episode_2" id="CTA" className="scroll">EXPLORE THE EPISODE
+							<a href="#episode_3" id="CTA" className="scroll">EXPLORE THE EPISODE
 							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
 						</div>
 					</section>
 
 
-					<div id='episode_2' className="type-1 background_ep2">
-						<div className="row">
-							<img src="images/CNN_EpisodeTOC_Header.jpg" />
+					<div id='episode_3' className="type-1 background_ep3">
+						<div className="row mixer">
 						</div>
 
 						<div className="sidebar">
 							<div>
-								<img src="images/episode2/E2_SideAlbum_1.png" />
+								<img src="images/episode3/E3_SideAlbum_1.png" />
 							</div>
 							<div>
-								<img src="images/episode2/E2_SideAlbum_2.png" />
+								<img src="images/episode3/E3_SideAlbum_2.png" />
 							</div>
 							<div>
-								<img src="images/episode2/E2_SideAlbum_3.png" />
+								<img src="images/episode3/E3_SideAlbum_3.png" />
 							</div>
 						</div>
 
-						<div id="nine11-title" className="tape-title nine11">
-							<img id="nine11-img" src="images/episode2/E2_Header.png" />
+						<div id="kent-title" className="tape-title kent-state">
+							<img id="kent-img" src="images/episode3/E3_Header.png" />
 						</div>
 						
 						<div className="inner">
@@ -1417,25 +1430,29 @@
 										<h2>ABOUT THE EPISODE</h2>
 									</div>
 									<div>
-										<p>September 11, 2001 will forever live in infamy for New Yorkers, and all Americans. It was a day of deep anguish followed by weeks of unprecedented camaraderie, partly brought about by benefit concerts in which songs like Billy Joel’s “New York State of Mind” and Sister Sledge’s “We Are Family” took on a new and heightened meaning. But the tragedy that had united the country quickly divided it, as the terrorist attacks became a justification for war in Iraq. Country music took center stage as the politically charged music of the moment, simply by celebrating patriotism in the case of Brooks and Dunn, or in an all-out pro-war message in the case of Toby Keith. When the Dixie Chicks found themselves caught in the crossfire after upsetting their fan base, it became clear that the wounds of 9/11 were yet to heal.</p>
+										<p>In a truly unimaginable act of police brutality, national guardsmen shot and killed four college students during an anti-Vietnam war protest on the Kent State University campus in Ohio in 1970. Just weeks later, Neil Young channeled his rage into a haunting song called “Ohio”, which was released and played on the radio almost immediately.</p>
+
+										<p>Perhaps no other era in American history saw such an intense outpouring of politically driven popular music as the years around the Vietnam War. Songs from Buffalo Springfield, Phil Ochs, and Edwin Starr were explicit in their anti-war messaging while also providing a soundtrack for soldiers in the battlefield. These artists were exercising their fundamental American right to protest government actions, and in a newly ascendant age of protest it is worth exploring the vital role that music can play in society. </p>
 									</div>
 								</div>
 								<div className="col-md-6 eps-block" ref={(el) => {
 										$(el).find("a").lightcase();
 									}}>
 									<div>
-									<a ref="lightcase" href="images/episode2/gallery/AS_00751_GET_911_FIREFIGHTER_SEATED_WEEPING_HAND_IN_FACE_M.jpg" data-rel="lightcase:myCollection"><img src="images/episode2/gallery_images.png" /></a>
-									<a ref="lightcase" href="images/episode2/gallery/AS_00784_GET_911_Memorial_Man_Collapses_Fountain_2011.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/episode2/gallery/AS_14720_MAG_Firefighters_World_Trade_Center_2001_M.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/episode2/gallery/AS_17149_GET_CNN_PUBLICITY_Trade_Tower_Firemen.jpg" data-rel="lightcase:myCollection"></a>
-									<a ref="lightcase" href="images/episode2/gallery/AS_17221_FEM_Back_fireman_rubble_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode3/gallery/AS_00558_MAG_Vietnam-War-Protest-Flower-Gun-Barrel_M.jpg" data-rel="lightcase:myCollection"><img src="images/episode3/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode3/gallery/AS_05795_NAR_US-soldiers-guitar-in-Vietnam-Jan-1968.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode3/gallery/AS_06663_HDZ_David_Crosby_David_Stills_Graham_Nash_portrait1969.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode3/gallery/AS_08674_GET_Nancy-Sinatra-pose-white-dress-blonde-sitting-color-1960.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode3/gallery/AS_10274_MAG_ANTI_WAR_RALLY_SIGN_MY_SON_WAS_KILLED_IN_VIETNAM_WHAT_FOR_AMERICA_1971_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode3/gallery/AS_11431_GET_Soldiers-shooting-their-guns-at-kent-state-students-1970.jpg" data-rel="lightcase:myCollection"></a>
 									</div>
 									<div className="tape-title view">
-										<a ref="lightcase" href="images/episode2/gallery/AS_00751_GET_911_FIREFIGHTER_SEATED_WEEPING_HAND_IN_FACE_M.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
-										<a ref="lightcase" href="images/episode2/gallery/AS_00784_GET_911_Memorial_Man_Collapses_Fountain_2011.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/episode2/gallery/AS_14720_MAG_Firefighters_World_Trade_Center_2001_M.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/episode2/gallery/AS_17149_GET_CNN_PUBLICITY_Trade_Tower_Firemen.jpg" data-rel="lightcase:myCollection2"></a>
-										<a ref="lightcase" href="images/episode2/gallery/AS_17221_FEM_Back_fireman_rubble_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode3/gallery/AS_00558_MAG_Vietnam-War-Protest-Flower-Gun-Barrel_M.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode3/gallery/AS_05795_NAR_US-soldiers-guitar-in-Vietnam-Jan-1968.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode3/gallery/AS_06663_HDZ_David_Crosby_David_Stills_Graham_Nash_portrait1969.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode3/gallery/AS_08674_GET_Nancy-Sinatra-pose-white-dress-blonde-sitting-color-1960.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode3/gallery/AS_10274_MAG_ANTI_WAR_RALLY_SIGN_MY_SON_WAS_KILLED_IN_VIETNAM_WHAT_FOR_AMERICA_1971_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode3/gallery/AS_11431_GET_Soldiers-shooting-their-guns-at-kent-state-students-1970.jpg" data-rel="lightcase:myCollection2"></a>
 
 									</div>
 							</div>
@@ -1445,7 +1462,7 @@
 							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/Atb-lBb4ZMY?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode2/E2_Video_Screens.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/Atb-lBb4ZMY?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode3/E3_Video_Screens.jpg" /></a></div>
 								 <div className="tape-title interviews">
 										<img src="images/episode_ToC/interviews.png" />
 								 </div>
@@ -1678,7 +1695,6 @@
 
 				<footer className="big-footer fullwidth t-left">
 					<div className="clearfix footer_inner">
-						<img className="footer_img" src="images/episode2/E2_Footer.png" />
 					</div>
 				</footer>
 
@@ -1701,9 +1717,16 @@
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
 		      		
-		      		$('.parallax').append('<img src="images/episode2/Photo_911_Poster.jpg" />');
+		      		$('.parallax').append('<img src="images/episode2/E2_PhotoTransition.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode3/E3_Footer_Mobile.png" />');
 		      	} else {
-		      		
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode3/E3_Footer.png" />');
 		      	}
 
 		      	$('#playlists').empty();
@@ -1714,7 +1737,7 @@
 	      			var footerHeight = $(".big-footer").height();
 					//$("#main").css("padding-bottom", footerHeight);
 					$(".big-footer").css("margin-top", -footerHeight)
-					$("#episode_2").css("padding-bottom", footerHeight)
+					$("#episode_3").css("padding-bottom", footerHeight)
 					//console.log(footerHeight);
 	      		}
 
@@ -1797,7 +1820,7 @@
 										<ul className="dropdown-menu pull-left clearfix">
 											<li><Link to="/episode-1"><span className="red">EPISODE: 1</span></Link></li>
 											<li><Link to="/episode-2"><span className="red">EPISODE: 2</span></Link></li>
-											<li><Link to="/episode-2"><span className="red">EPISODE: 3</span></Link></li>
+											<li><Link to="/episode-3"><span className="red">EPISODE: 3</span></Link></li>
 											<li className="inactiveEp"><a>EPISODE: 4</a></li>
 											<li className="inactiveEp"><a>EPISODE: 5</a></li>
 											<li className="inactiveEp"><a>EPISODE: 6</a></li>
