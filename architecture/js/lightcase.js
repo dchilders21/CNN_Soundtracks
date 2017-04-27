@@ -60,7 +60,7 @@
 				fullScreenModeForMobile: true,
 				mobileMatchExpression: /(iphone|ipod|ipad|android|blackberry|symbian)/,
 				disableShrink: false,
-				shrinkFactor: .50,
+				shrinkFactor: .90,
 				overlayOpacity: 1,
 				slideshow: false,
 				slideshowAutoStart: true,
@@ -87,8 +87,8 @@
 					data: {}
 				},
 				iframe: {
-					width: 800,
-					height: 500,
+					width: 1000, // 800
+					height: 625, //500
 					frameborder: 0
 				},
 				flash: {

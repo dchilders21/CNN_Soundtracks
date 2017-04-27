@@ -62,12 +62,13 @@
 
 	<!-- Page Loader -->
 	<article id="pageloader" class="dark-loader">
-		<!-- <div class="soundtracks"></div> -->
-		<div class="spinner">
+		<div id="sndtrx_preloader"></div>
+		</div>
+		<!-- <div class="spinner">
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
-		</div>
+		</div> -->
 	</article>
 
 	<div id="main">
@@ -420,8 +421,6 @@
 
 		    	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
 
-	        	document.getElementById('intro-home').style.display = "block";
-
 	        	this.$node.lightcase({
 					shrinkFactor: .90,
 					maxWidth: 1200,
@@ -436,8 +435,10 @@
 					}, 
 					onFinish:{
 						foo: function() {
-							console.log($('#intro-home'));
+
 							$('#lightcase-nav').append($('#intro-home'));
+							document.getElementById('sndtrx_preloader').style.display = "none";
+							document.getElementById('intro-home').style.display = "block";
 						}
 					},
 				    href: '//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1',

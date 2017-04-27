@@ -75,12 +75,6 @@
 		width: 309px;
 	}
 
-	.soundtracks {
-		background-image:url(/images/CNN_ST_PreLoaderGIF_JD_R01_01.gif);
-		width: 1256px;
-		height: 256px;
-	}
-
 	h2.t-center, h4.t-center {
 		margin-top: 0px;
 	}
@@ -192,6 +186,38 @@
 			padding-right: 10px;
 			padding-left: 10px;
 		}
+
+		#sndtrx_preloader {
+			position: absolute;
+			opacity: .2;
+			background-image:url(/images/preloader_top.png);
+			width: 576px;
+			height: 55px;
+			left: 50%;
+			top: 50%;
+			margin-left: -288px;
+			margin-top: -55px;
+			opacity: .2;
+			-webkit-animation-name: preFade;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 5s;
+		    animation-name: preFade;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		}
+
+		@-webkit-keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
+		@keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
 	}
 
 	/* 
@@ -233,6 +259,37 @@
 			padding-right: 10px;
 			padding-left: 10px;
 		}
+
+		#sndtrx_preloader {
+			position: absolute;
+			opacity: .2;
+			background-image:url(/images/preloader_top.png);
+			width: 576px;
+			height: 55px;
+			left: 50%;
+			top: 50%;
+			margin-left: -288px;
+			margin-top: -55px;
+			opacity: .2;
+			-webkit-animation-name: preFade;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 5s;
+		    animation-name: preFade;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		}
+
+		@-webkit-keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
+		@keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
 	  
 	}
 
@@ -248,6 +305,37 @@
 
 		.dark-nav .nav-inner div.nav-menu ul.nav a:hover{
 			/*background-color:#333 !important;*/
+		}
+
+		#sndtrx_preloader {
+			position: absolute;
+			opacity: .2;
+			background-image:url(/images/preloader_top.png);
+			width: 576px;
+			height: 55px;
+			left: 50%;
+			top: 50%;
+			margin-left: -288px;
+			margin-top: -55px;
+			opacity: .2;
+			-webkit-animation-name: preFade;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 5s;
+		    animation-name: preFade;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		}
+
+		@-webkit-keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
+		@keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
 		}
 
 	}
@@ -286,6 +374,37 @@
 
 		#mlk-img {
 			content:url("../images/mobile/episode_1_title_2x.png");
+		}
+
+		#sndtrx_preloader {
+			position: absolute;
+			opacity: .2;
+			background-image:url(/images/preloader_stacked_top.png);
+			width: 307px;
+			height: 118px;
+			left: 50%;
+			top: 50%;
+			margin-left: -153px;
+			margin-top: -59px;
+			opacity: .2;
+			-webkit-animation-name: preFade;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 5s;
+		    animation-name: preFade;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		}
+
+		@-webkit-keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
+		@keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
 		}
 	  
 	}
@@ -445,6 +564,36 @@
 			top: 50px;
 		}
 
+		#sndtrx_preloader {
+			position: absolute;
+			opacity: .2;
+			background-image:url(/images/preloader_stacked_top.png);
+			width: 307px;
+			height: 118px;
+			left: 50%;
+			top: 50%;
+			margin-left: -153px;
+			margin-top: -59px;
+			opacity: .2;
+			-webkit-animation-name: preFade;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 5s;
+		    animation-name: preFade;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		}
+
+		@-webkit-keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
+		@keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
 	  
 	}
 
@@ -604,6 +753,37 @@
 
 		#moon {
 			top: 50px;
+		}
+
+		#sndtrx_preloader {
+			position: absolute;
+			opacity: .2;
+			background-image:url(/images/preloader_stacked_top.png);
+			width: 307px;
+			height: 118px;
+			left: 50%;
+			top: 50%;
+			margin-left: -153px;
+			margin-top: -59px;
+			opacity: .2;
+			-webkit-animation-name: preFade;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 5s;
+		    animation-name: preFade;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		}
+
+		@-webkit-keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
+		}
+
+		@keyframes preFade {
+		    0% {opacity: .2;}
+		    60% {opacity: 1;}
+		    100% {opacity: .2;}
 		}
 	  
 	}
@@ -900,6 +1080,7 @@
     }
 
     #intro-home {
+    	display: none;
     	cursor: pointer;
     	top: 75%;
     	z-index: 1000000;
