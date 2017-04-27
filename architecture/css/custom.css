@@ -149,7 +149,12 @@
 	  ##Screen = B/w 1025px to 1280px
 	*/
 
-	@media (min-width: 1281px) {
+	/* 
+	  ##Device = Laptops, Desktops
+	  ##Screen = B/w 1025px to 1280px
+	*/
+
+	@media (min-width: 1281px), (min-width: 1025px) and (max-width: 1280px) {
 		#logo_badge {
 			margin-left: 45px;
 		}
@@ -220,80 +225,7 @@
 
 	}
 
-	/* 
-	  ##Device = Laptops, Desktops
-	  ##Screen = B/w 1025px to 1280px
-	*/
-	@media (min-width: 1025px) and (max-width: 1280px) {
-	  
-		#logo_badge {
-			margin-left: 45px;
-		}
-
-	   .background_home {
-			/*background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
-			background-size: cover;*/
-		}
-
-		.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile.jpg);
-	    	background-size: none;
-	    	background-position: none;
-	    	background-repeat: none;
-	    	background-size: 100% auto;
-		}
-		.background_ep2 {
-			background-image:url(../images/episode2/CNN_E2_Bg_Tile.jpg);
-	    	background-size: none;
-	    	background-position: none;
-	    	background-repeat: none;
-	    	background-size: 100% auto;
-		}
-
-		.feature-boxes {
-			padding-left: 24px;
-			padding-right: 24px;
-		}
-
-		.feature-boxes .feature-box {
-			padding-right: 10px;
-			padding-left: 10px;
-		}
-
-		#sndtrx_preloader {
-			position: absolute;
-			opacity: .2;
-			background-image:url(/images/preloader_top.png);
-			width: 576px;
-			height: 55px;
-			left: 50%;
-			top: 50%;
-			margin-left: -288px;
-			margin-top: -55px;
-			opacity: .2;
-			-webkit-animation-name: preFade;
-		    -webkit-animation-iteration-count: infinite;
-		    -webkit-animation-duration: 5s;
-		    animation-name: preFade;
-		    animation-iteration-count: infinite;
-		    animation-duration: 5s;
-		}
-
-		@-webkit-keyframes preFade {
-		    0% {opacity: .2;}
-		    60% {opacity: 1;}
-		    100% {opacity: .2;}
-		}
-
-		@keyframes preFade {
-		    0% {opacity: .2;}
-		    60% {opacity: 1;}
-		    100% {opacity: .2;}
-		}
-	  
-	}
-
-	/* ////////////////////// DESKTOP ///////////////////////// */
+	/* ////////////////////// END DESKTOP ///////////////////////// */
 
 	/* Media Screen Color */
 
@@ -412,12 +344,18 @@
 
 
 	/* ////////////////////// START PHONE ///////////////////////// */
+
 	/* 
 	  ##Device = Low Resolution Tablets, Mobiles (Landscape)
 	  ##Screen = B/w 481px to 767px
 	*/
 
-	@media (min-width: 481px) and (max-width: 767px) {
+	/* 
+	  ##Device = Most of the Smartphones Mobiles (Portrait)
+	  ##Screen = B/w 320px to 479px
+	*/
+
+	@media (min-width: 481px) and (max-width: 767px), (min-width: 320px) and (max-width: 480px)  {
 	  
 	   .background_home {
 			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Thursdays.jpg);
@@ -521,197 +459,6 @@
 
 		.eps-block {
 			margin-bottom: 40px;
-		}
-
-		#mlk-title {
-			width: 70%;
-		}
-
-		.mlk {
-			width: 80%;
-			margin-top: 16px;
-		}
-
-		.nine11 {
-			width: 100%;
-		}
-
-		.inner p {
-			font-size: 16px;
-		}
-
-		.t-center h2 {
-			font-size: 24px;
-		}
-
-		.arrow_down {
-			display: none;
-		}
-
-		.lightcase-open body > *:not([id*='lightcase-']) {
-			top: auto !important;
-		}
-
-		.sidebar {
-			display: none;
-		}
-
-		.navbar-center a {
-			letter-spacing: 1px;
-		}
-
-		#moon {
-			top: 50px;
-		}
-
-		#sndtrx_preloader {
-			position: absolute;
-			opacity: .2;
-			background-image:url(/images/preloader_stacked_top.png);
-			width: 307px;
-			height: 118px;
-			left: 50%;
-			top: 50%;
-			margin-left: -153px;
-			margin-top: -59px;
-			opacity: .2;
-			-webkit-animation-name: preFade;
-		    -webkit-animation-iteration-count: infinite;
-		    -webkit-animation-duration: 5s;
-		    animation-name: preFade;
-		    animation-iteration-count: infinite;
-		    animation-duration: 5s;
-		}
-
-		@-webkit-keyframes preFade {
-		    0% {opacity: .2;}
-		    60% {opacity: 1;}
-		    100% {opacity: .2;}
-		}
-
-		@keyframes preFade {
-		    0% {opacity: .2;}
-		    60% {opacity: 1;}
-		    100% {opacity: .2;}
-		}
-	  
-	}
-
-	/* 
-	  ##Device = Most of the Smartphones Mobiles (Portrait)
-	  ##Screen = B/w 320px to 479px
-	*/
-
-	@media (min-width: 320px) and (max-width: 480px) {
-	  
-	    .background_home {
-			background-image:url(../images/mobile/CNN_SOUNDTRACKS_MOBILE_Thursdays.jpg);
-			/*background-size: cover;*/
-			background-size: cover;
-			background-position: center;
-		}
-
-		.background_ep1 {
-			background-image:url(../images/CNN_EpisodeTOC_Bg_Tile_Small.jpg);
-	    	background-size: none;
-	    	background-position: none;
-	    	background-repeat: none;
-	    	background-size: 960px 540px;
-		}
-
-		.background_ep2 {
-			background-image:url(../images/episode2/CNN_E2_Bg_Tile_Small.jpg);
-	    	background-size: none;
-	    	background-position: none;
-	    	background-repeat: none;
-	    	background-size: 960px 540px;
-		}
-
-		span.glyphicon.glyphicon-menu-hamburger.hamburger {
-			display: none;
-		}
-
-		ul.dropdown-menu.pull-left.clearfix {
-			display: block;
-		}
-
-		.nav-menu ul.dropdown-menu li, .nav-menu ul.dropdown-menu li:last-child {
-			border: none;
-		}
-
-
-		.dark-nav .nav-menu ul.dropdown-menu {
-			background-color: rgba(0, 0, 0, 0);
-		}
-
-		.bw-type .home-extra-note {
-			top: 70%;
-		}
-
-		#apple-badge {
-			left: 6%;
-			bottom: 10px;
-		}
-
-		.nav-inner div.nav-menu ul.nav li a {
-			font-weight: 600;
-			color: #FFF;
-		}
-
-		div.border {
-			margin-top: 60px;
-		}
-
-		.about-rt {
-			width: 80%;
-			text-align: center;
-			margin: 0 auto;
-			margin-top: 40px;
-			padding-bottom: 80px;
-		}
-
-		.feature-boxes {
-			padding: 0px;
-			width: 50%;
-			float: left;
-		}
-
-		h4 {
-			font-size: 12px;
-		}
-
-		.t-center {
-			margin-bottom: 80px;
-		}
-
-		.background_episodes {
-			padding-bottom: 80px;
-		}
-
-		#mlk-img {
-			content:url("../images/mobile/episode_1_title_2x.png");
-		}
-
-		.inner {
-			padding: 16px;
-		}
-
-		.inner .row {
-			margin-top: 0px;
-			margin-bottom: 40px;
-		}
-
-		.t-center {
-			margin-top: 20px;
-			margin-bottom: 14px;
-		}
-
-		.eps-block {
-			margin-bottom: 40px;
-		}
-
-		.tape-title {
-			width: 50%;
 		}
 
 		#mlk-title {
