@@ -199,6 +199,7 @@
     padding: 0 !important;
     border: none !important;
     background: none !important;
+    margin-top: 40px !important; /* Added by DC to sort of better center video */
   }
 }
 

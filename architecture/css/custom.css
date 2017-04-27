@@ -337,6 +337,10 @@
 			content:url("../images/mobile/episode_1_title_2x.png");
 		}
 
+		#kent-img {
+			content:url("../images/mobile/episode_3_title_2x.png");
+		}
+
 		#sndtrx_preloader {
 			position: absolute;
 			opacity: .2;
@@ -481,6 +485,10 @@
 			content:url("../images/mobile/episode_1_title_2x.png");
 		}
 
+		#kent-img {
+			content:url("../images/mobile/episode_3_title_2x.png");
+		}
+
 		.tape-title {
 			width: 50%;
 		}
@@ -498,13 +506,13 @@
 			margin-bottom: 40px;
 		}
 
-		#mlk-title {
-			width: 70%;
-		}
-
 		.mlk {
 			width: 80%;
 			margin-top: 16px;
+		}
+
+		.kent-state {
+			width: 80%;
 		}
 
 		.nine11 {
@@ -866,7 +874,7 @@
     #intro-home {
     	display: none;
     	cursor: pointer;
-    	top: 75%;
+    	top: 85%;
     	z-index: 1000000;
     }
 

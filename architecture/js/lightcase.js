@@ -87,8 +87,8 @@
 					data: {}
 				},
 				iframe: {
-					width: 1000, // 800
-					height: 625, //500
+					//width: 1000, // 800
+					//height: 625, //500
 					frameborder: 0
 				},
 				flash: {
@@ -669,8 +669,16 @@
 			}
 
 			if (_self.isMobileDevice()) {
+
 				dimensions.objectWidth = dimensions.maxWidth;
-				dimensions.objectHeight = parseInt(dimensions.objectHeight / dimensions.differenceWidthAsPercent * 100);
+				// If it's youtube video
+				if (_self.objectData.type == 'iframe') {
+					dimensions.objectHeight = parseInt(dimensions.maxWidth / 1.6);
+				} else if (_self.objectData.type == 'image') {
+					
+				}
+				//dimensions.objectHeight = parseInt(dimensions.objectHeight / dimensions.differenceWidthAsPercent * 100);
+				
 			}
 
 
@@ -698,7 +706,7 @@
 					'width': $object.outerWidth(),
 					'height': $object.outerHeight(),
 					//'width': dimensions.objectWidth, // this will only work with horizontal images ?
-					'height': 'auto',
+					//'height': 'auto',
 					'max-width': '100%'
 				});
 			} else {
@@ -706,7 +714,7 @@
 					'width': $object.outerWidth(),
 					'height': $object.outerHeight(),
 					//'width': dimensions.maxWidth, // this will only work with horizontal images ?
-					'height': 'auto',
+					//'height': 'auto',
 					'max-width': '100%'
 				});
 			}
@@ -719,7 +727,7 @@
 
 			// Adjust margin
 			_self.objects.case.css({
-				'margin-top': parseInt(-((_self.objects.case.height() / 2) + 30)), // DC Added to center with the caption and title
+				'margin-top': parseInt(-((_self.objects.case.height() / 2) + 20)), // DC Added to center with the caption and title
 				'margin-left': parseInt(-(_self.objects.case.width() / 2))
 			});
 		},
