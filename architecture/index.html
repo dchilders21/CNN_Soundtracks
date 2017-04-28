@@ -300,12 +300,12 @@
 				var markers = L.markerClusterGroup();
 
 				var marker = L.marker([40.711667, -74.0125], {icon: redIcon});
-				marker.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/911_01.jpg' width='210'/><img class='bottom' src='images/map/911_02.jpg' width='210'/></div><p>The World Trade Center complex was built in 1973. After its destruction in 2001, the One World Trade Center was built in its place.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+				marker.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/911_01.jpg' width='210'/><img class='bottom' src='images/map/911_02.jpg' width='210'/></div><p>The World Trade Center complex was built in 1973. After its destruction in 2001, the One World Trade Center was built in its place.</p><a href='#episode-2'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				markers.addLayer(marker);
 
 				var marker2 = L.marker([41.150092, -81.343353], {icon: redIcon}).addTo(mymap);
-				marker2.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/Kent_State_01.jpg' width='210'/><img class='bottom' src='images/map/Kent_State_02.jpg' width='210'/></div><p>Kent State University in Kent, OH was the site of a student protest against the Vietnam War. It is still a functioning university.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+				marker2.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/Kent_State_01.jpg' width='210'/><img class='bottom' src='images/map/Kent_State_02.jpg' width='210'/></div><p>Kent State University in Kent, OH was the site of a student protest against the Vietnam War. It is still a functioning university.</p><a href='#episode-3'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				var marker3 = L.marker([29.95, -90.066667], {icon: redIcon}).addTo(mymap);
 				marker3.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/katrina.png' width='210'/><p>The hurricane in 2005 affected many regions in Louisiana but the infrastructure of New Orleans collapsed, causing billions of dollars of damage.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
@@ -388,9 +388,9 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER_Tonight.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_Tonight.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_Thursdays.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -441,7 +441,7 @@
 							document.getElementById('intro-home').style.display = "block";
 						}
 					},
-				    href: '//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1',
+				    href: '//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1',
 				});
 
 				/*lightcase.start({
@@ -881,7 +881,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Next_Screen.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode3/E3_Video_Screens.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -991,7 +991,7 @@
 					<section id="episode-1-video" className="home bw-type container">
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
-				              poster="images/episode2/Photo_911_Poster.jpg">
+				              poster="images/episode2/E2_PhotoTransition.jpg">
 				                <source src="video/ep2/Photo_911.mp4" type='video/mp4' />
 				                <source src="video/ep2/Photo_911.WebM" type='video/webm' />
 				             </video>
@@ -1280,7 +1280,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Next_Screen.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode3/E3_Video_Screens.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1388,7 +1388,7 @@
 					<section id="episode-1-video" className="home bw-type container">
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
-				              poster="images/episode2/Photo_911_Poster.jpg">
+				              poster="images/episode3/E3_PhotoTransition.jpg">
 				                <source src="video/ep3/Photo_KENTVIETNAM.mp4" type='video/mp4' />
 				                <source src="video/ep3/Photo_KENTVIETNAM.WebM" type='video/webm' />
 				             </video>
@@ -1480,13 +1480,13 @@
 						<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="song_history">
-										<h2 className="t-center">“Fragile”</h2> 
+										<h2 className="t-center">“Ohio”</h2> 
 								
 
-									<h4 className="t-center">Sting</h4>
+									<h4 className="t-center">Crosby Stills Nash Young</h4>
 									<div className="line-separator"></div>
 
-									<p>Few songs demonstrate pop music’s ability to cross political barriers and provide an emotional balm like Sting’s “Fragile.” Originally recorded for the 1988 album Nothing Like the Sun and intended as a tribute to Ben Linder, an American engineer killed by Nicaragua’s American-backed right-wing rebel group the Contras while helping to build a dam, the song initially had a strong left-leaning context. Linder’s death became a political hot button in the United States, where his support and sympathy for the goals of Nicaragua’s socialist Sandinista government was at odds with U.S. policy. While Reagan administration officials were particularly unsympathetic to Linder’s humanitarian intentions — even suggesting he got what he deserved — opponents of the policy charged that it had resulted in the U.S. government funding and encouraging the murder of an American. The song took on a new and broader context of healing when Sting used it to open a performance on the evening of September 11th, and he again selected it in 2016 as the first song to be performed when he re-opened Paris’s Bataclan theater a year after the deadly terrorist attacks that horrified that city and shocked the world.</p>
+									<p>Like many others, Neil Young reacted viscerally to what became the iconic image of the shootings at Kent State University: John Paul Filo’s Pulitzer prize-winning photograph of Mary Ann Vecchio kneeling beside the body of Jeffrey Miller. In Young’s case, it proved the impetus for an equally arresting snapshot of the country’s mood.  Written, recorded and released within days, “Ohio” and its stark refrain of “four dead in Ohio,” was both eulogy and rallying cry, a primal howl and a call to action. For the Canadian-born Young, whose own take on American politics would move all over the map throughout his career (as an organizer of Farm Aid in the eighties he voiced support for president Ronald Reagan and was later an outspoken critic of the Iraq War) he has suggested that “Ohio” was penned in a burst of activism and optimism regarding the power of pop music to effect the national conscience. He would later temper his outlook. “I’m a different person than I was in the 1960s,” he said. “I am not under any misconceptions that my next record is going to change the world.” </p>
 
 								</div>
 							</div>
@@ -1495,12 +1495,12 @@
 								
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“The Rising”</h2>
+									<h2 className="t-center">“Ballad of the Green Berets”</h2>
 								
-								<h4 className="t-center">Bruce Springsteen</h4>
+								<h4 className="t-center">Sgt. Barry Sadler</h4>
 								<div className="line-separator"></div>
 
-								<p>In his memoir, Born to Run, Bruce Springsteen recalls watching reports of the World Trade Center attack on television in dismay and disbelief, then driving to a nearby bridge with an open view of New York harbor, torrents of smoke rising from lower Manhattan. In the coming days, the stark and deeply felt religious imagery at the core of “The Rising” took shape as his thoughts returned again and again to the firemen, police, and rescue teams who gave their lives. “The picture I couldn’t let go of was of the emergency workers going up the stairs as others rushed down to safety,” he later recalled. “The depth of their sacrifice in unthinkable and incomprehensible.” Released as a single in 2002, the song won Grammy Awards as Best Rock Song and Best Male Rock Vocal Performance.</p>
+								<p>A Green Beret medic wounded in Vietnam, Sadler penned his tribute to the elite unit as a 12-verse epic while recovering in an Army hospital. Inspired by the service of James Gabriel, the first native Hawaiian to die in Vietnam, Sadler cut the song down to its shorter length with the help of novelist Robin Moore, whose book, The Green Berets was then a best-seller. Recording the song on his own in 1965, Sadler distributed it only within the military at first, where its prideful message of duty and service resonated. Its popularity attracted the attention of RCA Records; re-released, it became a huge hit and one of the biggest-selling singles of 1966.  Sadler continued his dual career as both a songwriter and a soldier and medic, but never returned to the national spotlight. His later years were marred by violence and mystery, including an arrest for shooting another songwriter. After being shot in the head in Guatemala, Saddler was confined to a wheelchair and died in 1989.</p>
 								</div> 
 								</div>
 							</div>		
@@ -1513,13 +1513,13 @@
 					<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“The Sound of Silence” </h2> 
+									<h2 className="t-center">“These Boots are Made for Walking”</h2> 
 							
 
-								<h4 className="t-center">Paul Simon</h4>
+								<h4 className="t-center">Nancy Sinatra</h4>
 								<div className="line-separator"></div>
 
-								<p>Initially recorded as an acoustic folk song for the 1964 Simon&nbsp;&amp;&nbsp;Garfunkel album, Wednesday Morning, 3 a.m., the song was <span style={{whiteSpace: "nowrap"}}>re-born</span> the following year as a huge pop hit when producer Tom Wilson brought in the same musicians who’d worked on Bob Dylan’s electric breakthrough, “Like A Rolling Stone,” to <span style={{whiteSpace: "nowrap"}}>re-imagine</span> “The Sound of Silence” as a rock record. Neither its author, Paul Simon, who was in England at the time, nor Art Garfunkle, was even aware of the new production until it was completed and released. As the single took off, the duo hastily <span style={{whiteSpace: "nowrap"}}>re-assembled</span> to record the album, The Sounds of Silence. Given new life, they would go on to record three more landmark studio albums, culminating in the enormously successful Bridge Over Troubled Waters. “The Sound of Silence” would re-emerge over and over through the coming decades, first on the soundtrack for The Graduate, and later re-recorded as a gospel song with the Jesse Dixon Singers for Paul Simon in Concert: Live Rhymin’.</p>
+								<p>According to writer and producer Lee Hazlewood, “These Boots are Made for Walking” grew out of an incident in a Texas bar. In an interview with Blender magazine, Hazlewood recalled hearing a group of friends tease a middle-aged patron that his young girlfriend had him wrapped around her finger. Putting his feet on a barstool, the man replied, “I know what you think – but I’m the boss of my house and these boots will walk all over her the day I’m not.” That boot, however, moved to the other foot when Hazlewood’s song was recorded by Nancy Sinatra. Backed by the all-star group of Los Angeles musicians known as the Wrecking Crew, it made Frank Sinatra’s daughter famous in her own right, reportedly selling an astounding six million copies, and has been re-recorded by a wide range of artists from Jessica Simpson to Megadeth. Nancy, who would appear in several movies including Speedway with Elvis Presley, scored another No. 1 hit when she dueted with her father on “Somethin’ Stupid.” </p>
 
 								</div>
 							</div>
@@ -1528,13 +1528,13 @@
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“We Are Family”</h2> 
+									<h2 className="t-center">“I Ain't Marchin’ Anymore”</h2> 
 							
 
-								<h4 className="t-center">We Are Family Collective</h4>
+								<h4 className="t-center">Phil Ochs</h4>
 								<div className="line-separator"></div>
 
-								<p>Initially a 1979 pop and disco hit  custom penned for Sister Sledge (a vocal group comprised of four singing sisters), “We Are Family” took on a far more ambitious cast when its co-author, musician and producer Nile Rodgers, organized an all-star re-recording&nbsp;of the song to both memorialize and give aid to victims of September 11th.  “Nothing I’ve seen in my life lifts the spirit like song,” Rodgers said when asked of the project’s genesis. Though clearly influenced by earlier, large group all-star projects like “We Are the World” and “Sun City,”  one of the more inspiring features of the 200-strong chorus was its inclusion of Ground Zero emergency workers including doctors, police and firefighters along with such featured singers as Patti Labelle, Dionne Warwick, Luther Vandross, Joan Osborne and Diana Ross. Originally formed to pay for counseling for September 11th workers and victims’ families, the We Are Family Foundation continues to support a broad range of inter-cultural peace initiatives.</p>
+								<p>The signature song of singer/songwriter Phil Ochs, 1966’s “I Ain’t Marchin’ Anymore” became the unofficial theme song for the anti-war movement, with Ochs a familiar presence at rallies and protest events. Both sharply stated but blunt in tone – “Call it peace or call it treason/ Call it love or call it reason/ But I ain’t marchin’ anymore”-- it traces American battles from the War of 1812 to Vietnam, and its lyrics employ a series of dramatic comparisons to decry both war and the structures behind it:   “It’s always the old to lead us to the war/ It’s always the young to fall”. And in one of the few anti-war songs to link economics with war, Ochs damned both laborers and management as complicit in the interests and policies leading to foreign adventures. </p>
 
 							</div>
 						</div>
@@ -1547,13 +1547,13 @@
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“New York State of Mind” </h2> 
+								<h2 className="t-center">“For What It's Worth”</h2> 
 						
 
-							<h4 className="t-center">Billy Joel</h4>
+							<h4 className="t-center">Buffalo Springfield</h4>
 							<div className="line-separator"></div>
 
-							<p>It’s hard to think of a contemporary songwriter who has obsessed more over his New York roots than Billy Joel. Since the release of his first album, Cold Spring Harbor, the Long Island native has assiduously sketched its country, suburbs and city into his musical landscape, whether providing a snapshot of the neighborhood Italian restaurant, the lights of Broadway, an “uptown girl,” or mocking himself as a suburban miscreant in&nbsp;“The&nbsp;Legend&nbsp;of&nbsp;Billy&nbsp;the&nbsp;Kid” (“From a town known as Oyster Bay, Long Island/Rode a boy with a six-pack in his hand…”). Literally begun while coming home from Los Angeles on a Greyhound bus, the sentimental “New York State of Mind,” with its longing for home and all its familiarities, took on an anthemic life in October 2001 when he performed it at the Concert For New York City benefit for first responders. </p>
+							<p>In the summer of 1966, Buffalo Springfield played regularly at the Whisky a Go Go club on L.A.’s Sunset Strip. The street was a popular hang-out for kids and became a local flash point: when a 10 pm curfew on teens was enforced, protests turned into a pitched battle with police that became known as “the riot on the Sunset Strip.” Inspired, Stephen Stills borrowed much of the melody from a song by the San Francisco group, Moby Grape, “Murder in My Heart for the Judge”. He penned the song while at a party in Topanga Canyon and the group recorded it the next day. Best known for the refrain “It’s time we stop, hey, what’s that sound/ Everybody look what’s going down”, the rush-release version of the song survived an attempt by Atlantic Records to remove an oblique reference to the police: “There’s a man with a gun over there/ Telling me I got to beware”. The song would later transcend its specific inspiration to become broadly associated with the anti-war movement. </p>
 
 							</div>
 						</div>
@@ -1562,13 +1562,13 @@
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“Boot Scootin’ Boogie” and <br />“Only in America”</h2> 
+								<h2 className="t-center">“I Feel Like I'm Fixin To Die Rag”</h2> 
 						
 
-							<h4 className="t-center">Brooks &amp; Dunn</h4>
+							<h4 className="t-center">Country Joe McDonald and the Fish</h4>
 							<div className="line-separator"></div>
 
-							<p>Paired in 1990, the singer/songwriters Kix Brooks and Ronnie Dunn proved country music mainstays over the next three decades, incorporating both rock and roadhouse honky-tonk music into their sound to notch 20 #1 country hits. Their first album, 1991’s Brand New Man -- featuring “Boot Scootin’ Boogie,” the song that led the charge of the line dancing craze — is one of the most successful modern country albums, having sold over 6 million copies and produced five #1 country singles. The duo’s ability to craft a music drawn freely from a wide range of influences – and weave those threads into a shared American cloth – was never more forcefully demonstrated than when their song “Only in America” was selected as a theme for both the George W. Bush and Barack Obama presidential campaigns. “It’s very flattering to know our song crossed party lines and potentially inspires all Americans,” Brooks said.</p>
+							<p>Initially recorded as a folk song by Joe McDonald in 1966, and then re-recorded in an electric version the next, the tune achieved wide popularity and a sheen of infamy when a lewd version of its’ introductory “F-I-S-H” cheer was performed at Woodstock. An irreverent anti-war song set in ragtime, its catchy lampoon of a military marching call -- “One, two, three, what are we fighting for?” – quickly made its way into the counter culture. Though staunchly anti-war, the song reportedly found an unexpected group of admirers: the record was played for American prisoners of war in Hoa Lo Prison – the notorious Hanoi Hilton – by their captors. Though intended to demoralize them, the prisoners later said they instead sang along. </p>
 
 						</div>
 					</div>
@@ -1580,13 +1580,13 @@
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Where Were You (When the World Stopped Turning)”</h2> 
+							<h2 className="t-center">“Okie from Muskogee”</h2> 
 					
 
-						<h4 className="t-center">Alan Jackson</h4>
+						<h4 className="t-center">Merle Haggard</h4>
 						<div className="line-separator"></div>
 
-						<p>Country music speaks best to the heart when it speaks simply, and few country songs are as plainspoken as Alan Jackson’s September 11th  reverie, “Where Were You.” The song is perhaps best thought of as a bid for a common prayer, an attempt to capture the overwhelming sense of a shared grief and confusion that marked the tragedy and put into words the gut feeling that the world had changed.  A Georgia native, Jackson has described the inspiration for the song as “a gift,” and says the seed of it came to him early one Sunday morning and that he finished it by that evening. “I never felt I could take credit for writing it,” he said. “I guess I just didn’t want to forget how I felt on that day and how I knew other people felt.”  Jackson, who has also said he is leery of writing “preachy” songs, knew he was taking a chance: while the song won a Grammy for Best Country Song, he and “Where Were You” were lampooned on the show South Park. </p>
+						<p>Legend has it the song was written on the band’s tour bus in 15 minutes by the singer and his drummer, Roy Edward Burris, after spotting a sign announcing, “Muskogee, 19 miles.” But beyond that – and the fact that the California-born Haggard’s family had migrated to the Golden State from Oklahoma and he felt a sense of kinship – it’s hard to tell exactly what Haggard intended. Depending on when and where he was asked, “Okie from Muskogee” was either an earnest expression of patriotism or an eye-rolling send up of a small town mentality. “We wrote it to be satirical but then people latched on to it and it really turned into the mindset of people so opposite of who and where we were,” he told one interview in 1970. Yet a few months later, he described the song as a reaction to “these barefooted bums…I don’t like their views on life, their filth, their visible self-disrespect. They don’t give a s*** what they look like, or what they smell like.” Either way, the song became a flag-waver for the silent majority, and to Haggard’s consternation, the song he’s most remembered for. “Merle is neither a redneck or a racist,” remarked his friend, songwriter Kris Kristofferson. “He just happens to be known for probably the only bad song he ever wrote.”</p>
 
 					</div>
 				</div>
@@ -1595,13 +1595,13 @@
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“God Bless the USA”</h2> 
+							<h2 className="t-center">“War”</h2> 
 					
 
-						<h4 className="t-center">Lee Greenwood</h4>
+						<h4 className="t-center">Edwin Starr</h4>
 						<div className="line-separator"></div>
 
-						<p>Perhaps the most successful American patriotic song since Irving Berlin’s similarly-titled “God Bless America,” Greenwood first recorded his paean to the American dream in 1984. Since then, it’s been the de facto flag-waver for both Desert Storm and the 2003 invasion of Iraq, was widely played following September 11th, and was performed by Greenwood at President Trump’s inauguration. Transcending popular culture, the song has lodged in the American consciousness: a version recorded by the 2003 finalists on American Idol went gold while raising over $150,000 for the American Red Cross, and it has been recorded by artists as divergent as Beyonce and Dolly Parton.</p>
+						<p>Written by Motown producer Norman Whitfield and songwriter Barrett Strong, “War” was first recorded by the Temptations and included on their album Psychedelic Shack. And though fans were clamoring for its release as a single, the label feared the anti-war song might stir ire against their most popular male group. Instead, Whitfield recut a more muscular version with the big-voiced Edwin Starr, who’d recently come to Motown via the purchase of another Detroit label, Ric-Tic.  An instant hit, “War” hit No.1 on the Billboard pop chart and stayed there for three weeks.  Though always associated with Starr, “War” later produced notable 1980s covers by Bruce Springsteen and England’s Frankie Goes to Hollywood. </p>
 
 					</div>
 				</div>
@@ -1614,13 +1614,13 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Courtesy of the Red, <br />White and Blue”</h2> 
+							<h2 className="t-center">“Tracks of my Tears”</h2> 
 					
 
-						<h4 className="t-center">Toby Keith</h4>
+						<h4 className="t-center">The Miracles featuring Smokey Robinson</h4>
 						<div className="line-separator"></div>
 
-						<p>Unapologetically jingoistic – the song’s most provocative lyrics, “we’ll put a boot in your ass/it’s the American way” are spotlighted in the sign-on for Sean Hannity’s radio show – “Courtesy of the Red, White and Blue” isn’t everybody’s idea of patriotism, but it certainly doesn’t lack for adherents. One of them is former National Security Advisor James L. Jones who, while serving as Commandant of the Marine Corp, heard Keith perform the song in concert and reportedly told the singer that he had a duty to record it and help lift armed forces morale. Jones clearly knew what he was talking about: “Courtesy of the Red, White and Blue” is immensely popular with members of the military.</p>
+						<p>Throughout his career, Smokey Robinson has been a double threat: listeners know him as a sweet crooner; musicians know he is also one of Motown’s most successful songwriters and producers who has written hits not just for his group the Miracles but for Marvin Gaye, the Marvelettes, the Temptations, the Contours and Mary Wells. On “The Tracks of My Tears,” Smokey collaborated with his bandmates Pete Moore and Marv Tarplin, but was stumped for weeks for a lyric hook. It wasn’t until he was looking in the mirror while shaving one morning that the idea for someone crying so long and hard that its “easy to see the tracks of my tears.” Though only a comparatively modest hit in Robinson’s long career, the song resonated with other artists and was later hits for both Linda Ronstadt and Johnny Rivers.</p>
 
 					</div>
 				</div>
@@ -1629,14 +1629,13 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Travelin’ Soldier” and “Not Ready to Make Nice”</h2> 
+							<h2 className="t-center">“We Gotta Get Out Of This Place”</h2> 
 					
 
-						<h4 className="t-center">The Dixie Chicks</h4>
+						<h4 className="t-center">The Animals</h4>
 						<div className="line-separator"></div>
 
-						<p>These two singles were the musical bookends to one of the culture war’s great skirmishes. On the eve of the U.S. invasion of Iraq, Texan Natalie Maines told a London audience that “we don't want this war, this violence, and we're ashamed that the President of the United States is from Texas”. Her words unleashed a huge conservative backlash that included protests against the band, an open feud with super-patriot songwriter Toby Keith, and even death threats against Maines. “Travelin’ Soldier,” a sentimental song about the death of an American soldier in Vietnam, was then the group’s current single and it was quickly blackballed by country stations. The group proved to be un-welcomed by many of its former fans.  It took the Dixie Chicks nearly three years to regain their footing – and a whole new status – with their spirited answer record, “Not Ready to Make Nice.” Produced by Rick Rubin, who’d also worked with Johnny Cash, the Beastie Boys and the Red Hot Chili Peppers, the song won several Grammy Awards including Record of the Year and Song of the Year.
-</p>
+						<p>Penned by the husband-and-wife team of Barry Mann and Cynthia Weill, who wrote the song with the Righteous Brothers in mind, it wound up instead in the hands of the Animals, a rowdy, blues-inspired pub band from Newcastle, England. It would later cross other oceans, becoming the “unofficial anthem” of American troops in Vietnam, and covered by every band that ever played a serviceman’s bar. But it didn’t just speak to soldiers: Bruce Springsteen has credited the song as his great model, calling it “every song I’ve ever written. I’m not kidding either,” he said. “That’s ‘Born to Run,’ ‘Born in the USA,’ everything I’ve done for the past 40 years.” </p>
 
 					</div>
 				</div>
@@ -1649,13 +1648,13 @@
 			<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Empire State of Mind”</h2> 
+							<h2 className="t-center">“Born in the USA”</h2> 
 					
 
-						<h4 className="t-center">Jay Z and Alicia Keys</h4>
+						<h4 className="t-center">Bruce Springsteen</h4>
 						<div className="line-separator"></div>
 
-						<p>Though written and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebration of the City’s rich, ever-changing melting pot identity and unique ability to stay rooted in the streets while reaching for the sky.  Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay&nbsp;Z, it was the rapper who pulled in Alicia Keys to handle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay&nbsp;Z his first trip to the top of the pop charts. </p>
+						<p>In the wake of Vietnam, Bruce Springsteen sketched a landscape of a shrinking American vista, a world of broken promises and an unsure future. Ironically, its booming sound and deceptively jingoistic chorus attracted conservative pundits and politicians who might have heard Springsteen’s sound but not his fury: after the columnist George Will praised Springsteen’s “values,” Ronald Reagan invoked the singer while campaigning for re-election. Though Springsteen rebuked the embrace, the stadium concerts fueled by the record’s huge success nonetheless attracted more than a few fist-shaking, chorus shouting fans who seemed either indifferent or deaf to the artist’s intention. </p>
 
 					</div>
 				</div>
@@ -1668,10 +1667,10 @@
 						<div className="row">
 
 						 <div className="col-md-6 mwidget">
-                         	 <VHMWidget elementId="mpoll" eventId="3440771" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                         	 <VHMWidget elementId="mpoll" eventId="3444104" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
                           </div>
                           <div className="col-md-6 mwidget">
-                          	<VHMWidget elementId="mtrivia" eventId="3440730" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          	<VHMWidget elementId="mtrivia" eventId="3444112" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
                           </div>
 
                         </div>
@@ -1680,7 +1679,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/pJMAj1eHSP4?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode2/E2_Next_Screen.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode3/E3_Video_Screens.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
