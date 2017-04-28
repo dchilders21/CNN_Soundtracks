@@ -39,6 +39,7 @@ function showPlayer() {
 }
 
 function closePlayer() {
+	ga('send', 'event’', 'Apple Music', 'Click', 'Apple Music');
 	$('#mlk_playlist').css('display', 'none');
 	$('#season_playlist').css('display', 'none');
 	$('#apple-player').removeClass('move-up');
