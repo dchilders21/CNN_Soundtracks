@@ -146,11 +146,6 @@
     	top: 30%;
     }
 
-    .dials {
-    	/*background-image:url(../images/episode_ToC/EpisodeTOC_Header.jpg);
-    	background-position: center top;
-    	background-size: cover;*/
-    }
 
 	/* ////////////////////// DESKTOP ///////////////////////// */
 
@@ -230,6 +225,15 @@
 		    animation-duration: 5s;
 		}
 
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
+			#sndtrx_preloader {
+				background-image:url(/images/preloader_top_2x.png);
+				background-size: 100%;
+			}
+		}
+
 		@-webkit-keyframes preFade {
 		    0% {opacity: .2;}
 		    60% {opacity: 1;}
@@ -256,37 +260,6 @@
 
 		.dark-nav .nav-inner div.nav-menu ul.nav a:hover{
 			/*background-color:#333 !important;*/
-		}
-
-		#sndtrx_preloader {
-			position: absolute;
-			opacity: .2;
-			background-image:url(/images/preloader_top.png);
-			width: 576px;
-			height: 55px;
-			left: 50%;
-			top: 50%;
-			margin-left: -288px;
-			margin-top: -55px;
-			opacity: .2;
-			-webkit-animation-name: preFade;
-		    -webkit-animation-iteration-count: infinite;
-		    -webkit-animation-duration: 5s;
-		    animation-name: preFade;
-		    animation-iteration-count: infinite;
-		    animation-duration: 5s;
-		}
-
-		@-webkit-keyframes preFade {
-		    0% {opacity: .2;}
-		    60% {opacity: 1;}
-		    100% {opacity: .2;}
-		}
-
-		@keyframes preFade {
-		    0% {opacity: .2;}
-		    60% {opacity: 1;}
-		    100% {opacity: .2;}
 		}
 
 	}
@@ -340,6 +313,10 @@
 		#kent-img {
 			content:url("../images/mobile/episode_3_title_2x.png");
 		}
+	  
+	}
+
+	@media only screen and (max-width: 1000px), @media (min-width: 768px) and (max-width: 1024px) {
 
 		#sndtrx_preloader {
 			position: absolute;
@@ -360,6 +337,15 @@
 		    animation-duration: 5s;
 		}
 
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
+			#sndtrx_preloader {
+				background-image:url(/images/preloader_stacked_top_2x.png);
+				background-size: 100%;
+			}
+		}
+
 		@-webkit-keyframes preFade {
 		    0% {opacity: .2;}
 		    60% {opacity: 1;}
@@ -371,7 +357,7 @@
 		    60% {opacity: 1;}
 		    100% {opacity: .2;}
 		}
-	  
+
 	}
 
 
@@ -564,6 +550,15 @@
 		    animation-name: preFade;
 		    animation-iteration-count: infinite;
 		    animation-duration: 5s;
+		}
+
+		@media 
+		(-webkit-min-device-pixel-ratio: 2), 
+		(min-resolution: 192dpi) { 
+			#sndtrx_preloader {
+				background-image:url(/images/preloader_stacked_top_2x_r2.png);
+				background-size: 100%;
+			}
 		}
 
 		@-webkit-keyframes preFade {
