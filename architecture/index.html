@@ -303,7 +303,7 @@
 				marker2.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/Kent_State_01.jpg' width='210'/><img class='bottom' src='images/map/Kent_State_02.jpg' width='210'/></div><p>Kent State University in Kent, OH was the site of a student protest against the Vietnam War. It is still a functioning university.</p><a href='#episode-3'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				var marker3 = L.marker([29.95, -90.066667], {icon: redIcon}).addTo(mymap);
-				marker3.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/katrina.png' width='210'/><p>The hurricane in 2005 affected many regions in Louisiana but the infrastructure of New Orleans collapsed, causing billions of dollars of damage.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+				marker3.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/katrina_01.jpg' width='210'/><img class='bottom' src='images/map/katrina_02.jpg' width='210'/></div><p>The hurricane in 2005 affected many regions in Louisiana but the infrastructure of New Orleans collapsed, causing billions of dollars of damage.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				var marker4 = L.marker([52.516111, 13.376944], {icon: redIcon}).addTo(mymap);
 				marker4.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/berlin_wall.png' width='210'/><p>Constructed in 1961, the wall was referred to as the Anti-Fascist Protective Wall and was not demolished completely until 1992.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
@@ -436,7 +436,7 @@
 							document.getElementById('intro-home').style.display = "block";
 						}
 					},
-				    href: '//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1',
+				    href: '//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1',
 				});
 
 				/*lightcase.start({
@@ -474,7 +474,7 @@
 
 		        	function endIntroVideo(){
 		        		//console.log(me.context.router);
-		        		me.context.router.push('/episodes');
+		        		me.context.router.push('/episode-3');
 					}
 
 			        function introVidPlay() {
@@ -531,10 +531,10 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
 									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/katrina.png" />
+										<Link to="/episode-2"><img src="images/albums/katrina_active.png" className="album-collapse"/></Link>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
-										EPISODE: 4
+										<span className="red">EXPLORE EPISODE: 4</span>
 									</h4>
 								</div>
 							</div>
@@ -876,7 +876,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode3/E3_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1275,7 +1275,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode3/E3_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1674,7 +1674,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/1a83Jhx6ZFg?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode3/E3_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1768,6 +1768,381 @@
 	      }
 	    });
 
+	    var Episode4 = React.createClass({
+	      componentDidMount: function() {
+            this.initEp4TOC();
+          },
+          componentDidUpdate: function() {
+            this.initEp4TOC();
+          },
+	      render: function() {
+	        return (
+	          <div>
+	          	<div id="episode-wrapper">
+					<section id="episode-1-video" className="home bw-type container">
+						<div className="parallax">
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
+				              poster="images/episode4/E4_PhotoTransition.jpg">
+				                <source src="video/ep4/Photo_KATRINA.mp4" type='video/mp4' />
+				                <source src="video/ep4/Photo_KATRINA.WebM" type='video/webm' />
+				             </video>
+						</div>
+
+						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
+							<a href="#episode_4" id="CTA" className="scroll">EXPLORE THE EPISODE
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
+						</div>
+					</section>
+
+
+					<div id='episode_4' className="type-1 background_ep4">
+						<div className="row mixer">
+						</div>
+
+						<div className="sidebar">
+							<div>
+								<img src="images/episode4/E4_SideAlbum_1.png" />
+							</div>
+							<div>
+								<img src="images/episode4/E4_SideAlbum_2.png" />
+							</div>
+							<div>
+								<img src="images/episode4/E4_SideAlbum_3.png" />
+							</div>
+						</div>
+
+						<div id="katrina-title" className="tape-title katrina">
+							<img id="katrina-img" src="images/episode4/E4_Header.png" />
+						</div>
+						
+						<div className="inner">
+
+							<div className="row">
+								
+								<div className="col-md-6 eps-block">
+									<div className="about t-center">
+										<h2>ABOUT THE EPISODE</h2>
+									</div>
+									<div>
+										<p>Hurricane Katrina hit New Orleans in August 2005, triggering the worst urban disaster in modern US history and threatening to wash away the birthplace of some of America’s most influential music, from the jazz of Louis Armstrong to the hip-hop of Lil Wayne. As the nation watched in horror, the inadequate relief and rescue efforts left African American grandmothers and babies stranded on their rooftops for days, laying bare deep racial and social divisions that had troubled New Orleans — and the rest of the country— long before the storm. International artists such as U2, Kanye West, Green Day, and Mary J Blige joined local musicians like the Dirty Dozen and Rebirth Brass Band in benefit concerts and musical collaborations to help the city get back on its feet and ensure that its rich traditions would survive.</p>
+									</div>
+								</div>
+								<div className="col-md-6 eps-block" ref={(el) => {
+										$(el).find("a").lightcase();
+									}}>
+									<div>
+									<a ref="lightcase" href="images/episode4/gallery/AS_06464_API_Katrina_stands_on_floating_mattress_people_balconies_2005.jpg" data-rel="lightcase:myCollection"><img src="images/episode4/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_06477_API_Katrina_man_in_raincoat_guides_boat_woman_in_gown_2005.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_08773_ALN_Katrina_Andy_Levin_rebirth_brass_band_in_street_2005.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_09234_GET_Louis_Armstrong_Dukes_of_Dixieland_rehearsal_trumpet_1960.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_14403_ZUM_Tearful_reunion_two_women_2005.jpg" data-rel="lightcase:myCollection"></a>
+									</div>
+									<div className="tape-title view">
+										<a ref="lightcase" href="images/episode4/gallery/AS_06464_API_Katrina_stands_on_floating_mattress_people_balconies_2005.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_06477_API_Katrina_man_in_raincoat_guides_boat_woman_in_gown_2005.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_08773_ALN_Katrina_Andy_Levin_rebirth_brass_band_in_street_2005.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_09234_GET_Louis_Armstrong_Dukes_of_Dixieland_rehearsal_trumpet_1960.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_14403_ZUM_Tearful_reunion_two_women_2005.jpg" data-rel="lightcase:myCollection2"></a>
+
+									</div>
+							</div>
+						</div>
+
+						<div className="row">
+							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode4/E4_Video_Screens.jpg" /></a></div>
+								 <div className="tape-title interviews">
+										<img src="images/episode_ToC/interviews.png" />
+								 </div>
+							</div>
+						</div>
+
+						<div className="row alternate">
+							<div className="tape-title histories">
+								<img src="images/episode_ToC/histories.png" />
+							</div>
+						</div>
+
+
+					<div className="row">
+						<div className="col-md-6 eps-block">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="song_history">
+										<h2 className="t-center">“St. James Infirmary”</h2> 
+								
+
+									<h4 className="t-center">Louis Armstrong</h4>
+									<div className="line-separator"></div>
+
+									<p>There’s never been a hospital named St. James in New Orleans – the song’s namesake was actually a London institution for lepers, and the tune has its roots in a cautionary 19th century English folk song, “The Unfortunate Rake.” So how did this version – recorded in Chicago in 1928 -- become the quintessential New Orleans song? The answer is Louis Armstrong. The jazz giant, who almost certainly played a larger role than anyone in directing both instrumental and vocal styles in America, brought the music of his hometown to the world. And though he had many, many hits in a recording career that spanned nearly 50 years, “St. James Infirmary” captures the essence of both its music – the searching improvisation of jazz and the religious slow-crawl of its funeral dirges – and its lyrics, which play off the city’s reputation as one-of-a-kind sporting town.</p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+								
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Louisiana 1927”</h2>
+								
+								<h4 className="t-center">Aaron Neville</h4>
+								<div className="line-separator"></div>
+
+								<p>Before there was Katrina there was the devastating Mississippi flood of 1927, which placed hundreds of miles of Delta farmland and towns under water. It also showcased the region’s class and racial system at its most corrupt and abusive: black laborers were forced into work gangs to stem the flooding, while New Orleans officials dynamited the levees and flooded a poorer nearby parish to spare themselves. Composed and originally recorded by Randy Newman for the Southern-accented album Good Old Boys – he was a Los Angeles native who’d spent summers in New Orleans with relatives while a boy and became fascinated by the city and its unique culture – his damning tale of that disaster took on a new life when the great New Orleans vocalist Aaron Neville performed it on a television broadcast in support of Hurricane Katrina relief.</p>
+								</div> 
+								</div>
+							</div>		
+						
+				</div>
+
+
+				<div className="row">
+
+					<div className="col-md-6 eps-block">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Go to Mardi Gras”</h2> 
+							
+
+								<h4 className="t-center">Professor Longhair</h4>
+								<div className="line-separator"></div>
+
+								<p>Pianist Henry Roeland Byrd – a.k.a. Professor Longhair – was never well known outside New Orleans, but his playing had an outsized influence on that city’s music and especially its pianists – most notably Allen Toussaint, Dr. John, Huey “Piano” Smith, and James Booker. “Go to Mardi Gras,” which he first recorded as “Mardi Gras in New Orleans” in 1949 with his band the Shuffling Hungarians, has – along with the Hawkettes’ “Mardi Gras Mambo” – become a Mardi Gras R&B anthem. Longhair – the appellation “Professor” was a New Orleans tradition, bestowed on the most accomplished pianists working the brothels of Storyville – had his professional ups and downs: after recording for several labels in the ‘fifties, he was out of music and working as a janitor when he was re-discovered in the early ‘70s and re-launched his performing and recording career. The rolling, Cuban-inflected syncopation that was the hallmark of his music has since become an identifying feature of New Orleans music. </p>
+
+								</div>
+							</div>
+						</div>
+														
+						<div className="col-md-6">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Do You Know What It Means to Miss New Orleans”</h2> 
+							
+
+								<h4 className="t-center">Billie Holiday, Louis Armstrong</h4>
+								<div className="line-separator"></div>
+
+								<p>A rare pairing of two jazz giants for the 1947 film New Orleans, neither the film nor “Do You Know What it Means to Miss New Orleans” was ever considered a musical high point in the careers of Armstrong or Holiday. Yet the song, which has subsequently been recorded by dozen of artists from Rosemary Clooney to Jimmy Buffett, took on a new, bittersweet meaning after Katrina forced thousands to abandon the city. Ironically, though the film New Orleans was predictable and run-of-the-mill, it had its genesis in one of the most unorthodox projects in American film history, Orson Welles’ ill-fated docu-drama, It’s All True. Though ultimately filmed in Brazil and abandoned (incomplete versions have been edited together and subsequently shown), the director had initially intended a segment on the history of jazz, with original music composed by Duke Ellington and performed by Armstrong and several of the musicians who ultimately appeared with him in New Orleans.</p>
+
+							</div>
+						</div>
+					</div>
+										
+			</div>
+
+
+			<div className="row">
+					<div className="col-md-6 eps-block">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“One”</h2> 
+						
+
+							<h4 className="t-center">Mary J Blige and U2</h4>
+							<div className="line-separator"></div>
+
+							<p>Singer Mary J. Blige, who grew up just north of New York City, recalls being struck by the words of U2’s “One” after the 2001 attack on the World Trade Center, and opted to record the song for her album The Breakthrough. She would come back to it again and again, most notably when she and U2 performed the song for Shelter from the Storm: The Concert for the Gulf Coast. It was the song’s unique ability to express both frustration at continuing inequality and the unity of humanity that captivated the singer. “In this system we’re still faced with racism and segregation and separation,” Blige said. “But at the end of the day those lyrics were really, really strong to me. That made me think of everybody and how we’re in this all together.” </p>
+
+							</div>
+						</div>
+					</div>
+													
+					<div className="col-md-6">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Jesus Walks”</h2> 
+						
+
+							<h4 className="t-center">Kanye West</h4>
+							<div className="line-separator"></div>
+
+							<p>Just a week after his unscripted, unplanned, and unexpurgated remark on national television that “George Bush doesn’t care about black people” stunned America (not to mention co-broadcaster Mike Myers), Kanye West once again bared his soul in service of Katrina victims, this time with a special performance of “Jesus Walks” on Shelter from the Storm. The wholly unique rap classic, dealing with the quest for spirituality and worldly guidance, was revised for the occasion and performed live with a gospel choir. Though unfamiliar with the rapper when she first started working with him, choir director Sylvia St. James was quickly won over by his focus and seriousness: he knew exactly what he wanted from the musicians, the singers, and even the camera operators. “He has a lot to say,” she said. “I had never really listened. But after that song and just feeling the seriousness of his heart, his commitment to the people, he was really hurt by what is happening in New Orleans.” </p>
+
+						</div>
+					</div>
+				</div>		
+				
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 eps-block">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Indian Red”</h2> 
+					
+
+						<h4 className="t-center">Treme Brass Band</h4>
+						<div className="line-separator"></div>
+
+						<p>In New Orleans, the tradition of African American Indian tribes are a key part of Mardi Gras. Indian Red” is a sacred prayer traditionally performed at the beginning and end of meetings and performances and is an invocation and statement of dedication that lays out the pride and perseverance of the tribe and its Indians who “won’t bow down.” Though its legacy is older, the song’s recording history dates back to the 1940s, with a version by guitarist Danny Barker. Since then, it’s been recorded by numerous Mardi Gras tribes as well as pianist Dr. John and this version by Treme Brass Band. But perhaps its most moving performance was recorded in the streets of the Ninth Ward for HBO’s post-Katrina series, Treme. That impromptu rendition featured the chiefs from several of the city’s tribes – normally fierce rivals – singing together in a show of solidarity and survival. </p>
+
+					</div>
+				</div>
+				</div>
+												
+				<div className="col-md-6">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“The Saints Are Coming”</h2> 
+					
+
+						<h4 className="t-center">U2 and Green Day</h4>
+						<div className="line-separator"></div>
+
+						<p>Though written and first recorded in 1978 by the Scottish punk band the Skids, the lyrics for “The Saints Are Coming” – with their reference to both a “drowning sorrow that floods the deepest grief” as well as a hope for redemption — seemed to anticipate the tragedy of Katrina. The song subsequently became the centerpiece of a four-song set by U2 and Green Day on the Monday Night Football pre-show that reopened the Louisiana Superdome in September 2006. With an expanded band that also included New Orleans’ Troy “Trombone Shorty” Andrews, the Rebirth Brass Band and the New Birth Brass Band, the set also included “Wake Me Up When September Ends,” “House of the Rising Sun,” and U2’s “Beautiful Day.” The live performance of the song was later used to raise funds for Music Rising, a charity created by U2 guitarist The Edge to purchase instruments and fund music programs in New Orleans.</p>
+
+					</div>
+				</div>
+				</div>
+									
+				
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Tie My Hands”</h2> 
+					
+
+						<h4 className="t-center">Li’l Wayne</h4>
+						<div className="line-separator"></div>
+
+						<p>New Orleans rapper Li’l Wayne’s “Tie My Hands” is both elegy and a call to action. Featuring an unusually delicate musical backdrop courtesy of vocalist Robin Thicke, it caught the rapper at his most incisive: talking not just about pride and survival (“my shoulders are strong, I prove ‘em wrong/ I ain’t doin’ nothin’ but movin’ on”) but also indicting the country for its failure to aid its own citizens: “My whole city underwater, some people still floatin’/ And they wonder why black people still votin’.” For Wayne, who began his recording career at 9 and has been phenomenally successful, reportedly selling over 100 million records worldwide, “Tie My Hands” marked a political coming of age and its album, Tha Carter III, won the Grammy Award for Rap Album of the Year.</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“I’ll Fly Away”</h2> 
+					
+
+						<h4 className="t-center">Various</h4>
+						<div className="line-separator"></div>
+
+						<p>Reputed to be the most performed and recorded gospel song, “I’ll Fly Away” is heard in the services of a wide variety of black and white churches. In New Orleans, the song has a special function and meaning: it is traditionally the last song performed at a funeral service.  For the rest of the country, “I’ll Fly Away” gained new exposure and resonance via the inclusion of a version by Gillian Welch and Allison Krause on the soundtrack to the 2000 film O Brother, Where Art Thou? That soundtrack, which sold over 11 million copies, played a key role in sparking the ongoing revival of roots music known as Americana. A particularly moving version of the old gospel song, by the Blind Boys of Alabama, can be heard on their 2008 album, Down in New Orleans. </p>
+
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+
+						<div className="row">
+
+						 <div className="col-md-6 mwidget">
+                         	 <VHMWidget elementId="mpoll" eventId="3448032" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+                          <div className="col-md-6 mwidget">
+                          	<VHMWidget elementId="mtrivia" eventId="3448039" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+
+                        </div>
+
+						<div className="row no-margin-bottom">
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div className="tape-title next_on">
+										<img src="images/episode_ToC/next_2x.png" />
+								 </div>
+							</div>
+						</div>
+						
+
+					</div>
+					
+					</div>
+				</div>
+
+				<footer className="big-footer fullwidth t-left">
+					<div className="clearfix footer_inner">
+					</div>
+				</footer>
+
+	          </div>
+	        )
+	      }, initEp4TOC: function() {
+
+	      		ga('set', 'page', '/episode-4.html');
+	      		ga('send', 'pageview');
+	      		
+	      		$( window ).bind("resize", function() {
+					divResize();
+				});
+
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+		      		
+		      		$('.parallax').append('<img src="images/episode4/E4_PhotoTransition_Mobile.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode4/E4_Footer_Mobile.png" />');
+		      	} else {
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode4/E4_Footer.png" />');
+		      	}
+
+		      	$('#playlists').empty();
+
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.03e53dc52d5d4203a3185ea97fd9d48a?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+
+	      		function resizeFooter() {
+	      			var footerHeight = $(".big-footer").height();
+					//$("#main").css("padding-bottom", footerHeight);
+					$(".big-footer").css("margin-top", -footerHeight)
+					$("#episode_4").css("padding-bottom", footerHeight)
+					//console.log(footerHeight);
+	      		}
+
+	      		function moveCTA() {
+
+	      			var bottomVideo = $("#transitionVideo").height();
+	      			var top = bottomVideo - 80;
+
+	      			$('#home-episodes').css("top", top);
+	      			$('#home-episodes').css("display", "block");
+
+	      		}
+
+	      		$(".footer_img").load(function() {
+	      			// initial call
+	      			resizeFooter();
+	      			moveCTA();
+	      		}); 
+	      		
+
+	      		$( window ).bind("resize", function(){
+				     resizeFooter();
+				     moveCTA();
+
+				});
+
+				var count = 0;
+
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+			
+			});
+	      }
+	    });
+
 		var App = React.createClass({
 		  componentDidMount: function() {
             this.initApp();
@@ -1815,7 +2190,7 @@
 											<li><Link to="/episode-1"><span className="red">EPISODE: 1</span></Link></li>
 											<li><Link to="/episode-2"><span className="red">EPISODE: 2</span></Link></li>
 											<li><Link to="/episode-3"><span className="red">EPISODE: 3</span></Link></li>
-											<li className="inactiveEp"><a>EPISODE: 4</a></li>
+											<li><Link to="/episode-4"><span className="red">EPISODE: 4</span></Link></li>
 											<li className="inactiveEp"><a>EPISODE: 5</a></li>
 											<li className="inactiveEp"><a>EPISODE: 6</a></li>
 											<li className="inactiveEp"><a>EPISODE: 7</a></li>
@@ -1875,6 +2250,7 @@
 	          <Route path="/episode-1" component={Episode1} />
 	          <Route path="/episode-2" component={Episode2} />
 	          <Route path="/episode-3" component={Episode3} />
+	          <Route path="/episode-4" component={Episode4} />
 	     
 	        </Route>
 	      </Router>,

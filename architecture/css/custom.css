@@ -64,6 +64,10 @@
 		width: 956px;
 	}
 
+	.katrina {
+		width: 781px;
+	}
+
 	.view {
 		width: 287px;
 	}
@@ -196,6 +200,15 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep4 {
+			background-image:url(../images/episode4/E4_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
 		.feature-boxes {
 			padding-left: 24px;
 			padding-right: 24px;
@@ -295,12 +308,19 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep4 {
+			background-image:url(../images/episode4/E4_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
 		.mlk {
 			margin-top: 40px;
 			width: 640px;
 		}
-
-
 
 		.inner {
 			margin-top: 0px;
@@ -312,6 +332,10 @@
 
 		#kent-img {
 			content:url("../images/mobile/episode_3_title_2x.png");
+		}
+
+		#katrina-img {
+			content:url("../images/mobile/episode_4_title_2x.png");
 		}
 	  
 	}
@@ -392,7 +416,7 @@
 		}
 
 		.background_ep2 {
-			background-image:url(../images/episode2/E2_Bg_Tile.jpg);
+			background-image:url(../images/episode2/E2_Bg_Tile_Small.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
@@ -400,11 +424,20 @@
 		}
 
 		.background_ep3 {
-			background-image:url(../images/episode3/E3_Bg_Tile.jpg);
+			background-image:url(../images/episode3/E3_Bg_Tile_Small.jpg);
 	    	background-size: none;
 	    	background-position: none;
 	    	background-repeat: none;
 	    	background-size: 960px 540px;
+		}
+
+		.background_ep4 {
+			background-image:url(../images/episode4/E4_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
 		}
 
 		span.glyphicon.glyphicon-menu-hamburger.hamburger {
@@ -475,6 +508,10 @@
 			content:url("../images/mobile/episode_3_title_2x.png");
 		}
 
+		#katrina-img {
+			content:url("../images/mobile/episode_4_title_2x.png");
+		}
+
 		.tape-title {
 			width: 50%;
 		}
@@ -503,6 +540,10 @@
 
 		.nine11 {
 			width: 100%;
+		}
+
+		.katrina {
+			width: 80%;
 		}
 
 		.inner p {
@@ -729,8 +770,6 @@
 		margin: 0 auto;
 	}
 
-	
-
 	#readMore p {
 		color: #FFFFFF;
 	}
@@ -796,7 +835,6 @@
 	#mlk_playlist {
 		display: none;
 	}
-
 
 	.map { position:absolute; top:0; bottom:0; width:100%; }
 
