@@ -465,12 +465,7 @@
 		        	window.divResize();
 		        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
-		        	document.getElementById('intro-home').addEventListener("click", closeLC, false);
 
-		        	function closeLC() {
-		        		document.getElementById('intro-home').style.display = "none";
-		        		lightcase.close();
-		        	}
 
 		        	function endIntroVideo(){
 		        		//console.log(me.context.router);
@@ -482,6 +477,13 @@
 						document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
 					}
 		      	}
+
+		      	document.getElementById('intro-home').addEventListener("click", closeLC, false);
+
+	        	function closeLC() {
+	        		document.getElementById('intro-home').style.display = "none";
+	        		lightcase.close();
+	        	}
 
 	        }
 	    });
@@ -900,6 +902,8 @@
 
 	      		ga('set', 'page', '/episode-1.html');
 	      		ga('send', 'pageview');
+
+	      		document.body.scrollTop = 0;
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
@@ -1296,6 +1300,8 @@
 	          </div>
 	        )
 	      }, initEp2TOC: function() {
+
+	      		document.body.scrollTop = 0;
 
 	      		ga('set', 'page', '/episode-2.html');
 	      		ga('send', 'pageview');
@@ -1696,6 +1702,8 @@
 	        )
 	      }, initEp3TOC: function() {
 
+	      		document.body.scrollTop = 0;
+
 	      		ga('set', 'page', '/episode-3.html');
 	      		ga('send', 'pageview');
 	      		
@@ -2070,6 +2078,8 @@
 	          </div>
 	        )
 	      }, initEp4TOC: function() {
+
+	      		document.body.scrollTop = 0;
 
 	      		ga('set', 'page', '/episode-4.html');
 	      		ga('send', 'pageview');
