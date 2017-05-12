@@ -424,7 +424,7 @@
 		}
 
 		.bw-type .home-extra-note {
-			top: 70%;
+			top: calc(100%-125px);
 		}
 
 		#apple-badge {
@@ -452,6 +452,7 @@
 		.feature-boxes {
 			padding: 0px;
 			width: 50%;
+			float: left;
 		}
 
 		h4 {

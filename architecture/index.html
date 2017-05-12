@@ -178,10 +178,10 @@
 			                  <div><h3 className="uppercase">September 11th.</h3><p> Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
 			                  <div><h3 className="uppercase">Kent State &amp; The Vietnam War </h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
 			                  <div><h3 className="uppercase">Hurricane Katrina</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit concerts to help ensure the city’s rich traditions survived.</p></div>
-			                  <div><h3 className="uppercase">The Fall of the Berlin Wall</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
-			                  <div><h3 className="uppercase">The Moon Landing</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
+			                  <div><h3 className="uppercase">THE BERLIN WALL &amp; THE FALL OF COMMUNISM</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
+			                  <div><h3 className="uppercase">SPACE RACE</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
 			                  <div><h3 className="uppercase">Battle of the Sexes</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s movement and ushered in music that delivered messages of female empowerment.</p></div>
-			                  <div><h3 className="uppercase">The Stonewall Riots</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
+			                  <div><h3 className="uppercase">OUT, LOUD &amp; PROUD</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
 			              </div>
 
 			  		</div>
@@ -465,13 +465,6 @@
 		        	window.divResize();
 		        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
 
-		        	document.getElementById('intro-home').addEventListener("click", closeLC, false);
-
-		        	function closeLC() {
-		        		document.getElementById('intro-home').style.display = "none";
-		        		lightcase.close();
-		        	}
-
 		        	function endIntroVideo(){
 		        		//console.log(me.context.router);
 		        		me.context.router.push('/episodes');
@@ -482,6 +475,13 @@
 						document.getElementById('introVideo').addEventListener('ended',endIntroVideo,false);
 					}
 		      	}
+
+		      	document.getElementById('intro-home').addEventListener("click", closeLC, false);
+
+	        	function closeLC() {
+	        		document.getElementById('intro-home').style.display = "none";
+	        		lightcase.close();
+	        	}
 
 	        }
 	    });
@@ -611,8 +611,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode1/E1_PhotoTransition.jpg">
-				                <source src="video/ep1/Photo_MLK.mp4" type='video/mp4' />
-				                <source src="video/ep1/Photo_MLK.WebM" type='video/webm' />
+				                <source src="video/ep1/MLK_W_SFX.mp4" type='video/mp4' />
+				                <source src="video/ep1/MLK_W_SFX.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -900,9 +900,17 @@
 
 	      		ga('set', 'page', '/episode-1.html');
 	      		ga('send', 'pageview');
+
+	      		document.body.scrollTop = 0;
+
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
 				});
 
 
@@ -948,6 +956,17 @@
 
 	      		}
 
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
 	      		$(".footer_img").load(function() {
 	      			// initial call
 	      			resizeFooter();
@@ -958,11 +977,9 @@
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
 				     moveCTA();
-
 				});
 
 				var count = 0;
-
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
@@ -987,8 +1004,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode2/E2_PhotoTransition.jpg">
-				                <source src="video/ep2/Photo_911.mp4" type='video/mp4' />
-				                <source src="video/ep2/Photo_911.WebM" type='video/webm' />
+				                <source src="video/ep2/911wsfx.mp4" type='video/mp4' />
+				                <source src="video/ep2/911wsfx.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -1304,6 +1321,11 @@
 					divResize();
 				});
 
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
+				});
+
 	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		      		window.isMob = true;
 		      		var el = document.getElementById('transitionVideo');
@@ -1346,6 +1368,17 @@
 
 	      		}
 
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
 	      		$(".footer_img").load(function() {
 	      			// initial call
 	      			resizeFooter();
@@ -1384,8 +1417,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode3/E3_PhotoTransition.jpg">
-				                <source src="video/ep3/Photo_KENTVIETNAM.mp4" type='video/mp4' />
-				                <source src="video/ep3/Photo_KENTVIETNAM.WebM" type='video/webm' />
+				                <source src="video/ep3/KENT_VIETNAMwsfx.mp4" type='video/mp4' />
+				                <source src="video/ep3/KENT_VIETNAMwsfx.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -1703,6 +1736,11 @@
 					divResize();
 				});
 
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
+				});
+
 	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		      		window.isMob = true;
 		      		var el = document.getElementById('transitionVideo');
@@ -1743,6 +1781,17 @@
 	      			$('#home-episodes').css("top", top);
 	      			$('#home-episodes').css("display", "block");
 
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
 	      		}
 
 	      		$(".footer_img").load(function() {
