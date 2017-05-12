@@ -453,7 +453,7 @@
 		      		var el = document.getElementById('introVideo');
 		      		el.parentNode.removeChild(el);
 		      		document.getElementById('CTA').addEventListener("click", function() {
-		      			me.context.router.push('/episodes');
+		      			me.context.router.push('/episode-3');
 		      		}, false);
 		      		
 		      	} else {
@@ -901,7 +901,7 @@
 	      		ga('set', 'page', '/episode-1.html');
 	      		ga('send', 'pageview');
 
-	      		document.body.scrollTop = 0;
+	      		$(window).scrollTop(0);
 
 	      		
 	      		$( window ).bind("resize", function() {
@@ -1317,7 +1317,7 @@
 	      		ga('set', 'page', '/episode-2.html');
 	      		ga('send', 'pageview');
 
-	      		document.body.scrollTop = 0;
+	      		$(window).scrollTop(0);
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
@@ -1734,7 +1734,7 @@
 	      		ga('set', 'page', '/episode-2.html');
 	      		ga('send', 'pageview');
 
-	      		document.body.scrollTop = 0;
+	      		$(window).scrollTop(0);
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
