@@ -178,10 +178,10 @@
 			                  <div><h3 className="uppercase">September 11th.</h3><p> Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
 			                  <div><h3 className="uppercase">Kent State &amp; The Vietnam War </h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
 			                  <div><h3 className="uppercase">Hurricane Katrina</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit concerts to help ensure the city’s rich traditions survived.</p></div>
-			                  <div><h3 className="uppercase">The Fall of the Berlin Wall</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
-			                  <div><h3 className="uppercase">The Moon Landing</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
+			                  <div><h3 className="uppercase">THE BERLIN WALL &amp; THE FALL OF COMMUNISM</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
+			                  <div><h3 className="uppercase">SPACE RACE</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
 			                  <div><h3 className="uppercase">Battle of the Sexes</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s movement and ushered in music that delivered messages of female empowerment.</p></div>
-			                  <div><h3 className="uppercase">The Stonewall Riots</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
+			                  <div><h3 className="uppercase">OUT, LOUD &amp; PROUD</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
 			              </div>
 
 			  		</div>
@@ -453,7 +453,7 @@
 		      		var el = document.getElementById('introVideo');
 		      		el.parentNode.removeChild(el);
 		      		document.getElementById('CTA').addEventListener("click", function() {
-		      			me.context.router.push('/episodes');
+		      			me.context.router.push('/episode-3');
 		      		}, false);
 		      		
 		      	} else {
@@ -464,8 +464,6 @@
 
 		        	window.divResize();
 		        	document.getElementById('CTA').addEventListener("click", introVidPlay, false);
-
-
 
 		        	function endIntroVideo(){
 		        		//console.log(me.context.router);
@@ -613,8 +611,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode1/E1_PhotoTransition.jpg">
-				                <source src="video/ep1/Photo_MLK.mp4" type='video/mp4' />
-				                <source src="video/ep1/Photo_MLK.WebM" type='video/webm' />
+				                <source src="video/ep1/MLK_W_SFX.mp4" type='video/mp4' />
+				                <source src="video/ep1/MLK_W_SFX.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -903,10 +901,16 @@
 	      		ga('set', 'page', '/episode-1.html');
 	      		ga('send', 'pageview');
 
-	      		document.body.scrollTop = 0;
+	      		$(window).scrollTop(0);
+
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
 				});
 
 
@@ -952,6 +956,17 @@
 
 	      		}
 
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
 	      		$(".footer_img").load(function() {
 	      			// initial call
 	      			resizeFooter();
@@ -962,11 +977,9 @@
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
 				     moveCTA();
-
 				});
 
 				var count = 0;
-
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
@@ -991,8 +1004,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode2/E2_PhotoTransition.jpg">
-				                <source src="video/ep2/Photo_911.mp4" type='video/mp4' />
-				                <source src="video/ep2/Photo_911.WebM" type='video/webm' />
+				                <source src="video/ep2/911wsfx.mp4" type='video/mp4' />
+				                <source src="video/ep2/911wsfx.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -1254,7 +1267,8 @@
 						<h4 className="t-center">Jay Z and Alicia Keys</h4>
 						<div className="line-separator"></div>
 
-						<p>Though written and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebration of the City’s rich, ever-changing melting pot identity and unique ability to stay rooted in the streets while reaching for the sky.  Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay&nbsp;Z, it was the rapper who pulled in Alicia Keys to handle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay&nbsp;Z his first trip to the top of the pop charts. </p>
+						<p>Though written and recorded in 2009, “Empire State of Mind” is linked in the minds of many to September 11th because it has become something of the go-to song for Gotham – the hip hop answer to “New York, New York” – and a celebration of the City’s rich, ever-changing melting pot identity and unique ability to stay rooted in the streets while reaching for the sky.  Composed by a pair of Brooklyn songwriters who envisioned it as a vehicle for Jay&nbsp;Z, it was the rapper who pulled in Alicia Keys to handle its anchoring piano part and soaring vocal counterpart. Achieving almost instantaneous iconic stature, the song proved an enormous commercial hit, selling a reported 5 million copies. It also gave Jay&nbsp;Z his first trip to the top of the pop charts.
+</p>
 
 					</div>
 				</div>
@@ -1301,13 +1315,18 @@
 	        )
 	      }, initEp2TOC: function() {
 
-	      		document.body.scrollTop = 0;
-
 	      		ga('set', 'page', '/episode-2.html');
 	      		ga('send', 'pageview');
+
+	      		$(window).scrollTop(0);
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
 				});
 
 	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
@@ -1352,6 +1371,17 @@
 
 	      		}
 
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
 	      		$(".footer_img").load(function() {
 	      			// initial call
 	      			resizeFooter();
@@ -1390,8 +1420,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode3/E3_PhotoTransition.jpg">
-				                <source src="video/ep3/Photo_KENTVIETNAM.mp4" type='video/mp4' />
-				                <source src="video/ep3/Photo_KENTVIETNAM.WebM" type='video/webm' />
+				                <source src="video/ep3/KENT_VIETNAMwsfx.mp4" type='video/mp4' />
+				                <source src="video/ep3/KENT_VIETNAMwsfx.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -1702,13 +1732,18 @@
 	        )
 	      }, initEp3TOC: function() {
 
-	      		document.body.scrollTop = 0;
-
-	      		ga('set', 'page', '/episode-3.html');
+	      		ga('set', 'page', '/episode-2.html');
 	      		ga('send', 'pageview');
+
+	      		$(window).scrollTop(0);
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
 				});
 
 	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
@@ -1751,6 +1786,17 @@
 	      			$('#home-episodes').css("top", top);
 	      			$('#home-episodes').css("display", "block");
 
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
 	      		}
 
 	      		$(".footer_img").load(function() {

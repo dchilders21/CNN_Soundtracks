@@ -458,7 +458,6 @@
 
 		.bw-type .home-extra-note {
 			top: calc(100%-125px);
-			/*top: 70%;*/
 		}
 
 		#apple-badge {
@@ -524,7 +523,7 @@
 
 		.t-center {
 			margin-bottom: 10px;
-			margin-top: 10px;
+			margin-top: 50px;
 		}
 
 		.eps-block {
