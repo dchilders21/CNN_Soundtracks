@@ -303,7 +303,7 @@
 				marker2.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/Kent_State_01.jpg' width='210'/><img class='bottom' src='images/map/Kent_State_02.jpg' width='210'/></div><p>Kent State University in Kent, OH was the site of a student protest against the Vietnam War. It is still a functioning university.</p><a href='#episode-3'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				var marker3 = L.marker([29.95, -90.066667], {icon: redIcon}).addTo(mymap);
-				marker3.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/katrina_01.jpg' width='210'/><img class='bottom' src='images/map/katrina_02.jpg' width='210'/></div><p>The hurricane in 2005 affected many regions in Louisiana but the infrastructure of New Orleans collapsed, causing billions of dollars of damage.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
+				marker3.bindPopup("<div class='sndtrx_bubble'><div id='cf'><img class='top' src='images/map/katrina_01.jpg' width='210'/><img class='bottom' src='images/map/katrina_02.jpg' width='210'/></div><p>The hurricane in 2005 affected many regions in Louisiana but the infrastructure of New Orleans collapsed, causing billions of dollars of damage.</p><a href='#episode-4'><img src='images/press_play.jpg' width='207'/></a></div>");
 
 				var marker4 = L.marker([52.516111, 13.376944], {icon: redIcon}).addTo(mymap);
 				marker4.bindPopup("<div class='sndtrx_bubble'><img src='images/albums/berlin_wall.png' width='210'/><p>Constructed in 1961, the wall was referred to as the Anti-Fascist Protective Wall and was not demolished completely until 1992.</p><a href='#episodes'><img src='images/press_play.jpg' width='207'/></a></div>");
@@ -422,7 +422,7 @@
 					maxHeight: 1200
 				});
 
-				lightcase.start({
+				/*lightcase.start({
 					onClose:{
 						foo: function() {
 							document.getElementById('intro-home').style.display = "none";
@@ -436,15 +436,7 @@
 							document.getElementById('intro-home').style.display = "block";
 						}
 					},
-				    href: '//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1',
-				});
-
-				/*lightcase.start({
-				  onInit:{
-						foo: function() {
-							//window.onYouTubePlayerAPIReady();
-						}
-					}
+				    href: '//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1',
 				});*/
 
 				
@@ -453,7 +445,7 @@
 		      		var el = document.getElementById('introVideo');
 		      		el.parentNode.removeChild(el);
 		      		document.getElementById('CTA').addEventListener("click", function() {
-		      			me.context.router.push('/episode-3');
+		      			me.context.router.push('/episode-4');
 		      		}, false);
 		      		
 		      	} else {
@@ -467,7 +459,7 @@
 
 		        	function endIntroVideo(){
 		        		//console.log(me.context.router);
-		        		me.context.router.push('/episode-3');
+		        		me.context.router.push('/episode-4');
 					}
 
 			        function introVidPlay() {
@@ -876,7 +868,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1293,7 +1285,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1710,7 +1702,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -1837,8 +1829,8 @@
 						<div className="parallax">
 							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
 				              poster="images/episode4/E4_PhotoTransition.jpg">
-				                <source src="video/ep4/Photo_KATRINA.mp4" type='video/mp4' />
-				                <source src="video/ep4/Photo_KATRINA.WebM" type='video/webm' />
+				                <source src="video/ep4/KATRINAwsfx.mp4" type='video/mp4' />
+				                <source src="video/ep4/KATRINAwsfx.WebM" type='video/webm' />
 				             </video>
 						</div>
 
@@ -2103,7 +2095,7 @@
 							<div className="col-lg-10 episode_video" ref={(el) => {
 											$(el).find("a").lightcase();
 										}}>
-								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
 								 <div className="tape-title next_on">
 										<img src="images/episode_ToC/next_2x.png" />
 								 </div>
@@ -2125,13 +2117,18 @@
 	        )
 	      }, initEp4TOC: function() {
 
-	      		document.body.scrollTop = 0;
+	      		$(window).scrollTop(0);
 
 	      		ga('set', 'page', '/episode-4.html');
 	      		ga('send', 'pageview');
 	      		
 	      		$( window ).bind("resize", function() {
 					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
 				});
 
 	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
@@ -2156,7 +2153,7 @@
 
 		      	$('#playlists').empty();
 
-		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.03e53dc52d5d4203a3185ea97fd9d48a?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.0d478bce7a8f46c08ebde7da4682b7a3?country=us" height="400px" width="100%" frameborder="0"></iframe>');
 
 	      		function resizeFooter() {
 	      			var footerHeight = $(".big-footer").height();
@@ -2174,6 +2171,17 @@
 	      			$('#home-episodes').css("top", top);
 	      			$('#home-episodes').css("display", "block");
 
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+				        
+				        videoAudio[0].play(); 
+				    } else {
+				    	videoAudio[0].pause();
+				    }
 	      		}
 
 	      		$(".footer_img").load(function() {
