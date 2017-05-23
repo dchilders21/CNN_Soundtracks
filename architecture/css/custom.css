@@ -150,6 +150,16 @@
     	top: 30%;
     }
 
+    #playerFrameDiv {
+    	width: 725px;
+    	margin: 0 auto;
+    	margin-top: 140px;
+    }
+
+    .pg_box {
+    	background: transparent;
+    }
+
 
 	/* ////////////////////// DESKTOP ///////////////////////// */
 
@@ -158,15 +168,96 @@
 	  ##Screen = B/w 1025px to 1280px
 	*/
 
-	/* 
-	  ##Device = Laptops, Desktops
-	  ##Screen = B/w 1025px to 1280px
-	*/
-
-	@media (min-width: 1281px), (min-width: 1025px) and (max-width: 1280px) {
+	@media (min-width: 1000px) {
 		#logo_badge {
 			margin-left: 45px;
 		}
+	}
+
+
+    /* Adjusting nav font size */
+	@media only screen and (min-width: 1000px) and (max-width: 1280px) {
+		.nav-inner {
+			padding-left: 0px;
+		}
+
+		.nav-menu ul.big-texts li a {
+			font-size: 14px;
+			padding-left: 10px;
+			padding-right: 10px;
+			line-height: 18px;
+		}
+
+		.hamburger {
+			margin-left: -8px;
+			margin-right: 10px;
+			font-size: 13px;
+		}
+
+		.glyphicon {
+			top: 2px;
+		}
+
+		.dark-nav .nav-menu ul.dropdown-menu a {
+			font-size: 14px;
+		}
+	} 
+
+	/* Adjusting nav font size */
+	@media only screen and (min-width: 1281px) and (max-width: 1350px) {
+
+		.nav-menu ul.big-texts li a {
+			font-size: 16px;
+			padding-left: 12px;
+			padding-right: 12px;
+			line-height: 20px;
+		}
+
+		.hamburger {
+			margin-left: -8px;
+			margin-right: 10px;
+			font-size: 100%;
+		}
+
+		.glyphicon {
+			/*top: 2px;*/
+		}
+
+		.dark-nav .nav-menu ul.dropdown-menu a {
+			font-size: 16px;
+		}
+	} 
+
+	/* Adjusting nav font size */
+	@media only screen and (min-width: 1351px) {
+
+		.nav-menu ul.big-texts li a {
+			font-size: 18px;
+			padding-left: 15px;
+			padding-right: 15px;
+			line-height: 20px;
+		}
+
+		.hamburger {
+			margin-left: -12px;
+			margin-right: 10px;
+			font-size: 100%;
+		}
+
+		.glyphicon {
+			/*top: 2px;*/
+		}
+
+		.dark-nav .nav-menu ul.dropdown-menu a {
+			font-size: 18px;
+		}
+	} 
+
+
+	@media (min-width: 1281px), (min-width: 1025px) and (max-width: 1280px) {
+		/*#logo_badge {
+			margin-left: 45px;
+		}*/
 
 		.background_home {
 			/*background-image:url(../images/CNN_ST_RECORD_PLAYER.jpg);
@@ -258,6 +349,10 @@
 		    60% {opacity: 1;}
 		    100% {opacity: .2;}
 		}
+
+	}
+
+	@media only screen and (min-width: 1000px) {
 
 	}
 

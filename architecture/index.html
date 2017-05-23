@@ -201,6 +201,78 @@
           }
 	    });
 
+	    var Podcast = React.createClass({
+	      componentDidMount: function() {
+            this.initPodcast();
+          },
+          componentDidUpdate: function() {
+            this.initPodcast();
+
+          },
+	      render: function() {
+	      	document.documentElement.style.backgroundImage = 'url("images/about_bg.jpg")';
+	        return (
+	          <div>
+				
+				<section id="home" className="home bw-type container">
+					<div className="border">
+			                <div id="playerFrameDiv">
+
+							</div>
+			  		</div>
+
+				</section>
+	          </div>
+	        )
+	      },
+          initPodcast: function() {
+
+          	ga('set', 'page', '/podcast.html');
+          	ga('send', 'pageview');
+
+          	$('#playlists').empty();
+
+		    $('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.86762ced2e524800a6531f0d8fef9c3f?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+		    var a;
+		    function test(){
+
+			    var element =  document.getElementsByClassName('pure-img')[0];
+				if (typeof(element) != 'undefined' && element != null)
+				{
+				  //element.style.display = "none";
+				  console.log(element)
+				  element.src = "images/CNN_1200x1200.jpg";
+				  document.getElementsByClassName('pg_box')[0].style.background = "transparent";
+				  document.getElementsByClassName('jp-title')[0].style.color = "#FFFFFF";
+				  document.getElementsByClassName('pg_time')[0].style.color = "#FFFFFF";
+				  document.getElementsByClassName('pg_link')[0].style.color = "#FFFFFF !important";
+				  clearInterval(a);
+				}
+
+				//document.getElementsByClassName('pure-img')[0].style.display = "none";
+			}
+
+			$("#playerFrameDiv").load('http://podcasts.cnn.net/embed/single/skin/dxhznz/morgan-stanleys-carla.html', function() {
+			  a = setInterval(test, 1000);
+			  console.log(a)
+			});
+
+			$.getScript( "./js/jquery-2.1.3.min.js", function( data, textStatus, jqxhr ) {
+				//console.log( data ); // Data returned
+				//console.log( textStatus ); // Success
+				console.log( jqxhr.status ); // 200
+				//console.log( "Load was performed." );
+			});
+
+			$.getScript( "./js/jquery.easing.1.3.js", function( data, textStatus, jqxhr ) {
+				//console.log( data ); // Data returned
+				//console.log( textStatus ); // Success
+				console.log( jqxhr.status ); // 200
+				//console.log( "Load was performed." );
+			});
+          }
+	    });
+
 
 	    var Map = React.createClass({
 	      componentDidMount: function() {
@@ -2262,6 +2334,8 @@
 										</ul>
 									</li>
 
+									<li><Link to="/podcast" className="nav-custom">Podcast</Link></li>
+
 								</ul>
 
 								
@@ -2310,6 +2384,7 @@
 	          <IndexRoute component={Home}/>
 	          <Route path="/about" component={About} />
 	          <Route path="/map" component={Map} />
+	          <Route path="/podcast" component={Podcast} />
 	          <Route path="/episodes" component={Episodes} />
 	          <Route path="/episode-1" component={Episode1} />
 	          <Route path="/episode-2" component={Episode2} />

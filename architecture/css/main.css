@@ -131,11 +131,12 @@ body {
 }
 
 .glyphicon {
-	top: 2px;
+	/*top: 2px;*/
 }
 
 .hamburger {
-	margin-top: -2px;
+	margin-left: -12px;
+	margin-right: 14px;
 }
 
 .follow {

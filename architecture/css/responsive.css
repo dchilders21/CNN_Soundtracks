@@ -171,14 +171,14 @@
 			display: block;
 		}
 
-		.nav-inner div.nav-menu{
+		.nav-inner div.nav-menu {
 			display: none;
 			top:100%;
 			width: 100%;
 			position: absolute;
 			left:0;
 			float: none;
-			height: 400px;
+			height: 460px;
 			overflow: auto;
 		}
 

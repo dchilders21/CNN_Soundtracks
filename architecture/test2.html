@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+<script src="./js/jQuery-2.2.0.min.js"></script>
+</head>
+<body>
+<h1>test</h1>
+
+<!--
+<iframe id="playerFrame" src="http://podcasts.cnn.net/embed/single/skin/dxhznz/morgan-stanleys-carla.html"; width="100%" height="175" style="border:none;" scrolling="no"></iframe>
+-->
+<div id="playerFrameDiv">
+
+</div>
+
+<script type="text/javascript">
+function test(){
+//console.log("yüklendi");
+//$(".pure-img").css("display","none");
+	//console.log(document.getElementsByClassName('pure-img')[0]);
+	document.getElementsByClassName('pure-img')[0].style.display = "none";
+}
+
+$(document).ready(function(e){
+	$("#playerFrameDiv").load('http://podcasts.cnn.net/embed/single/skin/dxhznz/morgan-stanleys-carla.html');
+
+	/*$.getScript( "./jQuery-2.2.0.min.js", function( data, textStatus, jqxhr ) {
+	//console.log( data ); // Data returned
+	//console.log( textStatus ); // Success
+	console.log( jqxhr.status ); // 200
+	console.log( "Load was performed." );
+	});*/
+setTimeout(test,1000);
+});
+</script>
+</body>
+</html>
