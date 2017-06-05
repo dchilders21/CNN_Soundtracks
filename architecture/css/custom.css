@@ -68,6 +68,22 @@
 		width: 781px;
 	}
 
+	.berlin {
+		width: 912px;
+	}
+
+	.space {
+		width: 745px;
+	}
+
+	.battle {
+		width: 722px;
+	}
+
+	.loud {
+		width: 745px;
+	}
+
 	.view {
 		width: 287px;
 	}
@@ -300,6 +316,42 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep5 {
+			background-image:url(../images/episode5/E5_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep6 {
+			background-image:url(../images/episode6/E6_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep7 {
+			background-image:url(../images/episode7/E7_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep8 {
+			background-image:url(../images/episode8/E8_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
 		.feature-boxes {
 			padding-left: 24px;
 			padding-right: 24px;
@@ -412,6 +464,24 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep5 {
+			background-image:url(../images/episode5/E5_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep6 {
+			background-image:url(../images/episode6/E6_Bg_Tile.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
 		.mlk {
 			margin-top: 40px;
 			width: 640px;
@@ -431,6 +501,18 @@
 
 		#katrina-img {
 			content:url("../images/mobile/episode_4_title_2x.png");
+		}
+
+		#berlin-img {
+			content:url("../images/mobile/episode_5_title_2x.png");
+		}
+
+		#space-img {
+			content:url("../images/mobile/episode_6_title_2x.png");
+		}
+
+		#battle-img {
+			content:url("../images/mobile/episode_7_title_2x.png");
 		}
 	  
 	}
@@ -535,6 +617,42 @@
 	    	background-size: 100% auto;
 		}
 
+		.background_ep5 {
+			background-image:url(../images/episode5/E5_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep6 {
+			background-image:url(../images/episode6/E6_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep7 {
+			background-image:url(../images/episode7/E7_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
+		.background_ep8 {
+			background-image:url(../images/episode8/E8_Bg_Tile_Small.jpg);
+	    	background-size: none;
+	    	background-position: none;
+	    	background-repeat: none;
+
+	    	background-size: 100% auto;
+		}
+
 		span.glyphicon.glyphicon-menu-hamburger.hamburger {
 			display: none;
 		}
@@ -606,6 +724,18 @@
 
 		#katrina-img {
 			content:url("../images/mobile/episode_4_title_2x.png");
+		}
+
+		#berlin-img {
+			content:url("../images/mobile/episode_5_title_2x.png");
+		}
+
+		#space-img {
+			content:url("../images/mobile/episode_6_title_2x.png");
+		}
+
+		#battle-img {
+			content:url("../images/mobile/episode_7_title_2x.png");
 		}
 
 		.tape-title {

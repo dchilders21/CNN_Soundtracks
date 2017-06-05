@@ -20,7 +20,7 @@
 	<meta property="og:title" content="CNN Soundtracks">
 	<meta property="og:description" content="The new CNN Original Series Soundtracks: Songs that Defined History, from Executive Producer Dwayne Johnson, will explore the music that is tied to iconic moments in history, and the impact of that music on our society.">
 	<meta property="og:image" content="http://cnnsoundtracks.com/images/CNN_1200x1200.jpg">
-		
+
 	<!-- CSS Files -->
 
 	<link rel="stylesheet" href="css/reset.css" />
@@ -54,7 +54,7 @@
 	  ga('send', 'pageview');
 
 	</script>
- 
+
 </head>
 
 <!-- Body Start -->
@@ -73,7 +73,7 @@
 
 	<div id="apple-badge" onclick="showPlayer()">
 		<img src="images/itunes.png" />
-	</div>	
+	</div>
 
 	<div id="apple-player" class="move-down">
 		<div id="apple-close" onclick="closePlayer()"><img src="images/close.png" /></div>
@@ -167,21 +167,31 @@
 	      	document.documentElement.style.backgroundImage = 'url("images/about_bg.jpg")';
 	        return (
 	          <div>
-				
+
 				<section id="home" className="home bw-type container">
 					<div className="border">
 			                <div className="col-md-7 about-lt"><img src="images/about_album_covers.png" /></div>
 			                <div className="col-md-5 about-rt">
 			                <div className="t-center about" style={{marginTop: "0px", marginBottom: "10px"}}><h2>ABOUT THE SHOW</h2></div>
 			                  <p>There are moments in history that shape our lives, and there are songs that define those moments. The new CNN Original Series Soundtracks: Songs that Defined History, from Executive Producer Dwayne Johnson, will explore the music that is tied to iconic moments in history, and the impact of that music on our society. From the March on Washington to the riots at Stonewall, the moon landing to Hurricane Katrina, music has played an integral part in celebrating, criticizing, amplifying and ultimately defining these seismic events in our collective history. Thursdays at 10P ET/PT on CNN.</p>
+
 			                  <div><h3 className="uppercase">The Assassination of Martin Luther King, JR.</h3> <p>The episode explores the music that kept the spirit of the civil rights movement alive following Martin Luther King, Jr.’s death. </p></div>
+
 			                  <div><h3 className="uppercase">September 11th.</h3><p> Following the terrorist attacks on September 11th, songs like Billy Joel’s “New York State of Mind” took on a new and heightened meaning and politically charged country music took center stage. </p></div>
+
 			                  <div><h3 className="uppercase">Kent State &amp; The Vietnam War </h3><p>Following the killings of four Kent State University students during anti-Vietnam War protests, politically driven songs from Neil Young, Buffalo Springfield and others became popular. </p></div>
+
 			                  <div><h3 className="uppercase">Hurricane Katrina</h3><p>Following Hurricane Katrina, international artists from U2 to Kanye West joined New Orleans musicians in benefit concerts to help ensure the city’s rich traditions survived.</p></div>
+
 			                  <div><h3 className="uppercase">THE BERLIN WALL &amp; THE FALL OF COMMUNISM</h3><p>The episode charts the course of the Cold War in Berlin through music revealing how it helped to sow the seeds of rebellion. </p></div>
+
 			                  <div><h3 className="uppercase">SPACE RACE</h3><p>Neil Armstrong and Buzz Aldrin’s moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. </p></div>
+
 			                  <div><h3 className="uppercase">Battle of the Sexes</h3><p>Billie Jean King’s win against Bobby Riggs in their famous tennis match was a galvanizing moment for the women’s movement and ushered in music that delivered messages of female empowerment.</p></div>
+
 			                  <div><h3 className="uppercase">OUT, LOUD &amp; PROUD</h3><p>The episode tracks the beginning of the gay rights movement in America following the riots at Stonewall Inn and how music has played a vital role in celebrating and preaching tolerance of the LGBT community.</p></div>
+
+
 			              </div>
 
 			  		</div>
@@ -213,7 +223,7 @@
 	      	document.documentElement.style.backgroundImage = 'url("images/about_bg.jpg")';
 	        return (
 	          <div>
-				
+
 				<section id="home" className="home bw-type container">
 					<div className="border">
 			                <div id="playerFrameDiv">
@@ -285,7 +295,7 @@
 	      render: function() {
 	        return (
 	          <div>
-				
+
 				<div id='map-leaflet' className='map'></div>
 					<div id="moon"><img src="images/moon.png" />
 						<div id="moon_pop"><img className="moonMarker" src="images/redMarker.png" /></div>
@@ -413,12 +423,12 @@
 				});
 
 
-				/*$("#mlk_click").load(function() { 
+				/*$("#mlk_click").load(function() {
 					console.log('maybe in business');
 				});
 
 
-				function mlk_click() { 
+				function mlk_click() {
 					me.context.router.push('/episode-1');
 
 				}*/
@@ -444,7 +454,7 @@
       		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
       			//document.documentElement.style.backgroundImage = 'url("images/Episodes_Bg.jpg")';
       		}
-	      		
+
 	          return (
 	            <div>
 					<section id="home" className="home bw-type container">
@@ -455,20 +465,20 @@
 
 						<div id="fullscreen" className="background_home parallax">
 							<video id="introVideo" preload="auto" height="100%" width="100%"
-				              poster="images/CNN_ST_RECORD_PLAYER_Thursdays.jpg">
-				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.mp4" type='video/mp4' />
-				                <source src="video/CNN_ST_RECORD_PLAYER_Thursdays.WebM" type='video/webm' />
+				              poster="images/CNN_ST_RECORD_PLAYER_NoTuneIn.jpg">
+				                <source src="video/CNN_ST_RECORD_PLAYER_NoTuneIn.mp4" type='video/mp4' />
+				                <source src="video/CNN_ST_RECORD_PLAYER_NoTuneIn.WebM" type='video/webm' />
 				             </video>
 						</div>
 
 						<div id="home-CTA" className="home-extra-note fullwidth t-center white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
 								<a id="CTA">EXPLORE THE SERIES<span className="arrow_right"><img className="arrow_img" src="images/arrow_right.png" /></span></a>
-								
+
 						</div>
 					</section>
 
 					<div id="intro-home" className="home-extra-note fullwidth t-center white thin absolute" data-0="opacity:1;" data-600="opacity:0;">
-						<a id="intro_CTA">CONTINUE TO SITE<span className="arrow_right"><img className="arrow_img" src="images/arrow_right.png" /></span></a>	
+						<a id="intro_CTA">CONTINUE TO SITE<span className="arrow_right"><img className="arrow_img" src="images/arrow_right.png" /></span></a>
 					</div>
 
 	            </div>
@@ -499,7 +509,7 @@
 						foo: function() {
 							document.getElementById('intro-home').style.display = "none";
 						}
-					}, 
+					},
 					onFinish:{
 						foo: function() {
 
@@ -511,7 +521,7 @@
 				    href: '//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1',
 				});*/
 
-				
+
 		        if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		      		window.isMob = true;
 		      		var el = document.getElementById('introVideo');
@@ -519,7 +529,7 @@
 		      		document.getElementById('CTA').addEventListener("click", function() {
 		      			me.context.router.push('/episode-4');
 		      		}, false);
-		      		
+
 		      	} else {
 
 		      		$( window ).bind("resize", function() {
@@ -586,7 +596,7 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
 									<div className="feature-text small-head f-left t-left dark">
-										<Link to="/episode-3"><img src="images/albums/kent_state_active.png" className="album-collapse"/></Link>
+										<Link to="/episode-4"><img src="images/albums/katrina_active.png" className="album-collapse"/></Link>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										<span className="red">EXPLORE EPISODE: 3</span>
@@ -595,7 +605,7 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
 									<div className="feature-text small-head f-left t-left dark">
-										<Link to="/episode-2"><img src="images/albums/katrina_active.png" className="album-collapse"/></Link>
+										<Link to="/episode-3"><img src="images/albums/berlin_wall.png" className="album-collapse"/></Link>
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										<span className="red">EXPLORE EPISODE: 4</span>
@@ -606,7 +616,7 @@
 							<div className="feature-boxes type-3 clearfix">
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="100">
 									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/berlin_wall.png" />
+										<img src="images/albums/stone_wall.png" />
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										EPISODE: 5
@@ -615,7 +625,7 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="150">
 									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/moon_landing.png" />
+										<img src="images/albums/kent_state.png" />
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										EPISODE: 6
@@ -623,8 +633,8 @@
 								</div>
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="250">
-									<div className="feature-text small-head f-left t-left dark">			
-										<img src="images/albums/battle_of_the_sexes.png" />
+									<div className="feature-text small-head f-left t-left dark">
+										<img src="images/albums/moon_landing.png" />
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										EPISODE: 7
@@ -633,7 +643,7 @@
 
 								<div className="feature-box col-xs-3" data-animation="fadeIn" data-animation-delay="200">
 									<div className="feature-text small-head f-left t-left dark">
-										<img src="images/albums/stone_wall.png" />
+										<img src="images/albums/battle_of_the_sexes.png" />
 									</div>
 									<h4 className="no-margin no-padding uppercase bold white">
 										EPISODE: 8
@@ -706,11 +716,11 @@
 						<div id="mlk-title" className="tape-title mlk">
 							<img id="mlk-img" src="images/episode1/episode_1_title.png" />
 						</div>
-						
+
 						<div className="inner">
 
 							<div className="row">
-								
+
 								<div className="col-md-6 eps-block">
 									<div className="about t-center">
 										<h2>ABOUT THE EPISODE</h2>
@@ -768,12 +778,12 @@
 						</div>
 
 						<div className="row">
-									
+
 							<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="song_history">
-										<h2 className="t-center">“We Shall Overcome”</h2> 
-								
+										<h2 className="t-center">“We Shall Overcome”</h2>
+
 
 									<h4 className="t-center">Various (Pete Seeger, Joan Baez, Mahalia Jackson, Peter Yarrow to name a few of the best known)</h4>
 									<div className="line-separator"></div>
@@ -784,16 +794,16 @@
 							</div>
 							</div>
 							<div className="col-md-6">
-								
+
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
 									<h2 className="t-center">“If I Had a Hammer”</h2>
-								
+
 								<h4 className="t-center">Peter, Paul &amp; Mary</h4>
 								<div className="line-separator"></div>
 
 								<p>Though oft performed and recorded, Peter, Paul &amp; Mary’s version of <b><i>“If I Had a Hammer”</i></b> marked not just the song’s commercial high-water mark, reaching #10 on the U.S. charts, but became synonymous with the civil rights movement when they performed it at the 1963 March on Washington, best remembered for Dr. King’s incomparable <i>“I Have a Dream”</i> speech.  The trio, created two years earlier by their manager, music promoter Albert Grossman – who later oversaw the careers of Bob Dylan and Janis Joplin as well – was an unusual hybrid, meant to deliver both the earnest political and social topics associated with earlier folk musicians, and to succeed commercially as a nightclub and concert act.  In both regards, Peter, Paul &amp; Mary enjoyed remarkable success: the group scored five Top Ten singles, including <b><i>“Puff the Magic Dragon”</i></b> and the #1 hit, <b><i>“Leaving On a Jet Plane,”</i></b> which introduced its songwriter, John Denver, to listeners. Once again, Pete Seeger shows up as the author of an iconic folk song, having co-written <b><i>“If I Had a Hammer”</i></b> in the forties with his Weavers bandmate, Lee Hays. </p>
-								</div> 
+								</div>
 								</div>
 							</div>
 
@@ -803,12 +813,12 @@
 
 
 					<div className="row">
-									
+
 						<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“People Get Ready” </h2> 
-							
+									<h2 className="t-center">“People Get Ready” </h2>
+
 
 								<h4 className="t-center">The Impressions featuring Curtis Mayfield; <br />Aretha Franklin</h4>
 								<div className="line-separator"></div>
@@ -818,17 +828,17 @@
 								</div>
 							</div>
 						</div>
-														
+
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“Mississippi Goddam” <span>and</span> <br />“Why (The King of Love is Dead)”</h2> 
-							
+									<h2 className="t-center">“Mississippi Goddam” <span>and</span> <br />“Why (The King of Love is Dead)”</h2>
+
 
 								<h4 className="t-center">Nina Simone</h4>
 								<div className="line-separator"></div>
 
-								<p>Dubbed “the High Priestess of Soul,” Nina Simone drew on an extraordinary wealth of music traditions including classical, gospel, jazz and pop to create her own unique style as a singer and pianist. Julliard-educated, Simone took her stage name in homage to the French actress Simone Signore and to hide her career as a nightclub singer from her father, a Carolina preacher. A passionate performer and volatile personality with a deep commitment to African-American self-determination, Simone was the creator of two of the most outraged songs of the era. Her composition  <b><i>“Mississippi Goddam”</i></b> – written, she said, in a “rush of fury, hatred and determination” – was spurred by two despicable events in the summer of 1963: the murder of civil rights activist Medgar Evers in Jackson, MS., and the Alabama bombing of Birmingham’s 16th Street Church that killed four young black girls and blinded a fifth.  Though not an adherent to Dr. King’s philosophy of non-violence, Simone leant her support to numerous civil rights actions, including the march from Selma to Montgomery, where she performed 
+								<p>Dubbed “the High Priestess of Soul,” Nina Simone drew on an extraordinary wealth of music traditions including classical, gospel, jazz and pop to create her own unique style as a singer and pianist. Julliard-educated, Simone took her stage name in homage to the French actress Simone Signore and to hide her career as a nightclub singer from her father, a Carolina preacher. A passionate performer and volatile personality with a deep commitment to African-American self-determination, Simone was the creator of two of the most outraged songs of the era. Her composition  <b><i>“Mississippi Goddam”</i></b> – written, she said, in a “rush of fury, hatred and determination” – was spurred by two despicable events in the summer of 1963: the murder of civil rights activist Medgar Evers in Jackson, MS., and the Alabama bombing of Birmingham’s 16th Street Church that killed four young black girls and blinded a fifth.  Though not an adherent to Dr. King’s philosophy of non-violence, Simone leant her support to numerous civil rights actions, including the march from Selma to Montgomery, where she performed
 								<b><i>“Mississippi Goddam.”</i></b> Three days after Dr. King’s assassination, Simone and her group recorded a live album dedicated to him that including <b><i>“Why (The King of Love is Dead)”</i></b> written by bassist Gene Taylor. Always independent and idiosyncratic, Simone spent her later years as an expatriate, living at various times in Europe, Liberia and Barbados before settling in the south of France. </p>
 
 							</div>
@@ -838,12 +848,12 @@
 
 
 				<div className="row">
-									
+
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“Say It Loud <br />(I’m Black and I’m Proud)” </h2> 
-						
+								<h2 className="t-center">“Say It Loud <br />(I’m Black and I’m Proud)” </h2>
+
 
 							<h4 className="t-center">James Brown</h4>
 							<div className="line-separator"></div>
@@ -853,12 +863,12 @@
 							</div>
 						</div>
 					</div>
-													
+
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“Living for the City”; <br />“Happy Birthday”</h2> 
-						
+								<h2 className="t-center">“Living for the City”; <br />“Happy Birthday”</h2>
+
 
 							<h4 className="t-center">Stevie Wonder</h4>
 							<div className="line-separator"></div>
@@ -873,12 +883,12 @@
 
 
 			<div className="row">
-									
+
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Fight the Power”</h2> 
-					
+							<h2 className="t-center">“Fight the Power”</h2>
+
 
 						<h4 className="t-center">Public Enemy</h4>
 						<div className="line-separator"></div>
@@ -888,12 +898,12 @@
 					</div>
 				</div>
 				</div>
-												
+
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“A Change is Gonna Come”</h2> 
-					
+							<h2 className="t-center">“A Change is Gonna Come”</h2>
+
 
 						<h4 className="t-center">Sam Cooke</h4>
 						<div className="line-separator"></div>
@@ -907,12 +917,12 @@
 			</div>
 
 			<div className="row">
-									
+
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Alright”</h2> 
-					
+							<h2 className="t-center">“Alright”</h2>
+
 
 						<h4 className="t-center">Kendrick Lamar</h4>
 						<div className="line-separator"></div>
@@ -946,10 +956,10 @@
 								 </div>
 							</div>
 						</div>
-						
+
 
 					</div>
-					
+
 					</div>
 				</div>
 
@@ -967,7 +977,7 @@
 
 	      		$(window).scrollTop(0);
 
-	      		
+
 	      		$( window ).bind("resize", function() {
 					divResize();
 				});
@@ -985,7 +995,7 @@
 
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
-		      		
+
 		      		$('.parallax').append('<img src="images/episode1/E1_PhotoTransition_Mobile.jpg" />');
 		      		$('.mixer img').remove();
 		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
@@ -1024,8 +1034,8 @@
 	      			var $elem = $('#transitionVideo');
 	      			var videoAudio = $("#transitionVideo");
 	      			if (window.isElementInViewport($elem)) {
-				        
-				        videoAudio[0].play(); 
+
+				        videoAudio[0].play();
 				    } else {
 				    	videoAudio[0].pause();
 				    }
@@ -1035,8 +1045,8 @@
 	      			// initial call
 	      			resizeFooter();
 	      			moveCTA();
-	      		}); 
-	      		
+	      		});
+
 
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
@@ -1047,7 +1057,7 @@
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
-			
+
 			});
 	      }
 	    });
@@ -1100,11 +1110,11 @@
 						<div id="nine11-title" className="tape-title nine11">
 							<img id="nine11-img" src="images/episode2/E2_Header.png" />
 						</div>
-						
+
 						<div className="inner">
 
 							<div className="row">
-								
+
 								<div className="col-md-6 eps-block">
 									<div className="about t-center">
 										<h2>ABOUT THE EPISODE</h2>
@@ -1156,8 +1166,8 @@
 						<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="song_history">
-										<h2 className="t-center">“Fragile”</h2> 
-								
+										<h2 className="t-center">“Fragile”</h2>
+
 
 									<h4 className="t-center">Sting</h4>
 									<div className="line-separator"></div>
@@ -1168,19 +1178,19 @@
 							</div>
 							</div>
 							<div className="col-md-6">
-								
+
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
 									<h2 className="t-center">“The Rising”</h2>
-								
+
 								<h4 className="t-center">Bruce Springsteen</h4>
 								<div className="line-separator"></div>
 
 								<p>In his memoir, Born to Run, Bruce Springsteen recalls watching reports of the World Trade Center attack on television in dismay and disbelief, then driving to a nearby bridge with an open view of New York harbor, torrents of smoke rising from lower Manhattan. In the coming days, the stark and deeply felt religious imagery at the core of “The Rising” took shape as his thoughts returned again and again to the firemen, police, and rescue teams who gave their lives. “The picture I couldn’t let go of was of the emergency workers going up the stairs as others rushed down to safety,” he later recalled. “The depth of their sacrifice in unthinkable and incomprehensible.” Released as a single in 2002, the song won Grammy Awards as Best Rock Song and Best Male Rock Vocal Performance.</p>
-								</div> 
 								</div>
-							</div>		
-						
+								</div>
+							</div>
+
 				</div>
 
 
@@ -1189,8 +1199,8 @@
 					<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“The Sound of Silence” </h2> 
-							
+									<h2 className="t-center">“The Sound of Silence” </h2>
+
 
 								<h4 className="t-center">Paul Simon</h4>
 								<div className="line-separator"></div>
@@ -1200,12 +1210,12 @@
 								</div>
 							</div>
 						</div>
-														
+
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“We Are Family”</h2> 
-							
+									<h2 className="t-center">“We Are Family”</h2>
+
 
 								<h4 className="t-center">We Are Family Collective</h4>
 								<div className="line-separator"></div>
@@ -1215,7 +1225,7 @@
 							</div>
 						</div>
 					</div>
-										
+
 			</div>
 
 
@@ -1223,8 +1233,8 @@
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“New York State of Mind” </h2> 
-						
+								<h2 className="t-center">“New York State of Mind” </h2>
+
 
 							<h4 className="t-center">Billy Joel</h4>
 							<div className="line-separator"></div>
@@ -1234,12 +1244,12 @@
 							</div>
 						</div>
 					</div>
-													
+
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“Boot Scootin’ Boogie” and <br />“Only in America”</h2> 
-						
+								<h2 className="t-center">“Boot Scootin’ Boogie” and <br />“Only in America”</h2>
+
 
 							<h4 className="t-center">Brooks &amp; Dunn</h4>
 							<div className="line-separator"></div>
@@ -1248,16 +1258,16 @@
 
 						</div>
 					</div>
-				</div>		
-				
+				</div>
+
 			</div>
 
 			<div className="row">
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Where Were You (When the World Stopped Turning)”</h2> 
-					
+							<h2 className="t-center">“Where Were You (When the World Stopped Turning)”</h2>
+
 
 						<h4 className="t-center">Alan Jackson</h4>
 						<div className="line-separator"></div>
@@ -1267,12 +1277,12 @@
 					</div>
 				</div>
 				</div>
-												
+
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“God Bless the USA”</h2> 
-					
+							<h2 className="t-center">“God Bless the USA”</h2>
+
 
 						<h4 className="t-center">Lee Greenwood</h4>
 						<div className="line-separator"></div>
@@ -1282,16 +1292,16 @@
 					</div>
 				</div>
 				</div>
-									
-				
+
+
 			</div>
 
 			<div className="row">
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Courtesy of the Red, <br />White and Blue”</h2> 
-					
+							<h2 className="t-center">“Courtesy of the Red, <br />White and Blue”</h2>
+
 
 						<h4 className="t-center">Toby Keith</h4>
 						<div className="line-separator"></div>
@@ -1305,8 +1315,8 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Travelin’ Soldier” and “Not Ready to Make Nice”</h2> 
-					
+							<h2 className="t-center">“Travelin’ Soldier” and “Not Ready to Make Nice”</h2>
+
 
 						<h4 className="t-center">The Dixie Chicks</h4>
 						<div className="line-separator"></div>
@@ -1325,8 +1335,8 @@
 			<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Empire State of Mind”</h2> 
-					
+							<h2 className="t-center">“Empire State of Mind”</h2>
+
 
 						<h4 className="t-center">Jay Z and Alicia Keys</h4>
 						<div className="line-separator"></div>
@@ -1363,10 +1373,10 @@
 								 </div>
 							</div>
 						</div>
-						
+
 
 					</div>
-					
+
 					</div>
 				</div>
 
@@ -1383,7 +1393,7 @@
 	      		ga('send', 'pageview');
 
 	      		$(window).scrollTop(0);
-	      		
+
 	      		$( window ).bind("resize", function() {
 					divResize();
 				});
@@ -1400,7 +1410,7 @@
 
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
-		      		
+
 		      		$('.parallax').append('<img src="images/episode2/E2_PhotoTransition_Mobile.jpg" />');
 		      		$('.mixer img').remove();
 		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
@@ -1439,8 +1449,8 @@
 	      			var $elem = $('#transitionVideo');
 	      			var videoAudio = $("#transitionVideo");
 	      			if (window.isElementInViewport($elem)) {
-				        
-				        videoAudio[0].play(); 
+
+				        videoAudio[0].play();
 				    } else {
 				    	videoAudio[0].pause();
 				    }
@@ -1450,8 +1460,8 @@
 	      			// initial call
 	      			resizeFooter();
 	      			moveCTA();
-	      		}); 
-	      		
+	      		});
+
 
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
@@ -1464,7 +1474,7 @@
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
-			
+
 			});
 	      }
 	    });
@@ -1515,11 +1525,11 @@
 						<div id="kent-title" className="tape-title kent-state">
 							<img id="kent-img" src="images/episode3/E3_Header.png" />
 						</div>
-						
+
 						<div className="inner">
 
 							<div className="row">
-								
+
 								<div className="col-md-6 eps-block">
 									<div className="about t-center">
 										<h2>ABOUT THE EPISODE</h2>
@@ -1575,8 +1585,8 @@
 						<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="song_history">
-										<h2 className="t-center">“Ohio”</h2> 
-								
+										<h2 className="t-center">“Ohio”</h2>
+
 
 									<h4 className="t-center">Crosby Stills Nash Young</h4>
 									<div className="line-separator"></div>
@@ -1587,19 +1597,19 @@
 							</div>
 							</div>
 							<div className="col-md-6">
-								
+
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
 									<h2 className="t-center">“Ballad of the Green Berets”</h2>
-								
+
 								<h4 className="t-center">Sgt. Barry Sadler</h4>
 								<div className="line-separator"></div>
 
 								<p>A Green Beret medic wounded in Vietnam, Sadler penned his tribute to the elite unit as a 12-verse epic while recovering in an Army hospital. Inspired by the service of James Gabriel, the first native Hawaiian to die in Vietnam, Sadler cut the song down to its shorter length with the help of novelist Robin Moore, whose book, The Green Berets was then a best-seller. Recording the song on his own in 1965, Sadler distributed it only within the military at first, where its prideful message of duty and service resonated. Its popularity attracted the attention of RCA Records; re-released, it became a huge hit and one of the biggest-selling singles of 1966.  Sadler continued his dual career as both a songwriter and a soldier and medic, but never returned to the national spotlight. His later years were marred by violence and mystery, including an arrest for shooting another songwriter. After being shot in the head in Guatemala, Saddler was confined to a wheelchair and died in 1989.</p>
-								</div> 
 								</div>
-							</div>		
-						
+								</div>
+							</div>
+
 				</div>
 
 
@@ -1608,8 +1618,8 @@
 					<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“These Boots are Made for Walking”</h2> 
-							
+									<h2 className="t-center">“These Boots are Made for Walking”</h2>
+
 
 								<h4 className="t-center">Nancy Sinatra</h4>
 								<div className="line-separator"></div>
@@ -1619,12 +1629,12 @@
 								</div>
 							</div>
 						</div>
-														
+
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“I Ain't Marchin’ Anymore”</h2> 
-							
+									<h2 className="t-center">“I Ain't Marchin’ Anymore”</h2>
+
 
 								<h4 className="t-center">Phil Ochs</h4>
 								<div className="line-separator"></div>
@@ -1634,7 +1644,7 @@
 							</div>
 						</div>
 					</div>
-										
+
 			</div>
 
 
@@ -1642,8 +1652,8 @@
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“For What It's Worth”</h2> 
-						
+								<h2 className="t-center">“For What It's Worth”</h2>
+
 
 							<h4 className="t-center">Buffalo Springfield</h4>
 							<div className="line-separator"></div>
@@ -1653,12 +1663,12 @@
 							</div>
 						</div>
 					</div>
-													
+
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“I Feel Like I'm Fixin To Die Rag”</h2> 
-						
+								<h2 className="t-center">“I Feel Like I'm Fixin To Die Rag”</h2>
+
 
 							<h4 className="t-center">Country Joe McDonald and the Fish</h4>
 							<div className="line-separator"></div>
@@ -1667,16 +1677,16 @@
 
 						</div>
 					</div>
-				</div>		
-				
+				</div>
+
 			</div>
 
 			<div className="row">
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Okie from Muskogee”</h2> 
-					
+							<h2 className="t-center">“Okie from Muskogee”</h2>
+
 
 						<h4 className="t-center">Merle Haggard</h4>
 						<div className="line-separator"></div>
@@ -1686,12 +1696,12 @@
 					</div>
 				</div>
 				</div>
-												
+
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“War”</h2> 
-					
+							<h2 className="t-center">“War”</h2>
+
 
 						<h4 className="t-center">Edwin Starr</h4>
 						<div className="line-separator"></div>
@@ -1701,16 +1711,16 @@
 					</div>
 				</div>
 				</div>
-									
-				
+
+
 			</div>
 
 			<div className="row">
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Tracks of my Tears”</h2> 
-					
+							<h2 className="t-center">“Tracks of my Tears”</h2>
+
 
 						<h4 className="t-center">The Miracles featuring Smokey Robinson</h4>
 						<div className="line-separator"></div>
@@ -1724,8 +1734,8 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“We Gotta Get Out Of This Place”</h2> 
-					
+							<h2 className="t-center">“We Gotta Get Out Of This Place”</h2>
+
 
 						<h4 className="t-center">The Animals</h4>
 						<div className="line-separator"></div>
@@ -1743,8 +1753,8 @@
 			<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Born in the USA”</h2> 
-					
+							<h2 className="t-center">“Born in the USA”</h2>
+
 
 						<h4 className="t-center">Bruce Springsteen</h4>
 						<div className="line-separator"></div>
@@ -1780,10 +1790,10 @@
 								 </div>
 							</div>
 						</div>
-						
+
 
 					</div>
-					
+
 					</div>
 				</div>
 
@@ -1800,7 +1810,7 @@
 	      		ga('send', 'pageview');
 
 	      		$(window).scrollTop(0);
-	      		
+
 	      		$( window ).bind("resize", function() {
 					divResize();
 				});
@@ -1817,7 +1827,7 @@
 
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
-		      		
+
 		      		$('.parallax').append('<img src="images/episode3/E3_PhotoTransition_Mobile.jpg" />');
 		      		$('.mixer img').remove();
 		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
@@ -1856,8 +1866,8 @@
 	      			var $elem = $('#transitionVideo');
 	      			var videoAudio = $("#transitionVideo");
 	      			if (window.isElementInViewport($elem)) {
-				        
-				        videoAudio[0].play(); 
+
+				        videoAudio[0].play();
 				    } else {
 				    	videoAudio[0].pause();
 				    }
@@ -1867,8 +1877,8 @@
 	      			// initial call
 	      			resizeFooter();
 	      			moveCTA();
-	      		}); 
-	      		
+	      		});
+
 
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
@@ -1881,10 +1891,12 @@
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
-			
+
 			});
 	      }
 	    });
+
+	    
 
 	    var Episode4 = React.createClass({
 	      componentDidMount: function() {
@@ -1932,11 +1944,11 @@
 						<div id="katrina-title" className="tape-title katrina">
 							<img id="katrina-img" src="images/episode4/E4_Header.png" />
 						</div>
-						
+
 						<div className="inner">
 
 							<div className="row">
-								
+
 								<div className="col-md-6 eps-block">
 									<div className="about t-center">
 										<h2>ABOUT THE EPISODE</h2>
@@ -1988,8 +2000,8 @@
 						<div className="col-md-6 eps-block">
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 									<div className="song_history">
-										<h2 className="t-center">“St. James Infirmary”</h2> 
-								
+										<h2 className="t-center">“St. James Infirmary”</h2>
+
 
 									<h4 className="t-center">Louis Armstrong</h4>
 									<div className="line-separator"></div>
@@ -2000,19 +2012,19 @@
 							</div>
 							</div>
 							<div className="col-md-6">
-								
+
 								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
 									<h2 className="t-center">“Louisiana 1927”</h2>
-								
+
 								<h4 className="t-center">Aaron Neville</h4>
 								<div className="line-separator"></div>
 
 								<p>Before there was Katrina there was the devastating Mississippi flood of 1927, which placed hundreds of miles of Delta farmland and towns under water. It also showcased the region’s class and racial system at its most corrupt and abusive: black laborers were forced into work gangs to stem the flooding, while New Orleans officials dynamited the levees and flooded a poorer nearby parish to spare themselves. Composed and originally recorded by Randy Newman for the Southern-accented album Good Old Boys – he was a Los Angeles native who’d spent summers in New Orleans with relatives while a boy and became fascinated by the city and its unique culture – his damning tale of that disaster took on a new life when the great New Orleans vocalist Aaron Neville performed it on a television broadcast in support of Hurricane Katrina relief.</p>
-								</div> 
 								</div>
-							</div>		
-						
+								</div>
+							</div>
+
 				</div>
 
 
@@ -2021,8 +2033,8 @@
 					<div className="col-md-6 eps-block">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“Go to Mardi Gras”</h2> 
-							
+									<h2 className="t-center">“Go to Mardi Gras”</h2>
+
 
 								<h4 className="t-center">Professor Longhair</h4>
 								<div className="line-separator"></div>
@@ -2032,12 +2044,12 @@
 								</div>
 							</div>
 						</div>
-														
+
 						<div className="col-md-6">
 							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 								<div className="song_history">
-									<h2 className="t-center">“Do You Know What It Means to Miss New Orleans”</h2> 
-							
+									<h2 className="t-center">“Do You Know What It Means to Miss New Orleans”</h2>
+
 
 								<h4 className="t-center">Billie Holiday, Louis Armstrong</h4>
 								<div className="line-separator"></div>
@@ -2047,7 +2059,7 @@
 							</div>
 						</div>
 					</div>
-										
+
 			</div>
 
 
@@ -2055,8 +2067,8 @@
 					<div className="col-md-6 eps-block">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“One”</h2> 
-						
+								<h2 className="t-center">“One”</h2>
+
 
 							<h4 className="t-center">Mary J Blige and U2</h4>
 							<div className="line-separator"></div>
@@ -2066,12 +2078,12 @@
 							</div>
 						</div>
 					</div>
-													
+
 					<div className="col-md-6">
 						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 							<div className="song_history">
-								<h2 className="t-center">“Jesus Walks”</h2> 
-						
+								<h2 className="t-center">“Jesus Walks”</h2>
+
 
 							<h4 className="t-center">Kanye West</h4>
 							<div className="line-separator"></div>
@@ -2080,16 +2092,16 @@
 
 						</div>
 					</div>
-				</div>		
-				
+				</div>
+
 			</div>
 
 			<div className="row">
 				<div className="col-md-6 eps-block">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Indian Red”</h2> 
-					
+							<h2 className="t-center">“Indian Red”</h2>
+
 
 						<h4 className="t-center">Treme Brass Band</h4>
 						<div className="line-separator"></div>
@@ -2099,12 +2111,12 @@
 					</div>
 				</div>
 				</div>
-												
+
 				<div className="col-md-6">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“The Saints Are Coming”</h2> 
-					
+							<h2 className="t-center">“The Saints Are Coming”</h2>
+
 
 						<h4 className="t-center">U2 and Green Day</h4>
 						<div className="line-separator"></div>
@@ -2114,16 +2126,16 @@
 					</div>
 				</div>
 				</div>
-									
-				
+
+
 			</div>
 
 			<div className="row">
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“Tie My Hands”</h2> 
-					
+							<h2 className="t-center">“Tie My Hands”</h2>
+
 
 						<h4 className="t-center">Li’l Wayne</h4>
 						<div className="line-separator"></div>
@@ -2137,8 +2149,8 @@
 				<div className="col-md-6 ">
 					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
 						<div className="song_history">
-							<h2 className="t-center">“I’ll Fly Away”</h2> 
-					
+							<h2 className="t-center">“I’ll Fly Away”</h2>
+
 
 						<h4 className="t-center">Various</h4>
 						<div className="line-separator"></div>
@@ -2173,10 +2185,10 @@
 								 </div>
 							</div>
 						</div>
-						
+
 
 					</div>
-					
+
 					</div>
 				</div>
 
@@ -2193,7 +2205,7 @@
 
 	      		ga('set', 'page', '/episode-4.html');
 	      		ga('send', 'pageview');
-	      		
+
 	      		$( window ).bind("resize", function() {
 					divResize();
 				});
@@ -2210,7 +2222,7 @@
 
 		      		var el2 = document.getElementById('home-episodes');
 		      		el2.parentNode.removeChild(el2);
-		      		
+
 		      		$('.parallax').append('<img src="images/episode4/E4_PhotoTransition_Mobile.jpg" />');
 		      		$('.mixer img').remove();
 		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
@@ -2249,8 +2261,8 @@
 	      			var $elem = $('#transitionVideo');
 	      			var videoAudio = $("#transitionVideo");
 	      			if (window.isElementInViewport($elem)) {
-				        
-				        videoAudio[0].play(); 
+
+				        videoAudio[0].play();
 				    } else {
 				    	videoAudio[0].pause();
 				    }
@@ -2260,8 +2272,8 @@
 	      			// initial call
 	      			resizeFooter();
 	      			moveCTA();
-	      		}); 
-	      		
+	      		});
+
 
 	      		$( window ).bind("resize", function(){
 				     resizeFooter();
@@ -2274,7 +2286,1664 @@
 
 				this.$node = $(this.refs.lightcase);
 				this.$node.lightcase({
-			
+
+			});
+	      }
+	    });
+
+	    var Episode5 = React.createClass({
+	      componentDidMount: function() {
+            this.initEp5TOC();
+          },
+          componentDidUpdate: function() {
+            this.initEp5TOC();
+          },
+	      render: function() {
+	        return (
+	          <div>
+	          	<div id="episode-wrapper">
+					<section id="episode-1-video" className="home bw-type container">
+						<div className="parallax">
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
+				              poster="images/episode5/E5_PhotoTransition.jpg">
+				                <source src="video/ep5/Photo_BERLIN.mp4" type='video/mp4' />
+				                <source src="video/ep5/Photo_BERLIN.WebM" type='video/webm' />
+				             </video>
+						</div>
+
+						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
+							<a href="#episode_5" id="CTA" className="scroll">EXPLORE THE EPISODE
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
+						</div>
+					</section>
+
+
+					<div id='episode_5' className="type-1 background_ep5">
+						<div className="row mixer">
+						</div>
+
+						<div className="sidebar">
+							<div>
+								<img src="images/episode5/E5_SideAlbum_1.png" />
+							</div>
+							<div>
+								<img src="images/episode5/E5_SideAlbum_2.png" />
+							</div>
+							<div>
+								<img src="images/episode5/E5_SideAlbum_3.png" />
+							</div>
+						</div>
+
+						<div id="berlin-title" className="tape-title berlin">
+							<img id="berlin-img" src="images/episode5/E5_Header.png" />
+						</div>
+
+						<div className="inner">
+
+							<div className="row">
+
+								<div className="col-md-6 eps-block">
+									<div className="about t-center">
+										<h2>ABOUT THE EPISODE</h2>
+									</div>
+									<div>
+										<p>After decades living under a repressive Communist regime, the people of East Germany could no longer stay trapped behind the concrete wall that separated them from their countrymen in the West — and so they tore that Wall down. Since the 1960s, West Berlin had been a cultural hotspot and a draw for artists like The Rolling Stones and David Bowie. But because rock music was considered politically dangerous to the Communist authorities, teenagers in the East had little access to it. This episode charts the course of the Cold War in Berlin through music, showing how it helped to sow the seeds of rebellion. After the Wall officially came down in 1989, a number of artists including Roger Waters of Pink Floyd put on concerts to celebrate. But it was a German band, the Scorpions, who came up with the true anthem of that moment in time, “Wind of Change,” which captured the bittersweet emotions behind such a dramatic moment in history.</p>
+									</div>
+								</div>
+								<div className="col-md-6 eps-block" ref={(el) => {
+										$(el).find("a").lightcase();
+									}}>
+									<div>
+									<a ref="lightcase" href="images/episode5/gallery/AS_05115_GET_Roger-Waters-The-Wall-Live-in-Berlin-musicians-playing-onstage-1990_M.jpg" data-rel="lightcase:myCollection"><img src="images/episode5/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_05142_GET_David_Bowie_at_the_Berlin_Wall_in_1987_black_and_white.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_06011_GET_Berlin-History-crowds-on-floor-and-line-wall-celebrate-1989_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_09030_API_Hammering-the-wall-1989_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_09031_API_West-German-policeman-helping-East-guard-1989_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_09081_API_Waving-flags-at-Brandenburg-1989_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_09139_API_New-Years-Eve-Brandenburg-1989.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_09801_GET_Melissa_Etheridge_on_stage_rocking_out_performing.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode5/gallery/AS_17157_API_CNN_PUBLICITY_BERLIN_WALL_COMES_DOWN.jpg" data-rel="lightcase:myCollection"></a>
+									</div>
+									<div className="tape-title view">
+										<a ref="lightcase" href="images/episode5/gallery/AS_05115_GET_Roger-Waters-The-Wall-Live-in-Berlin-musicians-playing-onstage-1990_M.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_05142_GET_David Bowie_at_the_Berlin_Wall_in_1987_black_and_white.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_06011_GET_Berlin-History-crowds-on-floor-and-line-wall-celebrate-1989_M.jpg" data-rel="lightcase:myCollection"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_09030_API_Hammering-the-wall-1989_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_09031_API_West-German-policeman-helping-East-guard-1989_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_09081_API_Waving-flags-at-Brandenburg-1989_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_09139_API_New-Years-Eve-Brandenburg-1989.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_09801_GET_Melissa_Etheridge_on_stage_rocking_out_performing.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode5/gallery/AS_17157_API_CNN_PUBLICITY_BERLIN_WALL_COMES_DOWN.jpg" data-rel="lightcase:myCollection2"></a>
+
+									</div>
+							</div>
+						</div>
+
+						<div className="row">
+							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode5/E5_Video_Screens.jpg" /></a></div>
+								 <div className="tape-title interviews">
+										<img src="images/episode_ToC/interviews.png" />
+								 </div>
+							</div>
+						</div>
+
+						<div className="row alternate">
+							<div className="tape-title histories">
+								<img src="images/episode_ToC/histories.png" />
+							</div>
+						</div>
+
+
+					<div className="row">
+						<div className="col-md-6 eps-block">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="song_history">
+										<h2 className="t-center">“99 Red Balloons”</h2>
+
+
+									<h4 className="t-center">Nena</h4>
+									<div className="line-separator"></div>
+
+									<p>Perhaps most surprising about the English-language version of Nena’s 1983 international hit “99 Luftballoons” is that the original German version has proven a bigger American hit than the translation. And that’s really saying something because the only other German language record to become a pop hit in America was by German actress, Marlene Dietrich. The song’s unusual American odyssey also had an equally unlikely beginning: German actress and author Christiane F., whose best-selling memoir We Children of Banhof Zoo detailed her life as a teenage heroin addict and prostitute in Berlin, played the original recording while being interviewed on the radio by LA rock DJ Rodney Bingenheimer. Listeners liked it so much that an English language version was soon released. And though that version topped record charts in Canada and the U.K., Americans didn’t agree: it was the original that got to #2 in the states. That made sense to the singer and the song’s writer, Carlo Karges, who was inspired to write the song after seeing balloons released at a Berlin concert by the Rolling Stones. “I don’t like the English version at all,” Nena has said. And apparently Americans still agree with her: language barrier notwithstanding, it’s “99 Luftballoons” that has endured as an American karaoke staple.</p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Jailhouse Rock”</h2>
+
+								<h4 className="t-center">Elvis</h4>
+								<div className="line-separator"></div>
+
+								<p>At the height of the Cold War in 1958, when America had a substantial military presence in West Germany, draftee Elvis Presley become its most famous soldier. Opting to serve as a regular rather than join Special Services and perform for the troops, Presley spent much of his time in Germany as a driver – although he enjoyed the privilege of living in a hotel rather than on a base, wearing his hair an inch longer than other GI’s and driving himself to and from the base in his Mercedes and BMW sport cars. Though earnest about making a good impression and taking his duties seriously, assigning the rock icon and teen idol to routine Army details proved all but impossible: the first and only time Presley was given guard duty at the Bad Nauheim barracks, he was mobbed by fans and had to be spirited away by MPs. He ended his two-year hitch in 1960, a year before the Berlin blockade and subsequent erection of the Wall.</p>
+								</div>
+								</div>
+							</div>
+
+				</div>
+
+
+				<div className="row">
+
+					<div className="col-md-6 eps-block">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“I’m Free”</h2>
+
+
+								<h4 className="t-center">The Rolling Stones</h4>
+								<div className="line-separator"></div>
+
+								<p>Though the riot accompanying the Rolling Stones’ 1965 appearance at West Berlin’s 22,000-seat Waldbuehne Stadium – built by the Nazis for the infamous 1936 Olympics – is viewed as a turning point in German political history and the start of that country’s student movement, the melee was actually spurred by fan anger over the brevity of the band’s then-typical 25-minute performance. But with 85 arrests, 87 injuries, and extensive damage – the stadium was trashed and 17 Berlin train cars owned by East Germany vandalized – the Stones were termed “decadent” by the GDR, and the communist bloc country ratcheted up their culture war against the west by banning airplay for numerous rock bands. Though the band’s brief set didn’t include “I’m Free,” which they’d recorded in Los Angeles two weeks earlier, the song soon became a German student anthem.</p>
+
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-6">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Wind of Change”</h2>
+
+
+								<h4 className="t-center">Scorpions</h4>
+								<div className="line-separator"></div>
+
+								<p>Reportedly one of the best-selling singles in history, the close association between “Wind of Change” and German re-unification and the end of the Cold War came about after the fact. The song actually had its genesis in a pair of Soviet tours the German band from Hannover made in the late-eighties. Denied the chance to perform in Moscow in 1988 – authorities apparently feared a riot by fans – the group returned to the city the next year for a massive, multi-group stadium show. That Soviet shift in attitude spurred “Wind of Change.” A few months later, when the Berlin Wall came down as the band was creating their video for the song, they opted to include archive footage of the Wall’s construction along with news clips of its dissembling. That new reference quickly superseded the song’s actual origin. German listeners adopted the song as their own, and television viewers there named it “song of the century” in a 2005 poll. The record also became something of a theme song for glasnost architect Mikhail Gorbachev; the band performed it several times in his honor, including at an 80th birthday celebration in London.</p>
+
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+
+			<div className="row">
+					<div className="col-md-6 eps-block">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“One”</h2>
+
+
+							<h4 className="t-center">Mary J Blige and U2</h4>
+							<div className="line-separator"></div>
+
+							<p>Singer Mary J. Blige, who grew up just north of New York City, recalls being struck by the words of U2’s “One” after the 2001 attack on the World Trade Center, and opted to record the song for her album The Breakthrough. She would come back to it again and again, most notably when she and U2 performed the song for Shelter from the Storm: The Concert for the Gulf Coast. It was the song’s unique ability to express both frustration at continuing inequality and the unity of humanity that captivated the singer. “In this system we’re still faced with racism and segregation and separation,” Blige said. “But at the end of the day those lyrics were really, really strong to me. That made me think of everybody and how we’re in this all together.” </p>
+
+							</div>
+						</div>
+					</div>
+
+					<div className="col-md-6">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Heroes”</h2>
+
+
+							<h4 className="t-center">David Bowie</h4>
+							<div className="line-separator"></div>
+
+							<p>No song owes its origins more to or has a deeper association with the Berlin Wall than David Bowie’s “Heroes.” Living in that city during the late-seventies, Bowie was inspired to write the song after seeing his producer, Tony Visconti, kiss his girlfriend, singer Antonia Maass, by the Wall. “That relationship motivated the song,” he said. But it wasn’t until a Berlin concert 10 years later that the song took on its broader meaning. As part of a three-day rock concert with Genesis and the Eurythmics near the Wall in the Platz der Republik, Bowie was acutely aware that thousands of fans were listening on the eastern side of the Wall, and acknowledged them just before performing the song. “It was anthemic – almost like a prayer,” he later said. Though unaware that hundreds were tussling with police and being arrested throughout the performance, it nonetheless became a singular moment for the singer. “I’ve never felt it like that again,” he said of performing the song. “It was just extraordinary.”</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 eps-block">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Another Brick in the Wall”</h2>
+
+
+						<h4 className="t-center">Pink Floyd, perf. as Roger Waters &amp; Cyndi Lauper</h4>
+						<div className="line-separator"></div>
+
+						<p>Eight months after the fall of the Berlin Wall, Pink Floyd’s Roger Waters staged a massive all-star performance of the band’s classic concept album “The Wall” on the former site of “no-man’s land” – the area that once marked the approach to the East German side of the Wall.  Broadcast as a two-hour event in 52 countries and released as an album and video, the outdoor concert drew a crowd estimated at 450,000. With an international cast including Van Morrison, the Band, Sinead O’Connor, Marianne Faithfull, the Scorpions, Thomas Dolby and Joni Mitchell, the show’s climax was Cyndi Lauper’s spirited, faux-Cockney performance in an English schoolboy uniform. “If this concert is to celebrate anything,“ Waters said, “it’s that the Berlin Wall coming down can be seen as a liberating of the human spirit.”</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Honesty”</h2>
+
+
+						<h4 className="t-center">Billy Joel</h4>
+						<div className="line-separator"></div>
+
+						<p>In 1987, when the first tentative rumblings of glasnost were being felt in the Soviet Union, several successful rock and pop acts deemed “safe” – including Billy Joel, James Taylor, Santana and Elton John – were invited into the country for concert tours. Joel, a New Yorker with blue collar roots, found the idea particularly resonant and eagerly agreed to dates in both Moscow and Leningrad. Acutely feeling a responsibility to get things off on the right foot, the performer went out of his way to show his trust and enthusiasm both on and offstage. In concert, he dove into the audiences, encouraged the crowds to relax and dance, and brought his wife and their young daughter with him. “The trip to Russia was probably the biggest highlight for me as a performer,” Joel later said. “I met these people and they weren’t the enemy. I also hoped that the people in America could see what we did.” A live album from the tour, Kontstert, was released that fall. </p>
+
+					</div>
+				</div>
+				</div>
+
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Looking for Freedom”</h2>
+
+
+						<h4 className="t-center">David Hasselhoff</h4>
+						<div className="line-separator"></div>
+
+						<p>Call it culture shock or call it relativism, but it’s a fact hard for Americans to digest: TV actor David Hasselhoff – known here for his role on the hit shows Baywatch and Knight Rider -- has enjoyed the status of a certified icon and political celebrity in Germany. With a successful recording career in Austria and Switzerland, the actor rose to new heights in 1987 when he recorded an English-language version of a 1970s German hit as “Looking for Freedom.” Though its lyrics are about a rich young man interested in making it in his own right, the song’s chorus – “I’ve been lookin’ for freedom/I’ve been lookin’ so long/ I’ve been lookin’ for freedom/still the search goes on” – struck a timely chord with German listeners: it was a No. 1 hit there for eight weeks. His unique New Year’s Eve performance at the former site of the Wall – Hasselhoff wore a jacket festooned with lights and sang from the bucket of a crane – prompted one German newspaper to accord him bona fide superstar status with the headline, Hasselhoff: Not Since the Beatles. </p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“With a Little Help from My Friends,”</h2>
+
+
+						<h4 className="t-center">Various</h4>
+						<div className="line-separator"></div>
+
+						<p>As one of the first western rock stars to play East Germany in the ‘80s, Joe Cocker enjoyed a special affection in the re-unified country. And when the Wall came down, the singer immediately flew to Germany in hopes of participating in a planned concert of artists from the east and west. His show at German Hall proved the most popular. The English-born, American-based singer, whose up and down and up career was hampered by drug and alcohol issues, had his own soft spot for his German fans, whom he said never abandoned him. “The German fans were remarkable,” he told broadcaster Deutsche Weill. “I used to have nights where I’d do shows with terrible hangovers that used to make it really hard to perform back then. Through the bad ones, the German fans would always be there. I’ve had this rapport with them ever since.” </p>
+
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+
+						<div className="row">
+
+						 <div className="col-md-6 mwidget">
+                         	 <VHMWidget elementId="mpoll" eventId="3448032" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+                          <div className="col-md-6 mwidget">
+                          	<VHMWidget elementId="mtrivia" eventId="3448039" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+
+                        </div>
+
+						<div className="row no-margin-bottom">
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div className="tape-title next_on">
+										<img src="images/episode_ToC/next_2x.png" />
+								 </div>
+							</div>
+						</div>
+
+
+					</div>
+
+					</div>
+				</div>
+
+				<footer className="big-footer fullwidth t-left">
+					<div className="clearfix footer_inner">
+					</div>
+				</footer>
+
+	          </div>
+	        )
+	      }, initEp5TOC: function() {
+
+	      		$(window).scrollTop(0);
+
+	      		ga('set', 'page', '/episode-4.html');
+	      		ga('send', 'pageview');
+
+	      		$( window ).bind("resize", function() {
+					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
+				});
+
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+
+		      		$('.parallax').append('<img src="images/episode5/E5_PhotoTransition_Mobile.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode5/E5_Footer_Mobile.png" />');
+		      	} else {
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode5/E5_Footer.png" />');
+		      	}
+
+		      	$('#playlists').empty();
+
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.0d478bce7a8f46c08ebde7da4682b7a3?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+
+	      		function resizeFooter() {
+	      			var footerHeight = $(".big-footer").height();
+					//$("#main").css("padding-bottom", footerHeight);
+					$(".big-footer").css("margin-top", -footerHeight)
+					$("#episode_5").css("padding-bottom", footerHeight)
+					//console.log(footerHeight);
+	      		}
+
+	      		function moveCTA() {
+
+	      			var bottomVideo = $("#transitionVideo").height();
+	      			var top = bottomVideo - 80;
+
+	      			$('#home-episodes').css("top", top);
+	      			$('#home-episodes').css("display", "block");
+
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+
+				        videoAudio[0].play();
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
+	      		$(".footer_img").load(function() {
+	      			// initial call
+	      			resizeFooter();
+	      			moveCTA();
+	      		});
+
+
+	      		$( window ).bind("resize", function(){
+				     resizeFooter();
+				     moveCTA();
+
+				});
+
+				var count = 0;
+
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+
+			});
+	      }
+	    });
+
+
+	    var Episode6 = React.createClass({
+	      componentDidMount: function() {
+            this.initEp6TOC();
+          },
+          componentDidUpdate: function() {
+            this.initEp6TOC();
+          },
+	      render: function() {
+	        return (
+	          <div>
+	          	<div id="episode-wrapper">
+					<section id="episode-1-video" className="home bw-type container">
+						<div className="parallax">
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
+				              poster="images/episode6/E6_PhotoTransition.jpg">
+				                <source src="video/ep6/Photo_SPACE.mp4" type='video/mp4' />
+				                <source src="video/ep6/Photo_SPACE.WebM" type='video/webm' />
+				             </video>
+						</div>
+
+						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
+							<a href="#episode_6" id="CTA" className="scroll">EXPLORE THE EPISODE
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
+						</div>
+					</section>
+
+
+					<div id='episode_3' className="type-1 background_ep6">
+						<div className="row mixer">
+						</div>
+
+						<div className="sidebar">
+							<div>
+								<img src="images/episode6/E6_SideAlbum_1.png" />
+							</div>
+							<div>
+								<img src="images/episode6/E6_SideAlbum_2.png" />
+							</div>
+							<div>
+								<img src="images/episode6/E6_SideAlbum_3.png" />
+							</div>
+						</div>
+
+						<div id="space-title" className="tape-title space">
+							<img id="space-img" src="images/episode6/E6_Header.png" />
+						</div>
+
+						<div className="inner">
+
+							<div className="row">
+
+								<div className="col-md-6 eps-block">
+									<div className="about t-center">
+										<h2>ABOUT THE EPISODE</h2>
+									</div>
+									<div>
+										<p>On July 20, 1969 an estimated 600 million people all over the world watched astronauts
+Neil Armstrong and Buzz Aldrin set foot on the moon for the first time. The moonwalk inspired musicians from David Bowie and the Byrds to Parliament-Funkadelic and Sun Ra to imagine a cosmic future for mankind. However, once the Cold War space race had been won, popular interest in space exploration waned rapidly – as reflected in songs by Elton John and Gil Scott-Heron. In December 1972, NASA launched its final manned mission to the moon, and we have never gone back since. Almost half a century after the moon landing, while our deep yearning to explore the universe lives on in the realm of art and music, its most profound legacy may be the perspective it gave us on our own planet and who we are as a species.</p>
+									</div>
+								</div>
+								<div className="col-md-6 eps-block" ref={(el) => {
+										$(el).find("a").lightcase();
+									}}>
+									<div>
+									<a ref="lightcase" href="images/episode6/gallery/AS_00558_MAG_Vietnam-War-Protest-Flower-Gun-Barrel_M.jpg" data-rel="lightcase:myCollection"><img src="images/episode6/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode6/gallery/AS_05795_NAR_US-soldiers-guitar-in-Vietnam-Jan-1968.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode6/gallery/AS_06663_HDZ_David_Crosby_David_Stills_Graham_Nash_portrait1969.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode6/gallery/AS_08674_GET_Nancy-Sinatra-pose-white-dress-blonde-sitting-color-1960.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode6/gallery/AS_10274_MAG_ANTI_WAR_RALLY_SIGN_MY_SON_WAS_KILLED_IN_VIETNAM_WHAT_FOR_AMERICA_1971_M.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode6/gallery/AS_11431_GET_Soldiers-shooting-their-guns-at-kent-state-students-1970.jpg" data-rel="lightcase:myCollection"></a>
+									</div>
+									<div className="tape-title view">
+										<a ref="lightcase" href="images/episode6/gallery/AS_00558_MAG_Vietnam-War-Protest-Flower-Gun-Barrel_M.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode6/gallery/AS_05795_NAR_US-soldiers-guitar-in-Vietnam-Jan-1968.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode6/gallery/AS_06663_HDZ_David_Crosby_David_Stills_Graham_Nash_portrait1969.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode6/gallery/AS_08674_GET_Nancy-Sinatra-pose-white-dress-blonde-sitting-color-1960.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode6/gallery/AS_10274_MAG_ANTI_WAR_RALLY_SIGN_MY_SON_WAS_KILLED_IN_VIETNAM_WHAT_FOR_AMERICA_1971_M.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode6/gallery/AS_11431_GET_Soldiers-shooting-their-guns-at-kent-state-students-1970.jpg" data-rel="lightcase:myCollection2"></a>
+
+									</div>
+							</div>
+						</div>
+
+						<div className="row">
+							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/QXKx2r9uFMw?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode6/E3_Video_Screens.jpg" /></a></div>
+								 <div className="tape-title interviews">
+										<img src="images/episode_ToC/interviews.png" />
+								 </div>
+							</div>
+						</div>
+
+						<div className="row alternate">
+							<div className="tape-title histories">
+								<img src="images/episode_ToC/histories.png" />
+							</div>
+						</div>
+
+
+					<div className="row">
+						<div className="col-md-6 eps-block">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="song_history">
+										<h2 className="t-center">“Space Oddity”</h2>
+
+
+									<h4 className="t-center">David Bowie</h4>
+									<div className="line-separator"></div>
+
+									<p>The single that launched David Bowie’s career. A hit in the U.K. in 1969, the record earned Bowie his first appearance in the U.S. Top 20 when it was re-released six years later. Its debut around the time of the moon landing led many listeners to assume that the musical tale of a space mission gone awry was inspired by the Apollo program. But according to the musician, its genesis was Stanley Kubrick’s epic space adventure, 2001: A Space Odyssey. “I was very stoned when I went to see it – several times – and it was really a revelation to me,” Bowie told an interviewer in 2003. “It got the song flowing.” Indeed, in the song’s tale of an astronaut who blasts off, loses contact with the Earth, and is stranded in space, some wondered if Bowie wasn’t offering up a veiled analogy of his then-ongoing drug problems. The song earned yet another space connection in 2013 when astronaut Chris Hadfield performed it for a video shot on the International Space Station.</p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Mr. Spaceman”</h2>
+
+								<h4 className="t-center">The Byrds</h4>
+								<div className="line-separator"></div>
+
+								<p>Having already scored with the single “Eight Miles High,” the psychedelic and country-inflected rock band obviously had their head above the clouds. According to group founder and songwriter Roger McGuinn, he and bandmate David Crosby were both avid believers in extraterrestrial life and harbored hopes that “Mr. Spaceman” would find a sympathetic ear somewhere out in the void. “I thought the song being played on the air might be a way to get through to them,” McGuinn said. He was disappointed to later learn that AM radio signals deteriorated long before they could travel beyond Earth’s atmosphere – let alone across the universe. In 1984 the song was used to wake up the astronauts on the space shuttle.</p>
+								</div>
+								</div>
+							</div>
+
+				</div>
+
+
+				<div className="row">
+
+					<div className="col-md-6 eps-block">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“The Blue Danube Waltz”</h2>
+
+
+								<h4 className="t-center">Johann Strauss from 2001: A Space Odyssey Soundtrack</h4>
+								<div className="line-separator"></div>
+
+								<p>Almost exactly 100 years after Johann Strauss II introduced his waltz – so successfully that it became something of an unofficial anthem for Vienna – director Stanley Kubrick gave it a whole new context when he used it to accompany his extended, romantic, and breathtakingly graceful vision of what commercial space travel might look like. The success of the film carried over to the soundtrack – perhaps best known for its use of Richard Strauss’s dramatic “Also Sprach Zarathustra” – and brought several classics back into the public’s consciousness. Initially, Kubrick had commissioned an original score for the film from composer Alex North; the pieces that eventually became the soundtrack were only intended as place holders and to give North an indication of the moods the director wanted for each segment. But Kubrick ultimately decided he preferred the classics over North’s new compositions. “Why use music which is less good when there is such a multitude of great orchestral music available from the past and from our own time?” he said.</p>
+
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-6">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Whitey on the Moon”</h2>
+
+
+								<h4 className="t-center">Gil Scott-Heron</h4>
+								<div className="line-separator"></div>
+
+								<p>Chicago-born poet Gil Scott-Heron was only 21 when he recorded his debut album, Small Talk at the Corner of 125th and Lenox, featuring “Whitey on the Moon” and the signature poem, “The Revolution Will Not Be Televised.” A fierce, compassionate, thoughtful, and overtly political poet who bore the influence of both Walt Whitman and the black arts group The Last Poets, Heron’s evolving use of music in his recordings created an unusual hybrid: poems that never lost sight of the word but made their underlying melodies explicit. Several subsequent compositions, most notably “Winter in America” and “The Bottle,” would become underground hits that transcended easy categorization. Heron’s style was an enormous influence on early rappers – although the poet and musician had mixed feelings about the style, suggesting too many rappers didn’t dig deep enough lyrically or fit their words to the music.</p>
+
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+
+			<div className="row">
+					<div className="col-md-6 eps-block">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Rocket Man”</h2>
+
+
+							<h4 className="t-center">Elton John</h4>
+							<div className="line-separator"></div>
+
+							<p>Originally appearing on the 1972 album Honky Chateau, Elton John’s “Rocket Man” – produced, coincidentally, by Gus Dudgeon, who also oversaw the recording of “Space Oddity” -- reportedly draws its inspiration from several sources. Lyricist Bernie Taupin has said that he was guided by the notion that being an astronaut was becoming normalized – i.e., a regular job – and that he sought to convey that with the song’s opening line. He’s also cited a short story of the same title by Ray Bradbury as well as another song also inspired by that story by the group Pearls Before Swine. Though just one in a long string of big hits by John, the pianist obviously had a soft spot for it: when he started his own record company a few years later, he dubbed it Rocket Records. In 1998, John performed the song at the launch of the Space Shuttle Discovery. </p>
+
+							</div>
+						</div>
+					</div>
+
+					<div className="col-md-6">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Space is the Place”</h2>
+
+
+							<h4 className="t-center">Sun Ra</h4>
+							<div className="line-separator"></div>
+
+							<p>A true iconoclast and artistic original, band leader, pianist and composer Sun Ra (a.k.a. Herman “Sonny” Blount) can be said to have created his own musical universe. A veteran jazz performer and arranger, he formed his own big band, the Arkestra, in the 1950s and quickly made it apparent that what he had in mind was more than a musical organization: cosmology, theater, Afro-centric mythology and African American art were all grist for Ra’s cosmic mill. It wasn’t just that Sun Ra and the Arkestra appeared in concert decked out in home-made space gear, performing music that looked back to such landmark jazz outfits as the Fletcher Henderson Orchestra and forward to a mythical future of enlightenment in space; the Arkestra was a true collective and a way of life. Many of the musicians shared a house in Philadelphia where, aside from writing and rehearsing, they packaged the group’s albums, some of them with individually hand-drawn covers. Since Sun Ra’s death in 1993, the Arkestra has continued to travel the spaceways – with concert stops on Earth -- under the direction of the group’s alto saxophonist, Marshall Allen.</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 eps-block">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Mothership Connection (Star Child)”</h2>
+
+
+						<h4 className="t-center">Parliament-Funkadelic</h4>
+						<div className="line-separator"></div>
+
+						<p>If James Brown is the godfather of soul, George Clinton is the mastermind of funk. Yet his recording career of 50-plus-years has run the gamut from doo-wop to r&amp;b to soul to rock and rap. Like the music equivalent of a repertory company director, Clinton has used a rotating group of 50-plus musicians for his projects under a variety of names, particularly Parliament-Funkadelic. Like Sun Ra, Clinton created shows that were part music, part theater and focused on bridging the past and the future. He obviously hit on something: “Mothership Connection (Star Child)” played off the past by building its chorus off the gospel song “Swing Down, Chariot,” and was itself later sampled as the basis for Dr. Dre’s “Let Me Ride.”</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Leavin' On a Jet Plane”</h2>
+
+
+						<h4 className="t-center">John Denver</h4>
+						<div className="line-separator"></div>
+
+						<p>Though the song “Leavin’ On a Jet Plane” is generally associated with the hit version by Peter, Paul &amp; Mary, it also launched the career of its author, John Denver. The singer had a special, perhaps even fatal fascination with flying. A candidate to fly on the ill-fated Challenger, he later applied to the Soviet space program, hoping to purchase a ride on the space craft Soyez, but reportedly balked at the $10 million price tag. Following the Challenger disaster, he penned a tune that both paid tribute to the flight and its crew, while making his own longings plain: “I was the one who wanted to fly,” he sang, adding “they were flying for me/they were flying for everyone.” Denver died in 1998 when his homemade plane crashed off the California coast.</p>
+
+					</div>
+				</div>
+				</div>
+
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Major Tom (Coming Home)”</h2>
+
+
+						<h4 className="t-center">Peter Schilling</h4>
+						<div className="line-separator"></div>
+
+						<p>One of the more intriguing footnotes in pop history: it’s hard to think of any other artist who had a hit by picking up and continuing a character from another performer’s record, German synth-pop musician Peter Schilling pulled it off with 1983’s “Major Tom (Coming Home).” Spun out of David Bowie’s “Space Oddity,” Schilling took it in an unexpected direction: now sober, the astronaut is brought home by ground control, only to have Major Tom fake his death on re-entry in order to return back to space. If Bowie had any reaction to the song he never said; but then, he wrote two more songs of his own about Major Tom, 1980’s “Ashes to Ashes” and 1995’s “Hello Spaceboy.”  Though Schilling’s record was a bigger hit outside the U.S., reaching the top of the charts in several countries, it’s far from forgotten here, having shown up on episodes of several TV dramas including The Americans and Breaking Bad.</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“The Space Race is Over”</h2>
+
+
+						<h4 className="t-center">Billy Bragg</h4>
+						<div className="line-separator"></div>
+
+						<p>Though often identified as a political songwriter – Bragg has recorded “The Internationale” and created music for previously unpublished Woody Guthrie lyrics – it might be more accurate to think of Bragg as a singer with a conscience. There is, after all, nothing overtly political about many of his songs and “The Space Race is Over” is a bittersweet take on the end of the push to land on the moon. Recounting growing up in the sixties, Bragg references the world of Kennedy and Khrushchev, says he saw the Eagle land on the Moon and both recalls telling his mother he was going to go into space and compares that with a current world of narrower vision, one in which his son has no reason to entertain the same dream. “Now that the space race is over,” he sings, “I can’t help but feeling we’ve all grown up too soon.”</p>
+
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Brandenburg Concerto #2 in F Major, 1st Movement”</h2>
+
+
+						<h4 className="t-center">Johann Sebastian Bach</h4>
+						<div className="line-separator"></div>
+
+						<p>With the 1977 launch of the Voyager Interstellar Mission – aimed primarily at exploring the outer reaches of our solar system – went the Golden Record, a high-tech message in a bottle. A cross between a greeting card, travel brochure, and an introduction to man and Earth, the Record’s contents were selected for NASA by a group chaired by astronomer Carl Sagan. The 12-inch, gold-plated disk included greetings in dozens of languages, photos, drawings, diagrams and charts conveying the scientific basis of life on Earth, sounds and music. Along with Bach’s “Brandenburg Concerto,” the selection ranged from field recordings and folk songs to Louis Armstrong, Chuck Berry, and Igor Stravinsky. In 2012, Voyager 1 passed out of our solar system and entered interstellar space. It will be nearly 40,000 years before it nears another planetary system; until then, its only chance of being heard and read is to be encountered by another traveler.</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Life on Mars”</h2>
+
+
+						<h4 className="t-center">David Bowie</h4>
+						<div className="line-separator"></div>
+
+						<p>One of Bowie’s most enigmatic songs, the lushly-orchestrated final version had its origins far away: it grew out of his attempt to write English lyrics to a well-known French chanson, “Comme d’habitude.” Though Bowie’s version, “Even a Fool Learns to Love,” was rejected by the song’s English-language publisher – the accepted submission, “My Way,” became Frank Sinatra’s signature song – the rejection spurred Bowie to use the descending chord sequence from the original French song in a completely different setting. The song’s dense, cascading orchestrations were contributed by two key Bowie collaborators, guitarist Mick Ronson and keyboardist Rick Wakeman, but its lyrical images – built around the impressions of a bored and bemused girl in a movie theater – are pure Bowie: cryptic yet familiar, hovering somewhere between insight and fashion pose. The song’s title was later borrowed for a TV series about a man who awakens after a car crash to find he’s in 1970.</p>
+
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+
+						<div className="row">
+
+						 <div className="col-md-6 mwidget">
+                         	 <VHMWidget elementId="mpoll" eventId="3444104" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+                          <div className="col-md-6 mwidget">
+                          	<VHMWidget elementId="mtrivia" eventId="3444112" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+
+                        </div>
+
+						<div className="row no-margin-bottom">
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div className="tape-title next_on">
+										<img src="images/episode_ToC/next_2x.png" />
+								 </div>
+							</div>
+						</div>
+
+
+					</div>
+
+					</div>
+				</div>
+
+				<footer className="big-footer fullwidth t-left">
+					<div className="clearfix footer_inner">
+					</div>
+				</footer>
+
+	          </div>
+	        )
+	      }, initEp6TOC: function() {
+
+	      		ga('set', 'page', '/episode-2.html');
+	      		ga('send', 'pageview');
+
+	      		$(window).scrollTop(0);
+
+	      		$( window ).bind("resize", function() {
+					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
+				});
+
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+
+		      		$('.parallax').append('<img src="images/episode3/E3_PhotoTransition_Mobile.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode3/E3_Footer_Mobile.png" />');
+		      	} else {
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode3/E3_Footer.png" />');
+		      	}
+
+		      	$('#playlists').empty();
+
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.03e53dc52d5d4203a3185ea97fd9d48a?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+
+	      		function resizeFooter() {
+	      			var footerHeight = $(".big-footer").height();
+					//$("#main").css("padding-bottom", footerHeight);
+					$(".big-footer").css("margin-top", -footerHeight)
+					$("#episode_3").css("padding-bottom", footerHeight)
+					//console.log(footerHeight);
+	      		}
+
+	      		function moveCTA() {
+
+	      			var bottomVideo = $("#transitionVideo").height();
+	      			var top = bottomVideo - 80;
+
+	      			$('#home-episodes').css("top", top);
+	      			$('#home-episodes').css("display", "block");
+
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+
+				        videoAudio[0].play();
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
+	      		$(".footer_img").load(function() {
+	      			// initial call
+	      			resizeFooter();
+	      			moveCTA();
+	      		});
+
+
+	      		$( window ).bind("resize", function(){
+				     resizeFooter();
+				     moveCTA();
+
+				});
+
+				var count = 0;
+
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+
+			});
+	      }
+	    });
+
+	    var Episode7 = React.createClass({
+	      componentDidMount: function() {
+            this.initEp7TOC();
+          },
+          componentDidUpdate: function() {
+            this.initEp7TOC();
+          },
+	      render: function() {
+	        return (
+	          <div>
+	          	<div id="episode-wrapper">
+					<section id="episode-1-video" className="home bw-type container">
+						<div className="parallax">
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
+				              poster="images/episode7/E7_PhotoTransition.jpg">
+				                <source src="video/ep6/Photo_SPACE.mp4" type='video/mp4' />
+				                <source src="video/ep6/Photo_SPACE.WebM" type='video/webm' />
+				             </video>
+						</div>
+
+						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
+							<a href="#episode_4" id="CTA" className="scroll">EXPLORE THE EPISODE
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
+						</div>
+					</section>
+
+
+					<div id='episode_7' className="type-1 background_ep7">
+						<div className="row mixer">
+						</div>
+
+						<div className="sidebar">
+							<div>
+								<img src="images/episode7/E7_SideAlbum_1.png" />
+							</div>
+							<div>
+								<img src="images/episode7/E7_SideAlbum_2.png" />
+							</div>
+							<div>
+								<img src="images/episode7/E7_SideAlbum_3.png" />
+							</div>
+						</div>
+
+						<div id="battle-title" className="tape-title battle">
+							<img id="battle-img" src="images/episode7/E7_Header.png" />
+						</div>
+
+						<div className="inner">
+
+							<div className="row">
+
+								<div className="col-md-6 eps-block">
+									<div className="about t-center">
+										<h2>ABOUT THE EPISODE</h2>
+									</div>
+									<div>
+										<p>The famous tennis match between Billie Jean King and Bobby Riggs was a galvanizing moment for the women’s movement. Billie Jean’s win was an affirmation to all the women who felt underestimated as simply mothers and housewives. The music of the 1960s and 70s, from Helen Reddy to Leslie Gore to Aretha Franklin was also a kind of subversive force in delivering to women messages of strength and empowerment. The sexual revolution ushered in more provocative music that gave women permission to let loose; Loretta Lynn's “The Pill” was an outright ode to the wonders of contraception and how freeing it was. Feminism in music has taken many forms, just as the women’s movement itself has waxed and waned over the decades. But from Pat Benatar to Salt-n-Pepa to Katy Perry, each generation of young women has found strength and solidarity in female artists who have literally given them a voice.</p>
+									</div>
+								</div>
+								<div className="col-md-6 eps-block" ref={(el) => {
+										$(el).find("a").lightcase();
+									}}>
+									<div>
+									<a ref="lightcase" href="images/episode4/gallery/AS_06464_API_Katrina_stands_on_floating_mattress_people_balconies_2005.jpg" data-rel="lightcase:myCollection"><img src="images/episode7/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_06477_API_Katrina_man_in_raincoat_guides_boat_woman_in_gown_2005.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_08773_ALN_Katrina_Andy_Levin_rebirth_brass_band_in_street_2005.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_09234_GET_Louis_Armstrong_Dukes_of_Dixieland_rehearsal_trumpet_1960.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_14403_ZUM_Tearful_reunion_two_women_2005.jpg" data-rel="lightcase:myCollection"></a>
+									</div>
+									<div className="tape-title view">
+										<a ref="lightcase" href="images/episode4/gallery/AS_06464_API_Katrina_stands_on_floating_mattress_people_balconies_2005.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_06477_API_Katrina_man_in_raincoat_guides_boat_woman_in_gown_2005.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_08773_ALN_Katrina_Andy_Levin_rebirth_brass_band_in_street_2005.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_09234_GET_Louis_Armstrong_Dukes_of_Dixieland_rehearsal_trumpet_1960.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_14403_ZUM_Tearful_reunion_two_women_2005.jpg" data-rel="lightcase:myCollection2"></a>
+
+									</div>
+							</div>
+						</div>
+
+						<div className="row">
+							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode4/E4_Video_Screens.jpg" /></a></div>
+								 <div className="tape-title interviews">
+										<img src="images/episode_ToC/interviews.png" />
+								 </div>
+							</div>
+						</div>
+
+						<div className="row alternate">
+							<div className="tape-title histories">
+								<img src="images/episode_ToC/histories.png" />
+							</div>
+						</div>
+
+
+					<div className="row">
+						<div className="col-md-6 eps-block">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="song_history">
+										<h2 className="t-center">“I Am Woman”</h2>
+
+
+									<h4 className="t-center">Helen Reddy</h4>
+									<div className="line-separator"></div>
+
+									<p>Recorded in 1971, Australian singer Helen Reddy’s “I Am Woman” was something of a sleeper hit when it was released on the album I Don’t Know How to Love Him. Though it produced positive feedback from her fans, it wasn’t until Reddy re-recorded the song the following year for its inclusion in the soundtrack for Stand Up and Be Counted (a comedy about women’s liberation), that it was released as a single. Though the film was a dud, Reddy’s record was off to the races, eventually topping the Billboard Hot 100 Singles chart and turning her into an international sensation. Leading feminist Betty Friedan would later characterize the record as exhilarating and empowering for the women’s movement, but Reddy, the song’s co-author, considered its message to be more general: “It’s not just for women – it’s a general empowerment song about believing in yourself. When my former brother-in-law was going to medical school he played it every morning to get going.” </p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Sisters are Doin’ It for Themselves”</h2>
+
+								<h4 className="t-center">Eurythmics &amp; Aretha Franklin</h4>
+								<div className="line-separator"></div>
+
+								<p>Though musician/producer Dave Stewart and vocalist Annie Lenox created Eurythmics as a duo – they’d felt creatively constrained as members of a larger group, The Tourists – their 1986 album Be Yourself Tonight  found them creating an off-the-cuff band by pulling in a host of well-known ringers including Tom Petty’s group The Heartbreakers and Elvis Costello. “But it was the addition of Aretha Franklin as second lead vocalist on “Sisters are Doin’ It for Themselves” that provided the album’s artistic and commercial high-point. The song had been penned with Tina Turner in mind, and Franklin only came onboard when Turner proved unavailable. One quick note on the duo’s unusual name: Dalcroze Eurythmics is a method of teaching music through physical movement developed in the late19th Century by a Swiss music professor.</p>
+								</div>
+								</div>
+							</div>
+
+				</div>
+
+
+				<div className="row">
+
+					<div className="col-md-6 eps-block">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“You Don't Own Me”</h2>
+
+
+								<h4 className="t-center">Lesley Gore</h4>
+								<div className="line-separator"></div>
+
+								<p>It never got higher than No. 2 on the Billboard Hot 100 – it was blocked by the Beatles debut hit, “I Wanna Hold Your Hand”-- but 17-year-old Lesley Gore’s “You Don’t Own Me” was a surprisingly defiant statement at a time when girl group records were all about heartbreak, obsession, and blind devotion. “I don’t care whether you’re 16 or 116,” Gore remarked, “there’s nothing more wonderful than standing on the stage and shaking your finger and singing, ‘Don’t tell me what to do.’  As I got older, feminism became more a part of my life and I could see why people would use it as a feminist anthem.” Indeed, the song’s been widely covered by hard rock icon Joan Jett, the actresses Goldie Hawn, Bette Midler and Diane Keaton in the film The First Wive’s Club, and in a gender-bending version by German singer Klaus Nomi. It’s hard to beat the original, though: Gore’s dramatic approach is backed with a terrific arrangement by her producer, Quincy Jones.</p>
+
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-6">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Respect”</h2>
+
+
+								<h4 className="t-center">Aretha Franklin</h4>
+								<div className="line-separator"></div>
+
+								<p>There’s probably no better way for a singer to earn respect than to put their own stamp on a song already associated with someone else – and no one has done that more emphatically than Aretha Franklin when she re-crafted “Respect”— originally written and recorded by the great soul singer Otis Redding — as her own feminist anthem. Redding, who recorded the song in 1965, penned the refrain “all I’m asking for is a little respect when I come home.” But it was Franklin who added the famous chorus section where she spells out R-E-S-P-E-C-T and wails while her backup chorus provides the sonic punch of “sock it to me.” Perhaps it was Redding that Franklin socked it to the hardest: though she made the song into a mammoth hit and earned Redding a huge royalties payday, he had to throw up his hands and admit he’d been bettered, describing Franklin as the woman who “took that song away from me.” </p>
+
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+
+			<div className="row">
+					<div className="col-md-6 eps-block">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“The Pill”</h2>
+
+
+							<h4 className="t-center">Loretta Lynn</h4>
+							<div className="line-separator"></div>
+
+							<p>As the self-proclaimed “Coal Miner’s Daughter,” Loretta Lynn has been long revered as the voice of working class women. With plain-spoken hits that deal with common conflicts and challenges such as “One on the Way,” “You Ain’t Woman Enough to Take My Man” and “Don’t Come Home A-Drinkin’ (With Lovin’ on Your Mind),” it was likely only a matter of time before the singer tackled birth control. Controversial enough to be banned by some country stations and lambasted by more than one preacher, 1975’s “The Pill” still proved one of her biggest sellers – and the criticism never seemed to hit its intended target. “My mama’s just sorry she didn’t have the pill so she wouldn’t have had eight of us to feed,” the singer declared. “If I’d had the pill back when I was havin’ babies I’d have taken ’em like popcorn. I wouldn’t trade my kids for anyone’s. But I wouldn’t necessarily have had six and I sure would have spaced ’em better.”</p>
+
+							</div>
+						</div>
+					</div>
+
+					<div className="col-md-6">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Lady Marmalade”</h2>
+
+
+							<h4 className="t-center">Labelle</h4>
+							<div className="line-separator"></div>
+
+							<p>Philadelphia native Patti Labelle would seem the unlikely vessel for a song about a French Quarter prostitute that sounds like the New Orleans offspring of Kurt Weill and Bertolt Brecht. Even stranger, it was penned by Bob Crewe, a songwriter and producer best known for his work with the squeaky clean group, Four Seasons. It was Crewe who had the inspired idea of offering the song to New Orleans songwriter, arranger and producer Allen Toussaint (then working with the trio of Labelle, Sarah Dash and Nona Hendryx). It would prove just the first (if most spirited) version of the song to be a hit: in 1998 the English group All Saints took it to the top of the British charts, while a version for the soundtrack of the film Moulin Rouge became the occasion for an all-star collaboration between Pink, L’il Kim, Mya and Christina Aguilera, produced by Missy Elliott.</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 eps-block">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“9 to 5”</h2>
+
+
+						<h4 className="t-center">Dolly Parton</h4>
+						<div className="line-separator"></div>
+
+						<p>Established as one of country music’s biggest stars as well as an outstanding songwriter via tunes like “Jolene” and “I Will Always Love You,” Dolly Parton branched into movies with 1980 comedy 9 to 5, co-starring Jane Fonda and Lily Tomlin. Though she later appeared in several other films including Steel Magnolias, Rhinestone, and The Best Little Whorehouse in Texas, she also made her mark as a producer with several TV movies and played Aunt Dolly for five seasons on the popular after school program, Hannah Montana. Canny enough to open and operate her own Tennessee theme park, Dollywood, the singer and actress’ strongest card may be her self-deprecating humor. “I’m not offended by dumb blonde jokes because I know that I’m not dumb,” she has remarked. “I also know I’m not blonde.” </p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Love is a Battlefield”</h2>
+
+
+						<h4 className="t-center">Pat Benatar</h4>
+						<div className="line-separator"></div>
+
+						<p>Hailing from Greenpoint, Brooklyn, singer Pat Benatar’s career took wing with the rise of MTV – her video for “You Better Run” was the second clip played by the nascent network, following the Buggles’ “Video Killed the Radio Star” – and the video for 1983’s “Love is a Battlefield” was one of its most requested. Co-written by Holly Knight, whose previous hits included such feminist-inflected songs as “The Best” and “Better Be Good to Me” for Tina Turner, the record won Benatar her fourth consecutive Grammy Award for Best Female Rock Vocal Performance. Though largely out of the limelight of late, Benatar supported the recent Women’s March in January 2017 with her first new record in 10 years, “Shine.”</p>
+
+					</div>
+				</div>
+				</div>
+
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Ain’t Nothin’ But A She Thing”</h2>
+
+
+						<h4 className="t-center">Salt-n-Pepa</h4>
+						<div className="line-separator"></div>
+
+						<p>One of hip hop’s first and most successful female groups, the Queens, NY trio Salt-n-Pepa, rappers Cheryl “Salt” James, Sandra “Pepa” Denton and DJ Deidra Roper, aka DJ Spinderella were never shy about speaking up. Like rapper Queen Latifah’s earlier “Ladies First,”  “Ain’t Nothin’ But A She Thing”— essentially a riff on and answer to Dr. Dre and Snoop Dogg’s “Ain’t Nothin’ But A G-Thang” — was an eloquent answer to the unquestioned macho and misogyny growing out of rap’s braggadocio.  The group scored one of the few rap/pop crossover records in 1995 when they teamed with vocal group En Vogue for “Whatta Man”.</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Roar”</h2>
+
+
+						<h4 className="t-center">Katy Perry</h4>
+						<div className="line-separator"></div>
+
+						<p>Singer Katy Perry says she wrote “Roar,” her pick-yourself-up-and-dust-yourself-off empowerment anthem, after undergoing therapy. “I was sick of keeping all these feelings inside and not speaking up for myself,” she said. The pop song struck a chord, becoming Perry’s eighth Number One hit in America, where it sold over 6 million copies.  A self-described feminist and LGBT activist, Perry has also been active in politics, raising funds for the junior U.S. Senator from California, Kamala Harris, and performed repeatedly at campaign stops during Hillary Clinton’s 2016 presidential run, where “Roar” became something of a campaign song. </p>
+
+					</div>
+				</div>
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Rebel Girl”</h2>
+
+
+						<h4 className="t-center">Bikini Kill</h4>
+						<div className="line-separator"></div>
+
+						<p>Born of the “riot grrrl” movement – a confluence of feminism and the ethos of punk rock that got its start in the Pacific Northwest in the 1990s – the group Bikini Kill fronted by singer Kathleen Hanna were its standard bearers. “Rebel Girl”, a proud declaration of outsider status, was the movement’s call-to-arms. Hanna, who’d previously been in an all-female band named for President Carter’s daughter, Amy Carter, said she turned to forming women’s rock bands because they barely existed. “I felt completely left out of the realm of everything that is so important to me,” she said. “And I know that this is partly because punk rock is for and by boys mostly and partly because punk rock of this generation is coming of age in a time of mindless career-goal bands.” Though Bikini Kill and the movement’s other founding bands including Bratmobile, Heavens to Betsy, Huggy Bear and Excuse 17 have long disbanded, the aim and values continue, and is represented to many fans most notably through Sleater-Kinney featuring former Excuse 17 guitarist Carrie Brownstein.</p>
+
+					</div>
+				</div>
+				</div>
+
+				
+			</div>
+
+			</div>
+
+
+						<div className="row">
+
+						 <div className="col-md-6 mwidget">
+                         	 <VHMWidget elementId="mpoll" eventId="3448032" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+                          <div className="col-md-6 mwidget">
+                          	<VHMWidget elementId="mtrivia" eventId="3448039" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+
+                        </div>
+
+						<div className="row no-margin-bottom">
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div className="tape-title next_on">
+										<img src="images/episode_ToC/next_2x.png" />
+								 </div>
+							</div>
+						</div>
+
+
+					</div>
+
+					</div>
+				</div>
+
+				<footer className="big-footer fullwidth t-left">
+					<div className="clearfix footer_inner">
+					</div>
+				</footer>
+
+	          </div>
+	        )
+	      }, initEp7TOC: function() {
+
+	      		$(window).scrollTop(0);
+
+	      		ga('set', 'page', '/episode-7.html');
+	      		ga('send', 'pageview');
+
+	      		$( window ).bind("resize", function() {
+					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
+				});
+
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+
+		      		$('.parallax').append('<img src="images/episode7/E7_PhotoTransition_Mobile.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode7/E7_Footer_Mobile.png" />');
+		      	} else {
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode7/E7_Footer.png" />');
+		      	}
+
+		      	$('#playlists').empty();
+
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.0d478bce7a8f46c08ebde7da4682b7a3?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+
+	      		function resizeFooter() {
+	      			var footerHeight = $(".big-footer").height();
+					//$("#main").css("padding-bottom", footerHeight);
+					$(".big-footer").css("margin-top", -footerHeight)
+					$("#episode_7").css("padding-bottom", footerHeight)
+					//console.log(footerHeight);
+	      		}
+
+	      		function moveCTA() {
+
+	      			var bottomVideo = $("#transitionVideo").height();
+	      			var top = bottomVideo - 80;
+
+	      			$('#home-episodes').css("top", top);
+	      			$('#home-episodes').css("display", "block");
+
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+
+				        videoAudio[0].play();
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
+	      		$(".footer_img").load(function() {
+	      			// initial call
+	      			resizeFooter();
+	      			moveCTA();
+	      		});
+
+
+	      		$( window ).bind("resize", function(){
+				     resizeFooter();
+				     moveCTA();
+
+				});
+
+				var count = 0;
+
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+
+			});
+	      }
+	    });
+
+	    var Episode8 = React.createClass({
+	      componentDidMount: function() {
+            this.initEp8TOC();
+          },
+          componentDidUpdate: function() {
+            this.initEp8TOC();
+          },
+	      render: function() {
+	        return (
+	          <div>
+	          	<div id="episode-wrapper">
+					<section id="episode-1-video" className="home bw-type container">
+						<div className="parallax">
+							<video id="transitionVideo" autoPlay loop preload="auto" height="100%" width="100%"
+				              poster="images/episode8/E8_PhotoTransition.jpg">
+				                <source src="video/ep8/Photo_OUT_LOUD.mp4" type='video/mp4' />
+				                <source src="video/ep8/Photo_OUT_LOUD.WebM" type='video/webm' />
+				             </video>
+						</div>
+
+						<div id="home-episodes" className="home-extra-note fullwidth t-center white thin absolute episode-extra-note" data-0="opacity:1;" data-600="opacity:0;">
+							<a href="#episode_8" id="CTA" className="scroll">EXPLORE THE EPISODE
+							<span className="t-center arrow_down"><img src="images/arrow_down.png" /></span></a>
+						</div>
+					</section>
+
+
+					<div id='episode_8' className="type-1 background_ep8">
+						<div className="row mixer">
+						</div>
+
+						<div className="sidebar">
+							<div>
+								<img src="images/episode8/E8_SideAlbum_1.png" />
+							</div>
+							<div>
+								<img src="images/episode8/E8_SideAlbum_2.png" />
+							</div>
+							<div>
+								<img src="images/episode8/E8_SideAlbum_3.png" />
+							</div>
+						</div>
+
+						<div id="loud-title" className="tape-title loud">
+							<img id="loud-img" src="images/episode8/E8_Header.png" />
+						</div>
+
+						<div className="inner">
+
+							<div className="row">
+
+								<div className="col-md-6 eps-block">
+									<div className="about t-center">
+										<h2>ABOUT THE EPISODE</h2>
+									</div>
+									<div>
+										<p>The LGBT movement in America was accelerated one night in late June on the streets of
+Greenwich Village, New York, in a bar called the Stonewall Inn. When police raided the place, gay and transgender men and women who had been repeatedly targeted for raids finally decided to fight back against the police, and to demand their civil rights. Bars and dance clubs were — and still are — places of refuge for LGBT people, and the music played on jukeboxes, from Judy Garland to Gloria Gaynor, has also been a vital aspect of the LGBT experience over the past five decades. Although the 1980s and 90s brought the AIDS crisis and anti-gay legislation that threatened the LGBT community, it only strengthened the resolve of activists — and artists — to push harder. Some musicians incorporated aspects of LGBT life into their lyrics. Others have furthered the cause of equality simply by coming out of the closet. This is a struggle that is not over, but with allies in popular culture like Lady Gaga, this episode shows the power of music to raise awareness and to preach acceptance.</p>
+									</div>
+								</div>
+								<div className="col-md-6 eps-block" ref={(el) => {
+										$(el).find("a").lightcase();
+									}}>
+									<div>
+									<a ref="lightcase" href="images/episode4/gallery/AS_06464_API_Katrina_stands_on_floating_mattress_people_balconies_2005.jpg" data-rel="lightcase:myCollection"><img src="images/episode8/gallery_images.png" /></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_06477_API_Katrina_man_in_raincoat_guides_boat_woman_in_gown_2005.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_08773_ALN_Katrina_Andy_Levin_rebirth_brass_band_in_street_2005.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_09234_GET_Louis_Armstrong_Dukes_of_Dixieland_rehearsal_trumpet_1960.jpg" data-rel="lightcase:myCollection"></a>
+									<a ref="lightcase" href="images/episode4/gallery/AS_14403_ZUM_Tearful_reunion_two_women_2005.jpg" data-rel="lightcase:myCollection"></a>
+									</div>
+									<div className="tape-title view">
+										<a ref="lightcase" href="images/episode4/gallery/AS_06464_API_Katrina_stands_on_floating_mattress_people_balconies_2005.jpg" data-rel="lightcase:myCollection2"><img src="images/episode_ToC/view.png" /></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_06477_API_Katrina_man_in_raincoat_guides_boat_woman_in_gown_2005.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_08773_ALN_Katrina_Andy_Levin_rebirth_brass_band_in_street_2005.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_09234_GET_Louis_Armstrong_Dukes_of_Dixieland_rehearsal_trumpet_1960.jpg" data-rel="lightcase:myCollection2"></a>
+										<a ref="lightcase" href="images/episode4/gallery/AS_14403_ZUM_Tearful_reunion_two_women_2005.jpg" data-rel="lightcase:myCollection2"></a>
+
+									</div>
+							</div>
+						</div>
+
+						<div className="row">
+							<div className="col-lg-10 episode_video eps-block" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/4wD1_ZblnnU?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:videoCollection"><img src="images/episode4/E4_Video_Screens.jpg" /></a></div>
+								 <div className="tape-title interviews">
+										<img src="images/episode_ToC/interviews.png" />
+								 </div>
+							</div>
+						</div>
+
+						<div className="row alternate">
+							<div className="tape-title histories">
+								<img src="images/episode_ToC/histories.png" />
+							</div>
+						</div>
+
+
+					<div className="row">
+						<div className="col-md-6 eps-block">
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+									<div className="song_history">
+										<h2 className="t-center">“Aquarius (Let the Sunshine In)”</h2>
+
+
+									<h4 className="t-center">The Fifth Dimension</h4>
+									<div className="line-separator"></div>
+
+									<p>In the pop world, 1969 was the year of the Fifth Dimension. After a long period of scuffling around the Los Angeles music scene – the vocal quintet had recorded under a variety of names for producers as divergent as Ray Charles and Johnny Rivers – they finally broke into the charts in 1967 as the Fifth Dimension with a cover of the Mamas and the Papas’ “Go Where You Wanna Go.” They soon had a string of huge hits including Jimmy Webb’s “Up, Up and Away,” and several songs by Laura Nyro including “Stone Soul Picnic” and “Sweet Blindness.” But it was “Aquarius (Let the Sunshine In)” from the Broadway show Hair that became their biggest hit, topping the pop charts for six weeks on its way to being the biggest-selling and most-played single of the year. The play would prove a fertile source for pop hits: among other bestsellers were the Cowsills’ version of the title song, Three Dog Night’s rendition of “Easy to be Hard,” Oliver’s “Good Morning Starshine,” and Nina Simone’s re-interpretation of “I Ain’t Got No/ I Got Life,” which was a hit in the U.K.</p>
+
+								</div>
+							</div>
+							</div>
+							<div className="col-md-6">
+
+								<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“Somewhere Over the Rainbow”</h2>
+
+								<h4 className="t-center">Judy Garland</h4>
+								<div className="line-separator"></div>
+
+								<p>The signature song of Judy Garland, who first sang it in 1939’s The Wizard of Oz and continued to perform it until her death 30 years later, it was also the most well-known hit by its writers, composer Harold Arlen and lyricist E.Y. “Yip” Harburg – and that’s really saying something since each penned dozens of standards.  After early hits with “Brother, Can You Spare a Dime” and “It’s Only a Paper Moon,” Harburg wrote the lyrics for the 1947 Broadway musical, Finian’s Rainbow. Arlen, whose earliest hits included “Stormy Weather” and “Get Happy,” found his most successful collaborator in Johnny Mercer, with whom he wrote a string of American Songbook classics including several recorded repeatedly by Frank Sinatra including, “Come Rain or Come Shine,” “That Old Black Magic,” and “One For My Baby (And One More For the Road).” Though the Arlen/Harburg teaming covered only a few years in Hollywood, “Somewhere Over the Rainbow” wasn’t the only signature song they came up with: the team also penned “Lydia the Tattooed Lady” for Groucho Marx.</p>
+								</div>
+								</div>
+							</div>
+
+				</div>
+
+
+				<div className="row">
+
+					<div className="col-md-6 eps-block">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">“The Killing of Georgie”</h2>
+
+
+								<h4 className="t-center">Rod Stewart</h4>
+								<div className="line-separator"></div>
+
+								<p>Though not the first rock star to address a gay subject – Ray Davies and the Kinks got there two years earlier with “Lola,” about a naïve young man who falls in love with a drag queen – there’s something in the heartfelt and matter-of-fact tone of “The Killing of Georgie” that marks a sea change in pop music. Based on the murder of an acquaintance – Stewart says the man who inspired the story was actually a good friend of one of his bandmate, Ian MacLagan -- it isn’t campy, high-handed or self-righteous; instead it tells of the murder of a man admired by the singer and who happened to be gay. The story isn’t exotic, just tragic: “Georgie boy was gay I guess/Nothin’ more or nothin’ less/The kindest guy I ever knew.” If Stewart was open-minded, that wasn’t a universal thought: the song was initially banned from airplay by the BBC.</p>
+
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-6">
+							<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+								<div className="song_history">
+									<h2 className="t-center">Walk on the Wild Side</h2>
+
+
+								<h4 className="t-center">Lou Reed</h4>
+								<div className="line-separator"></div>
+
+								<p>So just who were these people in Lou Reed’s “Walk on the Wild Side?” Most of Reed’s fans know they were figures he met hanging around artist Andy Warhol’s Factory in New York. But Michael Hann, former music editor of The Guardian, put real names with the legends in a 2015 article: Holly, who “came from Miami, FLA/Hitchhiked her way across the USA” was the late Holly Woodlawn, the transgender star of several Warhol films. Candy, who “never lost her head,” was Candy Darling, also a transgender actor. Darling died at 29 of lymphoma. Little Joe who “never once gave it away” was bisexual actor and director Joe Dallesandro. Though he worked in many films, most people have seen Dallesandro on an album cover: that’s his crotch on the Rolling Stones album Sticky Fingers. Sugar Plum Fairy, aka Joe Campbell who was “looking for soul food and a place to eat,” appeared in Warhol’s film My Hustler but is likely better known for having been the boyfriend of Harvey Milk, the openly gay mayor of San Francisco who was murdered.
+Jackie Curtis who “thought she was James Dean for a day” performed as both a man and a woman and pioneered what became the glitter glam-rock look. Curtis’ 1967 play, Glory, Glamour and Gold marked the first theatrical appearance of Robert de Nero. Curtis died of a heroin overdose in 1985.</p>
+
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+
+			<div className="row">
+					<div className="col-md-6 eps-block">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Smalltown Boy”</h2>
+
+
+							<h4 className="t-center">Bronski Beat</h4>
+							<div className="line-separator"></div>
+
+							<p>Though little known in the U.S., the popular British trio Bronski Beat managed to score something of a creative, artistic and political trifecta on their home turf: the band scored a string of hits while never deviating from their intention of bringing a message of gay activism into popular music. Unlike the pop and disco music of the era, which focused on entertainment, Bronski Beat was about being out and proud and unapologetic. Indeed, their controversial 1984 album The Age of Consent listed the age for consensual same-sex relationships in countries around the world, and pointedly noted that it was 21 in Britain, where the legal age for heterosexual relations was 16. Their debut single, “Smalltown Boy,” about a gay teenager fleeing his hometown for London, was a big hit in the U.K. and Europe.</p>
+
+							</div>
+						</div>
+					</div>
+
+					<div className="col-md-6">
+						<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+							<div className="song_history">
+								<h2 className="t-center">“Y.M.C.A.”</h2>
+
+
+							<h4 className="t-center">The Village People</h4>
+							<div className="line-separator"></div>
+
+							<p>The brainchild of French record producer Jacques Morali, who crafted the original Village People recordings in the studio with just singer/songwriter Victor Willis, the now-famous concept of the group didn’t strike Morali until he attended a costume party at New York gay disco Les Mouches: watching the stylings on the dancefloor, he hit on the idea of a group of macho types, even recruiting one dancer at the club, Felipe Rose, as the group’s Indian. Willis, who variously portrayed the cop and the sailor, anchored the vocals until his career was sidelined by drugs. Incredibly, the Village People have managed to transcend both the AIDS epidemic – which killed Morali and several group members -- and their own kitsch. Like Radio City Music Hall’s Rockettes, the Village People still perform and seem to go on and on – despite the fact that no one from the original group is still involved.</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 eps-block">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“You Make Me Feel (Mighty Real)”</h2>
+
+
+						<h4 className="t-center">Sylvester</h4>
+						<div className="line-separator"></div>
+
+						<p>Raised in Los Angeles but based out of San Francisco, the gender-bending Sylvester was a breakthrough artist, described variously as “the queen of disco” and by his biographer Joshua Gamson as someone for whom gender was “an everyday choice.” Though well-known on San Francisco’s gay club circuit – one of his earliest champions was Rolling Stone founder Jann Wenner, who helped him get a record deal – but it wasn’t until Sylvester caught the ear of producer Harvey Fuqua, best known for mentoring and producing Marvin Gaye, that Sylvester would record the gay disco anthem “You Make Me Feel (Mighty Real)” and find a worldwide following. Stricken with AIDS, the singer made no secret of his condition, openly discussing it in interviews until his death in 1988. His estate later donated his royalties to AIDS research.</p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“I Will Survive”</h2>
+
+
+						<h4 className="t-center">Gloria Gaynor</h4>
+						<div className="line-separator"></div>
+
+						<p>This is a surprise hit on two counts: for starters, “I Will Survive” was intended as the B-side of another Gaynor single, “Substitute,” and the singer’s record company only switched gears because radio stations were flipping the record over and playing “I Will Survive.” The second surprise is that what was intended as a feminist statement instead became a gay anthem. Though Gaynor also had a Top 10 hit with 1974’s “Never Can Say Goodbye,” it’s Freddie Peren, the keyboardist and co-author of “I Will Survive” who had the hit track record, having taken at least a hand in the writing of dozens of soul and dance hits including the Jackson 5’s “I Want You Back,” “Boogie Fever,” and Peaches &amp; Herb’s “Reunited” and the Sylvers “Shake Your Groove Thing.” He also produced Yvonne Elliman’s hit “If I Can’t Have You” for Saturday Night Fever. </p>
+
+					</div>
+				</div>
+				</div>
+
+
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Come to My Window”</h2>
+
+
+						<h4 className="t-center">Melissa Etheridge</h4>
+						<div className="line-separator"></div>
+
+						<p>One of the two hits on the 1993 album that marked Etheridge’s coming out as a lesbian, Yes I Am, it proved the most successful album of the singer/songwriter’s career, selling six million copies and spending over two years on the Billboard Top 200 Albums chart. Though Etheridge can be fairly said to have edged up to her role as an openly gay performer and advocate on LGBT issues -- Yes I Am was her fourth album – a subsequent diagnosis and treatment for breast cancer pushed the singer to also become a strong advocate of the medicinal use of marijuana. More recently, she’s partnered with a medical marijuana dispensary to sell wines infused with CBD, the marijuana extract used in medical applications, under the No Label line of wines. </p>
+
+					</div>
+				</div>
+				</div>
+
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">Born This Way</h2>
+
+
+						<h4 className="t-center">Lady Gaga</h4>
+						<div className="line-separator"></div>
+
+						<p>In an era when downloading and streaming have become the norm and record sales lackluster, “Born This Way” has proven a bona fide, worldwide anthem, selling over 8 million copies. The singer, who identifies as bisexual, has described “Born This Way” as her “freedom song,” intended to inspire both women and the gay community. To accomplish that, she trained her sites on writing more than an anthem. “I wanted it to be an attack, an assault on the issue because I think, especially in today’s music, everything gets kind of wishy-washy sometimes and the message gets hidden.” The song’s surreal, big-budget video produced a press debate over whether its rapid-fire use of many musical references to previous hits was empowering or a rip-off, but the singer’s fans certainly had no qualms: the clip has garnered over 200 million views on YouTube.</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div className="row">
+				<div className="col-md-6 ">
+					<div className="col-md-12" style={{margin: "0 auto", float: "none"}}>
+						<div className="song_history">
+							<h2 className="t-center">“Same Love”</h2>
+
+
+						<h4 className="t-center">Macklemore, Ryan Lewis, feat. Mary Lambert</h4>
+						<div className="line-separator"></div>
+
+						<p>With a melodic riff inspired by the Impressions’ mid-‘Sixties civil rights anthem “People Get Ready,” the Seattle rap duo Macklemore and Ryan Lewis crafted “Same Love” as its gay descendent, a plea so straight-forward and grounded in common sense and humanity as to be irrefutable. Not surprisingly, Macklemore said he drew his inspiration from what he perceived as a negative attitude toward gays in some rap music. “Misogyny and homophobia are the two acceptable means of oppression in hip hop culture,” he said. “There needs to be some accountability.” Used to boost a successful gay marriage initiative in the duo’s home state of Washington, the song went on to receive a Grammy nomination for Song of the Year. It also resonated globally, proving a worldwide hit.</p>
+
+					</div>
+				</div>
+				</div>
+
+				
+			</div>
+
+			</div>
+
+
+						<div className="row">
+
+						 <div className="col-md-6 mwidget">
+                         	 <VHMWidget elementId="mpoll" eventId="3448032" colorScheme="cnn_music_poll" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+                          <div className="col-md-6 mwidget">
+                          	<VHMWidget elementId="mtrivia" eventId="3448039" colorScheme="cnn_music_trivia_listing" width="100%" height="100%" thumbSize="orig" dynamicHeight="true"/>
+                          </div>
+
+                        </div>
+
+						<div className="row no-margin-bottom">
+							<div className="col-lg-10 episode_video" ref={(el) => {
+											$(el).find("a").lightcase();
+										}}>
+								 <div><a ref="lightcase" href="//www.youtube.com/embed/MxgNB3VyRp8?rel=0&controls=1&showinfo=0&autoplay=1" data-rel="lightcase:video2Collection"><img src="images/episode4/E4_Promo.jpg" /></a></div>
+								 <div className="tape-title next_on">
+										<img src="images/episode_ToC/next_2x.png" />
+								 </div>
+							</div>
+						</div>
+
+
+					</div>
+
+					</div>
+				</div>
+
+				<footer className="big-footer fullwidth t-left">
+					<div className="clearfix footer_inner">
+					</div>
+				</footer>
+
+	          </div>
+	        )
+	      }, initEp8TOC: function() {
+
+	      		$(window).scrollTop(0);
+
+	      		ga('set', 'page', '/episode-4.html');
+	      		ga('send', 'pageview');
+
+	      		$( window ).bind("resize", function() {
+					divResize();
+				});
+
+				// Capture scroll events
+				$(window).scroll(function(){
+				    checkVideo();
+				});
+
+	      		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		      		window.isMob = true;
+		      		var el = document.getElementById('transitionVideo');
+		      		el.parentNode.removeChild(el);
+
+		      		var el2 = document.getElementById('home-episodes');
+		      		el2.parentNode.removeChild(el2);
+
+		      		$('.parallax').append('<img src="images/episode4/E4_PhotoTransition_Mobile.jpg" />');
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header_Mobile.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode8/E8_Footer_Mobile.png" />');
+		      	} else {
+		      		$('.mixer img').remove();
+		      		$('.mixer').append('<img src="images/episode_ToC/EpisodeTOC_Header.jpg" />');
+		      		$('.footer_img').remove();
+		      		$('.footer_inner').append('<img class="footer_img" src="images/episode8/E8_Footer.png" />');
+		      	}
+
+		      	$('#playlists').empty();
+
+		      	$('#playlists').append('<iframe src="//tools.applemusic.com/embed/v1/playlist/pl.0d478bce7a8f46c08ebde7da4682b7a3?country=us" height="400px" width="100%" frameborder="0"></iframe>');
+
+	      		function resizeFooter() {
+	      			var footerHeight = $(".big-footer").height();
+					//$("#main").css("padding-bottom", footerHeight);
+					$(".big-footer").css("margin-top", -footerHeight)
+					$("#episode_8").css("padding-bottom", footerHeight)
+					//console.log(footerHeight);
+	      		}
+
+	      		function moveCTA() {
+
+	      			var bottomVideo = $("#transitionVideo").height();
+	      			var top = bottomVideo - 80;
+
+	      			$('#home-episodes').css("top", top);
+	      			$('#home-episodes').css("display", "block");
+
+	      		}
+
+	      		function checkVideo() {
+	      			var $elem = $('#transitionVideo');
+	      			var videoAudio = $("#transitionVideo");
+	      			if (window.isElementInViewport($elem)) {
+
+				        videoAudio[0].play();
+				    } else {
+				    	videoAudio[0].pause();
+				    }
+	      		}
+
+	      		$(".footer_img").load(function() {
+	      			// initial call
+	      			resizeFooter();
+	      			moveCTA();
+	      		});
+
+
+	      		$( window ).bind("resize", function(){
+				     resizeFooter();
+				     moveCTA();
+
+				});
+
+				var count = 0;
+
+
+				this.$node = $(this.refs.lightcase);
+				this.$node.lightcase({
+
 			});
 	      }
 	    });
@@ -2327,10 +3996,10 @@
 											<li><Link to="/episode-2"><span className="red">EPISODE: 2</span></Link></li>
 											<li><Link to="/episode-3"><span className="red">EPISODE: 3</span></Link></li>
 											<li><Link to="/episode-4"><span className="red">EPISODE: 4</span></Link></li>
-											<li className="inactiveEp"><a>EPISODE: 5</a></li>
-											<li className="inactiveEp"><a>EPISODE: 6</a></li>
-											<li className="inactiveEp"><a>EPISODE: 7</a></li>
-											<li className="inactiveEp"><a>EPISODE: 8</a></li>
+											<li><Link to="/episode-5"><span className="red">EPISODE: 5</span></Link></li>
+											<li><Link to="/episode-6"><span className="red">EPISODE: 6</span></Link></li>
+											<li><Link to="/episode-7"><span className="red">EPISODE: 7</span></Link></li>
+											<li><Link to="/episode-8"><span className="red">EPISODE: 8</span></Link></li>
 										</ul>
 									</li>
 
@@ -2338,7 +4007,7 @@
 
 								</ul>
 
-								
+
 							</div>
 
 						</div>
@@ -2373,11 +4042,11 @@
 
 			  //console.log("Orientation type is " + screen.orientation.type);
      		  //console.log("Orientation angle is " + screen.orientation.angle);
-	      		
+
 		}
 
 	    });
-	  
+
 	    ReactDOM.render(
 	      <Router history={ReactRouter.hashHistory}>
 	        <Route path="/" component={App}>
@@ -2390,7 +4059,11 @@
 	          <Route path="/episode-2" component={Episode2} />
 	          <Route path="/episode-3" component={Episode3} />
 	          <Route path="/episode-4" component={Episode4} />
-	     
+	          <Route path="/episode-5" component={Episode5} />
+	          <Route path="/episode-6" component={Episode6} />
+	          <Route path="/episode-7" component={Episode7} />
+	          <Route path="/episode-8" component={Episode8} />
+
 	        </Route>
 	      </Router>,
 	      destination
